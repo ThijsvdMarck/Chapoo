@@ -1,6 +1,20 @@
 
+
 .vs/Someren1819/v16/.suo
 SomerenDAL/obj/Debug/SomerenDAL.csprojAssemblyReference.cache
 SomerenLogic/obj/Debug/SomerenLogic.csprojAssemblyReference.cache
 SomerenModel/obj/Debug/SomerenModel.csprojAssemblyReference.cache
 SomerenUI/obj/Debug/SomerenUI.csprojAssemblyReference.cache
+
+*.lock
+
+*.ide-shm
+*.ide-wal
+*.ide
+.vs/Someren1819/v16/Server/sqlite3/db.lock
+.vs/Someren1819/v16/Server/sqlite3/storage.ide-shm
+.vs/Someren1819/v16/Server/sqlite3/storage.ide-wal
+*.cache
+
+
+
