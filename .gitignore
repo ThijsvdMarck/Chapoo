@@ -1,0 +1,7 @@
+
+*.lock
+.vs/Someren1819/v16/.suo
+*.ide
+*.ide-shm
+*.ide-wal
+*.cache
