@@ -1,0 +1,8 @@
+
+*.ide
+.vs/Someren1819/v16/.suo
+.vs/Someren1819/v16/Server/sqlite3/db.lock
+.vs/Someren1819/v16/Server/sqlite3/storage.ide-shm
+.vs/Someren1819/v16/Server/sqlite3/storage.ide-wal
+*.cache
+*.cache
