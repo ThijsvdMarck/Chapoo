@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SomerenModel.Bestelling">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAIAACAAAAAACAAAAAACBAAAAAAA=</HashCode>
+      <FileName>Bestelling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Drankje">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQIgAAAgCAAAAAAAA=</HashCode>
+      <FileName>Drankje.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Gerecht">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAASAAAAACAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gerecht.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Kassa">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAQAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Kassa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Klant">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABQAIAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Klant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Personeel">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgBAAAAAAA=</HashCode>
+      <FileName>Personeel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Product">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAABAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Rekening">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAIAIAAAAAAAQAAAgAAAAEAAAAAA=</HashCode>
+      <FileName>Rekening.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Tafel">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAQgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tafel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
