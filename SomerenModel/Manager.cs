@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Samenstelling : Product
+    public class Manager : Personeel
     {
-        internal Gerecht Gerecht
+        public int Functie
         {
             get => default;
             set

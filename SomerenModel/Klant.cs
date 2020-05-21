@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Klant
+    public class Klant
     {
+        public String naam { get; set;} //naam van klant
+        public DateTime datum { get; set;} // datum van tafelreservering
+
+        internal Tafel Tafel
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

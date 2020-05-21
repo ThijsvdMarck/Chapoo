@@ -8,5 +8,7 @@ namespace SomerenModel
 {
     class Product
     {
+        public string naam { get; set; }
+        public int aantal { get; set; }  //Hoeveel nog in voorraad van de producten
     }
 }

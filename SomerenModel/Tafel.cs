@@ -8,5 +8,14 @@ namespace SomerenModel
 {
     class Tafel
     {
+        public string gereserveeerd { get; set; }
+
+        public Bestelling Bestelling
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Kassa
+    public class Kassa
     {
+        public Bestelling Bestelling
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal Tafel Tafel
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

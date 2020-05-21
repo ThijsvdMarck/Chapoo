@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Personeel
+    public class Personeel
     {
+        public String naam { get; set; } // naam van werknemer
+        public DateTime geboortedatum { get; set; } // geboortedatum van werknemer
     }
 }
