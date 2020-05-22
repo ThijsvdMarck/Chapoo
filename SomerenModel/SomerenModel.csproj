@@ -46,6 +46,7 @@
     <Compile Include="Gerecht.cs" />
     <Compile Include="Kassa.cs" />
     <Compile Include="Klant.cs" />
+    <Compile Include="Kok.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Personeel.cs" />
     <Compile Include="Product.cs" />

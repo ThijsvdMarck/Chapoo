@@ -26,17 +26,6 @@
       <FileName>Gerecht.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomerenModel.Kassa">
-    <Position X="8.5" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Kassa.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Bestelling" />
-      <Property Name="Tafel" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="SomerenModel.Klant">
     <Position X="6.25" Y="8" Width="1.5" />
     <TypeIdentifier>
@@ -57,12 +46,15 @@
   <Class Name="SomerenModel.Product">
     <Position X="3.75" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAQAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Product.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Gerecht" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SomerenModel.Rekening">
-    <Position X="10.75" Y="6.75" Width="1.5" />
+    <Position X="9.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAGAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Rekening.cs</FileName>
@@ -70,30 +62,6 @@
     <ShowAsAssociation>
       <Property Name="Bestelling" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="SomerenModel.Room" Collapsed="true">
-    <Position X="0.5" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAACAAAAAAAAAQAAAAAAAAA=</HashCode>
-      <FileName>Room.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SomerenModel.Samenstelling">
-    <Position X="3.75" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Samenstelling.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Gerecht" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="SomerenModel.Student">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Student.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="SomerenModel.Tafel">
     <Position X="6.25" Y="6.5" Width="1.5" />
@@ -105,23 +73,10 @@
       <Property Name="Bestelling" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SomerenModel.Teacher">
-    <Position X="0.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Teacher.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SomerenModel.Properties.Settings" Collapsed="true">
-    <Position X="0.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SomerenModel.Serveerder">
     <Position X="8.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Serveerder.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -133,10 +88,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SomerenModel.Manager">
-    <Position X="10.75" Y="1" Width="1.5" />
+    <Position X="9" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SomerenModel.Kok">
+    <Position X="12.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kok.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

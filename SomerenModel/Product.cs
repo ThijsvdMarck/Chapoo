@@ -10,5 +10,13 @@ namespace SomerenModel
     {
         public string naam { get; set; }
         public int aantal { get; set; }  //Hoeveel nog in voorraad van de producten
+
+        internal Gerecht Gerecht
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

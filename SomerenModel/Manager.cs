@@ -7,7 +7,7 @@ namespace SomerenModel
 {
     public class Manager : Personeel
     {
-        public int Functie
+        public int functie
         {
             get => default;
             set
