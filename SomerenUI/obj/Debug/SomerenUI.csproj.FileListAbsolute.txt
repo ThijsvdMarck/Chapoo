@@ -13,3 +13,21 @@ C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\S
 C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenDAL.pdb
 C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenLogic.pdb
 C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenModel.pdb
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.csprojAssemblyReference.cache
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.SomerenUI.resources
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.Properties.Resources.resources
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.csproj.GenerateResource.cache
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.csproj.CoreCompileInputs.cache
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.exe
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.pdb
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenUI.exe.config
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenUI.exe
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenUI.pdb
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenDAL.dll
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenLogic.dll
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenModel.dll
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenDAL.pdb
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenDAL.dll.config
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenLogic.pdb
+D:\School\GitHub\Chapoo\SomerenUI\bin\Debug\SomerenModel.pdb
+D:\School\GitHub\Chapoo\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
