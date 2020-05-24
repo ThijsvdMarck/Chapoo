@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SomerenModel
 {
-    public class Serveerder : Personeel
+    public class Kok : Personeel
     {
         public int functie
         {
