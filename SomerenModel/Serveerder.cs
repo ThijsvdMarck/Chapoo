@@ -5,10 +5,8 @@ using System.Text;
 
 namespace SomerenModel
 {
-    public class Personeel
+    public class Serveerder : Personeel
     {
-        public DateTime geboortedatum { get; set; }
-
-        public string naam { get; set; }
+        public Personeel functie { get; set; } //enum
     }
 }

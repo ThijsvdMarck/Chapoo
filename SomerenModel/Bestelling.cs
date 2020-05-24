@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Bestelling
+    public class Bestelling
     {
-        public int BestellingID { get; set; }
-        public string Status { get; set; } // enum
-        public int DrankID { get; set; }
-        public int GerechtID { get; set; }
-        public int PersoneelID { get; set; }
-        public DateTime Datum { get; set; }
+        public DateTime datum { get; set; }
+
+        public int status { get; set; } //enum
+
+        public Drankje Drankje { get; set; }
+
+        public Serveerder Serveerder { get; set; }
+
+        public Gerecht Gerecht { get; set; }
     }
 }

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Product
+    public class Product
     {
-        public int ProductID { get; set; }
-        public string Naam { get; set; }
-        public int Aantal { get; set; }
+        public int aantal { get; set; }
 
+        public string naam { get; set; }
+
+        public Gerecht Gerecht { get; set; }
     }
 }

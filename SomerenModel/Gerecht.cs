@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Gerecht
+    public class Gerecht
     {
-        public int GerechtID { get; set; }
-        public string GerechtNaam { get; set; }
-        public float Prijs { get; set; }
-        public string SoortGerecht { get; set; } // misschien ook enum
-        public string DagType { get; set; } // ook enum
+        public int dagType { get; set; } //enum
+
+        public string gerechtNaam { get; set; }
+
+        public float prijs { get; set; }
+
+        public int soortGerecht { get; set; } //enum
     }
 }
