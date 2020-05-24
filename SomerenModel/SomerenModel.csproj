@@ -61,7 +61,6 @@
     <Compile Include="Serveerder.cs" />
     <Compile Include="Tafel.cs" />
     <Compile Include="Teacher.cs" />
-    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

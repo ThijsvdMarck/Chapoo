@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Gerecht
+    public class Gerecht
     {
+        public int gerechtID { get; set; }
         public string gerechtNaam { get; set; }
         public double prijs { get; set; }
         public string soortGerecht { get; set; } // Voorgerecht,hoofdgerecht en nagerecht

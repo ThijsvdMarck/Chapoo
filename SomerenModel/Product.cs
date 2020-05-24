@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Product
+    public class Product
     {
-        public string naam { get; set; }
-        public int aantal { get; set; }  //Hoeveel nog in voorraad van de producten
+        public int productId { get; set; }
+        public string productNaam { get; set; }
+        public int productAantal { get; set; }  //Hoeveel nog in voorraad van de producten
     }
 }

@@ -15,7 +15,7 @@
   <Class Name="SomerenModel.Drankje">
     <Position X="10.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAIAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAIAwAA=</HashCode>
       <FileName>Drankje.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -87,13 +87,6 @@
     <ShowAsAssociation>
       <Property Name="Gerecht" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="SomerenModel.Student">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Student.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="SomerenModel.Tafel">
     <Position X="6.25" Y="6.5" Width="1.5" />
