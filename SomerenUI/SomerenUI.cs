@@ -50,17 +50,20 @@ namespace SomerenUI
                 
 
                 // fill the students listview within the students panel with a list of students
-                SomerenLogic.Student_Service studService = new SomerenLogic.Student_Service();
-                List<Student> studentList = studService.GetStudents();
+                SomerenLogic.Drankje_Service drankjeService = new SomerenLogic.Drankje_Service();
+                List<Drankje> drankjeList = drankjeService.GetDrankjes();
 
                 // clear the listview before filling it again
                 listViewStudents.Clear();
 
-                foreach (SomerenModel.Student s in studentList)
+                foreach (Drankje s in drankjeList)
                 {
 
-                    ListViewItem li = new ListViewItem(s.Name);
-                    listViewStudents.Items.Add(li);
+                    ListViewItem li = new ListViewItem();
+
+                    li.Text = s.drankNaam;
+                    
+                   listViewStudents.Items.Add(li);
                 }
             }
         }
