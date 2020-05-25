@@ -7,12 +7,6 @@ namespace SomerenModel
 {
     public class Barman : Personeel
     {
-        public int functie
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public Functie functie { get; set; }
     }
 }

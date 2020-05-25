@@ -6,16 +6,9 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    class Tafel
+    public class Tafel
     {
-        public string gereserveeerd { get; set; }
-
-        public Bestelling Bestelling
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int tafelID { get; set; }
+        public Gereserveerd gereserveerd { get; set; }
     }
 }

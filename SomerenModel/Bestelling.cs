@@ -8,32 +8,14 @@ namespace SomerenModel
 {
     public class Bestelling
     {
-        public String status { get; set;} // Besteld, in bereiding en gereed voor serveren
+        public Status status { get; set;} // Besteld, in bereiding en gereed voor serveren
         public DateTime datum { get; set;}
 
-        public Serveerder Serveerder
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public Serveerder Serveerder { get; set; }
 
-        public Drankje Drankje
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public Drankje Drankje { get; set; }
 
-        internal Gerecht Gerecht
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        internal Gerecht Gerecht { get; set; }
     }
 }
 
