@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Barman.cs" />
     <Compile Include="Bestelling.cs" />
+    <Compile Include="Enum.cs" />
     <Compile Include="Drankje.cs" />
     <Compile Include="Gerecht.cs" />
     <Compile Include="Kassa.cs" />

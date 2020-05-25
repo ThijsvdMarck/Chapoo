@@ -8,20 +8,8 @@ namespace SomerenModel
 {
     public class Kassa
     {
-        public Bestelling Bestelling
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public Bestelling Bestelling { get; set; }
 
-        internal Tafel Tafel
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        internal Tafel Tafel { get; set; }
     }
 }

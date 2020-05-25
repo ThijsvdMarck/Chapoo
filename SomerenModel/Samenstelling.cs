@@ -8,12 +8,6 @@ namespace SomerenModel
 {
     class Samenstelling : Product
     {
-        internal Gerecht Gerecht
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        internal Gerecht Gerecht { get; set; }
     }
 }
