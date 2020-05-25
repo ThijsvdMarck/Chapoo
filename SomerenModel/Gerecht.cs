@@ -11,8 +11,8 @@ namespace SomerenModel
         public int gerechtID { get; set; }
         public string gerechtNaam { get; set; }
         public double prijs { get; set; }
-        public string soortGerecht { get; set; } // Voorgerecht,hoofdgerecht en nagerecht
-        public string dagType { get; set; } // lunch of diner
+        public SoortGerecht soortGerecht { get; set; } // Voorgerecht,hoofdgerecht en nagerecht
+        public DagType dagType { get; set; } // lunch of diner
 
 
 

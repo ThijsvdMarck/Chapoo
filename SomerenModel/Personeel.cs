@@ -8,7 +8,9 @@ namespace SomerenModel
 {
     public class Personeel
     {
-        public String naam { get; set; } // naam van werknemer
+        public int PersoneelID { get; set; }
+        public String Naam { get; set; } // naam van werknemer
         public DateTime geboortedatum { get; set; } // geboortedatum van werknemer
+        public Functie functie { get; set; }
     }
 }

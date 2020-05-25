@@ -13,7 +13,7 @@ namespace SomerenDAL
         {
             // DO NOT FORGET TO INSERT YOUR CONNECTION STRING NAMED 'SOMEREN DATABASE' IN YOUR APP.CONFIG!!
             
-                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbchapoo11"].ConnectionString);
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ChapooDatabase"].ConnectionString);
                 adapter = new SqlDataAdapter();
            
         }

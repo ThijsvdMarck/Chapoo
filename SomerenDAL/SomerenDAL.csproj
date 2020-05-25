@@ -45,8 +45,11 @@
     <Compile Include="Base.cs" />
     <Compile Include="Drankje_DAO.cs" />
     <Compile Include="Gerecht_DAO.cs" />
+    <Compile Include="Klant_DAO.cs" />
+    <Compile Include="Personeel_DAO.cs" />
     <Compile Include="Product_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tafel_DAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SomerenModel\SomerenModel.csproj">
