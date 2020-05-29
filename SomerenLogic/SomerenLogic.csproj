@@ -42,11 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DranklijstItem_Service.cs" />
     <Compile Include="Drankje_Service.cs" />
+    <Compile Include="GerechtlijstItem_Service.cs" />
     <Compile Include="Gerecht_Service.cs" />
     <Compile Include="Klant_Service.cs" />
     <Compile Include="Personeel_Service.cs" />
-    <Compile Include="Product_Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tafel_Service.cs" />
   </ItemGroup>

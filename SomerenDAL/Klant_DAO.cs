@@ -14,7 +14,7 @@ namespace SomerenDAL
     {
         public List<Klant> Db_Get_All_Klanten()
         {
-            string query = "SELECT Naam, Datum, TafelID FROM [Klant]";
+            string query = "SELECT Naam, Datum, Tafelnummer, TafelID FROM [Klant]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -29,6 +29,7 @@ namespace SomerenDAL
                 {
                     naam = (string)dr["Naam"],
                     datum = (DateTime)dr["Datum"],
+                    telefoonnummer = (int)dr["telefoonnummer"],
                     tafelID = (int)dr["TafelID"]
                 };
                 klanten.Add(klant);

@@ -10,8 +10,8 @@ namespace SomerenModel
     {
         public String naam { get; set;} //naam van klant
         public DateTime datum { get; set;} // datum van tafelreservering
-        public int tafelID { get; set; }
-
+        public int telefoonnummer { get; set; } //telefoonnummer van de klant
+        public int tafelID { get; set; } 
         internal Tafel Tafel { get; set; }
     }
 }

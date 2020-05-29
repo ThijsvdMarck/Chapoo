@@ -10,8 +10,11 @@ namespace SomerenModel
     {
         public int drankID { get; set; } //ID van het drankje
         public String drankNaam { get; set; } // naam van het drankje
-        public float prijs { get; set; } // prijs van het drankje
-        public bool alcholisch { get; set; } // heeft het drankje alcohol? (ja of nee)
-        public int aantal { get; set; } // voorraad van drankjes
+        public Alcholisch alcholisch { get; set; } // heeft het drankje alcohol? (ja of nee)
+        public int voorraad { get; set; } // voorraad van drankjes
+        public double prijs { get; set; } // prijs van het drankje
+
+        
     }
 }
+        

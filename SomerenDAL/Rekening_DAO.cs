@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SomerenModel
+namespace SomerenDAL
 {
-    class Samenstelling : Product
+    class Rekening_DAO
     {
-        internal Gerecht Gerecht { get; set; }
     }
 }

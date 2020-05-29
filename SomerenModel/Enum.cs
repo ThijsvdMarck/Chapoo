@@ -35,4 +35,8 @@ namespace SomerenModel
     {
         Ja, Nee
     }
+    public enum Alcholisch
+    {
+        Ja, Nee
+    }
 }

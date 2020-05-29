@@ -15,6 +15,7 @@ namespace SomerenUI
 {
     public partial class SomerenUI : Form
     {
+        
         public SomerenUI()
         {
             InitializeComponent();
@@ -50,8 +51,8 @@ namespace SomerenUI
                 
 
                 // fill the students listview within the students panel with a list of students
-                SomerenLogic.Tafel_Service tafelService = new SomerenLogic.Tafel_Service();
-                List<Tafel> tafelList = tafelService.GetTafels();
+                SomerenLogic.DrankLijstItem_Service test = new SomerenLogic.DrankLijstItem_Service();
+                List<DrankLijstItem> drankLijstItem = test.GetDrankLijstItems();
 
                 // clear the listview before filling it again
                 listViewStudents.Clear();
@@ -61,18 +62,22 @@ namespace SomerenUI
                 listViewStudents.FullRowSelect = true;
 
                 // Aanmaken van kolommen
-                listViewStudents.Columns.Add("Tafel ID", 100);
-                listViewStudents.Columns.Add("Gereserveerd", 100);
+                listViewStudents.Columns.Add("DrankID", 50);
+                listViewStudents.Columns.Add("BestellingID", 50);
+                listViewStudents.Columns.Add("Status", 100);
+                listViewStudents.Columns.Add("Aantal", 100);
 
-                string[] tafels = new string[2];
+                string[] drankLijstItems = new string[4];
                 ListViewItem itm;
 
-                foreach (SomerenModel.Tafel t in tafelList)
+                foreach (SomerenModel.DrankLijstItem d in drankLijstItems)
                 {
-                    tafels[0] = t.tafelID.ToString();
-                    tafels[1] = t.gereserveerd.ToString();
+                    drankLijstItems[0] = d.drankID.ToString();
+                    drankLijstItems[1] = d.bestellingID.ToString();
+                    drankLijstItems[2] = d.status.ToString();
+                    drankLijstItems[3] = d.aantal.ToString();
 
-                    itm = new ListViewItem(tafels);
+                    itm = new ListViewItem(drankLijstItems);
                     listViewStudents.Items.Add(itm);
                 }
 
