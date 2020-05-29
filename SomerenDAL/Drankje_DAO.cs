@@ -15,7 +15,7 @@ namespace SomerenDAL
 
         public List<Drankje> Db_Get_All_Drankjes()
         {
-            string query = "SELECT DrankID, Dranknaam FROM [Drankje]";
+            string query = "SELECT DrankID, Dranknaam, [Prijs] FROM [Drankje]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -30,10 +30,10 @@ namespace SomerenDAL
                 {
                     drankID = (int)dr["DrankID"],
                     drankNaam = (string)(dr["Dranknaam"].ToString()),
-                   /* prijs = (double)(dr["drankje_prijs"].ToString("C2")),
-                    alcholisch = (string)(dr["drankje_alcholisch"].ToString()),
-                    aantal = (int)(dr["drankje_aantal"].ToString())                      
-                      */     
+                    prijs = (double)dr["Prijs"],
+                    alcholisch = (Alcholisch)(dr["Alcholisch"]),
+                    voorraad = (int)(dr["drankje_aantal"])                      
+                           
                 };
                 drankjes.Add(drankje);
             }

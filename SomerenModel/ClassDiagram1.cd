@@ -15,32 +15,21 @@
   <Class Name="SomerenModel.Drankje">
     <Position X="10.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAIAwAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAIA0AA=</HashCode>
       <FileName>Drankje.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomerenModel.Gerecht">
     <Position X="6.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAEAAAgAAAAAACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAEAAAgAAgAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Gerecht.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="SomerenModel.Kassa">
-    <Position X="8.5" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Kassa.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Bestelling" />
-      <Property Name="Tafel" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="SomerenModel.Klant">
     <Position X="6.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>BAAAAQAAABAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Klant.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -50,15 +39,8 @@
   <Class Name="SomerenModel.Personeel">
     <Position X="10.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAABAAAAAAACAAAAAABAAAAAAA=</HashCode>
       <FileName>Personeel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SomerenModel.Product">
-    <Position X="3.75" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>Product.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SomerenModel.Rekening">
@@ -78,25 +60,12 @@
       <FileName>Room.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SomerenModel.Samenstelling">
-    <Position X="3.75" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Samenstelling.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Gerecht" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="SomerenModel.Tafel">
     <Position X="6.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Tafel.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Bestelling" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="SomerenModel.Teacher">
     <Position X="0.5" Y="2.25" Width="1.5" />
@@ -114,7 +83,7 @@
   <Class Name="SomerenModel.Serveerder">
     <Position X="8.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Serveerder.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -128,7 +97,7 @@
   <Class Name="SomerenModel.Manager">
     <Position X="10.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>

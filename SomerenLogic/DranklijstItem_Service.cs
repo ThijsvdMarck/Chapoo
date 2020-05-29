@@ -9,29 +9,28 @@ using System.Threading.Tasks;
 
 namespace SomerenLogic
 {
-    public class Drankje_Service
+    public class DrankLijstItem_Service
     {
-        Drankje_DAO drankje_db = new Drankje_DAO();
+        DrankLijstItem_DAO drankLijstItem_db = new DrankLijstItem_DAO();
 
-        public List<Drankje> GetDrankjes()
+        public List<DrankLijstItem> GetDrankLijstItems()
         {
             try
             {
-                List<Drankje> drankje = drankje_db.Db_Get_All_Drankjes();
-                return drankje;
+                List<DrankLijstItem> drankLijstItem = drankLijstItem_db.Db_Get_All_DrankLijstItems();
+                return drankLijstItem;
             }
             catch (Exception)
             {
                 // something went wrong connecting to the database, so we will add a fake student to the list to make sure the rest of the application continues working!
-                List<Drankje> drankje = new List<Drankje>();
-                Drankje a = new Drankje();
+                List<DrankLijstItem> drankLijstItem = new List<DrankLijstItem>();
+                DrankLijstItem a = new DrankLijstItem();
                 a.drankID = 1;
-                a.drankNaam = "Pussy juice";
-                a.prijs = 420.69;
-                a.alcholisch = Alcholisch.Nee;
-                a.voorraad = 42069;
-               
-                return drankje;
+                a.bestellingID = 1;
+                a.aantal = 420;
+                a.status = Status.Besteld;
+
+                return drankLijstItem;
                 //throw new Exception("Someren couldn't connect to the database");
             }
 

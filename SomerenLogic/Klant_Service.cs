@@ -28,6 +28,7 @@ namespace SomerenLogic
                 a.naam = "FrAnX";
                 a.datum = DateTime.Now;
                 a.tafelID = 11;
+                a.telefoonnummer = 061234567;
 
                 return klanten;
                 //throw new Exception("Someren couldn't connect to the database");

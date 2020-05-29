@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    public class Kassa
+    class GerechtlijstItem
     {
-        public Bestelling Bestelling { get; set; }
-
-        internal Tafel Tafel { get; set; }
     }
 }

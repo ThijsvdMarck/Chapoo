@@ -42,15 +42,15 @@
   <ItemGroup>
     <Compile Include="Barman.cs" />
     <Compile Include="Bestelling.cs" />
+    <Compile Include="DranklijstItem.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="Drankje.cs" />
     <Compile Include="Gerecht.cs" />
-    <Compile Include="Kassa.cs" />
+    <Compile Include="GerechtlijstItem.cs" />
     <Compile Include="Klant.cs" />
     <Compile Include="Kok.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Personeel.cs" />
-    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -59,7 +59,6 @@
     </Compile>
     <Compile Include="Rekening.cs" />
     <Compile Include="Room.cs" />
-    <Compile Include="Samenstelling.cs" />
     <Compile Include="Serveerder.cs" />
     <Compile Include="Tafel.cs" />
     <Compile Include="Teacher.cs" />
