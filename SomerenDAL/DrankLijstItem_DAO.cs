@@ -15,7 +15,7 @@ namespace SomerenDAL
 
         public List<DrankLijstItem> Db_Get_All_DrankLijstItems()
         {
-            string query = "SELECT DrankID, BestellingID, Aantal, Status FROM [Dranklijst]";
+            string query = "SELECT Dranknaam, BestellingID, Aantal, [Status] FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -28,9 +28,9 @@ namespace SomerenDAL
             {
                 DrankLijstItem drankLijstItem = new DrankLijstItem()
                 {
-                    drankID = (int)dr["DrankID"],
+                    drankNaam = (string)dr["Dranknaam"],
                     bestellingID = (int)dr["BestellingID"],
-                    status = (Status)(dr["Status"]),
+                    status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
                     aantal = (int)(dr["Aantal"])
 
                 };

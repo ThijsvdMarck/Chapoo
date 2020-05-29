@@ -52,7 +52,7 @@ namespace SomerenUI
 
                 // fill the students listview within the students panel with a list of students
                 SomerenLogic.DrankLijstItem_Service test = new SomerenLogic.DrankLijstItem_Service();
-                List<DrankLijstItem> drankLijstItem = test.GetDrankLijstItems();
+                List<DrankLijstItem> drankLijstItem  = test.GetDrankLijstItems();
 
                 // clear the listview before filling it again
                 listViewStudents.Clear();
@@ -62,17 +62,17 @@ namespace SomerenUI
                 listViewStudents.FullRowSelect = true;
 
                 // Aanmaken van kolommen
-                listViewStudents.Columns.Add("DrankID", 50);
-                listViewStudents.Columns.Add("BestellingID", 50);
+                listViewStudents.Columns.Add("DrankNaam", 70);
+                listViewStudents.Columns.Add("BestellingID", 70);
                 listViewStudents.Columns.Add("Status", 100);
                 listViewStudents.Columns.Add("Aantal", 100);
 
                 string[] drankLijstItems = new string[4];
                 ListViewItem itm;
 
-                foreach (SomerenModel.DrankLijstItem d in drankLijstItems)
+                foreach (SomerenModel.DrankLijstItem d in drankLijstItem )
                 {
-                    drankLijstItems[0] = d.drankID.ToString();
+                    drankLijstItems[0] = d.drankNaam;
                     drankLijstItems[1] = d.bestellingID.ToString();
                     drankLijstItems[2] = d.status.ToString();
                     drankLijstItems[3] = d.aantal.ToString();

@@ -25,7 +25,7 @@ namespace SomerenLogic
                 // something went wrong connecting to the database, so we will add a fake student to the list to make sure the rest of the application continues working!
                 List<DrankLijstItem> drankLijstItem = new List<DrankLijstItem>();
                 DrankLijstItem a = new DrankLijstItem();
-                a.drankID = 1;
+                a.drankNaam = "Water";
                 a.bestellingID = 1;
                 a.aantal = 420;
                 a.status = Status.Besteld;

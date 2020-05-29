@@ -10,7 +10,7 @@ namespace SomerenModel
     {
         public int aantal { get; set; }
         public Status status { get; set; }
-        public int drankID { get; set; }
+        public string drankNaam { get; set; }
         public int bestellingID { get; set; }
     }
 }
