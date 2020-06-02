@@ -121,7 +121,7 @@
             // txt_LogIn
             // 
             this.txt_LogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LogIn.Location = new System.Drawing.Point(129, 373);
+            this.txt_LogIn.Location = new System.Drawing.Point(144, 375);
             this.txt_LogIn.Margin = new System.Windows.Forms.Padding(2);
             this.txt_LogIn.Name = "txt_LogIn";
             this.txt_LogIn.Size = new System.Drawing.Size(373, 32);
@@ -610,13 +610,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein;
+            this.pictureBox1.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
             this.pictureBox1.Location = new System.Drawing.Point(445, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(140, 140);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_Bar
             // 
@@ -695,7 +694,7 @@
             this.pic_Poppetje.Location = new System.Drawing.Point(96, 373);
             this.pic_Poppetje.Margin = new System.Windows.Forms.Padding(2);
             this.pic_Poppetje.Name = "pic_Poppetje";
-            this.pic_Poppetje.Size = new System.Drawing.Size(35, 31);
+            this.pic_Poppetje.Size = new System.Drawing.Size(44, 41);
             this.pic_Poppetje.TabIndex = 3;
             this.pic_Poppetje.TabStop = false;
             // 
@@ -704,8 +703,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 849);
-            this.Controls.Add(this.pnl_Base);
             this.Controls.Add(this.pnl_LogIn);
+            this.Controls.Add(this.pnl_Base);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SomerenUI";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
