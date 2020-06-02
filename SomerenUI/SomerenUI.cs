@@ -23,7 +23,7 @@ namespace SomerenUI
 
         private void SomerenUI_Load(object sender, EventArgs e)
         {
-            showPanel("Dashboard");
+            showPanel("LogIn");
         }
 
         private void showPanel(string panelName)
@@ -31,16 +31,18 @@ namespace SomerenUI
 
             if(panelName == "Dashboard")
             {
-
+                /*
                 // hide all other panels
                 pnl_Students.Hide();
 
                 // show dashboard
                 pnl_Dashboard.Show();
                 img_Dashboard.Show();
+                */
             }
             else if(panelName == "Students")
             {
+             /*
                 // hide all other panels
                 pnl_Dashboard.Hide();
                 img_Dashboard.Hide();
@@ -80,7 +82,7 @@ namespace SomerenUI
                     itm = new ListViewItem(drankLijstItems);
                     listViewStudents.Items.Add(itm);
                 }
-
+             */
             }
         }
 

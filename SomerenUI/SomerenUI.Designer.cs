@@ -78,6 +78,7 @@
             this.btn_Voorraad = new System.Windows.Forms.Button();
             this.btn_Tafels = new System.Windows.Forms.Button();
             this.pic_Poppetje = new System.Windows.Forms.PictureBox();
+            this.pic_LogoChapoo = new System.Windows.Forms.PictureBox();
             this.pnl_LogIn.SuspendLayout();
             this.pnl_Overzicht.SuspendLayout();
             this.pnl_Base.SuspendLayout();
@@ -90,11 +91,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_LogIn
             // 
             this.pnl_LogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnl_LogIn.Controls.Add(this.pic_LogoChapoo);
             this.pnl_LogIn.Controls.Add(this.pic_Poppetje);
             this.pnl_LogIn.Controls.Add(this.btn_LogIn);
             this.pnl_LogIn.Controls.Add(this.txt_LogIn);
@@ -124,6 +127,7 @@
             this.txt_LogIn.Location = new System.Drawing.Point(144, 375);
             this.txt_LogIn.Margin = new System.Windows.Forms.Padding(2);
             this.txt_LogIn.Name = "txt_LogIn";
+            this.txt_LogIn.PasswordChar = '*';
             this.txt_LogIn.Size = new System.Drawing.Size(373, 32);
             this.txt_LogIn.TabIndex = 1;
             // 
@@ -161,8 +165,8 @@
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
             this.pnl_Base.Controls.Add(this.pnl_Overzicht);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
-            this.pnl_Base.Controls.Add(this.pnl_Reservering);
             this.pnl_Base.Controls.Add(this.pnl_Voorraad);
+            this.pnl_Base.Controls.Add(this.pnl_Reservering);
             this.pnl_Base.Controls.Add(this.pnl_Tafels);
             this.pnl_Base.Location = new System.Drawing.Point(0, 0);
             this.pnl_Base.Margin = new System.Windows.Forms.Padding(2);
@@ -698,6 +702,15 @@
             this.pic_Poppetje.TabIndex = 3;
             this.pic_Poppetje.TabStop = false;
             // 
+            // pic_LogoChapoo
+            // 
+            this.pic_LogoChapoo.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
+            this.pic_LogoChapoo.Location = new System.Drawing.Point(459, 0);
+            this.pic_LogoChapoo.Name = "pic_LogoChapoo";
+            this.pic_LogoChapoo.Size = new System.Drawing.Size(140, 140);
+            this.pic_LogoChapoo.TabIndex = 4;
+            this.pic_LogoChapoo.TabStop = false;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -726,6 +739,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -781,6 +795,7 @@
         private System.Windows.Forms.TextBox txt_Hoeveelheid;
         private System.Windows.Forms.PictureBox pic_ChapooHead;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic_LogoChapoo;
     }
 }
 

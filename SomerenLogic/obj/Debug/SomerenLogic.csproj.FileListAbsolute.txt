@@ -28,3 +28,15 @@ D:\School\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.pdb
 D:\School\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.dll.config
 D:\School\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenModel.pdb
 D:\School\GitHub\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenLogic.dll
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenLogic.pdb
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.dll
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenModel.dll
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.pdb
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\bin\Debug\SomerenModel.pdb
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.pdb
