@@ -253,11 +253,11 @@
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
             this.pnl_Base.Controls.Add(this.pic_Chapoo);
+            this.pnl_Base.Controls.Add(this.pnl_Overzicht);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_Reservering);
             this.pnl_Base.Controls.Add(this.pnl_Voorraad);
             this.pnl_Base.Controls.Add(this.pnl_Tafels);
-            this.pnl_Base.Controls.Add(this.pnl_Overzicht);
             this.pnl_Base.Location = new System.Drawing.Point(0, 0);
             this.pnl_Base.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_Base.Name = "pnl_Base";
