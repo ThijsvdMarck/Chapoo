@@ -15,12 +15,12 @@ namespace SomerenUI
 {
     public partial class SomerenUI : Form
     {
-        
+
         public SomerenUI()
         {
             InitializeComponent();
         }
-
+       
         private void SomerenUI_Load(object sender, EventArgs e)
         {
             showPanel("LogIn");
