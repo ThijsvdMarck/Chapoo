@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SomerenUI));
             this.pnl_LogIn = new System.Windows.Forms.Panel();
-            this.pic_Poppetje = new System.Windows.Forms.PictureBox();
             this.btn_LogIn = new System.Windows.Forms.Button();
             this.txt_LogIn = new System.Windows.Forms.TextBox();
-            this.pic_Chapoo = new System.Windows.Forms.PictureBox();
             this.pnl_Overzicht = new System.Windows.Forms.Panel();
-            this.btn_Bar = new System.Windows.Forms.Button();
-            this.btn_Keuken = new System.Windows.Forms.Button();
             this.btn_Loguit = new System.Windows.Forms.Button();
-            this.btn_Financien = new System.Windows.Forms.Button();
-            this.btn_Voorraad = new System.Windows.Forms.Button();
-            this.btn_Tafels = new System.Windows.Forms.Button();
             this.pnl_Base = new System.Windows.Forms.Panel();
+            this.pnl_TafelOverzicht = new System.Windows.Forms.Panel();
+            this.lv_Tafels = new System.Windows.Forms.ListView();
+            this.pnl_Reservering = new System.Windows.Forms.Panel();
+            this.btn_Rzoeken = new System.Windows.Forms.Button();
+            this.btn_Rwijzigen = new System.Windows.Forms.Button();
+            this.btn_Rverwijderen = new System.Windows.Forms.Button();
+            this.btn_Rtoevoegen = new System.Windows.Forms.Button();
             this.pnl_Voorraad = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_Naam = new System.Windows.Forms.TextBox();
@@ -67,31 +67,29 @@
             this.lbl_Voorraadlijst = new System.Windows.Forms.Label();
             this.lv_Voorraad = new System.Windows.Forms.ListView();
             this.pnl_Tafels = new System.Windows.Forms.Panel();
-            this.pnl_Reservering = new System.Windows.Forms.Panel();
-            this.btn_Rzoeken = new System.Windows.Forms.Button();
-            this.btn_Rwijzigen = new System.Windows.Forms.Button();
-            this.btn_Rverwijderen = new System.Windows.Forms.Button();
-            this.btn_Rtoevoegen = new System.Windows.Forms.Button();
-            this.pnl_TafelOverzicht = new System.Windows.Forms.Panel();
-            this.lv_Tafels = new System.Windows.Forms.ListView();
             this.btn_TafelOverzicht = new System.Windows.Forms.Button();
             this.btn_Reserveringen = new System.Windows.Forms.Button();
             this.btn_Home = new System.Windows.Forms.Button();
             this.pic_ChapooHead = new System.Windows.Forms.PictureBox();
-            this.pic_ChapooHeader = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Bar = new System.Windows.Forms.Button();
+            this.btn_Keuken = new System.Windows.Forms.Button();
+            this.btn_Financien = new System.Windows.Forms.Button();
+            this.btn_Voorraad = new System.Windows.Forms.Button();
+            this.btn_Tafels = new System.Windows.Forms.Button();
+            this.pic_Poppetje = new System.Windows.Forms.PictureBox();
             this.pnl_LogIn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Chapoo)).BeginInit();
             this.pnl_Overzicht.SuspendLayout();
             this.pnl_Base.SuspendLayout();
+            this.pnl_TafelOverzicht.SuspendLayout();
+            this.pnl_Reservering.SuspendLayout();
             this.pnl_Voorraad.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gb_ItemDetails.SuspendLayout();
             this.pnl_Tafels.SuspendLayout();
-            this.pnl_Reservering.SuspendLayout();
-            this.pnl_TafelOverzicht.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHeader)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_LogIn
@@ -101,20 +99,10 @@
             this.pnl_LogIn.Controls.Add(this.btn_LogIn);
             this.pnl_LogIn.Controls.Add(this.txt_LogIn);
             this.pnl_LogIn.Location = new System.Drawing.Point(0, 0);
-            this.pnl_LogIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_LogIn.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_LogIn.Name = "pnl_LogIn";
             this.pnl_LogIn.Size = new System.Drawing.Size(601, 856);
             this.pnl_LogIn.TabIndex = 0;
-            // 
-            // pic_Poppetje
-            // 
-            this.pic_Poppetje.Image = ((System.Drawing.Image)(resources.GetObject("pic_Poppetje.Image")));
-            this.pic_Poppetje.Location = new System.Drawing.Point(96, 373);
-            this.pic_Poppetje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pic_Poppetje.Name = "pic_Poppetje";
-            this.pic_Poppetje.Size = new System.Drawing.Size(35, 31);
-            this.pic_Poppetje.TabIndex = 3;
-            this.pic_Poppetje.TabStop = false;
             // 
             // btn_LogIn
             // 
@@ -123,7 +111,7 @@
             this.btn_LogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LogIn.ForeColor = System.Drawing.Color.White;
             this.btn_LogIn.Location = new System.Drawing.Point(213, 440);
-            this.btn_LogIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_LogIn.Margin = new System.Windows.Forms.Padding(2);
             this.btn_LogIn.Name = "btn_LogIn";
             this.btn_LogIn.Size = new System.Drawing.Size(190, 50);
             this.btn_LogIn.TabIndex = 2;
@@ -134,20 +122,10 @@
             // 
             this.txt_LogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_LogIn.Location = new System.Drawing.Point(129, 373);
-            this.txt_LogIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_LogIn.Margin = new System.Windows.Forms.Padding(2);
             this.txt_LogIn.Name = "txt_LogIn";
             this.txt_LogIn.Size = new System.Drawing.Size(373, 32);
             this.txt_LogIn.TabIndex = 1;
-            // 
-            // pic_Chapoo
-            // 
-            this.pic_Chapoo.Image = ((System.Drawing.Image)(resources.GetObject("pic_Chapoo.Image")));
-            this.pic_Chapoo.Location = new System.Drawing.Point(427, 21);
-            this.pic_Chapoo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pic_Chapoo.Name = "pic_Chapoo";
-            this.pic_Chapoo.Size = new System.Drawing.Size(140, 122);
-            this.pic_Chapoo.TabIndex = 0;
-            this.pic_Chapoo.TabStop = false;
             // 
             // pnl_Overzicht
             // 
@@ -158,111 +136,119 @@
             this.pnl_Overzicht.Controls.Add(this.btn_Financien);
             this.pnl_Overzicht.Controls.Add(this.btn_Voorraad);
             this.pnl_Overzicht.Controls.Add(this.btn_Tafels);
-            this.pnl_Overzicht.Controls.Add(this.pic_ChapooHeader);
             this.pnl_Overzicht.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Overzicht.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Overzicht.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Overzicht.Name = "pnl_Overzicht";
             this.pnl_Overzicht.Size = new System.Drawing.Size(602, 861);
             this.pnl_Overzicht.TabIndex = 1;
-            // 
-            // btn_Bar
-            // 
-            this.btn_Bar.BackColor = System.Drawing.Color.White;
-            this.btn_Bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Bar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Bar.Image")));
-            this.btn_Bar.Location = new System.Drawing.Point(8, 190);
-            this.btn_Bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Bar.Name = "btn_Bar";
-            this.btn_Bar.Size = new System.Drawing.Size(240, 158);
-            this.btn_Bar.TabIndex = 2;
-            this.btn_Bar.Text = "Bar";
-            this.btn_Bar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Bar.UseVisualStyleBackColor = false;
-            // 
-            // btn_Keuken
-            // 
-            this.btn_Keuken.BackColor = System.Drawing.Color.White;
-            this.btn_Keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Keuken.Image = ((System.Drawing.Image)(resources.GetObject("btn_Keuken.Image")));
-            this.btn_Keuken.Location = new System.Drawing.Point(347, 190);
-            this.btn_Keuken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Keuken.Name = "btn_Keuken";
-            this.btn_Keuken.Size = new System.Drawing.Size(240, 158);
-            this.btn_Keuken.TabIndex = 4;
-            this.btn_Keuken.Text = "Keuken";
-            this.btn_Keuken.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Keuken.UseVisualStyleBackColor = false;
-            this.btn_Keuken.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Loguit
             // 
             this.btn_Loguit.BackColor = System.Drawing.Color.White;
             this.btn_Loguit.Location = new System.Drawing.Point(470, 790);
-            this.btn_Loguit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Loguit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Loguit.Name = "btn_Loguit";
             this.btn_Loguit.Size = new System.Drawing.Size(90, 36);
             this.btn_Loguit.TabIndex = 14;
             this.btn_Loguit.Text = "Log Uit";
             this.btn_Loguit.UseVisualStyleBackColor = false;
             // 
-            // btn_Financien
-            // 
-            this.btn_Financien.BackColor = System.Drawing.Color.White;
-            this.btn_Financien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Financien.Image = ((System.Drawing.Image)(resources.GetObject("btn_Financien.Image")));
-            this.btn_Financien.Location = new System.Drawing.Point(348, 604);
-            this.btn_Financien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Financien.Name = "btn_Financien";
-            this.btn_Financien.Size = new System.Drawing.Size(240, 158);
-            this.btn_Financien.TabIndex = 11;
-            this.btn_Financien.Text = "Financiën";
-            this.btn_Financien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Financien.UseVisualStyleBackColor = false;
-            // 
-            // btn_Voorraad
-            // 
-            this.btn_Voorraad.BackColor = System.Drawing.Color.White;
-            this.btn_Voorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voorraad.Image = ((System.Drawing.Image)(resources.GetObject("btn_Voorraad.Image")));
-            this.btn_Voorraad.Location = new System.Drawing.Point(9, 604);
-            this.btn_Voorraad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Voorraad.Name = "btn_Voorraad";
-            this.btn_Voorraad.Size = new System.Drawing.Size(240, 158);
-            this.btn_Voorraad.TabIndex = 10;
-            this.btn_Voorraad.Text = "Voorraad";
-            this.btn_Voorraad.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Voorraad.UseVisualStyleBackColor = false;
-            // 
-            // btn_Tafels
-            // 
-            this.btn_Tafels.BackColor = System.Drawing.Color.White;
-            this.btn_Tafels.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Tafels.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tafels.Image")));
-            this.btn_Tafels.Location = new System.Drawing.Point(8, 379);
-            this.btn_Tafels.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Tafels.Name = "btn_Tafels";
-            this.btn_Tafels.Size = new System.Drawing.Size(579, 191);
-            this.btn_Tafels.TabIndex = 6;
-            this.btn_Tafels.Text = "Tafels";
-            this.btn_Tafels.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Tafels.UseVisualStyleBackColor = false;
-            // 
             // pnl_Base
             // 
             this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnl_Base.Controls.Add(this.btn_Home);
+            this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
-            this.pnl_Base.Controls.Add(this.pic_Chapoo);
             this.pnl_Base.Controls.Add(this.pnl_Overzicht);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_Reservering);
             this.pnl_Base.Controls.Add(this.pnl_Voorraad);
             this.pnl_Base.Controls.Add(this.pnl_Tafels);
             this.pnl_Base.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Base.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Base.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(610, 864);
             this.pnl_Base.TabIndex = 15;
+            // 
+            // pnl_TafelOverzicht
+            // 
+            this.pnl_TafelOverzicht.Controls.Add(this.lv_Tafels);
+            this.pnl_TafelOverzicht.Location = new System.Drawing.Point(4, 46);
+            this.pnl_TafelOverzicht.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_TafelOverzicht.Name = "pnl_TafelOverzicht";
+            this.pnl_TafelOverzicht.Size = new System.Drawing.Size(597, 654);
+            this.pnl_TafelOverzicht.TabIndex = 20;
+            // 
+            // lv_Tafels
+            // 
+            this.lv_Tafels.HideSelection = false;
+            this.lv_Tafels.Location = new System.Drawing.Point(7, 14);
+            this.lv_Tafels.Margin = new System.Windows.Forms.Padding(2);
+            this.lv_Tafels.Name = "lv_Tafels";
+            this.lv_Tafels.Size = new System.Drawing.Size(582, 354);
+            this.lv_Tafels.TabIndex = 0;
+            this.lv_Tafels.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_Reservering
+            // 
+            this.pnl_Reservering.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnl_Reservering.Controls.Add(this.btn_Rzoeken);
+            this.pnl_Reservering.Controls.Add(this.btn_Rwijzigen);
+            this.pnl_Reservering.Controls.Add(this.btn_Rverwijderen);
+            this.pnl_Reservering.Controls.Add(this.btn_Rtoevoegen);
+            this.pnl_Reservering.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Reservering.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_Reservering.Name = "pnl_Reservering";
+            this.pnl_Reservering.Size = new System.Drawing.Size(605, 700);
+            this.pnl_Reservering.TabIndex = 16;
+            // 
+            // btn_Rzoeken
+            // 
+            this.btn_Rzoeken.BackColor = System.Drawing.Color.White;
+            this.btn_Rzoeken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Rzoeken.Location = new System.Drawing.Point(348, 124);
+            this.btn_Rzoeken.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Rzoeken.Name = "btn_Rzoeken";
+            this.btn_Rzoeken.Size = new System.Drawing.Size(172, 43);
+            this.btn_Rzoeken.TabIndex = 3;
+            this.btn_Rzoeken.Text = "Reservering zoeken";
+            this.btn_Rzoeken.UseVisualStyleBackColor = false;
+            // 
+            // btn_Rwijzigen
+            // 
+            this.btn_Rwijzigen.BackColor = System.Drawing.Color.White;
+            this.btn_Rwijzigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Rwijzigen.Location = new System.Drawing.Point(348, 35);
+            this.btn_Rwijzigen.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Rwijzigen.Name = "btn_Rwijzigen";
+            this.btn_Rwijzigen.Size = new System.Drawing.Size(172, 43);
+            this.btn_Rwijzigen.TabIndex = 2;
+            this.btn_Rwijzigen.Text = "Reservering wijzigen";
+            this.btn_Rwijzigen.UseVisualStyleBackColor = false;
+            // 
+            // btn_Rverwijderen
+            // 
+            this.btn_Rverwijderen.BackColor = System.Drawing.Color.White;
+            this.btn_Rverwijderen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Rverwijderen.Location = new System.Drawing.Point(66, 124);
+            this.btn_Rverwijderen.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Rverwijderen.Name = "btn_Rverwijderen";
+            this.btn_Rverwijderen.Size = new System.Drawing.Size(172, 43);
+            this.btn_Rverwijderen.TabIndex = 1;
+            this.btn_Rverwijderen.Text = "Reservering verwijderen";
+            this.btn_Rverwijderen.UseVisualStyleBackColor = false;
+            // 
+            // btn_Rtoevoegen
+            // 
+            this.btn_Rtoevoegen.BackColor = System.Drawing.Color.White;
+            this.btn_Rtoevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Rtoevoegen.Location = new System.Drawing.Point(66, 35);
+            this.btn_Rtoevoegen.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Rtoevoegen.Name = "btn_Rtoevoegen";
+            this.btn_Rtoevoegen.Size = new System.Drawing.Size(172, 43);
+            this.btn_Rtoevoegen.TabIndex = 0;
+            this.btn_Rtoevoegen.Text = "Reservering toevoegen";
+            this.btn_Rtoevoegen.UseVisualStyleBackColor = false;
             // 
             // pnl_Voorraad
             // 
@@ -272,7 +258,7 @@
             this.pnl_Voorraad.Controls.Add(this.lbl_Voorraadlijst);
             this.pnl_Voorraad.Controls.Add(this.lv_Voorraad);
             this.pnl_Voorraad.Location = new System.Drawing.Point(0, 158);
-            this.pnl_Voorraad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Voorraad.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Voorraad.Name = "pnl_Voorraad";
             this.pnl_Voorraad.Size = new System.Drawing.Size(603, 698);
             this.pnl_Voorraad.TabIndex = 16;
@@ -289,9 +275,9 @@
             this.groupBox1.Controls.Add(this.lbl_Type);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(274, 282);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(318, 203);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -301,7 +287,7 @@
             // 
             this.txt_Naam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Naam.Location = new System.Drawing.Point(122, 32);
-            this.txt_Naam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Naam.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Naam.Name = "txt_Naam";
             this.txt_Naam.Size = new System.Drawing.Size(86, 21);
             this.txt_Naam.TabIndex = 13;
@@ -310,7 +296,7 @@
             // 
             this.txt_Hoeveelheid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Hoeveelheid.Location = new System.Drawing.Point(122, 59);
-            this.txt_Hoeveelheid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Hoeveelheid.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Hoeveelheid.Name = "txt_Hoeveelheid";
             this.txt_Hoeveelheid.Size = new System.Drawing.Size(86, 21);
             this.txt_Hoeveelheid.TabIndex = 12;
@@ -322,7 +308,7 @@
             this.btn_VoegToe.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_VoegToe.ForeColor = System.Drawing.Color.White;
             this.btn_VoegToe.Location = new System.Drawing.Point(122, 135);
-            this.btn_VoegToe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_VoegToe.Margin = new System.Windows.Forms.Padding(2);
             this.btn_VoegToe.Name = "btn_VoegToe";
             this.btn_VoegToe.Size = new System.Drawing.Size(76, 35);
             this.btn_VoegToe.TabIndex = 11;
@@ -333,7 +319,7 @@
             // 
             this.txt_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Type.Location = new System.Drawing.Point(122, 86);
-            this.txt_Type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Type.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Type.Name = "txt_Type";
             this.txt_Type.Size = new System.Drawing.Size(86, 21);
             this.txt_Type.TabIndex = 6;
@@ -389,9 +375,9 @@
             this.gb_ItemDetails.Controls.Add(this.lbl_ID);
             this.gb_ItemDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_ItemDetails.Location = new System.Drawing.Point(274, 58);
-            this.gb_ItemDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_ItemDetails.Margin = new System.Windows.Forms.Padding(2);
             this.gb_ItemDetails.Name = "gb_ItemDetails";
-            this.gb_ItemDetails.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_ItemDetails.Padding = new System.Windows.Forms.Padding(2);
             this.gb_ItemDetails.Size = new System.Drawing.Size(318, 208);
             this.gb_ItemDetails.TabIndex = 2;
             this.gb_ItemDetails.TabStop = false;
@@ -405,7 +391,7 @@
             this.btn_PasToe.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_PasToe.ForeColor = System.Drawing.Color.White;
             this.btn_PasToe.Location = new System.Drawing.Point(217, 161);
-            this.btn_PasToe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_PasToe.Margin = new System.Windows.Forms.Padding(2);
             this.btn_PasToe.Name = "btn_PasToe";
             this.btn_PasToe.Size = new System.Drawing.Size(76, 35);
             this.btn_PasToe.TabIndex = 11;
@@ -419,7 +405,7 @@
             this.btn_Annuleer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Annuleer.ForeColor = System.Drawing.Color.White;
             this.btn_Annuleer.Location = new System.Drawing.Point(122, 161);
-            this.btn_Annuleer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Annuleer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Annuleer.Name = "btn_Annuleer";
             this.btn_Annuleer.Size = new System.Drawing.Size(76, 35);
             this.btn_Annuleer.TabIndex = 10;
@@ -433,7 +419,7 @@
             this.btn_Verwijder.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Verwijder.ForeColor = System.Drawing.Color.White;
             this.btn_Verwijder.Location = new System.Drawing.Point(23, 161);
-            this.btn_Verwijder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Verwijder.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Verwijder.Name = "btn_Verwijder";
             this.btn_Verwijder.Size = new System.Drawing.Size(76, 35);
             this.btn_Verwijder.TabIndex = 9;
@@ -447,7 +433,7 @@
             this.btn_Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Plus.ForeColor = System.Drawing.Color.White;
             this.btn_Plus.Location = new System.Drawing.Point(271, 110);
-            this.btn_Plus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Plus.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Plus.Name = "btn_Plus";
             this.btn_Plus.Size = new System.Drawing.Size(22, 20);
             this.btn_Plus.TabIndex = 8;
@@ -462,7 +448,7 @@
             this.btn_Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Min.ForeColor = System.Drawing.Color.White;
             this.btn_Min.Location = new System.Drawing.Point(237, 110);
-            this.btn_Min.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Min.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Min.Name = "btn_Min";
             this.btn_Min.Size = new System.Drawing.Size(22, 20);
             this.btn_Min.TabIndex = 7;
@@ -474,7 +460,7 @@
             // 
             this.txt_WijzigingVoorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_WijzigingVoorraad.Location = new System.Drawing.Point(140, 111);
-            this.txt_WijzigingVoorraad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_WijzigingVoorraad.Margin = new System.Windows.Forms.Padding(2);
             this.txt_WijzigingVoorraad.Name = "txt_WijzigingVoorraad";
             this.txt_WijzigingVoorraad.Size = new System.Drawing.Size(86, 21);
             this.txt_WijzigingVoorraad.TabIndex = 6;
@@ -563,7 +549,7 @@
             // 
             this.lv_Voorraad.HideSelection = false;
             this.lv_Voorraad.Location = new System.Drawing.Point(8, 58);
-            this.lv_Voorraad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lv_Voorraad.Margin = new System.Windows.Forms.Padding(2);
             this.lv_Voorraad.Name = "lv_Voorraad";
             this.lv_Voorraad.Size = new System.Drawing.Size(242, 610);
             this.lv_Voorraad.TabIndex = 0;
@@ -574,96 +560,16 @@
             this.pnl_Tafels.Controls.Add(this.btn_TafelOverzicht);
             this.pnl_Tafels.Controls.Add(this.btn_Reserveringen);
             this.pnl_Tafels.Location = new System.Drawing.Point(0, 147);
-            this.pnl_Tafels.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Tafels.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Tafels.Name = "pnl_Tafels";
             this.pnl_Tafels.Size = new System.Drawing.Size(602, 700);
             this.pnl_Tafels.TabIndex = 20;
-            // 
-            // pnl_Reservering
-            // 
-            this.pnl_Reservering.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnl_Reservering.Controls.Add(this.btn_Rzoeken);
-            this.pnl_Reservering.Controls.Add(this.btn_Rwijzigen);
-            this.pnl_Reservering.Controls.Add(this.btn_Rverwijderen);
-            this.pnl_Reservering.Controls.Add(this.btn_Rtoevoegen);
-            this.pnl_Reservering.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Reservering.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnl_Reservering.Name = "pnl_Reservering";
-            this.pnl_Reservering.Size = new System.Drawing.Size(605, 700);
-            this.pnl_Reservering.TabIndex = 16;
-            // 
-            // btn_Rzoeken
-            // 
-            this.btn_Rzoeken.BackColor = System.Drawing.Color.White;
-            this.btn_Rzoeken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Rzoeken.Location = new System.Drawing.Point(348, 124);
-            this.btn_Rzoeken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Rzoeken.Name = "btn_Rzoeken";
-            this.btn_Rzoeken.Size = new System.Drawing.Size(172, 43);
-            this.btn_Rzoeken.TabIndex = 3;
-            this.btn_Rzoeken.Text = "Reservering zoeken";
-            this.btn_Rzoeken.UseVisualStyleBackColor = false;
-            // 
-            // btn_Rwijzigen
-            // 
-            this.btn_Rwijzigen.BackColor = System.Drawing.Color.White;
-            this.btn_Rwijzigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Rwijzigen.Location = new System.Drawing.Point(348, 35);
-            this.btn_Rwijzigen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Rwijzigen.Name = "btn_Rwijzigen";
-            this.btn_Rwijzigen.Size = new System.Drawing.Size(172, 43);
-            this.btn_Rwijzigen.TabIndex = 2;
-            this.btn_Rwijzigen.Text = "Reservering wijzigen";
-            this.btn_Rwijzigen.UseVisualStyleBackColor = false;
-            // 
-            // btn_Rverwijderen
-            // 
-            this.btn_Rverwijderen.BackColor = System.Drawing.Color.White;
-            this.btn_Rverwijderen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Rverwijderen.Location = new System.Drawing.Point(66, 124);
-            this.btn_Rverwijderen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Rverwijderen.Name = "btn_Rverwijderen";
-            this.btn_Rverwijderen.Size = new System.Drawing.Size(172, 43);
-            this.btn_Rverwijderen.TabIndex = 1;
-            this.btn_Rverwijderen.Text = "Reservering verwijderen";
-            this.btn_Rverwijderen.UseVisualStyleBackColor = false;
-            // 
-            // btn_Rtoevoegen
-            // 
-            this.btn_Rtoevoegen.BackColor = System.Drawing.Color.White;
-            this.btn_Rtoevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Rtoevoegen.Location = new System.Drawing.Point(66, 35);
-            this.btn_Rtoevoegen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Rtoevoegen.Name = "btn_Rtoevoegen";
-            this.btn_Rtoevoegen.Size = new System.Drawing.Size(172, 43);
-            this.btn_Rtoevoegen.TabIndex = 0;
-            this.btn_Rtoevoegen.Text = "Reservering toevoegen";
-            this.btn_Rtoevoegen.UseVisualStyleBackColor = false;
-            // 
-            // pnl_TafelOverzicht
-            // 
-            this.pnl_TafelOverzicht.Controls.Add(this.lv_Tafels);
-            this.pnl_TafelOverzicht.Location = new System.Drawing.Point(4, 46);
-            this.pnl_TafelOverzicht.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnl_TafelOverzicht.Name = "pnl_TafelOverzicht";
-            this.pnl_TafelOverzicht.Size = new System.Drawing.Size(597, 654);
-            this.pnl_TafelOverzicht.TabIndex = 20;
-            // 
-            // lv_Tafels
-            // 
-            this.lv_Tafels.HideSelection = false;
-            this.lv_Tafels.Location = new System.Drawing.Point(7, 14);
-            this.lv_Tafels.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lv_Tafels.Name = "lv_Tafels";
-            this.lv_Tafels.Size = new System.Drawing.Size(582, 354);
-            this.lv_Tafels.TabIndex = 0;
-            this.lv_Tafels.UseCompatibleStateImageBehavior = false;
             // 
             // btn_TafelOverzicht
             // 
             this.btn_TafelOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TafelOverzicht.Location = new System.Drawing.Point(0, 0);
-            this.btn_TafelOverzicht.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_TafelOverzicht.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TafelOverzicht.Name = "btn_TafelOverzicht";
             this.btn_TafelOverzicht.Size = new System.Drawing.Size(158, 47);
             this.btn_TafelOverzicht.TabIndex = 18;
@@ -674,7 +580,7 @@
             // 
             this.btn_Reserveringen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reserveringen.Location = new System.Drawing.Point(445, 0);
-            this.btn_Reserveringen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Reserveringen.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Reserveringen.Name = "btn_Reserveringen";
             this.btn_Reserveringen.Size = new System.Drawing.Size(158, 47);
             this.btn_Reserveringen.TabIndex = 19;
@@ -686,7 +592,7 @@
             this.btn_Home.BackColor = System.Drawing.Color.White;
             this.btn_Home.Image = ((System.Drawing.Image)(resources.GetObject("btn_Home.Image")));
             this.btn_Home.Location = new System.Drawing.Point(0, 0);
-            this.btn_Home.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Size = new System.Drawing.Size(44, 47);
             this.btn_Home.TabIndex = 17;
@@ -702,15 +608,96 @@
             this.pic_ChapooHead.TabIndex = 16;
             this.pic_ChapooHead.TabStop = false;
             // 
-            // pic_ChapooHeader
+            // pictureBox1
             // 
-            this.pic_ChapooHeader.Image = ((System.Drawing.Image)(resources.GetObject("pic_ChapooHeader.Image")));
-            this.pic_ChapooHeader.Location = new System.Drawing.Point(0, 0);
-            this.pic_ChapooHeader.Margin = new System.Windows.Forms.Padding(2);
-            this.pic_ChapooHeader.Name = "pic_ChapooHeader";
-            this.pic_ChapooHeader.Size = new System.Drawing.Size(607, 249);
-            this.pic_ChapooHeader.TabIndex = 1;
-            this.pic_ChapooHeader.TabStop = false;
+            this.pictureBox1.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein;
+            this.pictureBox1.Location = new System.Drawing.Point(445, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btn_Bar
+            // 
+            this.btn_Bar.BackColor = System.Drawing.Color.White;
+            this.btn_Bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Bar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Bar.Image")));
+            this.btn_Bar.Location = new System.Drawing.Point(8, 190);
+            this.btn_Bar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Bar.Name = "btn_Bar";
+            this.btn_Bar.Size = new System.Drawing.Size(240, 158);
+            this.btn_Bar.TabIndex = 2;
+            this.btn_Bar.Text = "Bar";
+            this.btn_Bar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Bar.UseVisualStyleBackColor = false;
+            // 
+            // btn_Keuken
+            // 
+            this.btn_Keuken.BackColor = System.Drawing.Color.White;
+            this.btn_Keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Keuken.Image = ((System.Drawing.Image)(resources.GetObject("btn_Keuken.Image")));
+            this.btn_Keuken.Location = new System.Drawing.Point(347, 190);
+            this.btn_Keuken.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Keuken.Name = "btn_Keuken";
+            this.btn_Keuken.Size = new System.Drawing.Size(240, 158);
+            this.btn_Keuken.TabIndex = 4;
+            this.btn_Keuken.Text = "Keuken";
+            this.btn_Keuken.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Keuken.UseVisualStyleBackColor = false;
+            this.btn_Keuken.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Financien
+            // 
+            this.btn_Financien.BackColor = System.Drawing.Color.White;
+            this.btn_Financien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Financien.Image = ((System.Drawing.Image)(resources.GetObject("btn_Financien.Image")));
+            this.btn_Financien.Location = new System.Drawing.Point(348, 604);
+            this.btn_Financien.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Financien.Name = "btn_Financien";
+            this.btn_Financien.Size = new System.Drawing.Size(240, 158);
+            this.btn_Financien.TabIndex = 11;
+            this.btn_Financien.Text = "Financiën";
+            this.btn_Financien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Financien.UseVisualStyleBackColor = false;
+            // 
+            // btn_Voorraad
+            // 
+            this.btn_Voorraad.BackColor = System.Drawing.Color.White;
+            this.btn_Voorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voorraad.Image = ((System.Drawing.Image)(resources.GetObject("btn_Voorraad.Image")));
+            this.btn_Voorraad.Location = new System.Drawing.Point(9, 604);
+            this.btn_Voorraad.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Voorraad.Name = "btn_Voorraad";
+            this.btn_Voorraad.Size = new System.Drawing.Size(240, 158);
+            this.btn_Voorraad.TabIndex = 10;
+            this.btn_Voorraad.Text = "Voorraad";
+            this.btn_Voorraad.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Voorraad.UseVisualStyleBackColor = false;
+            // 
+            // btn_Tafels
+            // 
+            this.btn_Tafels.BackColor = System.Drawing.Color.White;
+            this.btn_Tafels.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Tafels.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tafels.Image")));
+            this.btn_Tafels.Location = new System.Drawing.Point(8, 379);
+            this.btn_Tafels.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Tafels.Name = "btn_Tafels";
+            this.btn_Tafels.Size = new System.Drawing.Size(579, 191);
+            this.btn_Tafels.TabIndex = 6;
+            this.btn_Tafels.Text = "Tafels";
+            this.btn_Tafels.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Tafels.UseVisualStyleBackColor = false;
+            // 
+            // pic_Poppetje
+            // 
+            this.pic_Poppetje.Image = ((System.Drawing.Image)(resources.GetObject("pic_Poppetje.Image")));
+            this.pic_Poppetje.Location = new System.Drawing.Point(96, 373);
+            this.pic_Poppetje.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_Poppetje.Name = "pic_Poppetje";
+            this.pic_Poppetje.Size = new System.Drawing.Size(35, 31);
+            this.pic_Poppetje.TabIndex = 3;
+            this.pic_Poppetje.TabStop = false;
             // 
             // SomerenUI
             // 
@@ -726,10 +713,10 @@
             this.Load += new System.EventHandler(this.SomerenUI_Load);
             this.pnl_LogIn.ResumeLayout(false);
             this.pnl_LogIn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Chapoo)).EndInit();
             this.pnl_Overzicht.ResumeLayout(false);
             this.pnl_Base.ResumeLayout(false);
+            this.pnl_TafelOverzicht.ResumeLayout(false);
+            this.pnl_Reservering.ResumeLayout(false);
             this.pnl_Voorraad.ResumeLayout(false);
             this.pnl_Voorraad.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -737,10 +724,9 @@
             this.gb_ItemDetails.ResumeLayout(false);
             this.gb_ItemDetails.PerformLayout();
             this.pnl_Tafels.ResumeLayout(false);
-            this.pnl_Reservering.ResumeLayout(false);
-            this.pnl_TafelOverzicht.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHeader)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -751,7 +737,6 @@
         private System.Windows.Forms.PictureBox pic_Poppetje;
         private System.Windows.Forms.Button btn_LogIn;
         private System.Windows.Forms.TextBox txt_LogIn;
-        private System.Windows.Forms.PictureBox pic_Chapoo;
         private System.Windows.Forms.Panel pnl_Overzicht;
         private System.Windows.Forms.Button btn_Keuken;
         private System.Windows.Forms.Button btn_Bar;
@@ -795,8 +780,8 @@
         private System.Windows.Forms.Label lbl_Type;
         private System.Windows.Forms.TextBox txt_Naam;
         private System.Windows.Forms.TextBox txt_Hoeveelheid;
-        private System.Windows.Forms.PictureBox pic_ChapooHeader;
         private System.Windows.Forms.PictureBox pic_ChapooHead;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
