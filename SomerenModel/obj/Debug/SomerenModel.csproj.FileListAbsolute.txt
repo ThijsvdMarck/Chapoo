@@ -20,3 +20,9 @@ C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.cspro
 C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
 C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.dll
 C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.pdb
+E:\School_Chapoo\Chapoo\SomerenModel\bin\Debug\SomerenModel.dll
+E:\School_Chapoo\Chapoo\SomerenModel\bin\Debug\SomerenModel.pdb
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.dll
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.pdb
