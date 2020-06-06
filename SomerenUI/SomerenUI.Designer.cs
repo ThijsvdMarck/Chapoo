@@ -1065,7 +1065,7 @@
             // 
             // lbl_AantalProvençaalseVissoep
             // 
-            this.lbl_AantalProvençaalseVissoep.Location = new System.Drawing.Point(531, 134);
+            this.lbl_AantalProvençaalseVissoep.Location = new System.Drawing.Point(531, 135);
             this.lbl_AantalProvençaalseVissoep.Name = "lbl_AantalProvençaalseVissoep";
             this.lbl_AantalProvençaalseVissoep.Size = new System.Drawing.Size(17, 29);
             this.lbl_AantalProvençaalseVissoep.TabIndex = 15;
