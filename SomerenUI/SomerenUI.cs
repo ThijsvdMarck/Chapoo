@@ -219,5 +219,30 @@ namespace SomerenUI
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_PrijsCocaCola_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_PrijsKalfstartaar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
