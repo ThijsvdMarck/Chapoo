@@ -20,11 +20,7 @@ namespace SomerenUI
         {
             InitializeComponent();
         }
- 
-        private void SomerenUI_Load(object sender, EventArgs e)
-        {
-            showPanel("LogIn");
-        }
+
         private void hideAllPanels()
         {
             // Hide all panels niet header
@@ -38,17 +34,22 @@ namespace SomerenUI
             pnl_Frisdrank.Hide();
             pnl_GedestilleerdeDranken.Hide();
             pnl_KoffieThee.Hide();
-            pnl_LunchBestlling.Hide();
+            pnl_LunchBestelling.Hide();
             pnl_Overzicht.Hide();
             pnl_Reservering.Hide();
             pnl_TafelOverzicht.Hide();
-            pnl_Tafels.Hide();
+
             pnl_Voorraad.Hide();
             pnl_Wijn.Hide();
             MenuBalkBestelling_pnl.Hide();
-            MenuBalkTafles_pnl.Hide();
+            MenuBalkTafels_pnl.Hide();
 
         }
+        private void SomerenUI_Load(object sender, EventArgs e)
+        {
+            showPanel("LogIn");
+        }
+        
 
         private void showPanel(string panelName)
         {
@@ -105,12 +106,12 @@ namespace SomerenUI
             else if(panelName == "Base"){
                 hideAllPanels();
                 pnl_Base.Show();
-            }
-
-            /* CODE VOOR ALLE SHOWPANELS MAAR IK KRIJG HIERDOOR VEEL FOUTMELDINGEN BIJ DE BUTTONS
-             else if (panelName == "BestellingsOverzicht")
+            }           
+            else if (panelName == "BestellingsOverzicht")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
                 pnl_BestellingsOverzicht.Show();
             }
             else if (panelName == "BestellingVersturen")
@@ -148,14 +149,17 @@ namespace SomerenUI
                 hideAllPanels();
                 pnl_KoffieThee.Show();
             }
-            else if (panelName == "LunchBestlling")
+            else if (panelName == "LunchBestelling")
             {
                 hideAllPanels();
-                pnl_LunchBestlling.Show();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
+                pnl_LunchBestelling.Show();
             }
             else if (panelName == "Overzicht")
             {
                 hideAllPanels();
+                pnl_Base.Show();
                 pnl_Overzicht.Show();
             }
             else if (panelName == "Reservering")
@@ -176,11 +180,13 @@ namespace SomerenUI
             else if (panelName == "Tafels")
             {
                 hideAllPanels();
-                pnl_Tafels.Show();
+                pnl_Base.Show();
+                pnl_TafelOverzicht.Show();
             }
             else if (panelName == "Voorraad")
             {
                 hideAllPanels();
+                pnl_Base.Show();
                 pnl_Voorraad.Show();
             }
             else if (panelName == "Wijn")
@@ -193,12 +199,12 @@ namespace SomerenUI
                 hideAllPanels();
                 MenuBalkBestelling_pnl.Show();
             }
-            else if (panelName == "MenuBalkTafles")
+            else if (panelName == "MenuBalkTafels")
             {
                 hideAllPanels();
-                MenuBalkTafles_pnl.Show();
+                MenuBalkTafels_pnl.Show();
             }
-             */
+             
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -263,7 +269,7 @@ namespace SomerenUI
 
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
-            showPanel("Base");
+            showPanel("Overzicht");
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -419,6 +425,36 @@ namespace SomerenUI
         private void button24_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Home_Click(object sender, EventArgs e)
+        {
+            showPanel("Overzicht");
+        }
+
+        private void btn_Voorraad_Click(object sender, EventArgs e)
+        {
+            showPanel("Voorraad");
+        }
+
+        private void btn_Tafels_Click(object sender, EventArgs e)
+        {
+            showPanel("Tafels");
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Opmerkingen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Tafel1_Click(object sender, EventArgs e)
+        {
+            showPanel("LunchBestelling");
         }
     }
 }
