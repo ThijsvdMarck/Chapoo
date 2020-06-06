@@ -386,6 +386,20 @@
             this.lbl_PrijsPortFromage = new System.Windows.Forms.Label();
             this.lbl_PrijsProvençaalseVissoep2 = new System.Windows.Forms.Label();
             this.lbl_PrijsConsomméFazant = new System.Windows.Forms.Label();
+            this.pnl_BestellingsOverzicht = new System.Windows.Forms.Panel();
+            this.lbl_AantalBestelling = new System.Windows.Forms.Label();
+            this.lbl_PrijsBestelling = new System.Windows.Forms.Label();
+            this.lbl_Bestelling = new System.Windows.Forms.Label();
+            this.txt_Opmerkingen = new System.Windows.Forms.RichTextBox();
+            this.lbl_BestellingOpmerkingen = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pnl_BestellingVersturen = new System.Windows.Forms.Panel();
+            this.pnl_BestellingVerstuurd = new System.Windows.Forms.Panel();
+            this.lbl_BestellingVersturen = new System.Windows.Forms.Label();
+            this.btn_BestellingVersturenJa = new System.Windows.Forms.Button();
+            this.btn_BestellingVersturenNee = new System.Windows.Forms.Button();
+            this.btn_BestellingVersturenOK = new System.Windows.Forms.Button();
+            this.lbl_BestellingVerstuurd = new System.Windows.Forms.Label();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -407,6 +421,9 @@
             this.pnl_Wijn.SuspendLayout();
             this.pnl_GedestilleerdeDranken.SuspendLayout();
             this.pnl_KoffieThee.SuspendLayout();
+            this.pnl_BestellingsOverzicht.SuspendLayout();
+            this.pnl_BestellingVersturen.SuspendLayout();
+            this.pnl_BestellingVerstuurd.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_LogIn
@@ -567,20 +584,20 @@
             // pnl_Base
             // 
             this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnl_Base.Controls.Add(this.MenuBalkBestelling_pnl);
+            this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_DinerBestelling);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestlling);
             this.pnl_Base.Controls.Add(this.pnl_Wijn);
             this.pnl_Base.Controls.Add(this.pnl_Frisdrank);
             this.pnl_Base.Controls.Add(this.pnl_Bier);
+            this.pnl_Base.Controls.Add(this.pnl_Voorraad);
             this.pnl_Base.Controls.Add(this.pnl_GedestilleerdeDranken);
             this.pnl_Base.Controls.Add(this.pnl_KoffieThee);
-            this.pnl_Base.Controls.Add(this.MenuBalkBestelling_pnl);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
-            this.pnl_Base.Controls.Add(this.pnl_Voorraad);
-            this.pnl_Base.Controls.Add(this.pnl_Reservering);
             this.pnl_Base.Controls.Add(this.pnl_Overzicht);
             this.pnl_Base.Controls.Add(this.pnl_Tafels);
             this.pnl_Base.Controls.Add(this.MenuBalkTafles_pnl);
@@ -1197,9 +1214,9 @@
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.txt_Naam);
             this.groupBox1.Controls.Add(this.txt_Hoeveelheid);
-            this.groupBox1.Controls.Add(this.btn_VoegToe);
             this.groupBox1.Controls.Add(this.txt_Type);
             this.groupBox1.Controls.Add(this.lbl_Hoeveelheid);
+            this.groupBox1.Controls.Add(this.btn_VoegToe);
             this.groupBox1.Controls.Add(this.lbl_NaamIT);
             this.groupBox1.Controls.Add(this.lbl_Type);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1491,7 +1508,7 @@
             this.pnl_Reservering.Controls.Add(this.btn_Rwijzigen);
             this.pnl_Reservering.Controls.Add(this.btn_Rverwijderen);
             this.pnl_Reservering.Controls.Add(this.btn_Rtoevoegen);
-            this.pnl_Reservering.Location = new System.Drawing.Point(0, 218);
+            this.pnl_Reservering.Location = new System.Drawing.Point(0, 0);
             this.pnl_Reservering.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Reservering.Name = "pnl_Reservering";
             this.pnl_Reservering.Size = new System.Drawing.Size(608, 644);
@@ -5119,13 +5136,182 @@
             this.lbl_PrijsConsomméFazant.TabIndex = 73;
             this.lbl_PrijsConsomméFazant.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pnl_BestellingsOverzicht
+            // 
+            this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVerstuurd);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVersturen);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_BestellingOpmerkingen);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.txt_Opmerkingen);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_AantalBestelling);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_PrijsBestelling);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_Bestelling);
+            this.pnl_BestellingsOverzicht.Location = new System.Drawing.Point(-1, 220);
+            this.pnl_BestellingsOverzicht.Name = "pnl_BestellingsOverzicht";
+            this.pnl_BestellingsOverzicht.Size = new System.Drawing.Size(610, 744);
+            this.pnl_BestellingsOverzicht.TabIndex = 74;
+            // 
+            // lbl_AantalBestelling
+            // 
+            this.lbl_AantalBestelling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_AantalBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_AantalBestelling.ForeColor = System.Drawing.Color.White;
+            this.lbl_AantalBestelling.Location = new System.Drawing.Point(508, 38);
+            this.lbl_AantalBestelling.Name = "lbl_AantalBestelling";
+            this.lbl_AantalBestelling.Size = new System.Drawing.Size(103, 29);
+            this.lbl_AantalBestelling.TabIndex = 4;
+            this.lbl_AantalBestelling.Text = "Aantal";
+            this.lbl_AantalBestelling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_PrijsBestelling
+            // 
+            this.lbl_PrijsBestelling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_PrijsBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_PrijsBestelling.ForeColor = System.Drawing.Color.White;
+            this.lbl_PrijsBestelling.Location = new System.Drawing.Point(410, 38);
+            this.lbl_PrijsBestelling.Name = "lbl_PrijsBestelling";
+            this.lbl_PrijsBestelling.Size = new System.Drawing.Size(100, 29);
+            this.lbl_PrijsBestelling.TabIndex = 3;
+            this.lbl_PrijsBestelling.Text = "Prijs";
+            this.lbl_PrijsBestelling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Bestelling
+            // 
+            this.lbl_Bestelling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Bestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_Bestelling.ForeColor = System.Drawing.Color.White;
+            this.lbl_Bestelling.Location = new System.Drawing.Point(1, 35);
+            this.lbl_Bestelling.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_Bestelling.Name = "lbl_Bestelling";
+            this.lbl_Bestelling.Size = new System.Drawing.Size(610, 32);
+            this.lbl_Bestelling.TabIndex = 2;
+            this.lbl_Bestelling.Text = "Bestelling";
+            this.lbl_Bestelling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Opmerkingen
+            // 
+            this.txt_Opmerkingen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Opmerkingen.Location = new System.Drawing.Point(67, 436);
+            this.txt_Opmerkingen.Name = "txt_Opmerkingen";
+            this.txt_Opmerkingen.Size = new System.Drawing.Size(467, 193);
+            this.txt_Opmerkingen.TabIndex = 6;
+            this.txt_Opmerkingen.Text = "";
+            // 
+            // lbl_BestellingOpmerkingen
+            // 
+            this.lbl_BestellingOpmerkingen.AutoSize = true;
+            this.lbl_BestellingOpmerkingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingOpmerkingen.Location = new System.Drawing.Point(64, 420);
+            this.lbl_BestellingOpmerkingen.Name = "lbl_BestellingOpmerkingen";
+            this.lbl_BestellingOpmerkingen.Size = new System.Drawing.Size(92, 16);
+            this.lbl_BestellingOpmerkingen.TabIndex = 7;
+            this.lbl_BestellingOpmerkingen.Text = "Opmerkingen:";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.ForestGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(241, 888);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 48);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Bestel";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // pnl_BestellingVersturen
+            // 
+            this.pnl_BestellingVersturen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_BestellingVersturen.Controls.Add(this.btn_BestellingVersturenNee);
+            this.pnl_BestellingVersturen.Controls.Add(this.btn_BestellingVersturenJa);
+            this.pnl_BestellingVersturen.Controls.Add(this.lbl_BestellingVersturen);
+            this.pnl_BestellingVersturen.Location = new System.Drawing.Point(81, 124);
+            this.pnl_BestellingVersturen.Name = "pnl_BestellingVersturen";
+            this.pnl_BestellingVersturen.Size = new System.Drawing.Size(437, 262);
+            this.pnl_BestellingVersturen.TabIndex = 8;
+            // 
+            // pnl_BestellingVerstuurd
+            // 
+            this.pnl_BestellingVerstuurd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_BestellingVerstuurd.Controls.Add(this.btn_BestellingVersturenOK);
+            this.pnl_BestellingVerstuurd.Controls.Add(this.lbl_BestellingVerstuurd);
+            this.pnl_BestellingVerstuurd.Location = new System.Drawing.Point(81, 124);
+            this.pnl_BestellingVerstuurd.Name = "pnl_BestellingVerstuurd";
+            this.pnl_BestellingVerstuurd.Size = new System.Drawing.Size(437, 262);
+            this.pnl_BestellingVerstuurd.TabIndex = 9;
+            // 
+            // lbl_BestellingVersturen
+            // 
+            this.lbl_BestellingVersturen.AutoSize = true;
+            this.lbl_BestellingVersturen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingVersturen.Location = new System.Drawing.Point(117, 78);
+            this.lbl_BestellingVersturen.Name = "lbl_BestellingVersturen";
+            this.lbl_BestellingVersturen.Size = new System.Drawing.Size(214, 25);
+            this.lbl_BestellingVersturen.TabIndex = 0;
+            this.lbl_BestellingVersturen.Text = "Bestelling versturen?";
+            // 
+            // btn_BestellingVersturenJa
+            // 
+            this.btn_BestellingVersturenJa.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_BestellingVersturenJa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_BestellingVersturenJa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BestellingVersturenJa.ForeColor = System.Drawing.Color.White;
+            this.btn_BestellingVersturenJa.Location = new System.Drawing.Point(45, 166);
+            this.btn_BestellingVersturenJa.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BestellingVersturenJa.Name = "btn_BestellingVersturenJa";
+            this.btn_BestellingVersturenJa.Size = new System.Drawing.Size(127, 48);
+            this.btn_BestellingVersturenJa.TabIndex = 13;
+            this.btn_BestellingVersturenJa.Text = "Ja";
+            this.btn_BestellingVersturenJa.UseVisualStyleBackColor = false;
+            // 
+            // btn_BestellingVersturenNee
+            // 
+            this.btn_BestellingVersturenNee.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_BestellingVersturenNee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_BestellingVersturenNee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BestellingVersturenNee.ForeColor = System.Drawing.Color.White;
+            this.btn_BestellingVersturenNee.Location = new System.Drawing.Point(245, 166);
+            this.btn_BestellingVersturenNee.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BestellingVersturenNee.Name = "btn_BestellingVersturenNee";
+            this.btn_BestellingVersturenNee.Size = new System.Drawing.Size(127, 48);
+            this.btn_BestellingVersturenNee.TabIndex = 14;
+            this.btn_BestellingVersturenNee.Text = "Nee";
+            this.btn_BestellingVersturenNee.UseVisualStyleBackColor = false;
+            // 
+            // btn_BestellingVersturenOK
+            // 
+            this.btn_BestellingVersturenOK.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_BestellingVersturenOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_BestellingVersturenOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BestellingVersturenOK.ForeColor = System.Drawing.Color.White;
+            this.btn_BestellingVersturenOK.Location = new System.Drawing.Point(160, 151);
+            this.btn_BestellingVersturenOK.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BestellingVersturenOK.Name = "btn_BestellingVersturenOK";
+            this.btn_BestellingVersturenOK.Size = new System.Drawing.Size(127, 48);
+            this.btn_BestellingVersturenOK.TabIndex = 15;
+            this.btn_BestellingVersturenOK.Text = "OK";
+            this.btn_BestellingVersturenOK.UseVisualStyleBackColor = false;
+            // 
+            // lbl_BestellingVerstuurd
+            // 
+            this.lbl_BestellingVerstuurd.AutoSize = true;
+            this.lbl_BestellingVerstuurd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingVerstuurd.Location = new System.Drawing.Point(117, 78);
+            this.lbl_BestellingVerstuurd.Name = "lbl_BestellingVerstuurd";
+            this.lbl_BestellingVerstuurd.Size = new System.Drawing.Size(202, 25);
+            this.lbl_BestellingVerstuurd.TabIndex = 14;
+            this.lbl_BestellingVerstuurd.Text = "Bestelling verstuurd";
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(610, 868);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.pnl_Base);
+            this.Controls.Add(this.pnl_Reservering);
             this.Controls.Add(this.pnl_LogIn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SomerenUI";
@@ -5157,6 +5343,12 @@
             this.pnl_Wijn.ResumeLayout(false);
             this.pnl_GedestilleerdeDranken.ResumeLayout(false);
             this.pnl_KoffieThee.ResumeLayout(false);
+            this.pnl_BestellingsOverzicht.ResumeLayout(false);
+            this.pnl_BestellingsOverzicht.PerformLayout();
+            this.pnl_BestellingVersturen.ResumeLayout(false);
+            this.pnl_BestellingVersturen.PerformLayout();
+            this.pnl_BestellingVerstuurd.ResumeLayout(false);
+            this.pnl_BestellingVerstuurd.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5520,6 +5712,20 @@
         private System.Windows.Forms.Label lbl_PrijsKrabZalm;
         private System.Windows.Forms.Label lbl_PrijsPathéFazant2;
         private System.Windows.Forms.Label lbl_PrijsKalfstartaar;
+        private System.Windows.Forms.Panel pnl_BestellingsOverzicht;
+        private System.Windows.Forms.Panel pnl_BestellingVerstuurd;
+        private System.Windows.Forms.Button btn_BestellingVersturenOK;
+        private System.Windows.Forms.Label lbl_BestellingVerstuurd;
+        private System.Windows.Forms.Panel pnl_BestellingVersturen;
+        private System.Windows.Forms.Button btn_BestellingVersturenNee;
+        private System.Windows.Forms.Button btn_BestellingVersturenJa;
+        private System.Windows.Forms.Label lbl_BestellingVersturen;
+        private System.Windows.Forms.Label lbl_BestellingOpmerkingen;
+        private System.Windows.Forms.RichTextBox txt_Opmerkingen;
+        private System.Windows.Forms.Label lbl_AantalBestelling;
+        private System.Windows.Forms.Label lbl_PrijsBestelling;
+        private System.Windows.Forms.Label lbl_Bestelling;
+        private System.Windows.Forms.Button button3;
     }
 }
 

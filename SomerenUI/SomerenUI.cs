@@ -244,5 +244,70 @@ namespace SomerenUI
         {
 
         }
+
+        private void label1_Click_4(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
