@@ -20,25 +20,25 @@ namespace SomerenUI
         {
             InitializeComponent();
         }
-       
+ 
         private void SomerenUI_Load(object sender, EventArgs e)
         {
             showPanel("LogIn");
+        }
+        private void hideAllPanels()
+        {
+            // Hide all panels niet header
+            pnl_LogIn.Hide();
+            pnl_Base.Hide();
         }
 
         private void showPanel(string panelName)
         {
 
-            if(panelName == "Dashboard")
+            if(panelName == "LogIn")
             {
-                /*
-                // hide all other panels
-                pnl_Students.Hide();
-
-                // show dashboard
-                pnl_Dashboard.Show();
-                img_Dashboard.Show();
-                */
+                hideAllPanels();
+                pnl_LogIn.Show();
             }
             else if(panelName == "Students")
             {
@@ -83,6 +83,10 @@ namespace SomerenUI
                     listViewStudents.Items.Add(itm);
                 }
              */
+            }
+            else if(panelName == "Base"){
+                hideAllPanels();
+                pnl_Base.Show();
             }
         }
 
@@ -132,6 +136,66 @@ namespace SomerenUI
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Financien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_TafelOverzicht_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_LogIn_Click(object sender, EventArgs e)
+        {
+            showPanel("Base");
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_MinSteakTartaar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_LinguiniPaddestoelen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Hoofdgerechten_Click(object sender, EventArgs e)
         {
 
         }
