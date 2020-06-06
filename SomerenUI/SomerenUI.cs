@@ -127,26 +127,36 @@ namespace SomerenUI
             else if (panelName == "Bier")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
                 pnl_Bier.Show();
             }
             else if (panelName == "DinerBestelling")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
                 pnl_DinerBestelling.Show();
             }
             else if (panelName == "Frisdrank")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
                 pnl_Frisdrank.Show();
             }
             else if (panelName == "GedestilleerdeDranken")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
                 pnl_GedestilleerdeDranken.Show();
             }
             else if (panelName == "KoffieThee")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
                 pnl_KoffieThee.Show();
             }
             else if (panelName == "LunchBestelling")
@@ -167,16 +177,7 @@ namespace SomerenUI
                 hideAllPanels();
                 pnl_Reservering.Show();
             }
-            else if (panelName == "TafelOverzicht")
-            {
-                hideAllPanels();
-                pnl_TafelOverzicht.Show();
-            }
-            else if (panelName == "TafelOverzicht")
-            {
-                hideAllPanels();
-                pnl_TafelOverzicht.Show();
-            }
+
             else if (panelName == "Tafels")
             {
                 hideAllPanels();
@@ -192,6 +193,8 @@ namespace SomerenUI
             else if (panelName == "Wijn")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                MenuBalkBestelling_pnl.Show();
                 pnl_Wijn.Show();
             }
             else if (panelName == "MenuBalkBestelling_pnl")
@@ -264,7 +267,7 @@ namespace SomerenUI
 
         private void btn_TafelOverzicht_Click(object sender, EventArgs e)
         {
-
+            showPanel("LunchBestelling");
         }
 
         private void btn_LogIn_Click(object sender, EventArgs e)
@@ -324,17 +327,17 @@ namespace SomerenUI
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-
+            showPanel("GedestilleerdeDranken");
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-
+            showPanel("Wijn");
         }
 
         private void button26_Click(object sender, EventArgs e)
         {
-
+            showPanel("Bier");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -455,6 +458,141 @@ namespace SomerenUI
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
             showPanel("LunchBestelling");
+        }
+
+        private void btn_Drinken_Click(object sender, EventArgs e)
+        {
+            showPanel("Frisdrank");
+        }
+
+        private void btn_Diner_Click(object sender, EventArgs e)
+        {
+            showPanel("DinerBestelling");
+        }
+
+        private void btn_Lunch_Click(object sender, EventArgs e)
+        {
+            showPanel("LunchBestelling");
+        }
+
+        private void btn_FrisdrankKoffieThee_Click(object sender, EventArgs e)
+        {
+            showPanel("KoffieThee");
+        }
+
+        private void btn_BierFrisdrank_Click(object sender, EventArgs e)
+        {
+            showPanel("Frisdrank");
+        }
+
+        private void btn_BierBier_Click(object sender, EventArgs e)
+        {
+            showPanel("Bier");
+        }
+
+        private void btn_BierWijn_Click(object sender, EventArgs e)
+        {
+            showPanel("Wijn");
+        }
+
+        private void btn_BierGedestilleerde_Click(object sender, EventArgs e)
+        {
+            showPanel("GedestilleerdeDranken");
+        }
+
+        private void btn_BierKoffieThee_Click(object sender, EventArgs e)
+        {
+            showPanel("KoffieThee");
+        }
+
+        private void btn_WijnFrisdrank_Click(object sender, EventArgs e)
+        {
+            showPanel("Frisdrank");
+        }
+
+        private void btn_WijnBier_Click(object sender, EventArgs e)
+        {
+            showPanel("Bier");
+        }
+
+        private void btn_WijnWijn_Click(object sender, EventArgs e)
+        {
+            showPanel("Wijn");
+        }
+
+        private void btn_WijnGedestileerde_Click(object sender, EventArgs e)
+        {
+            showPanel("GedestilleerdeDranken");
+        }
+
+        private void btn_WijnKoffieThee_Click(object sender, EventArgs e)
+        {
+            showPanel("KoffieThee");
+        }
+
+        private void btn_GedestilleerdeFrisdrank_Click(object sender, EventArgs e)
+        {
+            showPanel("Frisdrank");
+        }
+
+        private void btn_GedestilleerdeBier_Click(object sender, EventArgs e)
+        {
+            showPanel("Bier");
+        }
+
+        private void btn_GedestilleerdeWijn_Click(object sender, EventArgs e)
+        {
+            showPanel("Wijn");
+        }
+
+        private void btn_GedestilleerdeGedestilleerde_Click(object sender, EventArgs e)
+        {
+            showPanel("GedestilleerdeDranken");
+        }
+
+        private void btn_GedestilleerdeKoffieThee_Click(object sender, EventArgs e)
+        {
+            showPanel("KoffieThee");
+        }
+
+        private void btn_KoffieTheeFrisdrank_Click(object sender, EventArgs e)
+        {
+            showPanel("Frisdrank");
+        }
+
+        private void btn_KoffieTheeBier_Click(object sender, EventArgs e)
+        {
+            showPanel("Bier");
+        }
+
+        private void btn_KoffieTheeWijn_Click(object sender, EventArgs e)
+        {
+            showPanel("Wijn");
+        }
+
+        private void btn_KoffieTheeGedestilleerde_Click(object sender, EventArgs e)
+        {
+            showPanel("GedestilleerdeDranken");
+        }
+
+        private void btn_KoffieTheeKoffieThee_Click(object sender, EventArgs e)
+        {
+            showPanel("KoffieThee");
+        }
+
+        private void btn_Lunch2_Click(object sender, EventArgs e)
+        {
+            showPanel("LunchBestelling");
+        }
+
+        private void btn_Bestelling_Click(object sender, EventArgs e)
+        {
+            showPanel("BestellingsOverzicht");
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            showPanel("Tafels");
         }
     }
 }
