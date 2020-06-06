@@ -30,6 +30,24 @@ namespace SomerenUI
             // Hide all panels niet header
             pnl_LogIn.Hide();
             pnl_Base.Hide();
+            pnl_BestellingsOverzicht.Hide();
+            pnl_BestellingVersturen.Hide();
+            pnl_BestellingVerstuurd.Hide();
+            pnl_Bier.Hide();
+            pnl_DinerBestelling.Hide();
+            pnl_Frisdrank.Hide();
+            pnl_GedestilleerdeDranken.Hide();
+            pnl_KoffieThee.Hide();
+            pnl_LunchBestlling.Hide();
+            pnl_Overzicht.Hide();
+            pnl_Reservering.Hide();
+            pnl_TafelOverzicht.Hide();
+            pnl_Tafels.Hide();
+            pnl_Voorraad.Hide();
+            pnl_Wijn.Hide();
+            MenuBalkBestelling_pnl.Hide();
+            MenuBalkTafles_pnl.Hide();
+
         }
 
         private void showPanel(string panelName)
@@ -88,6 +106,99 @@ namespace SomerenUI
                 hideAllPanels();
                 pnl_Base.Show();
             }
+
+            /* CODE VOOR ALLE SHOWPANELS MAAR IK KRIJG HIERDOOR VEEL FOUTMELDINGEN BIJ DE BUTTONS
+             else if (panelName == "BestellingsOverzicht")
+            {
+                hideAllPanels();
+                pnl_BestellingsOverzicht.Show();
+            }
+            else if (panelName == "BestellingVersturen")
+            {
+                hideAllPanels();
+                pnl_BestellingVersturen.Show();
+            }
+            else if (panelName == "BestellingVerstuurd")
+            {
+                hideAllPanels();
+                pnl_BestellingVerstuurd.Show();
+            }
+            else if (panelName == "Bier")
+            {
+                hideAllPanels();
+                pnl_Bier.Show();
+            }
+            else if (panelName == "DinerBestelling")
+            {
+                hideAllPanels();
+                pnl_DinerBestelling.Show();
+            }
+            else if (panelName == "Frisdrank")
+            {
+                hideAllPanels();
+                pnl_Frisdrank.Show();
+            }
+            else if (panelName == "GedestilleerdeDranken")
+            {
+                hideAllPanels();
+                pnl_GedestilleerdeDranken.Show();
+            }
+            else if (panelName == "KoffieThee")
+            {
+                hideAllPanels();
+                pnl_KoffieThee.Show();
+            }
+            else if (panelName == "LunchBestlling")
+            {
+                hideAllPanels();
+                pnl_LunchBestlling.Show();
+            }
+            else if (panelName == "Overzicht")
+            {
+                hideAllPanels();
+                pnl_Overzicht.Show();
+            }
+            else if (panelName == "Reservering")
+            {
+                hideAllPanels();
+                pnl_Reservering.Show();
+            }
+            else if (panelName == "TafelOverzicht")
+            {
+                hideAllPanels();
+                pnl_TafelOverzicht.Show();
+            }
+            else if (panelName == "TafelOverzicht")
+            {
+                hideAllPanels();
+                pnl_TafelOverzicht.Show();
+            }
+            else if (panelName == "Tafels")
+            {
+                hideAllPanels();
+                pnl_Tafels.Show();
+            }
+            else if (panelName == "Voorraad")
+            {
+                hideAllPanels();
+                pnl_Voorraad.Show();
+            }
+            else if (panelName == "Wijn")
+            {
+                hideAllPanels();
+                pnl_Wijn.Show();
+            }
+            else if (panelName == "MenuBalkBestelling_pnl")
+            {
+                hideAllPanels();
+                MenuBalkBestelling_pnl.Show();
+            }
+            else if (panelName == "MenuBalkTafles")
+            {
+                hideAllPanels();
+                MenuBalkTafles_pnl.Show();
+            }
+             */
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
