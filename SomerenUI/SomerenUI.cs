@@ -38,12 +38,18 @@ namespace SomerenUI
             pnl_Overzicht.Hide();
             pnl_Reservering.Hide();
             pnl_TafelOverzicht.Hide();
-
             pnl_Voorraad.Hide();
             pnl_Wijn.Hide();
-            MenuBalkBestelling_pnl.Hide();
-            MenuBalkTafels_pnl.Hide();
-
+            pnl_MenuBalkBestelling.Hide();
+            pnl_MenuBalkTafels.Hide();
+            pnl_Dag.Hide();
+            pnl_Week.Hide();
+            pnl_Maand.Hide();
+            pnl_DatumKiezen.Hide();
+            pnl_MenuBalkFinanciën.Hide();
+            pnl_RekeningOverzicht.Hide();
+            pnl_MenuBalkRekening.Hide();
+           
         }
         private void SomerenUI_Load(object sender, EventArgs e)
         {
@@ -111,59 +117,65 @@ namespace SomerenUI
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_BestellingsOverzicht.Show();
             }
             else if (panelName == "BestellingVersturen")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkBestelling.Show();
+                pnl_BestellingsOverzicht.Show();
                 pnl_BestellingVersturen.Show();
             }
             else if (panelName == "BestellingVerstuurd")
             {
                 hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkBestelling.Show();
+                pnl_BestellingsOverzicht.Show();
                 pnl_BestellingVerstuurd.Show();
             }
             else if (panelName == "Bier")
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_Bier.Show();
             }
             else if (panelName == "DinerBestelling")
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_DinerBestelling.Show();
             }
             else if (panelName == "Frisdrank")
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_Frisdrank.Show();
             }
             else if (panelName == "GedestilleerdeDranken")
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_GedestilleerdeDranken.Show();
             }
             else if (panelName == "KoffieThee")
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_KoffieThee.Show();
             }
             else if (panelName == "LunchBestelling")
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_LunchBestelling.Show();
             }
             else if (panelName == "Overzicht")
@@ -194,20 +206,56 @@ namespace SomerenUI
             {
                 hideAllPanels();
                 pnl_Base.Show();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
                 pnl_Wijn.Show();
             }
             else if (panelName == "MenuBalkBestelling_pnl")
             {
                 hideAllPanels();
-                MenuBalkBestelling_pnl.Show();
+                pnl_MenuBalkBestelling.Show();
             }
             else if (panelName == "MenuBalkTafels")
             {
                 hideAllPanels();
-                MenuBalkTafels_pnl.Show();
+                pnl_MenuBalkTafels.Show();
             }
-             
+            else if (panelName == "Dag")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkFinanciën.Show();
+                pnl_Dag.Show();
+            }
+            else if (panelName == "Week")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkFinanciën.Show();
+                pnl_Week.Show();
+            }
+            else if (panelName == "Maand")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkFinanciën.Show();
+                pnl_Maand.Show();
+            }
+            else if (panelName == "DatumKiezen")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkFinanciën.Show();
+                pnl_DatumKiezen.Show();
+            }
+            else if (panelName == "RekeningOverzicht")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkRekening.Show();
+                pnl_RekeningOverzicht.Show();
+
+            }
+
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -262,7 +310,7 @@ namespace SomerenUI
 
         private void btn_Financien_Click(object sender, EventArgs e)
         {
-
+            showPanel("Dag");
         }
 
         private void btn_TafelOverzicht_Click(object sender, EventArgs e)
@@ -457,7 +505,7 @@ namespace SomerenUI
 
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            showPanel("LunchBestelling");
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Drinken_Click(object sender, EventArgs e)
@@ -592,7 +640,52 @@ namespace SomerenUI
 
         private void button3_Click_2(object sender, EventArgs e)
         {
+            showPanel("BestellingVersturen");
+        }
+
+        private void btn_BestellingVersturenJa_Click(object sender, EventArgs e)
+        {
+            showPanel("BestellingVerstuurd");
+        }
+
+        private void btn_BestellingVersturenOK_Click(object sender, EventArgs e)
+        {
             showPanel("Tafels");
+        }
+
+        private void btn_BestellingVersturenNee_Click(object sender, EventArgs e)
+        {
+            showPanel("BestellingsOverzicht");
+        }
+
+        private void btn_Dag_Click(object sender, EventArgs e)
+        {
+            showPanel("Dag");
+        }
+
+        private void btn_Week_Click(object sender, EventArgs e)
+        {
+            showPanel("Week");
+        }
+
+        private void btn_Maand_Click(object sender, EventArgs e)
+        {
+            showPanel("Maand");
+        }
+
+        private void btn_DatumKiezen_Click(object sender, EventArgs e)
+        {
+            showPanel("DatumKiezen");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            showPanel("Tafels");
+        }
+
+        private void btn_BestellingOpnemen_Click(object sender, EventArgs e)
+        {
+            showPanel("LunchBestelling");
         }
     }
 }
