@@ -14,3 +14,15 @@ D:\School\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyRefere
 D:\School\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
 D:\School\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.dll
 D:\School\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.pdb
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\bin\Debug\SomerenModel.dll
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\bin\Debug\SomerenModel.pdb
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.dll
+C:\Users\Thijs\Documents\GitHub\Chapoo\SomerenModel\obj\Debug\SomerenModel.pdb
+E:\School_Chapoo\Chapoo\SomerenModel\bin\Debug\SomerenModel.dll
+E:\School_Chapoo\Chapoo\SomerenModel\bin\Debug\SomerenModel.pdb
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.dll
+E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.pdb
