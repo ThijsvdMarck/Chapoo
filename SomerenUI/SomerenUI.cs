@@ -49,6 +49,14 @@ namespace SomerenUI
             pnl_MenuBalkFinanciën.Hide();
             pnl_RekeningOverzicht.Hide();
             pnl_MenuBalkRekening.Hide();
+            pnl_Reservering.Hide();
+            pnl_MenuBalkReserveringen.Hide();
+            pnl_MenuBalkKeukenOverzicht.Hide();
+            pnl_MenuBalkBarOverzicht.Hide();
+            pnl_KeukenOverzicht.Hide();
+            pnl_BarOverzicht.Hide();
+            pnl_BestellingBar.Hide();
+            pnl_BestellingKeuken.Hide();
            
         }
         private void SomerenUI_Load(object sender, EventArgs e)
@@ -195,6 +203,7 @@ namespace SomerenUI
                 hideAllPanels();
                 pnl_Base.Show();
                 pnl_TafelOverzicht.Show();
+                pnl_MenuBalkTafels.Show();
             }
             else if (panelName == "Voorraad")
             {
@@ -255,6 +264,41 @@ namespace SomerenUI
                 pnl_RekeningOverzicht.Show();
 
             }
+            else if (panelName == "Reserveringen")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkReserveringen.Show();
+                pnl_Reservering.Show();
+            }
+            else if (panelName == "KeukenOverzicht")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkKeukenOverzicht.Show();
+                pnl_KeukenOverzicht.Show();
+            }
+            else if (panelName == "BarOverzicht")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkBarOverzicht.Show();
+                pnl_BarOverzicht.Show();
+            }
+            else if (panelName == "BarBestelling")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkBarOverzicht.Show();
+                pnl_BestellingBar.Show();
+            }
+            else if (panelName == "KeukenBestelling")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkKeukenOverzicht.Show();
+                pnl_BestellingKeuken.Show();
+            }
 
         }
 
@@ -290,7 +334,7 @@ namespace SomerenUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            showPanel("KeukenOverzicht");
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -463,20 +507,11 @@ namespace SomerenUI
 
         }
 
-        private void label40_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button22_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button24_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_Home_Click(object sender, EventArgs e)
         {
@@ -686,6 +721,46 @@ namespace SomerenUI
         private void btn_BestellingOpnemen_Click(object sender, EventArgs e)
         {
             showPanel("LunchBestelling");
+        }
+
+        private void btn_reserveringenRes_Click(object sender, EventArgs e)
+        {
+            showPanel("Reserveringen");
+        }
+
+        private void btn_Bar_Click(object sender, EventArgs e)
+        {
+            showPanel("BarOverzicht");
+        }
+
+        private void btn_Reserveringen_Click(object sender, EventArgs e)
+        {
+            showPanel("Reserveringen");
+        }
+
+        private void btn_TafelOverzichtRes_Click(object sender, EventArgs e)
+        {
+            showPanel("Tafels");
+        }
+
+        private void btn_ShowBestellingBar_Click(object sender, EventArgs e)
+        {
+            showPanel("BarBestelling");
+        }
+
+        private void btn_ShowBestellingKeuken_Click(object sender, EventArgs e)
+        {
+            showPanel("KeukenBestelling");
+        }
+
+        private void btn_BarOverzicht_Click(object sender, EventArgs e)
+        {
+            showPanel("BarOverzicht");
+        }
+
+        private void btn_KeukenOverzicht_Click(object sender, EventArgs e)
+        {
+            showPanel("KeukenOverzicht");
         }
     }
 }
