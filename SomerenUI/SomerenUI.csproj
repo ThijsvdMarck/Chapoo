@@ -33,6 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -97,6 +98,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\someren.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chapoo_logo_klein.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tafel10.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
