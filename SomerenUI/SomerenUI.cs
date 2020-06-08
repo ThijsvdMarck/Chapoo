@@ -119,8 +119,8 @@ namespace SomerenUI
                     listViewStudents.Items.Add(itm);
                 }
              */
-            }
-            else if(panelName == "Base"){
+            } 
+            else if (panelName == "Base"){
                 hideAllPanels();
                 pnl_Base.Show();
             }           
@@ -829,7 +829,11 @@ namespace SomerenUI
         {
             gb_GerechtToevoegen.Hide();
             gb_DrankToevoegen.Show();
+            vulDrankVoorraad();
+        }
 
+        private void vulDrankVoorraad()
+        {
             List<Drankje> drankList = drankService.GetDrankjes();
 
             // clear the listview before filling it again
@@ -855,6 +859,8 @@ namespace SomerenUI
 
                 itm = new ListViewItem(drankjes);
                 lv_Voorraad.Items.Add(itm);
+
+
             }
         }
 
@@ -863,6 +869,12 @@ namespace SomerenUI
             gb_GerechtToevoegen.Show();
             gb_DrankToevoegen.Hide();
 
+            vulGerechtVoorraad();
+
+
+        }
+        private void vulGerechtVoorraad()
+        {
             List<Gerecht> gerechtList = gerechtService.GetGerechten();
 
             // clear the listview before filling it again
@@ -906,10 +918,13 @@ namespace SomerenUI
             txt_HoeveelheidDrank.Clear();
             txt_DrankNaam.Clear();
             txt_PrijsDrank.Clear();
+
+            vulDrankVoorraad();
         }
 
         private void btn_VoegToeGerecht_Click(object sender, EventArgs e)
         {
+
             if (txt_NaamGerecht.Text == "" || txt_HoeveelheidGerecht.Text == "" || txt_SoortGerecht.Text == "" || txt_PrijsGerecht.Text == "" || txt_TypeGerecht.Text == "")
             {
                 MessageBox.Show("Vul alle velden in alstublieft.");
@@ -924,6 +939,9 @@ namespace SomerenUI
             txt_NaamGerecht.Clear();
             txt_PrijsGerecht.Clear();
             txt_SoortGerecht.Clear();
+
+
+            vulGerechtVoorraad();
         }
 
         private void btn_AfrekenBetalen_Click(object sender, EventArgs e)
