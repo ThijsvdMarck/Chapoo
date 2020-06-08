@@ -27,11 +27,24 @@ namespace SomerenLogic
                 Gerecht a = new Gerecht();
                 a.gerechtID = 1;
                 a.gerechtNaam = "VOEDSEL!!";
+                a.voorraad = 69;
 
                 return gerecht;
                 //throw new Exception("Someren couldn't connect to the database");
             }
 
+        }
+
+        public void UpdateGerecht(string query)
+        {
+            try
+            {
+                gerecht_db.Db_Update_Gerecht(query);
+            }
+            catch (Exception)
+            {
+                //
+            }
         }
     }
 }
