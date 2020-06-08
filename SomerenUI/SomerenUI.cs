@@ -59,6 +59,7 @@ namespace SomerenUI
             pnl_BarOverzicht.Hide();
             pnl_BestellingBar.Hide();
             pnl_BestellingKeuken.Hide();
+            pnl_AfrekenOverzicht.Hide();
            
         }
         private void SomerenUI_Load(object sender, EventArgs e)
@@ -360,6 +361,15 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkKeukenOverzicht.Show();
                 pnl_BestellingKeuken.Show();
+            }
+            else if (panelName == "Afrekenen")
+            {
+                hideAllPanels();
+                pnl_Base.Show();
+                pnl_MenuBalkRekening.Show();
+                pnl_AfrekenOverzicht.Show();
+                gb_Afgerekend.Hide();
+                gb_AfrekenPopUp.Hide();
             }
 
         }
@@ -914,6 +924,42 @@ namespace SomerenUI
             txt_NaamGerecht.Clear();
             txt_PrijsGerecht.Clear();
             txt_SoortGerecht.Clear();
+        }
+
+        private void btn_AfrekenBetalen_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Show();
+        }
+
+        private void btn_AfrekenAnnuleren_Click(object sender, EventArgs e)
+        {
+            showPanel("RekeningOverzicht");
+        }
+
+        private void btn_AfrekenNee_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Hide();
+        }
+
+        private void btnAfrekenJa_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Hide();
+            gb_Afgerekend.Show();
+        }
+
+        private void btn_BetalingVoltooid_Click(object sender, EventArgs e)
+        {
+            showPanel("Overzicht");
+        }
+
+        private void btn_Afrekenen_Click(object sender, EventArgs e)
+        {
+            showPanel("Afrekenen");
+        }
+
+        private void btn_LogUit_Click(object sender, EventArgs e)
+        {
+            showPanel("LogIn");
         }
     }
 }
