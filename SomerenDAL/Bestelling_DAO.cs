@@ -28,14 +28,15 @@ namespace SomerenDAL
             {
                 Bestelling bestelling = new Bestelling()
                 {
+                    /*
                     drankID = (int)dr["DrankID"],
                     drankNaam = (string)(dr["Dranknaam"].ToString()),
-                    /* prijs = (double)(dr["drankje_prijs"].ToString("C2")),
+                     prijs = (double)(dr["drankje_prijs"].ToString("C2")),
                      alcholisch = (string)(dr["drankje_alcholisch"].ToString()),
                      aantal = (int)(dr["drankje_aantal"].ToString())                      
                        */
                 };
-                bestellingen.Add(drankje);
+                // bestellingen.Add();
             }
             return bestellingen;
         }
