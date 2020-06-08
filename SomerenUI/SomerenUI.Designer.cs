@@ -35,12 +35,28 @@
             this.btn_LogIn = new System.Windows.Forms.Button();
             this.txt_LogIn = new System.Windows.Forms.TextBox();
             this.pnl_Voorraad = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_Naam = new System.Windows.Forms.TextBox();
-            this.txt_Hoeveelheid = new System.Windows.Forms.TextBox();
-            this.txt_Type = new System.Windows.Forms.TextBox();
+            this.gb_DrankToevoegen = new System.Windows.Forms.GroupBox();
+            this.txt_PrijsDrank = new System.Windows.Forms.TextBox();
+            this.lbl_PrijsDrank = new System.Windows.Forms.Label();
+            this.txt_DrankNaam = new System.Windows.Forms.TextBox();
+            this.txt_HoeveelheidDrank = new System.Windows.Forms.TextBox();
+            this.txt_Alcoholisch = new System.Windows.Forms.TextBox();
+            this.lbl_HoeveelheidDrank = new System.Windows.Forms.Label();
+            this.btn_VoegToeDrank = new System.Windows.Forms.Button();
+            this.lbl_DrankNaam = new System.Windows.Forms.Label();
+            this.lbl_Alcoholisch = new System.Windows.Forms.Label();
+            this.btn_Gerechtvoorraad = new System.Windows.Forms.Button();
+            this.btn_DrankVoorraad = new System.Windows.Forms.Button();
+            this.gb_GerechtToevoegen = new System.Windows.Forms.GroupBox();
+            this.txt_PrijsGerecht = new System.Windows.Forms.TextBox();
+            this.lbl_PrijsGerecht = new System.Windows.Forms.Label();
+            this.lbl_SoortGerecht = new System.Windows.Forms.Label();
+            this.txt_SoortGerecht = new System.Windows.Forms.TextBox();
+            this.txt_NaamGerecht = new System.Windows.Forms.TextBox();
+            this.txt_HoeveelheidGerecht = new System.Windows.Forms.TextBox();
+            this.txt_TypeGerecht = new System.Windows.Forms.TextBox();
             this.lbl_Hoeveelheid = new System.Windows.Forms.Label();
-            this.btn_VoegToe = new System.Windows.Forms.Button();
+            this.btn_VoegToeGerecht = new System.Windows.Forms.Button();
             this.lbl_NaamIT = new System.Windows.Forms.Label();
             this.lbl_Type = new System.Windows.Forms.Label();
             this.gb_ItemDetails = new System.Windows.Forms.GroupBox();
@@ -59,6 +75,9 @@
             this.lbl_Voorraadlijst = new System.Windows.Forms.Label();
             this.lv_Voorraad = new System.Windows.Forms.ListView();
             this.pnl_Reservering = new System.Windows.Forms.Panel();
+            this.btn_ShowReservering = new System.Windows.Forms.Button();
+            this.lv_Reserveringen = new System.Windows.Forms.ListView();
+            this.mc_ReserveringCalander = new System.Windows.Forms.MonthCalendar();
             this.btn_Rzoeken = new System.Windows.Forms.Button();
             this.btn_Rwijzigen = new System.Windows.Forms.Button();
             this.btn_Rverwijderen = new System.Windows.Forms.Button();
@@ -411,9 +430,37 @@
             this.pnl_Dag = new System.Windows.Forms.Panel();
             this.lv_Dag = new System.Windows.Forms.ListView();
             this.pnl_Base = new System.Windows.Forms.Panel();
+            this.pnl_MenuBalkKeukenOverzicht = new System.Windows.Forms.Panel();
+            this.btn_KeukenOverzicht = new System.Windows.Forms.Button();
+            this.pnl_MenuBalkBarOverzicht = new System.Windows.Forms.Panel();
+            this.btn_BarOverzicht = new System.Windows.Forms.Button();
+            this.pnl_KeukenOverzicht = new System.Windows.Forms.Panel();
+            this.btn_ShowBestellingKeuken = new System.Windows.Forms.Button();
+            this.lv_KeukenOverzicht = new System.Windows.Forms.ListView();
+            this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
+            this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
+            this.lv_BarOverzicht = new System.Windows.Forms.ListView();
             this.pnl_MenuBalkReserveringen = new System.Windows.Forms.Panel();
             this.btn_reserveringenRes = new System.Windows.Forms.Button();
             this.btn_TafelOverzichtRes = new System.Windows.Forms.Button();
+            this.pnl_BestellingBar = new System.Windows.Forms.Panel();
+            this.btn_AfgerondBar = new System.Windows.Forms.Button();
+            this.btn_DeelKlaarBar = new System.Windows.Forms.Button();
+            this.gb_OpmerkingenBar = new System.Windows.Forms.GroupBox();
+            this.lbl_OpmerkingBar = new System.Windows.Forms.Label();
+            this.lv_BarBestelling = new System.Windows.Forms.ListView();
+            this.lbl_StatusBar = new System.Windows.Forms.Label();
+            this.lbl_TafelNrBar = new System.Windows.Forms.Label();
+            this.lbl_TafelBar = new System.Windows.Forms.Label();
+            this.pnl_BestellingKeuken = new System.Windows.Forms.Panel();
+            this.btn_AfgerondKeuken = new System.Windows.Forms.Button();
+            this.btn_DeelKlaarKeuken = new System.Windows.Forms.Button();
+            this.gb_OpmerkingenKeuken = new System.Windows.Forms.GroupBox();
+            this.lbl_OpmerkingenKeuken = new System.Windows.Forms.Label();
+            this.lv_BestellingenKeuken = new System.Windows.Forms.ListView();
+            this.lbl_StatusKeuken = new System.Windows.Forms.Label();
+            this.lbl_TafelNr = new System.Windows.Forms.Label();
+            this.lbl_Tafel = new System.Windows.Forms.Label();
             this.pnl_MenuBalkRekening = new System.Windows.Forms.Panel();
             this.btn_RekeningTafelOverzicht = new System.Windows.Forms.Button();
             this.pnl_RekeningOverzicht = new System.Windows.Forms.Panel();
@@ -437,42 +484,12 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.mc_ReserveringCalander = new System.Windows.Forms.MonthCalendar();
-            this.lv_Reserveringen = new System.Windows.Forms.ListView();
-            this.btn_ShowReservering = new System.Windows.Forms.Button();
-            this.pnl_KeukenOverzicht = new System.Windows.Forms.Panel();
-            this.lv_KeukenOverzicht = new System.Windows.Forms.ListView();
-            this.pnl_MenuBalkKeukenOverzicht = new System.Windows.Forms.Panel();
-            this.btn_KeukenOverzicht = new System.Windows.Forms.Button();
-            this.btn_ShowBestellingKeuken = new System.Windows.Forms.Button();
-            this.pnl_BestellingKeuken = new System.Windows.Forms.Panel();
-            this.lbl_Tafel = new System.Windows.Forms.Label();
-            this.lbl_TafelNr = new System.Windows.Forms.Label();
-            this.lbl_StatusKeuken = new System.Windows.Forms.Label();
-            this.lv_BestellingenKeuken = new System.Windows.Forms.ListView();
-            this.gb_OpmerkingenKeuken = new System.Windows.Forms.GroupBox();
-            this.lbl_OpmerkingenKeuken = new System.Windows.Forms.Label();
-            this.btn_DeelKlaarKeuken = new System.Windows.Forms.Button();
-            this.btn_AfgerondKeuken = new System.Windows.Forms.Button();
-            this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
-            this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
-            this.lv_BarOverzicht = new System.Windows.Forms.ListView();
-            this.pnl_BestellingBar = new System.Windows.Forms.Panel();
-            this.btn_AfgerondBar = new System.Windows.Forms.Button();
-            this.btn_DeelKlaarBar = new System.Windows.Forms.Button();
-            this.gb_OpmerkingenBar = new System.Windows.Forms.GroupBox();
-            this.lbl_OpmerkingBar = new System.Windows.Forms.Label();
-            this.lv_BarBestelling = new System.Windows.Forms.ListView();
-            this.lbl_StatusBar = new System.Windows.Forms.Label();
-            this.lbl_TafelNrBar = new System.Windows.Forms.Label();
-            this.lbl_TafelBar = new System.Windows.Forms.Label();
-            this.pnl_MenuBalkBarOverzicht = new System.Windows.Forms.Panel();
-            this.btn_BarOverzicht = new System.Windows.Forms.Button();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
             this.pnl_Voorraad.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gb_DrankToevoegen.SuspendLayout();
+            this.gb_GerechtToevoegen.SuspendLayout();
             this.gb_ItemDetails.SuspendLayout();
             this.pnl_Reservering.SuspendLayout();
             this.pnl_Overzicht.SuspendLayout();
@@ -493,21 +510,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Dag.SuspendLayout();
             this.pnl_Base.SuspendLayout();
+            this.pnl_MenuBalkKeukenOverzicht.SuspendLayout();
+            this.pnl_MenuBalkBarOverzicht.SuspendLayout();
+            this.pnl_KeukenOverzicht.SuspendLayout();
+            this.pnl_BarOverzicht.SuspendLayout();
             this.pnl_MenuBalkReserveringen.SuspendLayout();
+            this.pnl_BestellingBar.SuspendLayout();
+            this.gb_OpmerkingenBar.SuspendLayout();
+            this.pnl_BestellingKeuken.SuspendLayout();
+            this.gb_OpmerkingenKeuken.SuspendLayout();
             this.pnl_MenuBalkRekening.SuspendLayout();
             this.pnl_RekeningOverzicht.SuspendLayout();
             this.pnl_DatumKiezen.SuspendLayout();
             this.pnl_Maand.SuspendLayout();
             this.pnl_Week.SuspendLayout();
             this.pnl_MenuBalkFinanciën.SuspendLayout();
-            this.pnl_KeukenOverzicht.SuspendLayout();
-            this.pnl_MenuBalkKeukenOverzicht.SuspendLayout();
-            this.pnl_BestellingKeuken.SuspendLayout();
-            this.gb_OpmerkingenKeuken.SuspendLayout();
-            this.pnl_BarOverzicht.SuspendLayout();
-            this.pnl_BestellingBar.SuspendLayout();
-            this.gb_OpmerkingenBar.SuspendLayout();
-            this.pnl_MenuBalkBarOverzicht.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_LogIn
@@ -571,7 +588,10 @@
             // pnl_Voorraad
             // 
             this.pnl_Voorraad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnl_Voorraad.Controls.Add(this.groupBox1);
+            this.pnl_Voorraad.Controls.Add(this.gb_DrankToevoegen);
+            this.pnl_Voorraad.Controls.Add(this.btn_Gerechtvoorraad);
+            this.pnl_Voorraad.Controls.Add(this.btn_DrankVoorraad);
+            this.pnl_Voorraad.Controls.Add(this.gb_GerechtToevoegen);
             this.pnl_Voorraad.Controls.Add(this.gb_ItemDetails);
             this.pnl_Voorraad.Controls.Add(this.lbl_Voorraadlijst);
             this.pnl_Voorraad.Controls.Add(this.lv_Voorraad);
@@ -581,52 +601,233 @@
             this.pnl_Voorraad.Size = new System.Drawing.Size(813, 869);
             this.pnl_Voorraad.TabIndex = 16;
             // 
-            // groupBox1
+            // gb_DrankToevoegen
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.txt_Naam);
-            this.groupBox1.Controls.Add(this.txt_Hoeveelheid);
-            this.groupBox1.Controls.Add(this.txt_Type);
-            this.groupBox1.Controls.Add(this.lbl_Hoeveelheid);
-            this.groupBox1.Controls.Add(this.btn_VoegToe);
-            this.groupBox1.Controls.Add(this.lbl_NaamIT);
-            this.groupBox1.Controls.Add(this.lbl_Type);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(365, 347);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(424, 250);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Item toevoegen";
+            this.gb_DrankToevoegen.BackColor = System.Drawing.Color.White;
+            this.gb_DrankToevoegen.Controls.Add(this.txt_PrijsDrank);
+            this.gb_DrankToevoegen.Controls.Add(this.lbl_PrijsDrank);
+            this.gb_DrankToevoegen.Controls.Add(this.txt_DrankNaam);
+            this.gb_DrankToevoegen.Controls.Add(this.txt_HoeveelheidDrank);
+            this.gb_DrankToevoegen.Controls.Add(this.txt_Alcoholisch);
+            this.gb_DrankToevoegen.Controls.Add(this.lbl_HoeveelheidDrank);
+            this.gb_DrankToevoegen.Controls.Add(this.btn_VoegToeDrank);
+            this.gb_DrankToevoegen.Controls.Add(this.lbl_DrankNaam);
+            this.gb_DrankToevoegen.Controls.Add(this.lbl_Alcoholisch);
+            this.gb_DrankToevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_DrankToevoegen.Location = new System.Drawing.Point(365, 347);
+            this.gb_DrankToevoegen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_DrankToevoegen.Name = "gb_DrankToevoegen";
+            this.gb_DrankToevoegen.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_DrankToevoegen.Size = new System.Drawing.Size(424, 261);
+            this.gb_DrankToevoegen.TabIndex = 18;
+            this.gb_DrankToevoegen.TabStop = false;
+            this.gb_DrankToevoegen.Text = "Item toevoegen";
             // 
-            // txt_Naam
+            // txt_PrijsDrank
             // 
-            this.txt_Naam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Naam.Location = new System.Drawing.Point(163, 39);
-            this.txt_Naam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Naam.Name = "txt_Naam";
-            this.txt_Naam.Size = new System.Drawing.Size(113, 24);
-            this.txt_Naam.TabIndex = 13;
+            this.txt_PrijsDrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PrijsDrank.Location = new System.Drawing.Point(163, 140);
+            this.txt_PrijsDrank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_PrijsDrank.Name = "txt_PrijsDrank";
+            this.txt_PrijsDrank.Size = new System.Drawing.Size(113, 24);
+            this.txt_PrijsDrank.TabIndex = 17;
             // 
-            // txt_Hoeveelheid
+            // lbl_PrijsDrank
             // 
-            this.txt_Hoeveelheid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Hoeveelheid.Location = new System.Drawing.Point(163, 73);
-            this.txt_Hoeveelheid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Hoeveelheid.Name = "txt_Hoeveelheid";
-            this.txt_Hoeveelheid.Size = new System.Drawing.Size(113, 24);
-            this.txt_Hoeveelheid.TabIndex = 12;
+            this.lbl_PrijsDrank.AutoSize = true;
+            this.lbl_PrijsDrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PrijsDrank.Location = new System.Drawing.Point(76, 143);
+            this.lbl_PrijsDrank.Name = "lbl_PrijsDrank";
+            this.lbl_PrijsDrank.Size = new System.Drawing.Size(45, 18);
+            this.lbl_PrijsDrank.TabIndex = 16;
+            this.lbl_PrijsDrank.Text = "Prijs: ";
             // 
-            // txt_Type
+            // txt_DrankNaam
             // 
-            this.txt_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Type.Location = new System.Drawing.Point(163, 106);
-            this.txt_Type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Type.Name = "txt_Type";
-            this.txt_Type.Size = new System.Drawing.Size(113, 24);
-            this.txt_Type.TabIndex = 6;
+            this.txt_DrankNaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DrankNaam.Location = new System.Drawing.Point(163, 39);
+            this.txt_DrankNaam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_DrankNaam.Name = "txt_DrankNaam";
+            this.txt_DrankNaam.Size = new System.Drawing.Size(113, 24);
+            this.txt_DrankNaam.TabIndex = 13;
+            // 
+            // txt_HoeveelheidDrank
+            // 
+            this.txt_HoeveelheidDrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_HoeveelheidDrank.Location = new System.Drawing.Point(163, 73);
+            this.txt_HoeveelheidDrank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_HoeveelheidDrank.Name = "txt_HoeveelheidDrank";
+            this.txt_HoeveelheidDrank.Size = new System.Drawing.Size(113, 24);
+            this.txt_HoeveelheidDrank.TabIndex = 12;
+            // 
+            // txt_Alcoholisch
+            // 
+            this.txt_Alcoholisch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Alcoholisch.Location = new System.Drawing.Point(163, 106);
+            this.txt_Alcoholisch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Alcoholisch.Name = "txt_Alcoholisch";
+            this.txt_Alcoholisch.Size = new System.Drawing.Size(113, 24);
+            this.txt_Alcoholisch.TabIndex = 6;
+            // 
+            // lbl_HoeveelheidDrank
+            // 
+            this.lbl_HoeveelheidDrank.AutoSize = true;
+            this.lbl_HoeveelheidDrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_HoeveelheidDrank.Location = new System.Drawing.Point(28, 76);
+            this.lbl_HoeveelheidDrank.Name = "lbl_HoeveelheidDrank";
+            this.lbl_HoeveelheidDrank.Size = new System.Drawing.Size(93, 18);
+            this.lbl_HoeveelheidDrank.TabIndex = 2;
+            this.lbl_HoeveelheidDrank.Text = "Hoeveelheid:";
+            // 
+            // btn_VoegToeDrank
+            // 
+            this.btn_VoegToeDrank.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_VoegToeDrank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_VoegToeDrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VoegToeDrank.ForeColor = System.Drawing.Color.White;
+            this.btn_VoegToeDrank.Location = new System.Drawing.Point(170, 177);
+            this.btn_VoegToeDrank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_VoegToeDrank.Name = "btn_VoegToeDrank";
+            this.btn_VoegToeDrank.Size = new System.Drawing.Size(101, 43);
+            this.btn_VoegToeDrank.TabIndex = 11;
+            this.btn_VoegToeDrank.Text = "Voeg Toe";
+            this.btn_VoegToeDrank.UseVisualStyleBackColor = false;
+            this.btn_VoegToeDrank.Click += new System.EventHandler(this.btn_VoegToeDrank_Click);
+            // 
+            // lbl_DrankNaam
+            // 
+            this.lbl_DrankNaam.AutoSize = true;
+            this.lbl_DrankNaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DrankNaam.Location = new System.Drawing.Point(67, 43);
+            this.lbl_DrankNaam.Name = "lbl_DrankNaam";
+            this.lbl_DrankNaam.Size = new System.Drawing.Size(52, 18);
+            this.lbl_DrankNaam.TabIndex = 1;
+            this.lbl_DrankNaam.Text = "Naam:";
+            // 
+            // lbl_Alcoholisch
+            // 
+            this.lbl_Alcoholisch.AutoSize = true;
+            this.lbl_Alcoholisch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Alcoholisch.Location = new System.Drawing.Point(33, 109);
+            this.lbl_Alcoholisch.Name = "lbl_Alcoholisch";
+            this.lbl_Alcoholisch.Size = new System.Drawing.Size(88, 18);
+            this.lbl_Alcoholisch.TabIndex = 0;
+            this.lbl_Alcoholisch.Text = "Alcoholisch:";
+            // 
+            // btn_Gerechtvoorraad
+            // 
+            this.btn_Gerechtvoorraad.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_Gerechtvoorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Gerechtvoorraad.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btn_Gerechtvoorraad.Location = new System.Drawing.Point(175, 70);
+            this.btn_Gerechtvoorraad.Name = "btn_Gerechtvoorraad";
+            this.btn_Gerechtvoorraad.Size = new System.Drawing.Size(157, 47);
+            this.btn_Gerechtvoorraad.TabIndex = 14;
+            this.btn_Gerechtvoorraad.Text = "Gerechtvoorraad";
+            this.btn_Gerechtvoorraad.UseVisualStyleBackColor = false;
+            this.btn_Gerechtvoorraad.Click += new System.EventHandler(this.btn_Gerechtvoorraad_Click);
+            // 
+            // btn_DrankVoorraad
+            // 
+            this.btn_DrankVoorraad.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_DrankVoorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DrankVoorraad.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.btn_DrankVoorraad.Location = new System.Drawing.Point(12, 71);
+            this.btn_DrankVoorraad.Name = "btn_DrankVoorraad";
+            this.btn_DrankVoorraad.Size = new System.Drawing.Size(157, 47);
+            this.btn_DrankVoorraad.TabIndex = 13;
+            this.btn_DrankVoorraad.Text = "Drankvoorraad";
+            this.btn_DrankVoorraad.UseVisualStyleBackColor = false;
+            this.btn_DrankVoorraad.Click += new System.EventHandler(this.btn_DrankVoorraad_Click);
+            // 
+            // gb_GerechtToevoegen
+            // 
+            this.gb_GerechtToevoegen.BackColor = System.Drawing.Color.White;
+            this.gb_GerechtToevoegen.Controls.Add(this.txt_PrijsGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.lbl_PrijsGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.lbl_SoortGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.txt_SoortGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.txt_NaamGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.txt_HoeveelheidGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.txt_TypeGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.lbl_Hoeveelheid);
+            this.gb_GerechtToevoegen.Controls.Add(this.btn_VoegToeGerecht);
+            this.gb_GerechtToevoegen.Controls.Add(this.lbl_NaamIT);
+            this.gb_GerechtToevoegen.Controls.Add(this.lbl_Type);
+            this.gb_GerechtToevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_GerechtToevoegen.Location = new System.Drawing.Point(365, 347);
+            this.gb_GerechtToevoegen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_GerechtToevoegen.Name = "gb_GerechtToevoegen";
+            this.gb_GerechtToevoegen.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_GerechtToevoegen.Size = new System.Drawing.Size(424, 337);
+            this.gb_GerechtToevoegen.TabIndex = 12;
+            this.gb_GerechtToevoegen.TabStop = false;
+            this.gb_GerechtToevoegen.Text = "Item toevoegen";
+            // 
+            // txt_PrijsGerecht
+            // 
+            this.txt_PrijsGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PrijsGerecht.Location = new System.Drawing.Point(163, 177);
+            this.txt_PrijsGerecht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_PrijsGerecht.Name = "txt_PrijsGerecht";
+            this.txt_PrijsGerecht.Size = new System.Drawing.Size(113, 24);
+            this.txt_PrijsGerecht.TabIndex = 17;
+            // 
+            // lbl_PrijsGerecht
+            // 
+            this.lbl_PrijsGerecht.AutoSize = true;
+            this.lbl_PrijsGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PrijsGerecht.Location = new System.Drawing.Point(74, 182);
+            this.lbl_PrijsGerecht.Name = "lbl_PrijsGerecht";
+            this.lbl_PrijsGerecht.Size = new System.Drawing.Size(45, 18);
+            this.lbl_PrijsGerecht.TabIndex = 16;
+            this.lbl_PrijsGerecht.Text = "Prijs: ";
+            // 
+            // lbl_SoortGerecht
+            // 
+            this.lbl_SoortGerecht.AutoSize = true;
+            this.lbl_SoortGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SoortGerecht.Location = new System.Drawing.Point(19, 147);
+            this.lbl_SoortGerecht.Name = "lbl_SoortGerecht";
+            this.lbl_SoortGerecht.Size = new System.Drawing.Size(102, 18);
+            this.lbl_SoortGerecht.TabIndex = 15;
+            this.lbl_SoortGerecht.Text = "Soortgerecht: ";
+            // 
+            // txt_SoortGerecht
+            // 
+            this.txt_SoortGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SoortGerecht.Location = new System.Drawing.Point(163, 144);
+            this.txt_SoortGerecht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_SoortGerecht.Name = "txt_SoortGerecht";
+            this.txt_SoortGerecht.Size = new System.Drawing.Size(113, 24);
+            this.txt_SoortGerecht.TabIndex = 14;
+            // 
+            // txt_NaamGerecht
+            // 
+            this.txt_NaamGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NaamGerecht.Location = new System.Drawing.Point(163, 39);
+            this.txt_NaamGerecht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_NaamGerecht.Name = "txt_NaamGerecht";
+            this.txt_NaamGerecht.Size = new System.Drawing.Size(113, 24);
+            this.txt_NaamGerecht.TabIndex = 13;
+            // 
+            // txt_HoeveelheidGerecht
+            // 
+            this.txt_HoeveelheidGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_HoeveelheidGerecht.Location = new System.Drawing.Point(163, 73);
+            this.txt_HoeveelheidGerecht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_HoeveelheidGerecht.Name = "txt_HoeveelheidGerecht";
+            this.txt_HoeveelheidGerecht.Size = new System.Drawing.Size(113, 24);
+            this.txt_HoeveelheidGerecht.TabIndex = 12;
+            // 
+            // txt_TypeGerecht
+            // 
+            this.txt_TypeGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TypeGerecht.Location = new System.Drawing.Point(163, 106);
+            this.txt_TypeGerecht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_TypeGerecht.Name = "txt_TypeGerecht";
+            this.txt_TypeGerecht.Size = new System.Drawing.Size(113, 24);
+            this.txt_TypeGerecht.TabIndex = 6;
             // 
             // lbl_Hoeveelheid
             // 
@@ -639,19 +840,20 @@
             this.lbl_Hoeveelheid.Text = "Hoeveelheid:";
             this.lbl_Hoeveelheid.Click += new System.EventHandler(this.label4_Click);
             // 
-            // btn_VoegToe
+            // btn_VoegToeGerecht
             // 
-            this.btn_VoegToe.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_VoegToe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_VoegToe.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VoegToe.ForeColor = System.Drawing.Color.White;
-            this.btn_VoegToe.Location = new System.Drawing.Point(163, 166);
-            this.btn_VoegToe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_VoegToe.Name = "btn_VoegToe";
-            this.btn_VoegToe.Size = new System.Drawing.Size(101, 43);
-            this.btn_VoegToe.TabIndex = 11;
-            this.btn_VoegToe.Text = "Voeg Toe";
-            this.btn_VoegToe.UseVisualStyleBackColor = false;
+            this.btn_VoegToeGerecht.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_VoegToeGerecht.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_VoegToeGerecht.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VoegToeGerecht.ForeColor = System.Drawing.Color.White;
+            this.btn_VoegToeGerecht.Location = new System.Drawing.Point(170, 222);
+            this.btn_VoegToeGerecht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_VoegToeGerecht.Name = "btn_VoegToeGerecht";
+            this.btn_VoegToeGerecht.Size = new System.Drawing.Size(101, 43);
+            this.btn_VoegToeGerecht.TabIndex = 11;
+            this.btn_VoegToeGerecht.Text = "Voeg Toe";
+            this.btn_VoegToeGerecht.UseVisualStyleBackColor = false;
+            this.btn_VoegToeGerecht.Click += new System.EventHandler(this.btn_VoegToeGerecht_Click);
             // 
             // lbl_NaamIT
             // 
@@ -667,11 +869,11 @@
             // 
             this.lbl_Type.AutoSize = true;
             this.lbl_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Type.Location = new System.Drawing.Point(73, 110);
+            this.lbl_Type.Location = new System.Drawing.Point(51, 109);
             this.lbl_Type.Name = "lbl_Type";
-            this.lbl_Type.Size = new System.Drawing.Size(48, 18);
+            this.lbl_Type.Size = new System.Drawing.Size(70, 18);
             this.lbl_Type.TabIndex = 0;
-            this.lbl_Type.Text = "Type: ";
+            this.lbl_Type.Text = "Dagtype: ";
             // 
             // gb_ItemDetails
             // 
@@ -856,10 +1058,10 @@
             // lv_Voorraad
             // 
             this.lv_Voorraad.HideSelection = false;
-            this.lv_Voorraad.Location = new System.Drawing.Point(11, 71);
+            this.lv_Voorraad.Location = new System.Drawing.Point(11, 124);
             this.lv_Voorraad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lv_Voorraad.Name = "lv_Voorraad";
-            this.lv_Voorraad.Size = new System.Drawing.Size(321, 750);
+            this.lv_Voorraad.Size = new System.Drawing.Size(321, 697);
             this.lv_Voorraad.TabIndex = 0;
             this.lv_Voorraad.UseCompatibleStateImageBehavior = false;
             // 
@@ -878,6 +1080,34 @@
             this.pnl_Reservering.Name = "pnl_Reservering";
             this.pnl_Reservering.Size = new System.Drawing.Size(811, 803);
             this.pnl_Reservering.TabIndex = 16;
+            // 
+            // btn_ShowReservering
+            // 
+            this.btn_ShowReservering.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_ShowReservering.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ShowReservering.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowReservering.Location = new System.Drawing.Point(99, 524);
+            this.btn_ShowReservering.Name = "btn_ShowReservering";
+            this.btn_ShowReservering.Size = new System.Drawing.Size(256, 65);
+            this.btn_ShowReservering.TabIndex = 6;
+            this.btn_ShowReservering.Text = "Laat reserveringen zien";
+            this.btn_ShowReservering.UseVisualStyleBackColor = false;
+            // 
+            // lv_Reserveringen
+            // 
+            this.lv_Reserveringen.HideSelection = false;
+            this.lv_Reserveringen.Location = new System.Drawing.Point(429, 266);
+            this.lv_Reserveringen.Name = "lv_Reserveringen";
+            this.lv_Reserveringen.Size = new System.Drawing.Size(287, 337);
+            this.lv_Reserveringen.TabIndex = 5;
+            this.lv_Reserveringen.UseCompatibleStateImageBehavior = false;
+            // 
+            // mc_ReserveringCalander
+            // 
+            this.mc_ReserveringCalander.Location = new System.Drawing.Point(96, 266);
+            this.mc_ReserveringCalander.MaxSelectionCount = 1;
+            this.mc_ReserveringCalander.Name = "mc_ReserveringCalander";
+            this.mc_ReserveringCalander.TabIndex = 4;
             // 
             // btn_Rzoeken
             // 
@@ -5700,6 +5930,7 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
+            this.pnl_Base.Controls.Add(this.pnl_Voorraad);
             this.pnl_Base.Controls.Add(this.pnl_MenuBalkKeukenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_MenuBalkBarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_KeukenOverzicht);
@@ -5727,12 +5958,119 @@
             this.pnl_Base.Controls.Add(this.pnl_Frisdrank);
             this.pnl_Base.Controls.Add(this.pnl_Bier);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
-            this.pnl_Base.Controls.Add(this.pnl_Voorraad);
             this.pnl_Base.Location = new System.Drawing.Point(0, 0);
             this.pnl_Base.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(813, 1063);
             this.pnl_Base.TabIndex = 15;
+            // 
+            // pnl_MenuBalkKeukenOverzicht
+            // 
+            this.pnl_MenuBalkKeukenOverzicht.Controls.Add(this.btn_KeukenOverzicht);
+            this.pnl_MenuBalkKeukenOverzicht.Location = new System.Drawing.Point(1, 189);
+            this.pnl_MenuBalkKeukenOverzicht.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MenuBalkKeukenOverzicht.Name = "pnl_MenuBalkKeukenOverzicht";
+            this.pnl_MenuBalkKeukenOverzicht.Size = new System.Drawing.Size(813, 83);
+            this.pnl_MenuBalkKeukenOverzicht.TabIndex = 24;
+            // 
+            // btn_KeukenOverzicht
+            // 
+            this.btn_KeukenOverzicht.BackColor = System.Drawing.Color.Gray;
+            this.btn_KeukenOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_KeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_KeukenOverzicht.Location = new System.Drawing.Point(-1, 0);
+            this.btn_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_KeukenOverzicht.Name = "btn_KeukenOverzicht";
+            this.btn_KeukenOverzicht.Size = new System.Drawing.Size(251, 78);
+            this.btn_KeukenOverzicht.TabIndex = 18;
+            this.btn_KeukenOverzicht.Text = "Keuken Overzicht";
+            this.btn_KeukenOverzicht.UseVisualStyleBackColor = false;
+            this.btn_KeukenOverzicht.Click += new System.EventHandler(this.btn_KeukenOverzicht_Click);
+            // 
+            // pnl_MenuBalkBarOverzicht
+            // 
+            this.pnl_MenuBalkBarOverzicht.Controls.Add(this.btn_BarOverzicht);
+            this.pnl_MenuBalkBarOverzicht.Location = new System.Drawing.Point(2, 186);
+            this.pnl_MenuBalkBarOverzicht.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MenuBalkBarOverzicht.Name = "pnl_MenuBalkBarOverzicht";
+            this.pnl_MenuBalkBarOverzicht.Size = new System.Drawing.Size(813, 83);
+            this.pnl_MenuBalkBarOverzicht.TabIndex = 25;
+            // 
+            // btn_BarOverzicht
+            // 
+            this.btn_BarOverzicht.BackColor = System.Drawing.Color.Gray;
+            this.btn_BarOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BarOverzicht.Location = new System.Drawing.Point(-1, 0);
+            this.btn_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_BarOverzicht.Name = "btn_BarOverzicht";
+            this.btn_BarOverzicht.Size = new System.Drawing.Size(251, 78);
+            this.btn_BarOverzicht.TabIndex = 18;
+            this.btn_BarOverzicht.Text = "Bar Overzicht";
+            this.btn_BarOverzicht.UseVisualStyleBackColor = false;
+            this.btn_BarOverzicht.Click += new System.EventHandler(this.btn_BarOverzicht_Click);
+            // 
+            // pnl_KeukenOverzicht
+            // 
+            this.pnl_KeukenOverzicht.Controls.Add(this.btn_ShowBestellingKeuken);
+            this.pnl_KeukenOverzicht.Controls.Add(this.lv_KeukenOverzicht);
+            this.pnl_KeukenOverzicht.Location = new System.Drawing.Point(1, 269);
+            this.pnl_KeukenOverzicht.Name = "pnl_KeukenOverzicht";
+            this.pnl_KeukenOverzicht.Size = new System.Drawing.Size(814, 789);
+            this.pnl_KeukenOverzicht.TabIndex = 16;
+            // 
+            // btn_ShowBestellingKeuken
+            // 
+            this.btn_ShowBestellingKeuken.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_ShowBestellingKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ShowBestellingKeuken.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBestellingKeuken.Location = new System.Drawing.Point(267, 542);
+            this.btn_ShowBestellingKeuken.Name = "btn_ShowBestellingKeuken";
+            this.btn_ShowBestellingKeuken.Size = new System.Drawing.Size(279, 58);
+            this.btn_ShowBestellingKeuken.TabIndex = 1;
+            this.btn_ShowBestellingKeuken.Text = "Laat bestelling zien";
+            this.btn_ShowBestellingKeuken.UseVisualStyleBackColor = false;
+            this.btn_ShowBestellingKeuken.Click += new System.EventHandler(this.btn_ShowBestellingKeuken_Click);
+            // 
+            // lv_KeukenOverzicht
+            // 
+            this.lv_KeukenOverzicht.HideSelection = false;
+            this.lv_KeukenOverzicht.Location = new System.Drawing.Point(14, 23);
+            this.lv_KeukenOverzicht.Name = "lv_KeukenOverzicht";
+            this.lv_KeukenOverzicht.Size = new System.Drawing.Size(773, 461);
+            this.lv_KeukenOverzicht.TabIndex = 0;
+            this.lv_KeukenOverzicht.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_BarOverzicht
+            // 
+            this.pnl_BarOverzicht.Controls.Add(this.btn_ShowBestellingBar);
+            this.pnl_BarOverzicht.Controls.Add(this.lv_BarOverzicht);
+            this.pnl_BarOverzicht.Location = new System.Drawing.Point(2, 265);
+            this.pnl_BarOverzicht.Name = "pnl_BarOverzicht";
+            this.pnl_BarOverzicht.Size = new System.Drawing.Size(814, 796);
+            this.pnl_BarOverzicht.TabIndex = 17;
+            // 
+            // btn_ShowBestellingBar
+            // 
+            this.btn_ShowBestellingBar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_ShowBestellingBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ShowBestellingBar.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBestellingBar.Location = new System.Drawing.Point(267, 542);
+            this.btn_ShowBestellingBar.Name = "btn_ShowBestellingBar";
+            this.btn_ShowBestellingBar.Size = new System.Drawing.Size(279, 58);
+            this.btn_ShowBestellingBar.TabIndex = 1;
+            this.btn_ShowBestellingBar.Text = "Laat bestelling zien";
+            this.btn_ShowBestellingBar.UseVisualStyleBackColor = false;
+            this.btn_ShowBestellingBar.Click += new System.EventHandler(this.btn_ShowBestellingBar_Click);
+            // 
+            // lv_BarOverzicht
+            // 
+            this.lv_BarOverzicht.HideSelection = false;
+            this.lv_BarOverzicht.Location = new System.Drawing.Point(14, 23);
+            this.lv_BarOverzicht.Name = "lv_BarOverzicht";
+            this.lv_BarOverzicht.Size = new System.Drawing.Size(773, 461);
+            this.lv_BarOverzicht.TabIndex = 0;
+            this.lv_BarOverzicht.UseCompatibleStateImageBehavior = false;
             // 
             // pnl_MenuBalkReserveringen
             // 
@@ -5771,6 +6109,200 @@
             this.btn_TafelOverzichtRes.Text = "Tafel Overzicht";
             this.btn_TafelOverzichtRes.UseVisualStyleBackColor = false;
             this.btn_TafelOverzichtRes.Click += new System.EventHandler(this.btn_TafelOverzichtRes_Click);
+            // 
+            // pnl_BestellingBar
+            // 
+            this.pnl_BestellingBar.Controls.Add(this.btn_AfgerondBar);
+            this.pnl_BestellingBar.Controls.Add(this.btn_DeelKlaarBar);
+            this.pnl_BestellingBar.Controls.Add(this.gb_OpmerkingenBar);
+            this.pnl_BestellingBar.Controls.Add(this.lv_BarBestelling);
+            this.pnl_BestellingBar.Controls.Add(this.lbl_StatusBar);
+            this.pnl_BestellingBar.Controls.Add(this.lbl_TafelNrBar);
+            this.pnl_BestellingBar.Controls.Add(this.lbl_TafelBar);
+            this.pnl_BestellingBar.Location = new System.Drawing.Point(2, 265);
+            this.pnl_BestellingBar.Name = "pnl_BestellingBar";
+            this.pnl_BestellingBar.Size = new System.Drawing.Size(816, 795);
+            this.pnl_BestellingBar.TabIndex = 7;
+            // 
+            // btn_AfgerondBar
+            // 
+            this.btn_AfgerondBar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_AfgerondBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfgerondBar.ForeColor = System.Drawing.Color.White;
+            this.btn_AfgerondBar.Location = new System.Drawing.Point(488, 617);
+            this.btn_AfgerondBar.Name = "btn_AfgerondBar";
+            this.btn_AfgerondBar.Size = new System.Drawing.Size(229, 54);
+            this.btn_AfgerondBar.TabIndex = 6;
+            this.btn_AfgerondBar.Text = "Bestelling afgerond";
+            this.btn_AfgerondBar.UseVisualStyleBackColor = false;
+            // 
+            // btn_DeelKlaarBar
+            // 
+            this.btn_DeelKlaarBar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_DeelKlaarBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeelKlaarBar.ForeColor = System.Drawing.Color.White;
+            this.btn_DeelKlaarBar.Location = new System.Drawing.Point(89, 621);
+            this.btn_DeelKlaarBar.Name = "btn_DeelKlaarBar";
+            this.btn_DeelKlaarBar.Size = new System.Drawing.Size(229, 54);
+            this.btn_DeelKlaarBar.TabIndex = 5;
+            this.btn_DeelKlaarBar.Text = "Deel bestelling klaar";
+            this.btn_DeelKlaarBar.UseVisualStyleBackColor = false;
+            // 
+            // gb_OpmerkingenBar
+            // 
+            this.gb_OpmerkingenBar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gb_OpmerkingenBar.Controls.Add(this.lbl_OpmerkingBar);
+            this.gb_OpmerkingenBar.Location = new System.Drawing.Point(55, 417);
+            this.gb_OpmerkingenBar.Name = "gb_OpmerkingenBar";
+            this.gb_OpmerkingenBar.Size = new System.Drawing.Size(714, 157);
+            this.gb_OpmerkingenBar.TabIndex = 4;
+            this.gb_OpmerkingenBar.TabStop = false;
+            this.gb_OpmerkingenBar.Text = "Opmerkingen";
+            // 
+            // lbl_OpmerkingBar
+            // 
+            this.lbl_OpmerkingBar.AutoSize = true;
+            this.lbl_OpmerkingBar.Location = new System.Drawing.Point(14, 29);
+            this.lbl_OpmerkingBar.Name = "lbl_OpmerkingBar";
+            this.lbl_OpmerkingBar.Size = new System.Drawing.Size(77, 17);
+            this.lbl_OpmerkingBar.TabIndex = 0;
+            this.lbl_OpmerkingBar.Text = "Opmerking";
+            // 
+            // lv_BarBestelling
+            // 
+            this.lv_BarBestelling.HideSelection = false;
+            this.lv_BarBestelling.Location = new System.Drawing.Point(49, 68);
+            this.lv_BarBestelling.Name = "lv_BarBestelling";
+            this.lv_BarBestelling.Size = new System.Drawing.Size(721, 275);
+            this.lv_BarBestelling.TabIndex = 3;
+            this.lv_BarBestelling.UseCompatibleStateImageBehavior = false;
+            // 
+            // lbl_StatusBar
+            // 
+            this.lbl_StatusBar.AutoSize = true;
+            this.lbl_StatusBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StatusBar.Location = new System.Drawing.Point(564, 22);
+            this.lbl_StatusBar.Name = "lbl_StatusBar";
+            this.lbl_StatusBar.Size = new System.Drawing.Size(79, 29);
+            this.lbl_StatusBar.TabIndex = 2;
+            this.lbl_StatusBar.Text = "Status";
+            // 
+            // lbl_TafelNrBar
+            // 
+            this.lbl_TafelNrBar.AutoSize = true;
+            this.lbl_TafelNrBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelNrBar.Location = new System.Drawing.Point(117, 24);
+            this.lbl_TafelNrBar.Name = "lbl_TafelNrBar";
+            this.lbl_TafelNrBar.Size = new System.Drawing.Size(79, 29);
+            this.lbl_TafelNrBar.TabIndex = 1;
+            this.lbl_TafelNrBar.Text = "label1";
+            // 
+            // lbl_TafelBar
+            // 
+            this.lbl_TafelBar.AutoSize = true;
+            this.lbl_TafelBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelBar.Location = new System.Drawing.Point(39, 23);
+            this.lbl_TafelBar.Name = "lbl_TafelBar";
+            this.lbl_TafelBar.Size = new System.Drawing.Size(68, 29);
+            this.lbl_TafelBar.TabIndex = 0;
+            this.lbl_TafelBar.Text = "Tafel";
+            // 
+            // pnl_BestellingKeuken
+            // 
+            this.pnl_BestellingKeuken.Controls.Add(this.btn_AfgerondKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.btn_DeelKlaarKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.gb_OpmerkingenKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.lv_BestellingenKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.lbl_StatusKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.lbl_TafelNr);
+            this.pnl_BestellingKeuken.Controls.Add(this.lbl_Tafel);
+            this.pnl_BestellingKeuken.Location = new System.Drawing.Point(-1, 266);
+            this.pnl_BestellingKeuken.Name = "pnl_BestellingKeuken";
+            this.pnl_BestellingKeuken.Size = new System.Drawing.Size(816, 795);
+            this.pnl_BestellingKeuken.TabIndex = 2;
+            // 
+            // btn_AfgerondKeuken
+            // 
+            this.btn_AfgerondKeuken.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_AfgerondKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfgerondKeuken.ForeColor = System.Drawing.Color.White;
+            this.btn_AfgerondKeuken.Location = new System.Drawing.Point(488, 617);
+            this.btn_AfgerondKeuken.Name = "btn_AfgerondKeuken";
+            this.btn_AfgerondKeuken.Size = new System.Drawing.Size(229, 54);
+            this.btn_AfgerondKeuken.TabIndex = 6;
+            this.btn_AfgerondKeuken.Text = "Bestelling afgerond";
+            this.btn_AfgerondKeuken.UseVisualStyleBackColor = false;
+            // 
+            // btn_DeelKlaarKeuken
+            // 
+            this.btn_DeelKlaarKeuken.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_DeelKlaarKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeelKlaarKeuken.ForeColor = System.Drawing.Color.White;
+            this.btn_DeelKlaarKeuken.Location = new System.Drawing.Point(89, 621);
+            this.btn_DeelKlaarKeuken.Name = "btn_DeelKlaarKeuken";
+            this.btn_DeelKlaarKeuken.Size = new System.Drawing.Size(229, 54);
+            this.btn_DeelKlaarKeuken.TabIndex = 5;
+            this.btn_DeelKlaarKeuken.Text = "Deel bestelling klaar";
+            this.btn_DeelKlaarKeuken.UseVisualStyleBackColor = false;
+            // 
+            // gb_OpmerkingenKeuken
+            // 
+            this.gb_OpmerkingenKeuken.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gb_OpmerkingenKeuken.Controls.Add(this.lbl_OpmerkingenKeuken);
+            this.gb_OpmerkingenKeuken.Location = new System.Drawing.Point(55, 417);
+            this.gb_OpmerkingenKeuken.Name = "gb_OpmerkingenKeuken";
+            this.gb_OpmerkingenKeuken.Size = new System.Drawing.Size(714, 157);
+            this.gb_OpmerkingenKeuken.TabIndex = 4;
+            this.gb_OpmerkingenKeuken.TabStop = false;
+            this.gb_OpmerkingenKeuken.Text = "Opmerkingen";
+            // 
+            // lbl_OpmerkingenKeuken
+            // 
+            this.lbl_OpmerkingenKeuken.AutoSize = true;
+            this.lbl_OpmerkingenKeuken.Location = new System.Drawing.Point(14, 29);
+            this.lbl_OpmerkingenKeuken.Name = "lbl_OpmerkingenKeuken";
+            this.lbl_OpmerkingenKeuken.Size = new System.Drawing.Size(77, 17);
+            this.lbl_OpmerkingenKeuken.TabIndex = 0;
+            this.lbl_OpmerkingenKeuken.Text = "Opmerking";
+            // 
+            // lv_BestellingenKeuken
+            // 
+            this.lv_BestellingenKeuken.HideSelection = false;
+            this.lv_BestellingenKeuken.Location = new System.Drawing.Point(49, 68);
+            this.lv_BestellingenKeuken.Name = "lv_BestellingenKeuken";
+            this.lv_BestellingenKeuken.Size = new System.Drawing.Size(721, 275);
+            this.lv_BestellingenKeuken.TabIndex = 3;
+            this.lv_BestellingenKeuken.UseCompatibleStateImageBehavior = false;
+            // 
+            // lbl_StatusKeuken
+            // 
+            this.lbl_StatusKeuken.AutoSize = true;
+            this.lbl_StatusKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StatusKeuken.Location = new System.Drawing.Point(564, 22);
+            this.lbl_StatusKeuken.Name = "lbl_StatusKeuken";
+            this.lbl_StatusKeuken.Size = new System.Drawing.Size(79, 29);
+            this.lbl_StatusKeuken.TabIndex = 2;
+            this.lbl_StatusKeuken.Text = "Status";
+            // 
+            // lbl_TafelNr
+            // 
+            this.lbl_TafelNr.AutoSize = true;
+            this.lbl_TafelNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelNr.Location = new System.Drawing.Point(117, 24);
+            this.lbl_TafelNr.Name = "lbl_TafelNr";
+            this.lbl_TafelNr.Size = new System.Drawing.Size(79, 29);
+            this.lbl_TafelNr.TabIndex = 1;
+            this.lbl_TafelNr.Text = "label1";
+            // 
+            // lbl_Tafel
+            // 
+            this.lbl_Tafel.AutoSize = true;
+            this.lbl_Tafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tafel.Location = new System.Drawing.Point(39, 23);
+            this.lbl_Tafel.Name = "lbl_Tafel";
+            this.lbl_Tafel.Size = new System.Drawing.Size(68, 29);
+            this.lbl_Tafel.TabIndex = 0;
+            this.lbl_Tafel.Text = "Tafel";
             // 
             // pnl_MenuBalkRekening
             // 
@@ -6024,336 +6556,6 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
-            // mc_ReserveringCalander
-            // 
-            this.mc_ReserveringCalander.Location = new System.Drawing.Point(96, 266);
-            this.mc_ReserveringCalander.MaxSelectionCount = 1;
-            this.mc_ReserveringCalander.Name = "mc_ReserveringCalander";
-            this.mc_ReserveringCalander.TabIndex = 4;
-            // 
-            // lv_Reserveringen
-            // 
-            this.lv_Reserveringen.HideSelection = false;
-            this.lv_Reserveringen.Location = new System.Drawing.Point(429, 266);
-            this.lv_Reserveringen.Name = "lv_Reserveringen";
-            this.lv_Reserveringen.Size = new System.Drawing.Size(287, 337);
-            this.lv_Reserveringen.TabIndex = 5;
-            this.lv_Reserveringen.UseCompatibleStateImageBehavior = false;
-            // 
-            // btn_ShowReservering
-            // 
-            this.btn_ShowReservering.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_ShowReservering.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowReservering.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowReservering.Location = new System.Drawing.Point(99, 524);
-            this.btn_ShowReservering.Name = "btn_ShowReservering";
-            this.btn_ShowReservering.Size = new System.Drawing.Size(256, 65);
-            this.btn_ShowReservering.TabIndex = 6;
-            this.btn_ShowReservering.Text = "Laat reserveringen zien";
-            this.btn_ShowReservering.UseVisualStyleBackColor = false;
-            // 
-            // pnl_KeukenOverzicht
-            // 
-            this.pnl_KeukenOverzicht.Controls.Add(this.btn_ShowBestellingKeuken);
-            this.pnl_KeukenOverzicht.Controls.Add(this.lv_KeukenOverzicht);
-            this.pnl_KeukenOverzicht.Location = new System.Drawing.Point(1, 269);
-            this.pnl_KeukenOverzicht.Name = "pnl_KeukenOverzicht";
-            this.pnl_KeukenOverzicht.Size = new System.Drawing.Size(814, 789);
-            this.pnl_KeukenOverzicht.TabIndex = 16;
-            // 
-            // lv_KeukenOverzicht
-            // 
-            this.lv_KeukenOverzicht.HideSelection = false;
-            this.lv_KeukenOverzicht.Location = new System.Drawing.Point(14, 23);
-            this.lv_KeukenOverzicht.Name = "lv_KeukenOverzicht";
-            this.lv_KeukenOverzicht.Size = new System.Drawing.Size(773, 461);
-            this.lv_KeukenOverzicht.TabIndex = 0;
-            this.lv_KeukenOverzicht.UseCompatibleStateImageBehavior = false;
-            // 
-            // pnl_MenuBalkKeukenOverzicht
-            // 
-            this.pnl_MenuBalkKeukenOverzicht.Controls.Add(this.btn_KeukenOverzicht);
-            this.pnl_MenuBalkKeukenOverzicht.Location = new System.Drawing.Point(1, 189);
-            this.pnl_MenuBalkKeukenOverzicht.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_MenuBalkKeukenOverzicht.Name = "pnl_MenuBalkKeukenOverzicht";
-            this.pnl_MenuBalkKeukenOverzicht.Size = new System.Drawing.Size(813, 83);
-            this.pnl_MenuBalkKeukenOverzicht.TabIndex = 24;
-            // 
-            // btn_KeukenOverzicht
-            // 
-            this.btn_KeukenOverzicht.BackColor = System.Drawing.Color.Gray;
-            this.btn_KeukenOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_KeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KeukenOverzicht.Location = new System.Drawing.Point(-1, 0);
-            this.btn_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_KeukenOverzicht.Name = "btn_KeukenOverzicht";
-            this.btn_KeukenOverzicht.Size = new System.Drawing.Size(251, 78);
-            this.btn_KeukenOverzicht.TabIndex = 18;
-            this.btn_KeukenOverzicht.Text = "Keuken Overzicht";
-            this.btn_KeukenOverzicht.UseVisualStyleBackColor = false;
-            this.btn_KeukenOverzicht.Click += new System.EventHandler(this.btn_KeukenOverzicht_Click);
-            // 
-            // btn_ShowBestellingKeuken
-            // 
-            this.btn_ShowBestellingKeuken.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_ShowBestellingKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowBestellingKeuken.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowBestellingKeuken.Location = new System.Drawing.Point(267, 542);
-            this.btn_ShowBestellingKeuken.Name = "btn_ShowBestellingKeuken";
-            this.btn_ShowBestellingKeuken.Size = new System.Drawing.Size(279, 58);
-            this.btn_ShowBestellingKeuken.TabIndex = 1;
-            this.btn_ShowBestellingKeuken.Text = "Laat bestelling zien";
-            this.btn_ShowBestellingKeuken.UseVisualStyleBackColor = false;
-            this.btn_ShowBestellingKeuken.Click += new System.EventHandler(this.btn_ShowBestellingKeuken_Click);
-            // 
-            // pnl_BestellingKeuken
-            // 
-            this.pnl_BestellingKeuken.Controls.Add(this.btn_AfgerondKeuken);
-            this.pnl_BestellingKeuken.Controls.Add(this.btn_DeelKlaarKeuken);
-            this.pnl_BestellingKeuken.Controls.Add(this.gb_OpmerkingenKeuken);
-            this.pnl_BestellingKeuken.Controls.Add(this.lv_BestellingenKeuken);
-            this.pnl_BestellingKeuken.Controls.Add(this.lbl_StatusKeuken);
-            this.pnl_BestellingKeuken.Controls.Add(this.lbl_TafelNr);
-            this.pnl_BestellingKeuken.Controls.Add(this.lbl_Tafel);
-            this.pnl_BestellingKeuken.Location = new System.Drawing.Point(-1, 266);
-            this.pnl_BestellingKeuken.Name = "pnl_BestellingKeuken";
-            this.pnl_BestellingKeuken.Size = new System.Drawing.Size(816, 795);
-            this.pnl_BestellingKeuken.TabIndex = 2;
-            // 
-            // lbl_Tafel
-            // 
-            this.lbl_Tafel.AutoSize = true;
-            this.lbl_Tafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Tafel.Location = new System.Drawing.Point(39, 23);
-            this.lbl_Tafel.Name = "lbl_Tafel";
-            this.lbl_Tafel.Size = new System.Drawing.Size(68, 29);
-            this.lbl_Tafel.TabIndex = 0;
-            this.lbl_Tafel.Text = "Tafel";
-            // 
-            // lbl_TafelNr
-            // 
-            this.lbl_TafelNr.AutoSize = true;
-            this.lbl_TafelNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelNr.Location = new System.Drawing.Point(117, 24);
-            this.lbl_TafelNr.Name = "lbl_TafelNr";
-            this.lbl_TafelNr.Size = new System.Drawing.Size(79, 29);
-            this.lbl_TafelNr.TabIndex = 1;
-            this.lbl_TafelNr.Text = "label1";
-            // 
-            // lbl_StatusKeuken
-            // 
-            this.lbl_StatusKeuken.AutoSize = true;
-            this.lbl_StatusKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_StatusKeuken.Location = new System.Drawing.Point(564, 22);
-            this.lbl_StatusKeuken.Name = "lbl_StatusKeuken";
-            this.lbl_StatusKeuken.Size = new System.Drawing.Size(79, 29);
-            this.lbl_StatusKeuken.TabIndex = 2;
-            this.lbl_StatusKeuken.Text = "Status";
-            // 
-            // lv_BestellingenKeuken
-            // 
-            this.lv_BestellingenKeuken.HideSelection = false;
-            this.lv_BestellingenKeuken.Location = new System.Drawing.Point(49, 68);
-            this.lv_BestellingenKeuken.Name = "lv_BestellingenKeuken";
-            this.lv_BestellingenKeuken.Size = new System.Drawing.Size(721, 275);
-            this.lv_BestellingenKeuken.TabIndex = 3;
-            this.lv_BestellingenKeuken.UseCompatibleStateImageBehavior = false;
-            // 
-            // gb_OpmerkingenKeuken
-            // 
-            this.gb_OpmerkingenKeuken.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gb_OpmerkingenKeuken.Controls.Add(this.lbl_OpmerkingenKeuken);
-            this.gb_OpmerkingenKeuken.Location = new System.Drawing.Point(55, 417);
-            this.gb_OpmerkingenKeuken.Name = "gb_OpmerkingenKeuken";
-            this.gb_OpmerkingenKeuken.Size = new System.Drawing.Size(714, 157);
-            this.gb_OpmerkingenKeuken.TabIndex = 4;
-            this.gb_OpmerkingenKeuken.TabStop = false;
-            this.gb_OpmerkingenKeuken.Text = "Opmerkingen";
-            // 
-            // lbl_OpmerkingenKeuken
-            // 
-            this.lbl_OpmerkingenKeuken.AutoSize = true;
-            this.lbl_OpmerkingenKeuken.Location = new System.Drawing.Point(14, 29);
-            this.lbl_OpmerkingenKeuken.Name = "lbl_OpmerkingenKeuken";
-            this.lbl_OpmerkingenKeuken.Size = new System.Drawing.Size(77, 17);
-            this.lbl_OpmerkingenKeuken.TabIndex = 0;
-            this.lbl_OpmerkingenKeuken.Text = "Opmerking";
-            // 
-            // btn_DeelKlaarKeuken
-            // 
-            this.btn_DeelKlaarKeuken.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_DeelKlaarKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeelKlaarKeuken.ForeColor = System.Drawing.Color.White;
-            this.btn_DeelKlaarKeuken.Location = new System.Drawing.Point(89, 621);
-            this.btn_DeelKlaarKeuken.Name = "btn_DeelKlaarKeuken";
-            this.btn_DeelKlaarKeuken.Size = new System.Drawing.Size(229, 54);
-            this.btn_DeelKlaarKeuken.TabIndex = 5;
-            this.btn_DeelKlaarKeuken.Text = "Deel bestelling klaar";
-            this.btn_DeelKlaarKeuken.UseVisualStyleBackColor = false;
-            // 
-            // btn_AfgerondKeuken
-            // 
-            this.btn_AfgerondKeuken.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_AfgerondKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfgerondKeuken.ForeColor = System.Drawing.Color.White;
-            this.btn_AfgerondKeuken.Location = new System.Drawing.Point(488, 617);
-            this.btn_AfgerondKeuken.Name = "btn_AfgerondKeuken";
-            this.btn_AfgerondKeuken.Size = new System.Drawing.Size(229, 54);
-            this.btn_AfgerondKeuken.TabIndex = 6;
-            this.btn_AfgerondKeuken.Text = "Bestelling afgerond";
-            this.btn_AfgerondKeuken.UseVisualStyleBackColor = false;
-            // 
-            // pnl_BarOverzicht
-            // 
-            this.pnl_BarOverzicht.Controls.Add(this.btn_ShowBestellingBar);
-            this.pnl_BarOverzicht.Controls.Add(this.lv_BarOverzicht);
-            this.pnl_BarOverzicht.Location = new System.Drawing.Point(2, 265);
-            this.pnl_BarOverzicht.Name = "pnl_BarOverzicht";
-            this.pnl_BarOverzicht.Size = new System.Drawing.Size(814, 796);
-            this.pnl_BarOverzicht.TabIndex = 17;
-            // 
-            // btn_ShowBestellingBar
-            // 
-            this.btn_ShowBestellingBar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_ShowBestellingBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowBestellingBar.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowBestellingBar.Location = new System.Drawing.Point(267, 542);
-            this.btn_ShowBestellingBar.Name = "btn_ShowBestellingBar";
-            this.btn_ShowBestellingBar.Size = new System.Drawing.Size(279, 58);
-            this.btn_ShowBestellingBar.TabIndex = 1;
-            this.btn_ShowBestellingBar.Text = "Laat bestelling zien";
-            this.btn_ShowBestellingBar.UseVisualStyleBackColor = false;
-            this.btn_ShowBestellingBar.Click += new System.EventHandler(this.btn_ShowBestellingBar_Click);
-            // 
-            // lv_BarOverzicht
-            // 
-            this.lv_BarOverzicht.HideSelection = false;
-            this.lv_BarOverzicht.Location = new System.Drawing.Point(14, 23);
-            this.lv_BarOverzicht.Name = "lv_BarOverzicht";
-            this.lv_BarOverzicht.Size = new System.Drawing.Size(773, 461);
-            this.lv_BarOverzicht.TabIndex = 0;
-            this.lv_BarOverzicht.UseCompatibleStateImageBehavior = false;
-            // 
-            // pnl_BestellingBar
-            // 
-            this.pnl_BestellingBar.Controls.Add(this.btn_AfgerondBar);
-            this.pnl_BestellingBar.Controls.Add(this.btn_DeelKlaarBar);
-            this.pnl_BestellingBar.Controls.Add(this.gb_OpmerkingenBar);
-            this.pnl_BestellingBar.Controls.Add(this.lv_BarBestelling);
-            this.pnl_BestellingBar.Controls.Add(this.lbl_StatusBar);
-            this.pnl_BestellingBar.Controls.Add(this.lbl_TafelNrBar);
-            this.pnl_BestellingBar.Controls.Add(this.lbl_TafelBar);
-            this.pnl_BestellingBar.Location = new System.Drawing.Point(2, 265);
-            this.pnl_BestellingBar.Name = "pnl_BestellingBar";
-            this.pnl_BestellingBar.Size = new System.Drawing.Size(816, 795);
-            this.pnl_BestellingBar.TabIndex = 7;
-            // 
-            // btn_AfgerondBar
-            // 
-            this.btn_AfgerondBar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_AfgerondBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfgerondBar.ForeColor = System.Drawing.Color.White;
-            this.btn_AfgerondBar.Location = new System.Drawing.Point(488, 617);
-            this.btn_AfgerondBar.Name = "btn_AfgerondBar";
-            this.btn_AfgerondBar.Size = new System.Drawing.Size(229, 54);
-            this.btn_AfgerondBar.TabIndex = 6;
-            this.btn_AfgerondBar.Text = "Bestelling afgerond";
-            this.btn_AfgerondBar.UseVisualStyleBackColor = false;
-            // 
-            // btn_DeelKlaarBar
-            // 
-            this.btn_DeelKlaarBar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_DeelKlaarBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeelKlaarBar.ForeColor = System.Drawing.Color.White;
-            this.btn_DeelKlaarBar.Location = new System.Drawing.Point(89, 621);
-            this.btn_DeelKlaarBar.Name = "btn_DeelKlaarBar";
-            this.btn_DeelKlaarBar.Size = new System.Drawing.Size(229, 54);
-            this.btn_DeelKlaarBar.TabIndex = 5;
-            this.btn_DeelKlaarBar.Text = "Deel bestelling klaar";
-            this.btn_DeelKlaarBar.UseVisualStyleBackColor = false;
-            // 
-            // gb_OpmerkingenBar
-            // 
-            this.gb_OpmerkingenBar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gb_OpmerkingenBar.Controls.Add(this.lbl_OpmerkingBar);
-            this.gb_OpmerkingenBar.Location = new System.Drawing.Point(55, 417);
-            this.gb_OpmerkingenBar.Name = "gb_OpmerkingenBar";
-            this.gb_OpmerkingenBar.Size = new System.Drawing.Size(714, 157);
-            this.gb_OpmerkingenBar.TabIndex = 4;
-            this.gb_OpmerkingenBar.TabStop = false;
-            this.gb_OpmerkingenBar.Text = "Opmerkingen";
-            // 
-            // lbl_OpmerkingBar
-            // 
-            this.lbl_OpmerkingBar.AutoSize = true;
-            this.lbl_OpmerkingBar.Location = new System.Drawing.Point(14, 29);
-            this.lbl_OpmerkingBar.Name = "lbl_OpmerkingBar";
-            this.lbl_OpmerkingBar.Size = new System.Drawing.Size(77, 17);
-            this.lbl_OpmerkingBar.TabIndex = 0;
-            this.lbl_OpmerkingBar.Text = "Opmerking";
-            // 
-            // lv_BarBestelling
-            // 
-            this.lv_BarBestelling.HideSelection = false;
-            this.lv_BarBestelling.Location = new System.Drawing.Point(49, 68);
-            this.lv_BarBestelling.Name = "lv_BarBestelling";
-            this.lv_BarBestelling.Size = new System.Drawing.Size(721, 275);
-            this.lv_BarBestelling.TabIndex = 3;
-            this.lv_BarBestelling.UseCompatibleStateImageBehavior = false;
-            // 
-            // lbl_StatusBar
-            // 
-            this.lbl_StatusBar.AutoSize = true;
-            this.lbl_StatusBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_StatusBar.Location = new System.Drawing.Point(564, 22);
-            this.lbl_StatusBar.Name = "lbl_StatusBar";
-            this.lbl_StatusBar.Size = new System.Drawing.Size(79, 29);
-            this.lbl_StatusBar.TabIndex = 2;
-            this.lbl_StatusBar.Text = "Status";
-            // 
-            // lbl_TafelNrBar
-            // 
-            this.lbl_TafelNrBar.AutoSize = true;
-            this.lbl_TafelNrBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelNrBar.Location = new System.Drawing.Point(117, 24);
-            this.lbl_TafelNrBar.Name = "lbl_TafelNrBar";
-            this.lbl_TafelNrBar.Size = new System.Drawing.Size(79, 29);
-            this.lbl_TafelNrBar.TabIndex = 1;
-            this.lbl_TafelNrBar.Text = "label1";
-            // 
-            // lbl_TafelBar
-            // 
-            this.lbl_TafelBar.AutoSize = true;
-            this.lbl_TafelBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelBar.Location = new System.Drawing.Point(39, 23);
-            this.lbl_TafelBar.Name = "lbl_TafelBar";
-            this.lbl_TafelBar.Size = new System.Drawing.Size(68, 29);
-            this.lbl_TafelBar.TabIndex = 0;
-            this.lbl_TafelBar.Text = "Tafel";
-            // 
-            // pnl_MenuBalkBarOverzicht
-            // 
-            this.pnl_MenuBalkBarOverzicht.Controls.Add(this.btn_BarOverzicht);
-            this.pnl_MenuBalkBarOverzicht.Location = new System.Drawing.Point(2, 186);
-            this.pnl_MenuBalkBarOverzicht.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_MenuBalkBarOverzicht.Name = "pnl_MenuBalkBarOverzicht";
-            this.pnl_MenuBalkBarOverzicht.Size = new System.Drawing.Size(813, 83);
-            this.pnl_MenuBalkBarOverzicht.TabIndex = 25;
-            // 
-            // btn_BarOverzicht
-            // 
-            this.btn_BarOverzicht.BackColor = System.Drawing.Color.Gray;
-            this.btn_BarOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BarOverzicht.Location = new System.Drawing.Point(-1, 0);
-            this.btn_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_BarOverzicht.Name = "btn_BarOverzicht";
-            this.btn_BarOverzicht.Size = new System.Drawing.Size(251, 78);
-            this.btn_BarOverzicht.TabIndex = 18;
-            this.btn_BarOverzicht.Text = "Bar Overzicht";
-            this.btn_BarOverzicht.UseVisualStyleBackColor = false;
-            this.btn_BarOverzicht.Click += new System.EventHandler(this.btn_BarOverzicht_Click);
-            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -6373,8 +6575,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).EndInit();
             this.pnl_Voorraad.ResumeLayout(false);
             this.pnl_Voorraad.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gb_DrankToevoegen.ResumeLayout(false);
+            this.gb_DrankToevoegen.PerformLayout();
+            this.gb_GerechtToevoegen.ResumeLayout(false);
+            this.gb_GerechtToevoegen.PerformLayout();
             this.gb_ItemDetails.ResumeLayout(false);
             this.gb_ItemDetails.PerformLayout();
             this.pnl_Reservering.ResumeLayout(false);
@@ -6399,7 +6603,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_Dag.ResumeLayout(false);
             this.pnl_Base.ResumeLayout(false);
+            this.pnl_MenuBalkKeukenOverzicht.ResumeLayout(false);
+            this.pnl_MenuBalkBarOverzicht.ResumeLayout(false);
+            this.pnl_KeukenOverzicht.ResumeLayout(false);
+            this.pnl_BarOverzicht.ResumeLayout(false);
             this.pnl_MenuBalkReserveringen.ResumeLayout(false);
+            this.pnl_BestellingBar.ResumeLayout(false);
+            this.pnl_BestellingBar.PerformLayout();
+            this.gb_OpmerkingenBar.ResumeLayout(false);
+            this.gb_OpmerkingenBar.PerformLayout();
+            this.pnl_BestellingKeuken.ResumeLayout(false);
+            this.pnl_BestellingKeuken.PerformLayout();
+            this.gb_OpmerkingenKeuken.ResumeLayout(false);
+            this.gb_OpmerkingenKeuken.PerformLayout();
             this.pnl_MenuBalkRekening.ResumeLayout(false);
             this.pnl_RekeningOverzicht.ResumeLayout(false);
             this.pnl_DatumKiezen.ResumeLayout(false);
@@ -6407,18 +6623,6 @@
             this.pnl_Maand.ResumeLayout(false);
             this.pnl_Week.ResumeLayout(false);
             this.pnl_MenuBalkFinanciën.ResumeLayout(false);
-            this.pnl_KeukenOverzicht.ResumeLayout(false);
-            this.pnl_MenuBalkKeukenOverzicht.ResumeLayout(false);
-            this.pnl_BestellingKeuken.ResumeLayout(false);
-            this.pnl_BestellingKeuken.PerformLayout();
-            this.gb_OpmerkingenKeuken.ResumeLayout(false);
-            this.gb_OpmerkingenKeuken.PerformLayout();
-            this.pnl_BarOverzicht.ResumeLayout(false);
-            this.pnl_BestellingBar.ResumeLayout(false);
-            this.pnl_BestellingBar.PerformLayout();
-            this.gb_OpmerkingenBar.ResumeLayout(false);
-            this.gb_OpmerkingenBar.PerformLayout();
-            this.pnl_MenuBalkBarOverzicht.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -6431,12 +6635,12 @@
         private System.Windows.Forms.TextBox txt_LogIn;
         private System.Windows.Forms.PictureBox pic_LogoChapoo;
         private System.Windows.Forms.Panel pnl_Voorraad;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_Naam;
-        private System.Windows.Forms.TextBox txt_Hoeveelheid;
-        private System.Windows.Forms.TextBox txt_Type;
+        private System.Windows.Forms.GroupBox gb_GerechtToevoegen;
+        private System.Windows.Forms.TextBox txt_NaamGerecht;
+        private System.Windows.Forms.TextBox txt_HoeveelheidGerecht;
+        private System.Windows.Forms.TextBox txt_TypeGerecht;
         private System.Windows.Forms.Label lbl_Hoeveelheid;
-        private System.Windows.Forms.Button btn_VoegToe;
+        private System.Windows.Forms.Button btn_VoegToeGerecht;
         private System.Windows.Forms.Label lbl_NaamIT;
         private System.Windows.Forms.Label lbl_Type;
         private System.Windows.Forms.GroupBox gb_ItemDetails;
@@ -6864,6 +7068,22 @@
         private System.Windows.Forms.Label lbl_StatusBar;
         private System.Windows.Forms.Label lbl_TafelNrBar;
         private System.Windows.Forms.Label lbl_TafelBar;
+        private System.Windows.Forms.Button btn_Gerechtvoorraad;
+        private System.Windows.Forms.Button btn_DrankVoorraad;
+        private System.Windows.Forms.TextBox txt_PrijsGerecht;
+        private System.Windows.Forms.Label lbl_PrijsGerecht;
+        private System.Windows.Forms.Label lbl_SoortGerecht;
+        private System.Windows.Forms.TextBox txt_SoortGerecht;
+        private System.Windows.Forms.GroupBox gb_DrankToevoegen;
+        private System.Windows.Forms.TextBox txt_PrijsDrank;
+        private System.Windows.Forms.Label lbl_PrijsDrank;
+        private System.Windows.Forms.TextBox txt_DrankNaam;
+        private System.Windows.Forms.TextBox txt_HoeveelheidDrank;
+        private System.Windows.Forms.TextBox txt_Alcoholisch;
+        private System.Windows.Forms.Label lbl_HoeveelheidDrank;
+        private System.Windows.Forms.Button btn_VoegToeDrank;
+        private System.Windows.Forms.Label lbl_DrankNaam;
+        private System.Windows.Forms.Label lbl_Alcoholisch;
     }
 }
 

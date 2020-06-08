@@ -27,14 +27,24 @@ namespace SomerenLogic
                 Drankje a = new Drankje();
                 a.drankID = 1;
                 a.drankNaam = "Pussy juice";
-                a.prijs = 420.69;
-                a.alcholisch = Alcholisch.Nee;
                 a.voorraad = 42069;
                
                 return drankje;
                 //throw new Exception("Someren couldn't connect to the database");
             }
 
+        }
+
+        public void UpdateDrankje(string query)
+        {
+            try
+            {
+                drankje_db.Db_Update_Drankje(query);
+            }
+            catch (Exception)
+            {
+                //
+            }
         }
     }
 }
