@@ -10,7 +10,7 @@ namespace SomerenLogic
 {
     public class Bestelling_Service
     {
-        Betselling_DAO bestelling_db = new Bestelling_DAO();
+        Bestelling_DAO bestelling_db = new Bestelling_DAO();
 
         public List<Personeel> GetPersoneel()
         {

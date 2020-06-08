@@ -590,16 +590,6 @@ namespace SomerenUI
             showPanel("Tafels");
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_Opmerkingen_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
             showPanel("RekeningOverzicht");
