@@ -15,7 +15,7 @@ namespace SomerenDAL
 
         public List<Gerecht> Db_Get_All_Gerechten()
         {
-            string query = "SELECT GerechtID, GerechtNaam FROM [Gerecht]";
+            string query = "SELECT GerechtID, GerechtNaam, Voorraad FROM [Gerecht]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -29,16 +29,23 @@ namespace SomerenDAL
                 Gerecht gerecht = new Gerecht()
                 {
                     gerechtID = (int)dr["GerechtID"],
-                    gerechtNaam = (string)(dr["GerechtNaam"].ToString()),
+                    gerechtNaam = (string)dr["GerechtNaam"],
+                    voorraad = (int)dr["Voorraad"]
                     /*
                     prijs = (double)(dr["prijs"].ToString("00.00")),
                     soortGerecht = (string)(dr["SoortGerecht"].ToString()),
                     dagType = (string)(dr["DagType"].ToString()),*/
 
-    };
+                };
                 gerechten.Add(gerecht);
             }
             return gerechten;
+        }
+
+        public void Db_Update_Gerecht(string query)
+        {
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
         }
 
     }
