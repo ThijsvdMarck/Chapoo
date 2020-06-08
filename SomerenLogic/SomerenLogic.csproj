@@ -45,11 +45,18 @@
     <Compile Include="Bestelling_Service.cs" />
     <Compile Include="DranklijstItem_Service.cs" />
     <Compile Include="Drankje_Service.cs" />
+    <Compile Include="Dranklijst_Service.cs" />
     <Compile Include="GerechtlijstItem_Service.cs" />
     <Compile Include="Gerecht_Service.cs" />
     <Compile Include="Klant_Service.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Personeel_Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rekening_Service.cs" />
+    <Compile Include="Student_Service.cs" />
     <Compile Include="Tafel_Service.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +68,31 @@
       <Project>{90a9ed02-35d3-4d84-80e4-458bc835c722}</Project>
       <Name>SomerenModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\SomerenDAL.dll" />
+    <Content Include="bin\Debug\SomerenDAL.pdb" />
+    <Content Include="bin\Debug\SomerenLogic.dll" />
+    <Content Include="bin\Debug\SomerenLogic.pdb" />
+    <Content Include="bin\Debug\SomerenModel.dll" />
+    <Content Include="bin\Debug\SomerenModel.pdb" />
+    <Content Include="obj\Debug\ChapeauLogic.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SomerenLogic.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SomerenLogic.dll" />
+    <Content Include="obj\Debug\SomerenLogic.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SomerenDAL.dll.config" />
+    <None Include="obj\Debug\ChapeauLogic.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\SomerenLogic.csproj.CopyComplete" />
+    <None Include="obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\SomerenLogic.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\SomerenLogic.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -49,8 +49,15 @@
     <Compile Include="GerechtlijstItem_DAO.cs" />
     <Compile Include="Gerecht_DAO.cs" />
     <Compile Include="Klant_DAO.cs" />
+    <Compile Include="LoginDAL.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Personeel_DAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rekening_DAO.cs" />
+    <Compile Include="Student_DAO.cs" />
     <Compile Include="Tafel_DAO.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +68,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\SomerenDAL.dll.config" />
+    <None Include="obj\Debug\ChapeauDAL.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\SomerenDAL.csproj.CopyComplete" />
+    <None Include="obj\Debug\SomerenDAL.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\SomerenDAL.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\SomerenDAL.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\SomerenDAL.dll" />
+    <Content Include="bin\Debug\SomerenDAL.pdb" />
+    <Content Include="bin\Debug\SomerenModel.dll" />
+    <Content Include="bin\Debug\SomerenModel.pdb" />
+    <Content Include="obj\Debug\ChapeauDAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SomerenDAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SomerenDAL.dll" />
+    <Content Include="obj\Debug\SomerenDAL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
