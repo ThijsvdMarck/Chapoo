@@ -18,6 +18,9 @@ namespace SomerenUI
         SomerenLogic.Drankje_Service drankService = new SomerenLogic.Drankje_Service();
         SomerenLogic.Gerecht_Service gerechtService = new SomerenLogic.Gerecht_Service();
         SomerenLogic.Bestelling_Service bestellingService = new SomerenLogic.Bestelling_Service();
+        SomerenLogic.GerechtlijstItem_Service gerechtlijstItemService = new SomerenLogic.GerechtlijstItem_Service();
+        SomerenLogic.DrankLijstItem_Service drankLijstService = new SomerenLogic.DrankLijstItem_Service();
+
 
         public SomerenUI()
         {
@@ -307,7 +310,7 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
-                    bestellingen[0] = b.TafelID.ToString();
+                    bestellingen[0] = "Tafel " + b.TafelID.ToString();
                     bestellingen[1] = b.BestellingID.ToString();
 
                     itm = new ListViewItem(bestellingen);
@@ -334,6 +337,60 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkKeukenOverzicht.Show();
                 pnl_BestellingKeuken.Show();
+
+                // Label tafelnummer laten zien
+                string geselecteerdeTafel = "";
+
+                for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
+                {
+                    if (lv_KeukenOverzicht.Items[i].Checked)
+                    {
+                       geselecteerdeTafel = lv_KeukenOverzicht.Items[i].Text;
+                    }
+                }
+
+                lbl_Tafel.Text = geselecteerdeTafel;
+                lbl_TafelNr.Text = "";
+
+                // Listview
+                int geselecteerdeBestelling = 0;
+
+                for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
+                {
+                    if (lv_KeukenOverzicht.Items[i].Checked)
+                    {
+                        geselecteerdeBestelling = int.Parse(lv_KeukenOverzicht.Items[i].SubItems[1].Text);
+                    }
+                }
+
+                List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GetGerechtlijstItems(geselecteerdeBestelling);
+
+                // clear the listview before filling it again
+               // lv_BestellingKeuken.Clear();
+
+                lv_KeukenOverzicht.View = View.Details;
+                lv_KeukenOverzicht.GridLines = true;
+                lv_KeukenOverzicht.FullRowSelect = true;
+                lv_KeukenOverzicht.CheckBoxes = true;
+
+                // Aanmaken van kolommen
+                lv_KeukenOverzicht.Columns.Add("Tafel", 200);
+                lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
+                lv_KeukenOverzicht.Columns.Add("Last Name", 100);
+
+                string[] gerechten = new string[3];
+                ListViewItem itm;
+
+                foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                {
+                    gerechten[0] = g.BestellingID.ToString();
+                    gerechten[1] = g.GerechtNaam;
+                    gerechten[2] = g.status.ToString();
+
+                    itm = new ListViewItem(gerechten);
+                    lv_KeukenOverzicht.Items.Add(itm);
+                }
+
             }
             else if (panelName == "Afrekenen")
             {
@@ -618,7 +675,36 @@ namespace SomerenUI
 
         private void btn_ShowBestellingKeuken_Click(object sender, EventArgs e)
         {
-            showPanel("KeukenBestelling");
+            if (checkGeselecteerdeBestelling())
+            {
+                showPanel("KeukenBestelling");
+            }
+        }
+        private bool checkGeselecteerdeBestelling()
+        {
+            int count = 0;
+
+            for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
+            {
+                if (lv_KeukenOverzicht.Items[i].Checked)
+                {
+                    count++;
+
+                    if (count > 1)
+                    {
+                        MessageBox.Show("Selecteer maar 1 bestelling!");
+                        return false;
+                    }
+                }
+            }
+
+            if (count == 0)
+            {
+                MessageBox.Show("Selecteer een bestelling om hem te kunnen zien");
+                return false;
+            }
+
+            return true;
         }
 
         private void btn_BarOverzicht_Click(object sender, EventArgs e)
@@ -786,6 +872,7 @@ namespace SomerenUI
             showPanel("LogIn");
         }
 
+
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -797,6 +884,10 @@ namespace SomerenUI
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_MinKalfstartaar_Click(object sender, EventArgs e)
         {
 
         }

@@ -515,6 +515,7 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -5436,6 +5437,7 @@
             this.btn_MinKalfstartaar.TabIndex = 8;
             this.btn_MinKalfstartaar.Text = "-";
             this.btn_MinKalfstartaar.UseVisualStyleBackColor = true;
+            this.btn_MinKalfstartaar.Click += new System.EventHandler(this.btn_MinKalfstartaar_Click);
             // 
             // lbl_AantalKalfstartaat
             // 
@@ -5811,7 +5813,11 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
+
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
+
+            this.pnl_Base.Controls.Add(this.pnl_DinerBestelling);
+
             this.pnl_Base.Controls.Add(this.pnl_Overzicht);
             this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_RekeningOverzicht);
@@ -5835,7 +5841,6 @@
             this.pnl_Base.Controls.Add(this.pnl_Dag);
             this.pnl_Base.Controls.Add(this.pnl_MenuBalkFinanciën);
             this.pnl_Base.Controls.Add(this.pnl_MenuBalkBestelling);
-            this.pnl_Base.Controls.Add(this.pnl_DinerBestelling);
             this.pnl_Base.Controls.Add(this.pnl_KoffieThee);
             this.pnl_Base.Controls.Add(this.pnl_GedestilleerdeDranken);
             this.pnl_Base.Controls.Add(this.pnl_Wijn);
@@ -6493,6 +6498,7 @@
             this.lbl_OpmerkingBar.Size = new System.Drawing.Size(58, 13);
             this.lbl_OpmerkingBar.TabIndex = 0;
             this.lbl_OpmerkingBar.Text = "Opmerking";
+
             // 
             // lv_BarBestelling
             // 
@@ -6814,6 +6820,277 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(147, 21);
             this.comboBox5.TabIndex = 62;
+
+            // 
+            // lv_BarBestelling
+            // 
+            this.lv_BarBestelling.HideSelection = false;
+            this.lv_BarBestelling.Location = new System.Drawing.Point(37, 55);
+            this.lv_BarBestelling.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lv_BarBestelling.Name = "lv_BarBestelling";
+            this.lv_BarBestelling.Size = new System.Drawing.Size(542, 224);
+            this.lv_BarBestelling.TabIndex = 3;
+            this.lv_BarBestelling.UseCompatibleStateImageBehavior = false;
+            // 
+            // lbl_StatusBar
+            // 
+            this.lbl_StatusBar.AutoSize = true;
+            this.lbl_StatusBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StatusBar.Location = new System.Drawing.Point(423, 18);
+            this.lbl_StatusBar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_StatusBar.Name = "lbl_StatusBar";
+            this.lbl_StatusBar.Size = new System.Drawing.Size(60, 24);
+            this.lbl_StatusBar.TabIndex = 2;
+            this.lbl_StatusBar.Text = "Status";
+            // 
+            // lbl_TafelNrBar
+            // 
+            this.lbl_TafelNrBar.AutoSize = true;
+            this.lbl_TafelNrBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelNrBar.Location = new System.Drawing.Point(88, 20);
+            this.lbl_TafelNrBar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TafelNrBar.Name = "lbl_TafelNrBar";
+            this.lbl_TafelNrBar.Size = new System.Drawing.Size(60, 24);
+            this.lbl_TafelNrBar.TabIndex = 1;
+            this.lbl_TafelNrBar.Text = "label1";
+            // 
+            // lbl_TafelBar
+            // 
+            this.lbl_TafelBar.AutoSize = true;
+            this.lbl_TafelBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelBar.Location = new System.Drawing.Point(29, 19);
+            this.lbl_TafelBar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TafelBar.Name = "lbl_TafelBar";
+            this.lbl_TafelBar.Size = new System.Drawing.Size(51, 24);
+            this.lbl_TafelBar.TabIndex = 0;
+            this.lbl_TafelBar.Text = "Tafel";
+            // 
+            // pnl_BestellingKeuken
+            // 
+            this.pnl_BestellingKeuken.Controls.Add(this.btn_AfgerondKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.btn_DeelKlaarKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.gb_OpmerkingenKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.lv_BestellingenKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.lbl_StatusKeuken);
+            this.pnl_BestellingKeuken.Controls.Add(this.lbl_TafelNr);
+            this.pnl_BestellingKeuken.Controls.Add(this.lbl_Tafel);
+            this.pnl_BestellingKeuken.Location = new System.Drawing.Point(-1, 216);
+            this.pnl_BestellingKeuken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_BestellingKeuken.Name = "pnl_BestellingKeuken";
+            this.pnl_BestellingKeuken.Size = new System.Drawing.Size(612, 646);
+            this.pnl_BestellingKeuken.TabIndex = 2;
+            // 
+            // btn_AfgerondKeuken
+            // 
+            this.btn_AfgerondKeuken.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_AfgerondKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfgerondKeuken.ForeColor = System.Drawing.Color.White;
+            this.btn_AfgerondKeuken.Location = new System.Drawing.Point(366, 501);
+            this.btn_AfgerondKeuken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AfgerondKeuken.Name = "btn_AfgerondKeuken";
+            this.btn_AfgerondKeuken.Size = new System.Drawing.Size(172, 44);
+            this.btn_AfgerondKeuken.TabIndex = 6;
+            this.btn_AfgerondKeuken.Text = "Bestelling afgerond";
+            this.btn_AfgerondKeuken.UseVisualStyleBackColor = false;
+            // 
+            // btn_DeelKlaarKeuken
+            // 
+            this.btn_DeelKlaarKeuken.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_DeelKlaarKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeelKlaarKeuken.ForeColor = System.Drawing.Color.White;
+            this.btn_DeelKlaarKeuken.Location = new System.Drawing.Point(67, 505);
+            this.btn_DeelKlaarKeuken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DeelKlaarKeuken.Name = "btn_DeelKlaarKeuken";
+            this.btn_DeelKlaarKeuken.Size = new System.Drawing.Size(172, 44);
+            this.btn_DeelKlaarKeuken.TabIndex = 5;
+            this.btn_DeelKlaarKeuken.Text = "Deel bestelling klaar";
+            this.btn_DeelKlaarKeuken.UseVisualStyleBackColor = false;
+            // 
+            // gb_OpmerkingenKeuken
+            // 
+            this.gb_OpmerkingenKeuken.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gb_OpmerkingenKeuken.Controls.Add(this.lbl_OpmerkingenKeuken);
+            this.gb_OpmerkingenKeuken.Location = new System.Drawing.Point(41, 339);
+            this.gb_OpmerkingenKeuken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_OpmerkingenKeuken.Name = "gb_OpmerkingenKeuken";
+            this.gb_OpmerkingenKeuken.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gb_OpmerkingenKeuken.Size = new System.Drawing.Size(536, 128);
+            this.gb_OpmerkingenKeuken.TabIndex = 4;
+            this.gb_OpmerkingenKeuken.TabStop = false;
+            this.gb_OpmerkingenKeuken.Text = "Opmerkingen";
+            // 
+            // lbl_OpmerkingenKeuken
+            // 
+            this.lbl_OpmerkingenKeuken.AutoSize = true;
+            this.lbl_OpmerkingenKeuken.Location = new System.Drawing.Point(10, 24);
+            this.lbl_OpmerkingenKeuken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_OpmerkingenKeuken.Name = "lbl_OpmerkingenKeuken";
+            this.lbl_OpmerkingenKeuken.Size = new System.Drawing.Size(58, 13);
+            this.lbl_OpmerkingenKeuken.TabIndex = 0;
+            this.lbl_OpmerkingenKeuken.Text = "Opmerking";
+            // 
+            // lv_BestellingenKeuken
+            // 
+            this.lv_BestellingenKeuken.HideSelection = false;
+            this.lv_BestellingenKeuken.Location = new System.Drawing.Point(37, 55);
+            this.lv_BestellingenKeuken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lv_BestellingenKeuken.Name = "lv_BestellingenKeuken";
+            this.lv_BestellingenKeuken.Size = new System.Drawing.Size(542, 224);
+            this.lv_BestellingenKeuken.TabIndex = 3;
+            this.lv_BestellingenKeuken.UseCompatibleStateImageBehavior = false;
+            // 
+            // lbl_StatusKeuken
+            // 
+            this.lbl_StatusKeuken.AutoSize = true;
+            this.lbl_StatusKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StatusKeuken.Location = new System.Drawing.Point(423, 18);
+            this.lbl_StatusKeuken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_StatusKeuken.Name = "lbl_StatusKeuken";
+            this.lbl_StatusKeuken.Size = new System.Drawing.Size(60, 24);
+            this.lbl_StatusKeuken.TabIndex = 2;
+            this.lbl_StatusKeuken.Text = "Status";
+            // 
+            // lbl_TafelNr
+            // 
+            this.lbl_TafelNr.AutoSize = true;
+            this.lbl_TafelNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelNr.Location = new System.Drawing.Point(88, 20);
+            this.lbl_TafelNr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TafelNr.Name = "lbl_TafelNr";
+            this.lbl_TafelNr.Size = new System.Drawing.Size(60, 24);
+            this.lbl_TafelNr.TabIndex = 1;
+            this.lbl_TafelNr.Text = "label1";
+            // 
+            // lbl_Tafel
+            // 
+            this.lbl_Tafel.AutoSize = true;
+            this.lbl_Tafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tafel.Location = new System.Drawing.Point(29, 19);
+            this.lbl_Tafel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Tafel.Name = "lbl_Tafel";
+            this.lbl_Tafel.Size = new System.Drawing.Size(51, 24);
+            this.lbl_Tafel.TabIndex = 0;
+            this.lbl_Tafel.Text = "Tafel";
+            // 
+            // pnl_MenuBalkRekening
+            // 
+            this.pnl_MenuBalkRekening.Controls.Add(this.btn_RekeningTafelOverzicht);
+            this.pnl_MenuBalkRekening.Location = new System.Drawing.Point(0, 157);
+            this.pnl_MenuBalkRekening.Name = "pnl_MenuBalkRekening";
+            this.pnl_MenuBalkRekening.Size = new System.Drawing.Size(610, 63);
+            this.pnl_MenuBalkRekening.TabIndex = 23;
+            // 
+            // btn_RekeningTafelOverzicht
+            // 
+            this.btn_RekeningTafelOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RekeningTafelOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RekeningTafelOverzicht.Location = new System.Drawing.Point(422, 1);
+            this.btn_RekeningTafelOverzicht.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_RekeningTafelOverzicht.Name = "btn_RekeningTafelOverzicht";
+            this.btn_RekeningTafelOverzicht.Size = new System.Drawing.Size(186, 60);
+            this.btn_RekeningTafelOverzicht.TabIndex = 19;
+            this.btn_RekeningTafelOverzicht.Text = "Tafel overzicht";
+            this.btn_RekeningTafelOverzicht.UseVisualStyleBackColor = true;
+            this.btn_RekeningTafelOverzicht.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // pnl_Maand
+            // 
+            this.pnl_Maand.Controls.Add(this.lv_Maand);
+            this.pnl_Maand.Location = new System.Drawing.Point(0, 216);
+            this.pnl_Maand.Name = "pnl_Maand";
+            this.pnl_Maand.Size = new System.Drawing.Size(610, 644);
+            this.pnl_Maand.TabIndex = 58;
+            // 
+            // lv_Maand
+            // 
+            this.lv_Maand.HideSelection = false;
+            this.lv_Maand.Location = new System.Drawing.Point(29, 21);
+            this.lv_Maand.Name = "lv_Maand";
+            this.lv_Maand.Size = new System.Drawing.Size(549, 458);
+            this.lv_Maand.TabIndex = 0;
+            this.lv_Maand.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_Week
+            // 
+            this.pnl_Week.Controls.Add(this.lv_Week);
+            this.pnl_Week.Location = new System.Drawing.Point(0, 216);
+            this.pnl_Week.Name = "pnl_Week";
+            this.pnl_Week.Size = new System.Drawing.Size(610, 644);
+            this.pnl_Week.TabIndex = 58;
+            // 
+            // lv_Week
+            // 
+            this.lv_Week.HideSelection = false;
+            this.lv_Week.Location = new System.Drawing.Point(29, 21);
+            this.lv_Week.Name = "lv_Week";
+            this.lv_Week.Size = new System.Drawing.Size(549, 458);
+            this.lv_Week.TabIndex = 0;
+            this.lv_Week.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_MenuBalkFinanciën
+            // 
+            this.pnl_MenuBalkFinanciën.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(213)))), ((int)(((byte)(226)))));
+            this.pnl_MenuBalkFinanciën.Controls.Add(this.btn_DatumKiezen);
+            this.pnl_MenuBalkFinanciën.Controls.Add(this.btn_Maand);
+            this.pnl_MenuBalkFinanciën.Controls.Add(this.btn_Week);
+            this.pnl_MenuBalkFinanciën.Controls.Add(this.btn_Dag);
+            this.pnl_MenuBalkFinanciën.Location = new System.Drawing.Point(0, 157);
+            this.pnl_MenuBalkFinanciën.Name = "pnl_MenuBalkFinanciën";
+            this.pnl_MenuBalkFinanciën.Size = new System.Drawing.Size(609, 63);
+            this.pnl_MenuBalkFinanciën.TabIndex = 22;
+            // 
+            // btn_DatumKiezen
+            // 
+            this.btn_DatumKiezen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DatumKiezen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DatumKiezen.Location = new System.Drawing.Point(432, 1);
+            this.btn_DatumKiezen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DatumKiezen.Name = "btn_DatumKiezen";
+            this.btn_DatumKiezen.Size = new System.Drawing.Size(140, 56);
+            this.btn_DatumKiezen.TabIndex = 21;
+            this.btn_DatumKiezen.Text = "Datum Kiezen";
+            this.btn_DatumKiezen.UseVisualStyleBackColor = true;
+            this.btn_DatumKiezen.Click += new System.EventHandler(this.btn_DatumKiezen_Click);
+            // 
+            // btn_Maand
+            // 
+            this.btn_Maand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Maand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Maand.Location = new System.Drawing.Point(288, 1);
+            this.btn_Maand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Maand.Name = "btn_Maand";
+            this.btn_Maand.Size = new System.Drawing.Size(140, 56);
+            this.btn_Maand.TabIndex = 20;
+            this.btn_Maand.Text = "Maand";
+            this.btn_Maand.UseVisualStyleBackColor = true;
+            this.btn_Maand.Click += new System.EventHandler(this.btn_Maand_Click);
+            // 
+            // btn_Week
+            // 
+            this.btn_Week.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Week.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Week.Location = new System.Drawing.Point(144, 1);
+            this.btn_Week.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Week.Name = "btn_Week";
+            this.btn_Week.Size = new System.Drawing.Size(140, 56);
+            this.btn_Week.TabIndex = 19;
+            this.btn_Week.Text = "Week";
+            this.btn_Week.UseVisualStyleBackColor = true;
+            this.btn_Week.Click += new System.EventHandler(this.btn_Week_Click);
+            // 
+            // btn_Dag
+            // 
+            this.btn_Dag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Dag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Dag.Location = new System.Drawing.Point(0, 1);
+            this.btn_Dag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Dag.Name = "btn_Dag";
+            this.btn_Dag.Size = new System.Drawing.Size(140, 56);
+            this.btn_Dag.TabIndex = 18;
+            this.btn_Dag.Text = "Dag";
+            this.btn_Dag.UseVisualStyleBackColor = true;
+            this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
+
             // 
             // SomerenUI
             // 
