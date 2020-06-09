@@ -18,6 +18,7 @@ namespace SomerenUI
         SomerenLogic.Drankje_Service drankService = new SomerenLogic.Drankje_Service();
         SomerenLogic.Gerecht_Service gerechtService = new SomerenLogic.Gerecht_Service();
         SomerenLogic.Bestelling_Service bestellingService = new SomerenLogic.Bestelling_Service();
+        SomerenLogic.DrankLijstItem_Service drankLijstService = new SomerenLogic.DrankLijstItem_Service();
 
         public SomerenUI()
         {
@@ -784,6 +785,10 @@ namespace SomerenUI
         private void btn_LogUit_Click(object sender, EventArgs e)
         {
             showPanel("LogIn");
+        }
+
+        private void btn_MinKalfstartaar_Click(object sender, EventArgs e)
+        {
         }
     }
 }
