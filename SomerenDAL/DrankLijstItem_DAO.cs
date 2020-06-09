@@ -39,5 +39,12 @@ namespace SomerenDAL
             return drankLijstItems;
         }
 
+        public void AddDrankLijsItem(int drankID, int bestellingID, int aantal, Status status)
+        {
+            string Status = status.ToString();
+            string AddDrankLijsItem = $"Insert into [Dranklijst] (DrankID, BestellingID, Aantal, Status) Values ( {drankID},{bestellingID},{aantal},'{status}')";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(AddDrankLijsItem, sqlParameters);
+        }
     }
 }
