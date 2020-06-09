@@ -17,6 +17,7 @@ namespace SomerenUI
     {
         SomerenLogic.Drankje_Service drankService = new SomerenLogic.Drankje_Service();
         SomerenLogic.Gerecht_Service gerechtService = new SomerenLogic.Gerecht_Service();
+        SomerenLogic.Bestelling_Service bestellingService = new SomerenLogic.Bestelling_Service();
 
         public SomerenUI()
         {
@@ -119,8 +120,8 @@ namespace SomerenUI
                     listViewStudents.Items.Add(itm);
                 }
              */
-            }
-            else if(panelName == "Base"){
+            } 
+            else if (panelName == "Base"){
                 hideAllPanels();
                 pnl_Base.Show();
             }           
@@ -200,7 +201,6 @@ namespace SomerenUI
                 hideAllPanels();
                 pnl_Reservering.Show();
             }
-
             else if (panelName == "Tafels")
             {
                 hideAllPanels();
@@ -217,34 +217,7 @@ namespace SomerenUI
                 gb_GerechtToevoegen.Hide();
                 gb_DrankToevoegen.Show();
 
-                List<Drankje> drankList = drankService.GetDrankjes();
-
-                // clear the listview before filling it again
-                lv_Voorraad.Clear();
-
-                lv_Voorraad.View = View.Details;
-                lv_Voorraad.GridLines = true;
-                lv_Voorraad.FullRowSelect = true;
-
-                // Aanmaken van kolommen
-                lv_Voorraad.Columns.Add("ID", 30);
-                lv_Voorraad.Columns.Add("Naam", 170);
-                lv_Voorraad.Columns.Add("Voorraad", 50);
-
-                string[] drankjes = new string[3];
-                ListViewItem itm;
-
-                foreach (SomerenModel.Drankje d in drankList)
-                {
-                    drankjes[0] = d.drankID.ToString();
-                    drankjes[1] = d.drankNaam;
-                    drankjes[2] = d.voorraad.ToString();
-
-                    itm = new ListViewItem(drankjes);
-                    lv_Voorraad.Items.Add(itm);
-                }
-
-                //lv_Voorraad.SelectedItems;
+                vulDrankVoorraad();
             }
             else if (panelName == "Wijn")
             {
@@ -314,32 +287,32 @@ namespace SomerenUI
                 pnl_KeukenOverzicht.Show();
 
 
-                //List<Bestelling> studentList = Bestelling_Service.GetStudents();
+                List<Bestelling> bestellingList = bestellingService.GetBestelling();
 
-                //// clear the listview before filling it again
-                //listViewStudents.Clear();
+                // clear the listview before filling it again
+                lv_KeukenOverzicht.Clear();
 
-                //listViewStudents.View = View.Details;
-                //listViewStudents.GridLines = true;
-                //listViewStudents.FullRowSelect = true;
+                lv_KeukenOverzicht.View = View.Details;
+                lv_KeukenOverzicht.GridLines = true;
+                lv_KeukenOverzicht.FullRowSelect = true;
+                lv_KeukenOverzicht.CheckBoxes = true;
 
-                //// Aanmaken van kolommen
-                //listViewStudents.Columns.Add("Student Number", 100);
-                //listViewStudents.Columns.Add("First Name", 100);
-                //listViewStudents.Columns.Add("Last Name", 100);
+                // Aanmaken van kolommen
+                lv_KeukenOverzicht.Columns.Add("Tafel", 200);
+                lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
+                // lv_KeukenOverzicht.Columns.Add("Last Name", 100);
 
-                //string[] students = new string[3];
-                //ListViewItem itm;
+                string[] bestellingen = new string[2];
+                ListViewItem itm;
 
-                //foreach (SomerenModel.Student s in studentList)
-                //{
-                //    students[0] = s.Number.ToString();
-                //    students[1] = s.FirstName;
-                //    students[2] = s.LastName;
+                foreach (SomerenModel.Bestelling b in bestellingList)
+                {
+                    bestellingen[0] = b.TafelID.ToString();
+                    bestellingen[1] = b.BestellingID.ToString();
 
-                //    itm = new ListViewItem(students);
-                //    listViewStudents.Items.Add(itm);
-                //}
+                    itm = new ListViewItem(bestellingen);
+                    lv_KeukenOverzicht.Items.Add(itm);
+                }
             }
             else if (panelName == "BarOverzicht")
             {
@@ -370,58 +343,22 @@ namespace SomerenUI
                 pnl_AfrekenOverzicht.Show();
                 gb_Afgerekend.Hide();
                 gb_AfrekenPopUp.Hide();
+
+                cmb_BetaalMethode.Items.Clear();
+
+                cmb_BetaalMethode.Items.Add("Credit card");
+                cmb_BetaalMethode.Items.Add("Contant");
+                cmb_BetaalMethode.Items.Add("Pinnen");
+
+                cmb_BetaalMethode.SelectedIndex = 0;
             }
 
         }
 
-        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           //
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void dashboardToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            showPanel("Dashboard");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void img_Dashboard_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("What happens in Someren, stays in Someren!");
-        }
-
-        private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            showPanel("Students");
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             showPanel("KeukenOverzicht");
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_Financien_Click(object sender, EventArgs e)
@@ -439,56 +376,6 @@ namespace SomerenUI
             showPanel("Overzicht");
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_MinSteakTartaar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_LinguiniPaddestoelen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_Hoofdgerechten_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click_1(object sender, EventArgs e)
         {
             showPanel("GedestilleerdeDranken");
@@ -503,88 +390,7 @@ namespace SomerenUI
         {
             showPanel("Bier");
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_PrijsCocaCola_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_PrijsKalfstartaar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_4(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label44_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label41_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label35_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
+ 
         private void btn_Home_Click(object sender, EventArgs e)
         {
             showPanel("Overzicht");
@@ -829,7 +635,11 @@ namespace SomerenUI
         {
             gb_GerechtToevoegen.Hide();
             gb_DrankToevoegen.Show();
+            vulDrankVoorraad();
+        }
 
+        private void vulDrankVoorraad()
+        {
             List<Drankje> drankList = drankService.GetDrankjes();
 
             // clear the listview before filling it again
@@ -841,7 +651,7 @@ namespace SomerenUI
 
             // Aanmaken van kolommen
             lv_Voorraad.Columns.Add("ID", 30);
-            lv_Voorraad.Columns.Add("Naam", 170);
+            lv_Voorraad.Columns.Add("Naam", 160);
             lv_Voorraad.Columns.Add("Voorraad", 50);
 
             string[] drankjes = new string[3];
@@ -855,6 +665,8 @@ namespace SomerenUI
 
                 itm = new ListViewItem(drankjes);
                 lv_Voorraad.Items.Add(itm);
+
+
             }
         }
 
@@ -863,6 +675,12 @@ namespace SomerenUI
             gb_GerechtToevoegen.Show();
             gb_DrankToevoegen.Hide();
 
+            vulGerechtVoorraad();
+
+
+        }
+        private void vulGerechtVoorraad()
+        {
             List<Gerecht> gerechtList = gerechtService.GetGerechten();
 
             // clear the listview before filling it again
@@ -874,7 +692,7 @@ namespace SomerenUI
 
             // Aanmaken van kolommen
             lv_Voorraad.Columns.Add("ID", 30);
-            lv_Voorraad.Columns.Add("Naam", 170);
+            lv_Voorraad.Columns.Add("Naam", 160);
             lv_Voorraad.Columns.Add("Voorraad", 50);
 
             string[] drankjes = new string[3];
@@ -906,10 +724,13 @@ namespace SomerenUI
             txt_HoeveelheidDrank.Clear();
             txt_DrankNaam.Clear();
             txt_PrijsDrank.Clear();
+
+            vulDrankVoorraad();
         }
 
         private void btn_VoegToeGerecht_Click(object sender, EventArgs e)
         {
+
             if (txt_NaamGerecht.Text == "" || txt_HoeveelheidGerecht.Text == "" || txt_SoortGerecht.Text == "" || txt_PrijsGerecht.Text == "" || txt_TypeGerecht.Text == "")
             {
                 MessageBox.Show("Vul alle velden in alstublieft.");
@@ -924,6 +745,9 @@ namespace SomerenUI
             txt_NaamGerecht.Clear();
             txt_PrijsGerecht.Clear();
             txt_SoortGerecht.Clear();
+
+
+            vulGerechtVoorraad();
         }
 
         private void btn_AfrekenBetalen_Click(object sender, EventArgs e)

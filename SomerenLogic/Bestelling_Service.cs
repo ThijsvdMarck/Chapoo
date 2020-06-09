@@ -12,28 +12,26 @@ namespace SomerenLogic
     {
         Bestelling_DAO bestelling_db = new Bestelling_DAO();
 
-        /*public List<Personeel> GetPersoneel()
+        public List<Bestelling> GetBestelling()
         {
             try
             {
-              //  List<Personeel> personeels = personeel_db.Db_Get_All_Personeel();
-              //  return personeels;
+               List<Bestelling> bestellingen = bestelling_db.Db_Get_All_Bestellingen();
+               return bestellingen;
             }
             catch (Exception)
             {
                 // something went wrong connecting to the database, so we will add a fake student to the list to make sure the rest of the application continues working!
-                List<Personeel> personeels = new List<Personeel>();
-                Personeel a = new Personeel();
-                a.PersoneelID = 111111;
-                a.Naam = "VLEESSSSS!!!";
-                a.functie = Functie.bediening;
+                List<Bestelling> bestellingen = new List<Bestelling>();
+                Bestelling b = new Bestelling();
+                b.BestellingID = 111111;
 
-                personeels.Add(a);
+                bestellingen.Add(b);
 
-                return personeels;
+                return bestellingen;
                 //throw new Exception("Someren couldn't connect to the database");
             }
 
-        }*/
+        }
     }
 }
