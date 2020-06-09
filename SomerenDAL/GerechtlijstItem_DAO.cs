@@ -14,7 +14,7 @@ namespace SomerenDAL
     {
         public List<GerechtlijstItem> Db_Get_All_GerechtlijstItems(int geselecteerdeBestelling)
         {
-            string query = "SELECT BestellingID, Aantal, [Status], Gerecht.Gerechtnaam FROM Gerechtlijst JOIN Gerecht ON Gerechtlijst.GerechtID = Gerecht.GerechtID WHERE BestellingID = " + geselecteerdeBestelling.ToString();
+            string query = "SELECT BestellingID, Aantal, [Status], Gerecht.Gerechtnaam, Tijd FROM Gerechtlijst JOIN Gerecht ON Gerechtlijst.GerechtID = Gerecht.GerechtID WHERE BestellingID = " + geselecteerdeBestelling.ToString();
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
@@ -29,11 +29,10 @@ namespace SomerenDAL
                 GerechtlijstItem gerechtlijstItem = new GerechtlijstItem()
                 {
                     BestellingID = (int)dr["BestellingID"],
-                    GerechtID = (int)dr["GerechtID"],
                     Aantal = (int)dr["Aantal"],
                     status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
-                    GerechtNaam = (string)dr["Gerecht.Gerechtnaam"]
-
+                    GerechtNaam = (string)dr["Gerechtnaam"],
+                    Tijd = (DateTime)dr["Tijd"]
                 };
                 gerechtItems.Add(gerechtlijstItem);
             }
