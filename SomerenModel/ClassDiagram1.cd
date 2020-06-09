@@ -3,13 +3,11 @@
   <Class Name="SomerenModel.Bestelling">
     <Position X="8.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAABAAAAAACAAAAAAAAAAAgAAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAASAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Bestelling.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Serveerder" />
-      <Property Name="Drankje" />
-      <Property Name="Gerecht" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SomerenModel.Drankje">
@@ -20,9 +18,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SomerenModel.Gerecht">
-    <Position X="6.25" Y="4.5" Width="1.5" />
+    <Position X="6.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAEAAAgAAgAAACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAEAAAgAAgAAACAAAAAAAAAEAA=</HashCode>
       <FileName>Gerecht.cs</FileName>
     </TypeIdentifier>
   </Class>

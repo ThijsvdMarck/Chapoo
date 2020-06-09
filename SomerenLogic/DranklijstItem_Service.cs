@@ -35,5 +35,9 @@ namespace SomerenLogic
             }
 
         }
+        public void AddDrankLijsItem(int DrankID, int BestellingID, int Aantal, Status Status)
+        {
+            drankLijstItem_db.AddDrankLijsItem( DrankID,  BestellingID,  Aantal,  Status);
+        }
     }
 }
