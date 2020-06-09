@@ -14,11 +14,7 @@ namespace SomerenDAL
     {
         public List<GerechtlijstItem> Db_Get_All_GerechtlijstItems(int geselecteerdeBestelling)
         {
-            string query = "SELECT BestellingID, Aantal, [Status], Gerecht.Gerechtnaam" +
-                           "FROM Gerechtlijst" +
-                           "JOIN Gerecht" + 
-                           "ON Gerechtlijst.GerechtID = Gerecht.GerechtID" +
-                           "WHERE BestellingID = " + geselecteerdeBestelling.ToString();
+            string query = "SELECT BestellingID, Aantal, [Status], Gerecht.Gerechtnaam FROM Gerechtlijst JOIN Gerecht ON Gerechtlijst.GerechtID = Gerecht.GerechtID WHERE BestellingID = " + geselecteerdeBestelling.ToString();
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
