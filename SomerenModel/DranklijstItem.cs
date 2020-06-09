@@ -12,5 +12,6 @@ namespace SomerenModel
         public Status status { get; set; }
         public string drankNaam { get; set; }
         public int bestellingID { get; set; }
+        public DateTime tijd { get; set; }
     }
 }

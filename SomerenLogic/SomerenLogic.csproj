@@ -45,7 +45,6 @@
     <Compile Include="Bestelling_Service.cs" />
     <Compile Include="DranklijstItem_Service.cs" />
     <Compile Include="Drankje_Service.cs" />
-    <Compile Include="Dranklijst_Service.cs" />
     <Compile Include="GerechtlijstItem_Service.cs" />
     <Compile Include="Gerecht_Service.cs" />
     <Compile Include="Klant_Service.cs" />

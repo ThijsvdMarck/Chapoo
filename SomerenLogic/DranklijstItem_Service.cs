@@ -29,15 +29,17 @@ namespace SomerenLogic
                 a.bestellingID = 1;
                 a.aantal = 420;
                 a.status = Status.Besteld;
+                a.tijd = DateTime.Now;
 
                 return drankLijstItem;
                 //throw new Exception("Someren couldn't connect to the database");
             }
 
         }
-        public void AddDrankLijsItem(int DrankID, int BestellingID, int Aantal, Status Status)
+        public void AddDrankLijsItem(int DrankID, int BestellingID, int Aantal)
         {
-            drankLijstItem_db.AddDrankLijsItem( DrankID,  BestellingID,  Aantal,  Status);
+            drankLijstItem_db.AddDrankLijsItem( DrankID,  BestellingID,  Aantal);
         }
+
     }
 }

@@ -8,7 +8,7 @@ namespace SomerenModel
 {
     public enum DagType
     {
-        lunch, diner
+        Lunch, Diner
     }
 
     public enum SoortGerecht
