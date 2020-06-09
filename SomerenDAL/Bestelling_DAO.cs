@@ -37,5 +37,13 @@ namespace SomerenDAL
             }
             return bestellingen;
         }
+
+        public void Db_Update_Bestelling(Status status, int bestelling)
+        {
+            string query = "UPDATE Bestelling SET[Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

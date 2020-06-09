@@ -677,7 +677,7 @@ namespace SomerenUI
                 showPanel("KeukenBestelling");
             }
 
-            VeranderStatusBestelling();
+            VeranderStatusBestelling(Status.WordtBereid);
         }
         private bool checkGeselecteerdeBestelling()
         {
@@ -705,13 +705,11 @@ namespace SomerenUI
 
             return true;
         }
-        private void VeranderStatusBestelling()
+        private void VeranderStatusBestelling(Status status)
         {
             int geselecteerdeBestelling = GetGeselecteerdeBestelling();
 
-            string query = "UPDATE Gerecht SET[Status] = '" + Status.WordtBereid + "' WHERE BestellingID = " + geselecteerdeBestelling.ToString();
-
-
+            bestellingService.UpdateBestelling(status, geselecteerdeBestelling);
         }
         private int GetGeselecteerdeBestelling()
         {
