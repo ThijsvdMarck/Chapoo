@@ -868,7 +868,6 @@
             this.lbl_Hoeveelheid.Size = new System.Drawing.Size(93, 18);
             this.lbl_Hoeveelheid.TabIndex = 2;
             this.lbl_Hoeveelheid.Text = "Hoeveelheid:";
-            this.lbl_Hoeveelheid.Click += new System.EventHandler(this.label4_Click);
             // 
             // btn_VoegToeGerecht
             // 
@@ -929,7 +928,6 @@
             this.gb_ItemDetails.TabIndex = 2;
             this.gb_ItemDetails.TabStop = false;
             this.gb_ItemDetails.Text = "Item Details";
-            this.gb_ItemDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btn_PasToe
             // 
@@ -1573,7 +1571,6 @@
             this.lbl_PrijsSteakTartaar.Size = new System.Drawing.Size(109, 36);
             this.lbl_PrijsSteakTartaar.TabIndex = 48;
             this.lbl_PrijsSteakTartaar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_PrijsSteakTartaar.Click += new System.EventHandler(this.label1_Click_3);
             // 
             // btn_PlusBoerenKazen
             // 
@@ -1821,7 +1818,6 @@
             this.lbl_LinguiniPaddestoelen.TabIndex = 29;
             this.lbl_LinguiniPaddestoelen.Text = "Linguini met paddestoelen saus";
             this.lbl_LinguiniPaddestoelen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_LinguiniPaddestoelen.Click += new System.EventHandler(this.lbl_LinguiniPaddestoelen_Click);
             // 
             // btn_PlusGebakkenKabeljauw
             // 
@@ -1837,7 +1833,6 @@
             this.btn_PlusGebakkenKabeljauw.TabIndex = 28;
             this.btn_PlusGebakkenKabeljauw.Text = "+";
             this.btn_PlusGebakkenKabeljauw.UseVisualStyleBackColor = true;
-            this.btn_PlusGebakkenKabeljauw.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_MinGebakkenKabeljauw
             // 
@@ -1853,7 +1848,6 @@
             this.btn_MinGebakkenKabeljauw.TabIndex = 27;
             this.btn_MinGebakkenKabeljauw.Text = "-";
             this.btn_MinGebakkenKabeljauw.UseVisualStyleBackColor = true;
-            this.btn_MinGebakkenKabeljauw.Click += new System.EventHandler(this.button4_Click);
             // 
             // lbl_AantalGebakkenKabeljauw
             // 
@@ -1864,7 +1858,6 @@
             this.lbl_AantalGebakkenKabeljauw.TabIndex = 26;
             this.lbl_AantalGebakkenKabeljauw.Text = "0";
             this.lbl_AantalGebakkenKabeljauw.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_AantalGebakkenKabeljauw.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // lbl_GebakkenKabeljauw
             // 
@@ -1877,7 +1870,6 @@
             this.lbl_GebakkenKabeljauw.TabIndex = 25;
             this.lbl_GebakkenKabeljauw.Text = "Gebakken kabeljauw met curry-sabayon";
             this.lbl_GebakkenKabeljauw.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_GebakkenKabeljauw.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // btn_PlusHertenstoofpotje
             // 
@@ -1969,7 +1961,6 @@
             this.lbl_Hoofdgerechten.TabIndex = 18;
             this.lbl_Hoofdgerechten.Text = "Hoofdgerechten";
             this.lbl_Hoofdgerechten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_Hoofdgerechten.Click += new System.EventHandler(this.lbl_Hoofdgerechten_Click);
             // 
             // btn_PlusProvençaalseVissoep
             // 
@@ -2074,7 +2065,6 @@
             this.lbl_PatéFazant.TabIndex = 10;
             this.lbl_PatéFazant.Text = "Paté van fazant met monegaskische uitjes";
             this.lbl_PatéFazant.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_PatéFazant.Click += new System.EventHandler(this.label2_Click);
             // 
             // btn_PlusSteakTartaar
             // 
@@ -2105,7 +2095,6 @@
             this.btn_MinSteakTartaar.TabIndex = 8;
             this.btn_MinSteakTartaar.Text = "-";
             this.btn_MinSteakTartaar.UseVisualStyleBackColor = true;
-            this.btn_MinSteakTartaar.Click += new System.EventHandler(this.btn_MinSteakTartaar_Click);
             // 
             // lbl_AantalSteakTartaar
             // 
@@ -2163,7 +2152,6 @@
             this.lbl_Prijs1.TabIndex = 3;
             this.lbl_Prijs1.Text = "Prijs";
             this.lbl_Prijs1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_Prijs1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lbl_Voorgerechten
             // 
@@ -2778,7 +2766,6 @@
             this.lbl_PrijsCocaCola.Size = new System.Drawing.Size(109, 36);
             this.lbl_PrijsCocaCola.TabIndex = 40;
             this.lbl_PrijsCocaCola.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_PrijsCocaCola.Click += new System.EventHandler(this.lbl_PrijsCocaCola_Click);
             // 
             // lbl_PrijsSpaGroen
             // 
@@ -3897,7 +3884,6 @@
             this.lbl_PrijsWhiskey.Size = new System.Drawing.Size(109, 36);
             this.lbl_PrijsWhiskey.TabIndex = 34;
             this.lbl_PrijsWhiskey.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_PrijsWhiskey.Click += new System.EventHandler(this.label2_Click_2);
             // 
             // lbl_PrijsJongeJenever
             // 
@@ -3975,7 +3961,6 @@
             this.btn_PlusJongeJenever.TabIndex = 25;
             this.btn_PlusJongeJenever.Text = "+";
             this.btn_PlusJongeJenever.UseVisualStyleBackColor = true;
-            this.btn_PlusJongeJenever.Click += new System.EventHandler(this.button5_Click);
             // 
             // btn_MinJongeJenever
             // 
@@ -4901,7 +4886,6 @@
             this.lbl_PrijsKalfstartaar.Size = new System.Drawing.Size(109, 36);
             this.lbl_PrijsKalfstartaar.TabIndex = 63;
             this.lbl_PrijsKalfstartaar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_PrijsKalfstartaar.Click += new System.EventHandler(this.lbl_PrijsKalfstartaar_Click);
             // 
             // btn_PlusPortFromage
             // 
@@ -5475,7 +5459,6 @@
             this.lbl_AantalKrabZalm.TabIndex = 15;
             this.lbl_AantalKrabZalm.Text = "0";
             this.lbl_AantalKrabZalm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_AantalKrabZalm.Click += new System.EventHandler(this.label19_Click);
             // 
             // lbl_KrabZalm
             // 
