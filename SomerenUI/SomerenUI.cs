@@ -960,5 +960,35 @@ namespace SomerenUI
         {
 
         }
+
+        private void btn_RefreshKeukenOverzicht_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_RefreshBarOverzicht_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ServerenKeuken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AfgerondKeuken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ServerenBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AfgerondBar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
