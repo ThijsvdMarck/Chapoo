@@ -531,9 +531,9 @@ namespace SomerenUI
 
                 cmb_BetaalMethode.Items.Clear();
 
-                cmb_BetaalMethode.Items.Add("Credit card");
-                cmb_BetaalMethode.Items.Add("Contant");
-                cmb_BetaalMethode.Items.Add("Pinnen");
+                cmb_BetaalMethode.Items.Add(BetaalMethode.Pin);
+                cmb_BetaalMethode.Items.Add(BetaalMethode.Contant);
+                cmb_BetaalMethode.Items.Add(BetaalMethode.CreditCard);
 
                 cmb_BetaalMethode.SelectedIndex = 0;
             }

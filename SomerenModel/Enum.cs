@@ -28,7 +28,7 @@ namespace SomerenModel
 
     public enum StatusBestelling
     {
-        Open, Afgerond
+        Open, Afgerond, Betaald
     }
 
     public enum BetaalMethode

@@ -26,3 +26,9 @@ E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyRefere
 E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
 E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.dll
 E:\School_Chapoo\Chapoo\SomerenModel\obj\Debug\SomerenModel.pdb
+C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenModel\bin\Debug\SomerenModel.dll
+C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenModel\bin\Debug\SomerenModel.pdb
+C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
+C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenModel\obj\Debug\SomerenModel.dll
+C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenModel\obj\Debug\SomerenModel.pdb
