@@ -412,12 +412,9 @@ namespace SomerenUI
                     if (g.status == Status.KlaarVoorServeren)
                     {
                         itm.BackColor = Color.MistyRose;
-                    }
-
-                    if (g.status != Status.Geserveerd)
-                    {
-                        lv_BestellingenKeuken.Items.Add(itm);
-                    }
+                    }                
+                    lv_BestellingenKeuken.Items.Add(itm);
+            
                 }
 
 
@@ -738,10 +735,8 @@ namespace SomerenUI
 
             return true;
         }
-        private void VeranderStatusBestelling(StatusBestelling status)
+        private void VeranderStatusBestelling(StatusBestelling status, int geselecteerdeBestelling)
         {
-            int geselecteerdeBestelling = GetGeselecteerdeBestelling();
-
             bestellingService.UpdateBestelling(status, geselecteerdeBestelling);
         }
         private int GetGeselecteerdeBestelling()
@@ -798,7 +793,35 @@ namespace SomerenUI
         private void btn_AfgerondKeuken_Click(object sender, EventArgs e)
         {
             VeranderStatusGerechten(Status.Geserveerd);
-            showPanel("BestellingKeuken");
+            int bestelling = 0;
+
+            if (CheckAllesGechecked(ref bestelling))
+            {
+                VeranderStatusBestelling(StatusBestelling.Afgerond, bestelling);
+            }
+
+            showPanel("KeukenBestelling");
+        }
+        private bool CheckAllesGechecked(ref int bestelling)
+        {
+            int count = 0;
+
+            for (int i = 0; i < lv_BestellingenKeuken.Items.Count; i++)
+            {
+                if (lv_BestellingenKeuken.Items[i].SubItems[4].Text == "Geserveerd")
+                {
+                    count++;
+                }
+
+                bestelling = int.Parse(lv_BestellingenKeuken.Items[i].SubItems[0].Text);
+            }
+
+            if (count == lv_BestellingenKeuken.Items.Count)
+            {
+                return true;
+            }
+
+            return false;
         }
 
 
