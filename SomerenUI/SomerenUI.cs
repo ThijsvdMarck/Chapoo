@@ -341,6 +341,35 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkBarOverzicht.Show();
                 pnl_BarOverzicht.Show();
+
+
+                List<Bestelling> bestellingList = bestellingService.GetBestelling();
+
+                // clear the listview before filling it again
+                lv_BarOverzicht.Clear();
+
+                lv_BarOverzicht.View = View.Details;
+                lv_BarOverzicht.GridLines = true;
+                lv_BarOverzicht.FullRowSelect = true;
+                lv_BarOverzicht.CheckBoxes = true;
+
+                // Aanmaken van kolommen
+                lv_BarOverzicht.Columns.Add("Tafel", 200);
+                lv_BarOverzicht.Columns.Add("BestellingID", 200);
+                lv_BarOverzicht.Columns.Add("Status", 100);
+
+                string[] bestellingen = new string[3];
+                ListViewItem itm;
+
+                foreach (SomerenModel.Bestelling b in bestellingList)
+                {
+                    bestellingen[0] = "Tafel " + b.TafelID.ToString();
+                    bestellingen[1] = b.BestellingID.ToString();
+                    bestellingen[2] = b.status.ToString();
+
+                    itm = new ListViewItem(bestellingen);
+                    lv_BarOverzicht.Items.Add(itm);
+                }
             }
             else if (panelName == "BarBestelling")
             {
@@ -348,6 +377,73 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkBarOverzicht.Show();
                 pnl_BestellingBar.Show();
+
+                // Label tafelnummer laten zien
+                string geselecteerdeTafel = "";
+                string tafelStatus = "";
+
+                for (int i = 0; i < lv_BarOverzicht.Items.Count; i++)
+                {
+                    if (lv_BarOverzicht.Items[i].Checked)
+                    {
+                        geselecteerdeTafel = lv_BarOverzicht.Items[i].Text;
+                        tafelStatus = lv_BarOverzicht.Items[i].SubItems[2].Text;
+                    }
+                }
+
+                lbl_Tafel.Text = geselecteerdeTafel;
+                lbl_TafelNr.Text = "";
+
+                lbl_StatusBar.Text = tafelStatus;
+
+                // Listview
+                int geselecteerdeBestelling = GetGeselecteerdeBestellingBar();
+
+                List<DrankLijstItem> drankList = drankLijstService.GetDrankLijstItems(geselecteerdeBestelling);
+
+                // clear the listview before filling it again
+                lv_BarBestelling.Clear();
+
+                lv_BarBestelling.View = View.Details;
+                lv_BarBestelling.GridLines = true;
+                lv_BarBestelling.FullRowSelect = true;
+                lv_BarBestelling.CheckBoxes = true;
+
+                // Aanmaken van kolommen
+                lv_BarBestelling.Columns.Add("BestellingID", 80);
+                lv_BarBestelling.Columns.Add("Drankje", 218);
+                lv_BarBestelling.Columns.Add("Aantal", 60);
+                lv_BarBestelling.Columns.Add("Tijd", 60);
+                lv_BarBestelling.Columns.Add("Status", 120);
+                lv_BarBestelling.Columns.Add("DrankID", 0);
+
+                string[] drankjes = new string[6];
+                ListViewItem itm;
+
+                foreach (SomerenModel.DrankLijstItem d in drankList)
+                {
+                    drankjes[0] = d.bestellingID.ToString();
+                    drankjes[1] = d.drankNaam;
+                    drankjes[2] = d.aantal.ToString();
+                    drankjes[3] = d.tijd.ToString("HH:mm");
+                    drankjes[4] = d.status.ToString();
+                    drankjes[5] = d.drankID.ToString();
+
+                    itm = new ListViewItem(drankjes);
+
+                    if (d.status == Status.KlaarVoorServeren)
+                    {
+                        itm.BackColor = Color.MistyRose;
+                    }
+                    else if (d.status == Status.Geserveerd)
+                    {
+                        itm.BackColor = Color.Pink;
+                    }
+
+                    lv_BarBestelling.Items.Add(itm);
+            
+                }
+
             }
             else if (panelName == "KeukenBestelling")
             {
@@ -375,7 +471,7 @@ namespace SomerenUI
                 lbl_StatusKeuken.Text = tafelStatus;
 
                 // Listview
-                int geselecteerdeBestelling = GetGeselecteerdeBestelling();
+                int geselecteerdeBestelling = GetGeselecteerdeBestellingKeuken();
 
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GetGerechtlijstItems(geselecteerdeBestelling);
 
@@ -412,7 +508,12 @@ namespace SomerenUI
                     if (g.status == Status.KlaarVoorServeren)
                     {
                         itm.BackColor = Color.MistyRose;
-                    }                
+                    }     
+                    else if (g.status == Status.Geserveerd)
+                    {
+                        itm.BackColor = Color.Pink;
+                    }
+
                     lv_BestellingenKeuken.Items.Add(itm);
             
                 }
@@ -680,11 +781,6 @@ namespace SomerenUI
             showPanel("Reserveringen");
         }
 
-        private void btn_Bar_Click(object sender, EventArgs e)
-        {
-            showPanel("BarOverzicht");
-        }
-
         private void btn_Reserveringen_Click(object sender, EventArgs e)
         {
             showPanel("Reserveringen");
@@ -695,21 +791,21 @@ namespace SomerenUI
             showPanel("Tafels");
         }
 
-        private void btn_ShowBestellingBar_Click(object sender, EventArgs e)
-        {
-            showPanel("BarBestelling");
-        }
 
 
         // Bestellingen Keuken
+        private void btn_KeukenOverzicht_Click(object sender, EventArgs e)
+        {
+            showPanel("KeukenOverzicht");
+        }
         private void btn_ShowBestellingKeuken_Click(object sender, EventArgs e)
         {
-            if (checkGeselecteerdeBestelling())
+            if (checkGeselecteerdeBestellingKeuken())
             {
                 showPanel("KeukenBestelling");
             }
         }
-        private bool checkGeselecteerdeBestelling()
+        private bool checkGeselecteerdeBestellingKeuken()
         {
             int count = 0;
 
@@ -739,7 +835,7 @@ namespace SomerenUI
         {
             bestellingService.UpdateBestelling(status, geselecteerdeBestelling);
         }
-        private int GetGeselecteerdeBestelling()
+        private int GetGeselecteerdeBestellingKeuken()
         {
             int geselecteerdeBestelling = 0;
 
@@ -783,7 +879,7 @@ namespace SomerenUI
                 if (lv_BestellingenKeuken.Items[i].Checked)
                 {
                     //update status
-                    int geselecteerdeBestelling = GetGeselecteerdeBestelling();
+                    int geselecteerdeBestelling = GetGeselecteerdeBestellingKeuken();
                     int geselecteerdGerecht = GetGeselecteerdGerecht();
 
                     gerechtlijstItemService.UpdateGerechtItem(status, geselecteerdeBestelling, geselecteerdGerecht);
@@ -794,15 +890,15 @@ namespace SomerenUI
         {
             VeranderStatusGerechten(Status.Geserveerd);
             int bestelling = 0;
+            showPanel("KeukenBestelling");
 
-            if (CheckAllesGechecked(ref bestelling))
+            if (CheckAllesGeserveerdKeuken(ref bestelling))
             {
                 VeranderStatusBestelling(StatusBestelling.Afgerond, bestelling);
             }
 
-            showPanel("KeukenBestelling");
         }
-        private bool CheckAllesGechecked(ref int bestelling)
+        private bool CheckAllesGeserveerdKeuken(ref int bestelling)
         {
             int count = 0;
 
@@ -825,16 +921,133 @@ namespace SomerenUI
         }
 
 
-
+        // Bestelingen Bar
         private void btn_BarOverzicht_Click(object sender, EventArgs e)
         {
             showPanel("BarOverzicht");
         }
-
-        private void btn_KeukenOverzicht_Click(object sender, EventArgs e)
+        private void btn_Bar_Click(object sender, EventArgs e)
         {
-            showPanel("KeukenOverzicht");
+            showPanel("BarOverzicht");
         }
+        private void btn_ShowBestellingBar_Click(object sender, EventArgs e)
+        {
+            if (CheckGeselecteerdeBestellingBar())
+            {
+                showPanel("BarBestelling");
+            }          
+        }
+        private bool CheckGeselecteerdeBestellingBar()
+        {
+            int count = 0;
+
+            for (int i = 0; i < lv_BarOverzicht.Items.Count; i++)
+            {
+                if (lv_BarOverzicht.Items[i].Checked)
+                {
+                    count++;
+
+                    if (count > 1)
+                    {
+                        MessageBox.Show("Selecteer maar 1 bestelling!");
+                        return false;
+                    }
+                }
+            }
+
+            if (count == 0)
+            {
+                MessageBox.Show("Selecteer een bestelling om hem te kunnen zien");
+                return false;
+            }
+
+            return true;
+        }
+        private int GetGeselecteerdeBestellingBar()
+        {
+            int geselecteerdeBestelling = 0;
+
+            for (int i = 0; i < lv_BarOverzicht.Items.Count; i++)
+            {
+                if (lv_BarOverzicht.Items[i].Checked)
+                {
+                    geselecteerdeBestelling = int.Parse(lv_BarOverzicht.Items[i].SubItems[1].Text);
+                }
+            }
+
+            return geselecteerdeBestelling;
+        }
+        private int GetGeselecteerdDrankje()
+        {
+            int geselecteerdDrankje = 0;
+
+            for (int i = 0; i < lv_BarBestelling.Items.Count; i++)
+            {
+                if (lv_BarBestelling.Items[i].Checked)
+                {
+                    geselecteerdDrankje = int.Parse(lv_BarBestelling.Items[i].SubItems[5].Text);
+                }
+            }
+
+            return geselecteerdDrankje;
+        }
+        private void btn_RefreshBarOverzicht_Click(object sender, EventArgs e)
+        {
+            showPanel("BarOverzicht");
+        }
+        private void btn_ServerenBar_Click(object sender, EventArgs e)
+        {
+            VeranderStatusDrankjes(Status.KlaarVoorServeren);
+            showPanel("BarBestelling");
+        }
+        private void VeranderStatusDrankjes(Status status)
+        {
+            for (int i = 0; i < lv_BarBestelling.Items.Count; i++)
+            {
+                if (lv_BarBestelling.Items[i].Checked)
+                {
+                    //update status
+                    int geselecteerdeBestelling = GetGeselecteerdeBestellingBar();
+                    int geselecteerdDrankje = GetGeselecteerdDrankje();
+
+                    drankLijstService.UpdateDrankItem(status, geselecteerdeBestelling, geselecteerdDrankje);
+                }
+            }
+        }
+        private void btn_AfgerondBar_Click(object sender, EventArgs e)
+        {
+            VeranderStatusDrankjes(Status.Geserveerd);
+            int bestelling = 0;
+            showPanel("BarBestelling");
+
+            if (CheckAllesGeserveerdBar(ref bestelling))
+            {
+                VeranderStatusBestelling(StatusBestelling.Afgerond, bestelling);
+            }
+        }
+        private bool CheckAllesGeserveerdBar(ref int bestelling)
+        {
+            int count = 0;
+
+            for (int i = 0; i < lv_BarBestelling.Items.Count; i++)
+            {
+                if (lv_BarBestelling.Items[i].SubItems[4].Text == "Geserveerd")
+                {
+                    count++;
+                }
+
+                bestelling = int.Parse(lv_BarBestelling.Items[i].SubItems[0].Text);
+            }
+
+            if (count == lv_BarBestelling.Items.Count)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
 
         private void btn_DrankVoorraad_Click(object sender, EventArgs e)
         {
@@ -1052,18 +1265,5 @@ namespace SomerenUI
 
         }
 
-        private void btn_RefreshBarOverzicht_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btn_ServerenBar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_AfgerondBar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
