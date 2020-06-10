@@ -70,6 +70,11 @@ namespace SomerenUI
         }
         private void GetGerechtList()
         {
+            if (comboBox3.Text == "Spa rood")
+            {
+                comboBox4.Show();
+            }
+
             comboBox3.Items.Clear();
             comboBox3.Hide();
             comboBox3.Text = "";
@@ -130,6 +135,7 @@ namespace SomerenUI
             {
                 CB_LunchDiner.Hide();
                 CB_SoortGerechtDiner.Hide();
+                CB_SoortGerechtLunch.Hide();
                 comboBox3.Show();
                 foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
             }
@@ -138,42 +144,34 @@ namespace SomerenUI
                 CB_LunchDiner.Show();
                 if (CB_LunchDiner.Text == "Lunch")
                 {
-                    
-                    CB_SoortGerechtDiner.Show();
+                    CB_SoortGerechtLunch.Show();
+                    CB_SoortGerechtDiner.Hide();
 
-                    CB_SoortGerechtDiner.Items.Add("Voorgerecht");
-                    CB_SoortGerechtDiner.Items.Add("Hoofdgerecht");
-                    CB_SoortGerechtDiner.Items.Add("Nagerecht");
-
-                    
-                    if (CB_SoortGerechtDiner.Text == "Voorgerecht")
+                    if (CB_SoortGerechtLunch.Text == "Voorgerecht")
                     {
                         comboBox3.Show();
                         foreach (SomerenModel.Gerecht d in voorgerechtLunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
-                        CB_SoortGerechtDiner.SelectedIndex = 0;
+                        CB_SoortGerechtLunch.SelectedIndex = 0;
 
                     }
-                    else if (CB_SoortGerechtDiner.Text == "Hoofdgerecht")
+                    else if (CB_SoortGerechtLunch.Text == "Hoofdgerecht")
                     {
                         comboBox3.Show();
-                        CB_SoortGerechtDiner.SelectedIndex = 1;
+                        CB_SoortGerechtLunch.SelectedIndex = 1;
                         foreach (SomerenModel.Gerecht d in hoofdgerechtLunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
                     }
-                    else if (CB_SoortGerechtDiner.Text == "Voorgerecht")
+                    else if (CB_SoortGerechtLunch.Text == "Nagerecht")
                     {
                         comboBox3.Show();
-                        CB_SoortGerechtDiner.SelectedIndex = 2;
+                        CB_SoortGerechtLunch.SelectedIndex = 2;
                         foreach (SomerenModel.Gerecht d in nagerechtLunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
                     }
                 }
                 else if(CB_LunchDiner.Text == "Diner")
                 {
                     CB_SoortGerechtDiner.Show();
+                    CB_SoortGerechtLunch.Hide();
 
-                    CB_SoortGerechtDiner.Items.Add("Voorgerecht");
-                    CB_SoortGerechtDiner.Items.Add("Tussengerecht");
-                    CB_SoortGerechtDiner.Items.Add("Hoofdgerecht");
-                    CB_SoortGerechtDiner.Items.Add("Nagerecht");
 
                     if (CB_SoortGerechtDiner.Text == "Voorgerecht")
                     {
@@ -367,8 +365,18 @@ namespace SomerenUI
                 CB_EtenDrinken.Items.Add("Drinken");
                 CB_EtenDrinken.Items.Add("Eten");
 
+                CB_SoortGerechtLunch.Items.Add("Voorgerecht");
+                CB_SoortGerechtLunch.Items.Add("Hoofdgerecht");
+                CB_SoortGerechtLunch.Items.Add("Nagerecht");
+
+                CB_SoortGerechtDiner.Items.Add("Voorgerecht");
+                CB_SoortGerechtDiner.Items.Add("Tussengerecht");
+                CB_SoortGerechtDiner.Items.Add("Hoofdgerecht");
+                CB_SoortGerechtDiner.Items.Add("Nagerecht");
+
                 CB_LunchDiner.Hide();
                 CB_SoortGerechtDiner.Hide();
+                CB_SoortGerechtLunch.Hide();
                 comboBox3.Hide();
                 comboBox4.Hide();
             }
@@ -1382,7 +1390,7 @@ namespace SomerenUI
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            GetGerechtList();
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -1460,6 +1468,11 @@ namespace SomerenUI
         private void btn_TEST_Click(object sender, EventArgs e)
         {
             showPanel("RekeningOverzicht"); // Moet nog terug naar button 1 na UI.
+        }
+
+        private void CB_SoortGerechtLunch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetGerechtList();
         }
     }
 }
