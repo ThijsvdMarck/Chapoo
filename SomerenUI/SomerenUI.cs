@@ -759,11 +759,11 @@ namespace SomerenUI
 
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            //showPanel("RekeningOverzicht");
-            //if (statusBestelling = )
-            //{ 
+            showPanel("RekeningOverzicht");
+            /*if (statusBestelling = )
+            { 
 
-            //}
+            }*/
         }
 
         private void btn_Drinken_Click(object sender, EventArgs e)
