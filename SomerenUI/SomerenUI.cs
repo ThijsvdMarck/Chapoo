@@ -209,18 +209,6 @@ namespace SomerenUI
                     CB_LunchDiner.Items.Add(d.dagType.ToString());
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
             else if (panelName == "Overzicht")
             {
                 hideAllPanels();
@@ -331,19 +319,21 @@ namespace SomerenUI
                 // Aanmaken van kolommen
                 lv_KeukenOverzicht.Columns.Add("Tafel", 200);
                 lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
-                // lv_KeukenOverzicht.Columns.Add("Last Name", 100);
+                lv_KeukenOverzicht.Columns.Add("Status", 100);
 
-                string[] bestellingen = new string[2];
+                string[] bestellingen = new string[3];
                 ListViewItem itm;
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
                     bestellingen[0] = "Tafel " + b.TafelID.ToString();
                     bestellingen[1] = b.BestellingID.ToString();
+                    bestellingen[2] = b.status.ToString();
 
                     itm = new ListViewItem(bestellingen);
                     lv_KeukenOverzicht.Items.Add(itm);
                 }
+
             }
             else if (panelName == "BarOverzicht")
             {
@@ -368,56 +358,68 @@ namespace SomerenUI
 
                 // Label tafelnummer laten zien
                 string geselecteerdeTafel = "";
+                string tafelStatus = "";
 
                 for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
                 {
                     if (lv_KeukenOverzicht.Items[i].Checked)
                     {
                         geselecteerdeTafel = lv_KeukenOverzicht.Items[i].Text;
+                        tafelStatus = lv_KeukenOverzicht.Items[i].SubItems[2].Text;
                     }
                 }
 
                 lbl_Tafel.Text = geselecteerdeTafel;
                 lbl_TafelNr.Text = "";
 
-                // Listview
-                int geselecteerdeBestelling = 0;
+                lbl_StatusKeuken.Text = tafelStatus;
 
-                for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
-                {
-                    if (lv_KeukenOverzicht.Items[i].Checked)
-                    {
-                        geselecteerdeBestelling = int.Parse(lv_KeukenOverzicht.Items[i].SubItems[1].Text);
-                    }
-                }
+                // Listview
+                int geselecteerdeBestelling = GetGeselecteerdeBestelling();
 
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GetGerechtlijstItems(geselecteerdeBestelling);
 
                 // clear the listview before filling it again
-                // lv_BestellingKeuken.Clear();
+                lv_BestellingenKeuken.Clear();
 
-                lv_KeukenOverzicht.View = View.Details;
-                lv_KeukenOverzicht.GridLines = true;
-                lv_KeukenOverzicht.FullRowSelect = true;
-                lv_KeukenOverzicht.CheckBoxes = true;
+                lv_BestellingenKeuken.View = View.Details;
+                lv_BestellingenKeuken.GridLines = true;
+                lv_BestellingenKeuken.FullRowSelect = true;
+                lv_BestellingenKeuken.CheckBoxes = true;
 
                 // Aanmaken van kolommen
-                lv_KeukenOverzicht.Columns.Add("Tafel", 200);
-                lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
-                lv_KeukenOverzicht.Columns.Add("Last Name", 100);
+                lv_BestellingenKeuken.Columns.Add("BestellingID", 80);
+                lv_BestellingenKeuken.Columns.Add("Gerecht", 218);
+                lv_BestellingenKeuken.Columns.Add("Aantal", 60);
+                lv_BestellingenKeuken.Columns.Add("Tijd", 60);
+                lv_BestellingenKeuken.Columns.Add("Status", 120);
+                lv_BestellingenKeuken.Columns.Add("GerechtID", 0);
 
-                string[] gerechten = new string[3];
+                string[] gerechten = new string[6];
                 ListViewItem itm;
 
                 foreach (SomerenModel.GerechtlijstItem g in gerechtList)
                 {
                     gerechten[0] = g.BestellingID.ToString();
                     gerechten[1] = g.GerechtNaam;
-                    gerechten[2] = g.status.ToString();
+                    gerechten[2] = g.Aantal.ToString();
+                    gerechten[3] = g.Tijd.ToString("HH:mm");
+                    gerechten[4] = g.status.ToString();
+                    gerechten[5] = g.GerechtID.ToString();
 
                     itm = new ListViewItem(gerechten);
-                    lv_KeukenOverzicht.Items.Add(itm);
+
+                    if (g.status == Status.KlaarVoorServeren)
+                    {
+                        itm.BackColor = Color.MistyRose;
+                    }
+
+                    if (g.status != Status.Geserveerd)
+                    {
+                        lv_BestellingenKeuken.Items.Add(itm);
+                    }
                 }
+
 
             }
             else if (panelName == "Afrekenen")
@@ -701,6 +703,8 @@ namespace SomerenUI
             showPanel("BarBestelling");
         }
 
+
+        // Bestellingen Keuken
         private void btn_ShowBestellingKeuken_Click(object sender, EventArgs e)
         {
             if (checkGeselecteerdeBestelling())
@@ -734,6 +738,70 @@ namespace SomerenUI
 
             return true;
         }
+        private void VeranderStatusBestelling(StatusBestelling status)
+        {
+            int geselecteerdeBestelling = GetGeselecteerdeBestelling();
+
+            bestellingService.UpdateBestelling(status, geselecteerdeBestelling);
+        }
+        private int GetGeselecteerdeBestelling()
+        {
+            int geselecteerdeBestelling = 0;
+
+            for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
+            {
+                if (lv_KeukenOverzicht.Items[i].Checked)
+                {
+                    geselecteerdeBestelling = int.Parse(lv_KeukenOverzicht.Items[i].SubItems[1].Text);
+                }
+            }
+
+            return geselecteerdeBestelling;
+        }
+        private int GetGeselecteerdGerecht()
+        {
+            int geselecteerdGerecht = 0;
+
+            for (int i = 0; i < lv_BestellingenKeuken.Items.Count; i++)
+            {
+                if (lv_BestellingenKeuken.Items[i].Checked)
+                {
+                    geselecteerdGerecht = int.Parse(lv_BestellingenKeuken.Items[i].SubItems[5].Text);
+                }
+            }
+
+            return geselecteerdGerecht;
+        }
+        private void btn_RefreshKeukenOverzicht_Click(object sender, EventArgs e)
+        {
+            showPanel("KeukenOverzicht");
+        }
+        private void btn_ServerenKeuken_Click(object sender, EventArgs e)
+        {
+            VeranderStatusGerechten(Status.KlaarVoorServeren);
+            showPanel("KeukenBestelling");
+        }
+        private void VeranderStatusGerechten(Status status)
+        {
+            for (int i = 0; i < lv_BestellingenKeuken.Items.Count; i++)
+            {
+                if (lv_BestellingenKeuken.Items[i].Checked)
+                {
+                    //update status
+                    int geselecteerdeBestelling = GetGeselecteerdeBestelling();
+                    int geselecteerdGerecht = GetGeselecteerdGerecht();
+
+                    gerechtlijstItemService.UpdateGerechtItem(status, geselecteerdeBestelling, geselecteerdGerecht);
+                }
+            }
+        }
+        private void btn_AfgerondKeuken_Click(object sender, EventArgs e)
+        {
+            VeranderStatusGerechten(Status.Geserveerd);
+            showPanel("BestellingKeuken");
+        }
+
+
 
         private void btn_BarOverzicht_Click(object sender, EventArgs e)
         {
@@ -961,26 +1029,10 @@ namespace SomerenUI
 
         }
 
-        private void btn_RefreshKeukenOverzicht_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_RefreshBarOverzicht_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btn_ServerenKeuken_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_AfgerondKeuken_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_ServerenBar_Click(object sender, EventArgs e)
         {
 

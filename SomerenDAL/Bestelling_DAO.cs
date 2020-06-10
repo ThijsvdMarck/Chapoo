@@ -31,14 +31,14 @@ namespace SomerenDAL
                     BestellingID = (int)dr["BestellingID"],
                     TafelID = (int)dr["TafelID"],
                     datum = (DateTime)dr["Datum"],
-                    status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
+                    status = (StatusBestelling)Enum.Parse(typeof(StatusBestelling), (string)dr["Status"]),
                 };
                 bestellingen.Add(bestelling);
             }
             return bestellingen;
         }
 
-        public void Db_Update_Bestelling(Status status, int bestelling)
+        public void Db_Update_Bestelling(StatusBestelling status, int bestelling)
         {
             string query = "UPDATE Bestelling SET[Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString();
 

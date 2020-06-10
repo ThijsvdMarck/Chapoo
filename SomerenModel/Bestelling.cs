@@ -12,7 +12,7 @@ namespace SomerenModel
         public Serveerder Serveerder { get; set; }
         public int TafelID { get; set; }
         public int BestellingID { get; set; }
-        public Status status { get; set; }
+        public StatusBestelling status { get; set; }
     }
 }
 
