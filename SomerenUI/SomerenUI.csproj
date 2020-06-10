@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Methods.cs" />
+    <Compile Include="Resources\Room.cs" />
     <Compile Include="SomerenUI.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -23,6 +23,7 @@ namespace SomerenUI
         SomerenLogic.DrankLijstItem_Service drankLijstService = new SomerenLogic.DrankLijstItem_Service();
 
 
+
         public SomerenUI()
         {
             InitializeComponent();
@@ -66,6 +67,85 @@ namespace SomerenUI
             pnl_BestellingKeuken.Hide();
             pnl_AfrekenOverzicht.Hide();
 
+        }
+        private List<Gerecht> GetGerechtList(DagType dagType)
+        {
+            comboBox3.Items.Clear();
+
+            List<Gerecht> gerechtList = gerechtService.GetGerechten();
+            List<Drankje> drankList = drankService.GetDrankjes();
+
+            List<Gerecht> lunchGerechtList = new List<Gerecht>();
+            List<Gerecht> dinerGerechtList = new List<Gerecht>();
+
+            if(CB_EtenDrinken.Text == "Drinken")
+            {
+                foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
+            }
+            else if (CB_EtenDrinken.Text == "Eten")
+            {
+                if(CB_LunchDiner.Text == "Lunch")
+                {
+                    if(CB_SoortGerecht.Text == "Voorgerecht")
+                    {
+
+                    }
+                    else if (CB_SoortGerecht.Text == "Voorgerecht")
+                    {
+
+                    }
+                }
+                else if(CB_LunchDiner.Text == "Diner")
+                {
+
+                }
+            }
+
+
+            foreach (SomerenModel.Gerecht d in gerechtList)
+            {
+                if (d.dagType == DagType.Lunch)
+                {
+                    lunchGerechtList.Add(d);
+                }
+                else if (d.dagType == DagType.Diner)
+                {
+                    dinerGerechtList.Add(d);
+                }
+            }
+
+            if (dagType == DagType.Lunch)
+            {
+                return lunchGerechtList;
+            }
+            else
+            {
+                return dinerGerechtList;
+            }
+
+            
+
+
+
+           /* List<Gerecht> lunchGerechtList = GetGerechtList(DagType.Lunch);
+            List<Gerecht> dinerGerechtList = GetGerechtList(DagType.Diner);
+
+            if (CB_DrinkenEten.Text == "Eten")
+            {
+                if (CB_LunchDiner.Text == "Lunch")
+                {
+                    foreach (SomerenModel.Gerecht d in lunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                }
+                else if (CB_LunchDiner.Text == "Diner")
+                {
+                    foreach (SomerenModel.Gerecht d in dinerGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                }
+
+            }
+            else if (CB_DrinkenEten.Text == "Drinken")
+            {
+                foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
+            }*/
         }
         private void SomerenUI_Load(object sender, EventArgs e)
         {
@@ -195,34 +275,22 @@ namespace SomerenUI
                 pnl_MenuBalkBestelling.Show();
                 pnl_LunchBestelling.Show();
 
-                List<Drankje> drankList = drankService.GetDrankjes();
-                List<Gerecht> gerechtList = gerechtService.GetGerechten();
-
-                CB_DrinkenEten.Items.Clear();
+                comboBox3.Items.Clear();
                 CB_LunchDiner.Items.Clear();
+                CB_EtenDrinken.Items.Clear();
+                CB_SoortGerecht.Items.Clear();
 
-                CB_DrinkenEten.Items.Add("Eten");
-                CB_DrinkenEten.Items.Add("Drinken");
+                CB_LunchDiner.Items.Add("Eten");
+                CB_LunchDiner.Items.Add("Drinken");
 
-                // Loopje die zorgt voor maar 1 malig toevoeging van een tpye dagtype
-                foreach (Gerecht d in gerechtList)
-                {
-                    CB_LunchDiner.Items.Add(d.dagType.ToString());
-                }
+                CB_EtenDrinken.Items.Add(DagType.Lunch.ToString());
+                CB_EtenDrinken.Items.Add(DagType.Diner.ToString());
+
+                CB_LunchDiner.Hide();
+                CB_SoortGerecht.Hide();
+
             }
-
-
-
-
-
-
-
-
-
-
-
-
-            else if (panelName == "Overzicht")
+            else if (panelName == "Overzicht") 
             {
                 hideAllPanels();
                 pnl_Base.Show();
@@ -904,48 +972,12 @@ namespace SomerenUI
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox3.Items.Clear();
-            List<Drankje> drankList = drankService.GetDrankjes();
-            List<Gerecht> gerechtList = gerechtService.GetGerechten();
 
-            List<Gerecht> lunchGerechtList = new List<Gerecht>();
-            List<Gerecht> dinerGerechtList = new List<Gerecht>();
-
-            foreach (SomerenModel.Gerecht d in gerechtList)
-            {
-                if (d.dagType == DagType.Lunch)
-                {
-                    lunchGerechtList.Add(d);
-                }
-                else if (d.dagType == DagType.Diner)
-                {
-                    dinerGerechtList.Add(d);
-                }
-            } 
-
-
-
-            if (CB_DrinkenEten.Text == "Eten")
-            {
-                if (CB_LunchDiner.Text == "Lunch")
-                {
-                    foreach (SomerenModel.Gerecht d in gerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString());}
-                }
-                else if (CB_LunchDiner.Text == "Diner")
-                {
-
-                }
-                foreach (SomerenModel.Gerecht d in gerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
-            }
-            else if (CB_DrinkenEten.Text == "Drinken")
-            {
-                foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
-            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            showPanel("LunchBestelling");
+            
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)

@@ -64,3 +64,15 @@ C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenLogic\obj\D
 C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Users\ilonk\source\repos\ChapooMei2020\Someren1920F\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.pdb
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\bin\Debug\SomerenLogic.dll
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\bin\Debug\SomerenLogic.pdb
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.dll
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\bin\Debug\SomerenModel.dll
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.pdb
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\bin\Debug\SomerenModel.pdb
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.dll
+E:\School_Chapoo\Chapoo_def\Chapoo\SomerenLogic\obj\Debug\SomerenLogic.pdb
