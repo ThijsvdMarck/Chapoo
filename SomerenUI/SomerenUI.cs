@@ -68,60 +68,140 @@ namespace SomerenUI
             pnl_AfrekenOverzicht.Hide();
 
         }
-        private List<Gerecht> GetGerechtList(DagType dagType)
+        private void GetGerechtList()
         {
             comboBox3.Items.Clear();
+            comboBox3.Hide();
+            comboBox3.Text = "";
 
             List<Gerecht> gerechtList = gerechtService.GetGerechten();
             List<Drankje> drankList = drankService.GetDrankjes();
 
-            List<Gerecht> lunchGerechtList = new List<Gerecht>();
-            List<Gerecht> dinerGerechtList = new List<Gerecht>();
+            List<Gerecht> voorgerechtLunchGerechtList = new List<Gerecht>();
+            List<Gerecht> hoofdgerechtLunchGerechtList = new List<Gerecht>();
+            List<Gerecht> nagerechtLunchGerechtList = new List<Gerecht>();
 
-            if(CB_EtenDrinken.Text == "Drinken")
-            {
-                foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
-            }
-            else if (CB_EtenDrinken.Text == "Eten")
-            {
-                if(CB_LunchDiner.Text == "Lunch")
-                {
-                    if(CB_SoortGerecht.Text == "Voorgerecht")
-                    {
 
-                    }
-                    else if (CB_SoortGerecht.Text == "Voorgerecht")
-                    {
-
-                    }
-                }
-                else if(CB_LunchDiner.Text == "Diner")
-                {
-
-                }
-            }
-
+            List<Gerecht> voorgerechtDinerGerechtList = new List<Gerecht>();
+            List<Gerecht> tussengerechtDinerGerechtList = new List<Gerecht>();
+            List<Gerecht> hoofdgerechtDinerGerechtList = new List<Gerecht>();
+            List<Gerecht> nagerechtDinerGerechtList = new List<Gerecht>();
 
             foreach (SomerenModel.Gerecht d in gerechtList)
             {
                 if (d.dagType == DagType.Lunch)
                 {
-                    lunchGerechtList.Add(d);
+                    if (d.soortGerecht == SoortGerecht.Voorgerecht)
+                    {
+                        voorgerechtLunchGerechtList.Add(d);
+                    }
+                    else if (d.soortGerecht == SoortGerecht.Hoofdgerecht)
+                    {
+                        hoofdgerechtLunchGerechtList.Add(d);
+                    }
+                    else if (d.soortGerecht == SoortGerecht.Nagerecht)
+                    {
+                        nagerechtLunchGerechtList.Add(d);
+                    }
+
                 }
                 else if (d.dagType == DagType.Diner)
                 {
-                    dinerGerechtList.Add(d);
+                    if (d.soortGerecht == SoortGerecht.Voorgerecht)
+                    {
+                        voorgerechtDinerGerechtList.Add(d);
+                    }
+                    else if (d.soortGerecht == SoortGerecht.Tussengerecht)
+                    {
+                        tussengerechtDinerGerechtList.Add(d);
+                    }
+                    else if (d.soortGerecht == SoortGerecht.Hoofdgerecht)
+                    {
+                        hoofdgerechtDinerGerechtList.Add(d);
+                    }
+                    else if (d.soortGerecht == SoortGerecht.Nagerecht)
+                    {
+                        nagerechtDinerGerechtList.Add(d);
+                    }
                 }
             }
 
-            if (dagType == DagType.Lunch)
+            if (CB_EtenDrinken.Text == "Drinken")
             {
-                return lunchGerechtList;
+                CB_LunchDiner.Hide();
+                CB_SoortGerecht.Hide();
+                comboBox3.Show();
+                foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
             }
-            else
+            else if (CB_EtenDrinken.Text == "Eten")
             {
-                return dinerGerechtList;
+                CB_LunchDiner.Show();
+                if (CB_LunchDiner.Text == "Lunch")
+                {
+                    
+                    CB_SoortGerecht.Show();
+
+                    CB_SoortGerecht.Items.Add("Voorgerecht");
+                    CB_SoortGerecht.Items.Add("Hoofdgerecht");
+                    CB_SoortGerecht.Items.Add("Nagerecht");
+
+                    
+                    if (CB_SoortGerecht.Text == "Voorgerecht")
+                    {
+                        comboBox3.Show();
+                        foreach (SomerenModel.Gerecht d in voorgerechtLunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                        CB_SoortGerecht.SelectedIndex = 0;
+
+                    }
+                    else if (CB_SoortGerecht.Text == "Hoofdgerecht")
+                    {
+                        comboBox3.Show();
+                        CB_SoortGerecht.SelectedIndex = 1;
+                        foreach (SomerenModel.Gerecht d in hoofdgerechtLunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                    }
+                    else if (CB_SoortGerecht.Text == "Voorgerecht")
+                    {
+                        comboBox3.Show();
+                        CB_SoortGerecht.SelectedIndex = 2;
+                        foreach (SomerenModel.Gerecht d in nagerechtLunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                    }
+                }
+                else if(CB_LunchDiner.Text == "Diner")
+                {
+                    CB_SoortGerecht.Show();
+
+                    CB_SoortGerecht.Items.Add("Voorgerecht");
+                    CB_SoortGerecht.Items.Add("Tussengerecht");
+                    CB_SoortGerecht.Items.Add("Hoofdgerecht");
+                    CB_SoortGerecht.Items.Add("Nagerecht");
+
+                    if (CB_SoortGerecht.Text == "Voorgerecht")
+                    {
+                        comboBox3.Show();
+                        foreach (SomerenModel.Gerecht d in voorgerechtDinerGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                    }
+                    else if (CB_SoortGerecht.Text == "Tussengerecht")
+                    {
+                        comboBox3.Show();
+                        foreach (SomerenModel.Gerecht d in hoofdgerechtDinerGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                    }
+                    else if (CB_SoortGerecht.Text == "Hoofdgerecht")
+                    {
+                        comboBox3.Show();
+                        foreach (SomerenModel.Gerecht d in hoofdgerechtDinerGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                    }
+                    else if (CB_SoortGerecht.Text == "Nagerecht")
+                    {
+                        comboBox3.Show();
+                        foreach (SomerenModel.Gerecht d in nagerechtDinerGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                    }
+                }
             }
+
+
+
+
+
 
             
 
@@ -280,15 +360,16 @@ namespace SomerenUI
                 CB_EtenDrinken.Items.Clear();
                 CB_SoortGerecht.Items.Clear();
 
-                CB_LunchDiner.Items.Add("Eten");
-                CB_LunchDiner.Items.Add("Drinken");
+                CB_LunchDiner.Items.Add(DagType.Lunch.ToString());
+                CB_LunchDiner.Items.Add(DagType.Diner.ToString());
 
-                CB_EtenDrinken.Items.Add(DagType.Lunch.ToString());
-                CB_EtenDrinken.Items.Add(DagType.Diner.ToString());
+                CB_EtenDrinken.Items.Add("Drinken");
+                CB_EtenDrinken.Items.Add("Eten");
 
                 CB_LunchDiner.Hide();
                 CB_SoortGerecht.Hide();
-
+                comboBox3.Hide();
+                comboBox4.Hide();
             }
             else if (panelName == "Overzicht") 
             {
@@ -972,7 +1053,7 @@ namespace SomerenUI
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            GetGerechtList();
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -991,7 +1072,7 @@ namespace SomerenUI
 
         private void CB_LunchDiner_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            GetGerechtList();
         }
 
         private void btn_RefreshKeukenOverzicht_Click(object sender, EventArgs e)
@@ -1022,6 +1103,11 @@ namespace SomerenUI
         private void btn_AfgerondBar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CB_SoortGerecht_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetGerechtList();
         }
     }
 }
