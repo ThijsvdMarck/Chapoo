@@ -528,6 +528,8 @@ namespace SomerenUI
                 pnl_AfrekenOverzicht.Show();
                 gb_Afgerekend.Hide();
                 gb_AfrekenPopUp.Hide();
+                
+                //lbl_TafelNrInvoer.Text = geselecteerdeTafel;
 
                 cmb_BetaalMethode.Items.Clear();
 
