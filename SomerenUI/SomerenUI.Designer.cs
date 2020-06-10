@@ -437,6 +437,32 @@
             this.pnl_Dag = new System.Windows.Forms.Panel();
             this.lv_Dag = new System.Windows.Forms.ListView();
             this.pnl_Base = new System.Windows.Forms.Panel();
+            this.pnl_BestellingBar = new System.Windows.Forms.Panel();
+            this.btn_AfgerondBar = new System.Windows.Forms.Button();
+            this.btn_ServerenBar = new System.Windows.Forms.Button();
+            this.gb_OpmerkingenBar = new System.Windows.Forms.GroupBox();
+            this.lbl_OpmerkingBar = new System.Windows.Forms.Label();
+            this.lv_BarBestelling = new System.Windows.Forms.ListView();
+            this.lbl_StatusBar = new System.Windows.Forms.Label();
+            this.lbl_TafelNrBar = new System.Windows.Forms.Label();
+            this.lbl_TafelBar = new System.Windows.Forms.Label();
+            this.pnl_BestellingKeuken = new System.Windows.Forms.Panel();
+            this.btn_AfgerondKeuken = new System.Windows.Forms.Button();
+            this.btn_ServerenKeuken = new System.Windows.Forms.Button();
+            this.gb_OpmerkingenKeuken = new System.Windows.Forms.GroupBox();
+            this.lbl_OpmerkingenKeuken = new System.Windows.Forms.Label();
+            this.lv_BestellingenKeuken = new System.Windows.Forms.ListView();
+            this.lbl_StatusKeuken = new System.Windows.Forms.Label();
+            this.lbl_TafelNr = new System.Windows.Forms.Label();
+            this.lbl_Tafel = new System.Windows.Forms.Label();
+            this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
+            this.btn_RefreshBarOverzicht = new System.Windows.Forms.Button();
+            this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
+            this.lv_BarOverzicht = new System.Windows.Forms.ListView();
+            this.pnl_KeukenOverzicht = new System.Windows.Forms.Panel();
+            this.btn_RefreshKeukenOverzicht = new System.Windows.Forms.Button();
+            this.btn_ShowBestellingKeuken = new System.Windows.Forms.Button();
+            this.lv_KeukenOverzicht = new System.Windows.Forms.ListView();
             this.pnl_AfrekenOverzicht = new System.Windows.Forms.Panel();
             this.gb_Afgerekend = new System.Windows.Forms.GroupBox();
             this.btn_BetalingVoltooid = new System.Windows.Forms.Button();
@@ -477,33 +503,9 @@
             this.btn_KeukenOverzicht = new System.Windows.Forms.Button();
             this.pnl_MenuBalkBarOverzicht = new System.Windows.Forms.Panel();
             this.btn_BarOverzicht = new System.Windows.Forms.Button();
-            this.pnl_KeukenOverzicht = new System.Windows.Forms.Panel();
-            this.btn_ShowBestellingKeuken = new System.Windows.Forms.Button();
-            this.lv_KeukenOverzicht = new System.Windows.Forms.ListView();
-            this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
-            this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
-            this.lv_BarOverzicht = new System.Windows.Forms.ListView();
             this.pnl_MenuBalkReserveringen = new System.Windows.Forms.Panel();
             this.btn_reserveringenRes = new System.Windows.Forms.Button();
             this.btn_TafelOverzichtRes = new System.Windows.Forms.Button();
-            this.pnl_BestellingBar = new System.Windows.Forms.Panel();
-            this.btn_AfgerondBar = new System.Windows.Forms.Button();
-            this.btn_ServerenBar = new System.Windows.Forms.Button();
-            this.gb_OpmerkingenBar = new System.Windows.Forms.GroupBox();
-            this.lbl_OpmerkingBar = new System.Windows.Forms.Label();
-            this.lv_BarBestelling = new System.Windows.Forms.ListView();
-            this.lbl_StatusBar = new System.Windows.Forms.Label();
-            this.lbl_TafelNrBar = new System.Windows.Forms.Label();
-            this.lbl_TafelBar = new System.Windows.Forms.Label();
-            this.pnl_BestellingKeuken = new System.Windows.Forms.Panel();
-            this.btn_AfgerondKeuken = new System.Windows.Forms.Button();
-            this.btn_ServerenKeuken = new System.Windows.Forms.Button();
-            this.gb_OpmerkingenKeuken = new System.Windows.Forms.GroupBox();
-            this.lbl_OpmerkingenKeuken = new System.Windows.Forms.Label();
-            this.lv_BestellingenKeuken = new System.Windows.Forms.ListView();
-            this.lbl_StatusKeuken = new System.Windows.Forms.Label();
-            this.lbl_TafelNr = new System.Windows.Forms.Label();
-            this.lbl_Tafel = new System.Windows.Forms.Label();
             this.pnl_MenuBalkRekening = new System.Windows.Forms.Panel();
             this.btn_RekeningTafelOverzicht = new System.Windows.Forms.Button();
             this.pnl_Maand = new System.Windows.Forms.Panel();
@@ -515,8 +517,6 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.btn_RefreshKeukenOverzicht = new System.Windows.Forms.Button();
-            this.btn_RefreshBarOverzicht = new System.Windows.Forms.Button();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -543,6 +543,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Dag.SuspendLayout();
             this.pnl_Base.SuspendLayout();
+            this.pnl_BestellingBar.SuspendLayout();
+            this.gb_OpmerkingenBar.SuspendLayout();
+            this.pnl_BestellingKeuken.SuspendLayout();
+            this.gb_OpmerkingenKeuken.SuspendLayout();
+            this.pnl_BarOverzicht.SuspendLayout();
+            this.pnl_KeukenOverzicht.SuspendLayout();
             this.pnl_AfrekenOverzicht.SuspendLayout();
             this.gb_Afgerekend.SuspendLayout();
             this.gb_AfrekenPopUp.SuspendLayout();
@@ -550,13 +556,7 @@
             this.pnl_DatumKiezen.SuspendLayout();
             this.pnl_MenuBalkKeukenOverzicht.SuspendLayout();
             this.pnl_MenuBalkBarOverzicht.SuspendLayout();
-            this.pnl_KeukenOverzicht.SuspendLayout();
-            this.pnl_BarOverzicht.SuspendLayout();
             this.pnl_MenuBalkReserveringen.SuspendLayout();
-            this.pnl_BestellingBar.SuspendLayout();
-            this.gb_OpmerkingenBar.SuspendLayout();
-            this.pnl_BestellingKeuken.SuspendLayout();
-            this.gb_OpmerkingenKeuken.SuspendLayout();
             this.pnl_MenuBalkRekening.SuspendLayout();
             this.pnl_Maand.SuspendLayout();
             this.pnl_Week.SuspendLayout();
@@ -580,7 +580,7 @@
             // 
             this.pic_LogoChapoo.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
             this.pic_LogoChapoo.Location = new System.Drawing.Point(612, 0);
-            this.pic_LogoChapoo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_LogoChapoo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_LogoChapoo.Name = "pic_LogoChapoo";
             this.pic_LogoChapoo.Size = new System.Drawing.Size(187, 172);
             this.pic_LogoChapoo.TabIndex = 4;
@@ -1334,7 +1334,7 @@
             this.btn_Tafel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel9.Image = global::SomerenUI.Properties.Resources.Tafel9;
             this.btn_Tafel9.Location = new System.Drawing.Point(223, 651);
-            this.btn_Tafel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel9.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel9.Name = "btn_Tafel9";
             this.btn_Tafel9.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel9.TabIndex = 13;
@@ -1345,7 +1345,7 @@
             this.btn_Tafel7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel7.Image = global::SomerenUI.Properties.Resources.Tafel7;
             this.btn_Tafel7.Location = new System.Drawing.Point(223, 508);
-            this.btn_Tafel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel7.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel7.Name = "btn_Tafel7";
             this.btn_Tafel7.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel7.TabIndex = 12;
@@ -1356,7 +1356,7 @@
             this.btn_Tafel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel5.Image = global::SomerenUI.Properties.Resources.Tafel5;
             this.btn_Tafel5.Location = new System.Drawing.Point(223, 372);
-            this.btn_Tafel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel5.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel5.Name = "btn_Tafel5";
             this.btn_Tafel5.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel5.TabIndex = 11;
@@ -1367,7 +1367,7 @@
             this.btn_Tafel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel1.Image = global::SomerenUI.Properties.Resources.Tafel1;
             this.btn_Tafel1.Location = new System.Drawing.Point(223, 81);
-            this.btn_Tafel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel1.Name = "btn_Tafel1";
             this.btn_Tafel1.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel1.TabIndex = 10;
@@ -1379,7 +1379,7 @@
             this.btn_Tafel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel3.Image = global::SomerenUI.Properties.Resources.Tafel3;
             this.btn_Tafel3.Location = new System.Drawing.Point(223, 234);
-            this.btn_Tafel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel3.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel3.Name = "btn_Tafel3";
             this.btn_Tafel3.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel3.TabIndex = 9;
@@ -1390,7 +1390,7 @@
             this.btn_Tafel10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel10.Image = global::SomerenUI.Properties.Resources.tafel10;
             this.btn_Tafel10.Location = new System.Drawing.Point(452, 652);
-            this.btn_Tafel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel10.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel10.Name = "btn_Tafel10";
             this.btn_Tafel10.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel10.TabIndex = 8;
@@ -1401,7 +1401,7 @@
             this.btn_Tafel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel8.Image = global::SomerenUI.Properties.Resources.Tafel8;
             this.btn_Tafel8.Location = new System.Drawing.Point(452, 510);
-            this.btn_Tafel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel8.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel8.Name = "btn_Tafel8";
             this.btn_Tafel8.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel8.TabIndex = 7;
@@ -1412,7 +1412,7 @@
             this.btn_Tafel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel6.Image = global::SomerenUI.Properties.Resources.Tafel6;
             this.btn_Tafel6.Location = new System.Drawing.Point(452, 373);
-            this.btn_Tafel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel6.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel6.Name = "btn_Tafel6";
             this.btn_Tafel6.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel6.TabIndex = 6;
@@ -1423,7 +1423,7 @@
             this.btn_Tafel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel2.Image = global::SomerenUI.Properties.Resources.Tafel2;
             this.btn_Tafel2.Location = new System.Drawing.Point(452, 82);
-            this.btn_Tafel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel2.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel2.Name = "btn_Tafel2";
             this.btn_Tafel2.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel2.TabIndex = 5;
@@ -1434,7 +1434,7 @@
             this.btn_Tafel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel4.Image = global::SomerenUI.Properties.Resources.Tafel4;
             this.btn_Tafel4.Location = new System.Drawing.Point(452, 235);
-            this.btn_Tafel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Tafel4.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Tafel4.Name = "btn_Tafel4";
             this.btn_Tafel4.Size = new System.Drawing.Size(133, 123);
             this.btn_Tafel4.TabIndex = 4;
@@ -1506,7 +1506,7 @@
             this.pnl_LunchBestelling.Controls.Add(this.btn_Diner);
             this.pnl_LunchBestelling.Controls.Add(this.btn_Lunch);
             this.pnl_LunchBestelling.Location = new System.Drawing.Point(-1, 271);
-            this.pnl_LunchBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_LunchBestelling.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_LunchBestelling.Name = "pnl_LunchBestelling";
             this.pnl_LunchBestelling.Size = new System.Drawing.Size(813, 793);
             this.pnl_LunchBestelling.TabIndex = 1;
@@ -1515,7 +1515,7 @@
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(447, 555);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(195, 24);
             this.comboBox5.TabIndex = 62;
@@ -1523,7 +1523,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(35, 693);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(741, 62);
             this.button1.TabIndex = 61;
@@ -1534,7 +1534,7 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(705, 614);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(53, 24);
             this.comboBox4.TabIndex = 60;
@@ -1544,7 +1544,7 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(32, 614);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(605, 24);
             this.comboBox3.TabIndex = 59;
@@ -1554,7 +1554,7 @@
             // 
             this.CB_DrinkenEten.FormattingEnabled = true;
             this.CB_DrinkenEten.Location = new System.Drawing.Point(251, 555);
-            this.CB_DrinkenEten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CB_DrinkenEten.Margin = new System.Windows.Forms.Padding(4);
             this.CB_DrinkenEten.Name = "CB_DrinkenEten";
             this.CB_DrinkenEten.Size = new System.Drawing.Size(176, 24);
             this.CB_DrinkenEten.TabIndex = 58;
@@ -1564,7 +1564,7 @@
             // 
             this.CB_LunchDiner.FormattingEnabled = true;
             this.CB_LunchDiner.Location = new System.Drawing.Point(35, 554);
-            this.CB_LunchDiner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CB_LunchDiner.Margin = new System.Windows.Forms.Padding(4);
             this.CB_LunchDiner.Name = "CB_LunchDiner";
             this.CB_LunchDiner.Size = new System.Drawing.Size(180, 24);
             this.CB_LunchDiner.TabIndex = 57;
@@ -2261,7 +2261,7 @@
             this.btn_Diner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_Diner.ForeColor = System.Drawing.Color.Black;
             this.btn_Diner.Location = new System.Drawing.Point(393, 1);
-            this.btn_Diner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Diner.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Diner.Name = "btn_Diner";
             this.btn_Diner.Size = new System.Drawing.Size(137, 42);
             this.btn_Diner.TabIndex = 1;
@@ -2280,7 +2280,7 @@
             this.btn_Lunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_Lunch.ForeColor = System.Drawing.Color.White;
             this.btn_Lunch.Location = new System.Drawing.Point(239, 1);
-            this.btn_Lunch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Lunch.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Lunch.Name = "btn_Lunch";
             this.btn_Lunch.Size = new System.Drawing.Size(137, 42);
             this.btn_Lunch.TabIndex = 0;
@@ -2296,7 +2296,7 @@
             this.pnl_MenuBalkBestelling.Controls.Add(this.btn_Drinken);
             this.pnl_MenuBalkBestelling.Controls.Add(this.btn_Eten);
             this.pnl_MenuBalkBestelling.Location = new System.Drawing.Point(1, 193);
-            this.pnl_MenuBalkBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_MenuBalkBestelling.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_MenuBalkBestelling.Name = "pnl_MenuBalkBestelling";
             this.pnl_MenuBalkBestelling.Size = new System.Drawing.Size(812, 78);
             this.pnl_MenuBalkBestelling.TabIndex = 21;
@@ -2371,7 +2371,7 @@
             this.pnl_Bier.Controls.Add(this.btn_BierFrisdrank);
             this.pnl_Bier.Controls.Add(this.btn_BierBier);
             this.pnl_Bier.Location = new System.Drawing.Point(-1, 271);
-            this.pnl_Bier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Bier.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Bier.Name = "pnl_Bier";
             this.pnl_Bier.Size = new System.Drawing.Size(813, 793);
             this.pnl_Bier.TabIndex = 50;
@@ -2478,7 +2478,7 @@
             this.btn_BierKoffieThee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_BierKoffieThee.ForeColor = System.Drawing.Color.Black;
             this.btn_BierKoffieThee.Location = new System.Drawing.Point(645, 4);
-            this.btn_BierKoffieThee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BierKoffieThee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BierKoffieThee.Name = "btn_BierKoffieThee";
             this.btn_BierKoffieThee.Size = new System.Drawing.Size(165, 42);
             this.btn_BierKoffieThee.TabIndex = 21;
@@ -2497,7 +2497,7 @@
             this.btn_BierGedestilleerde.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_BierGedestilleerde.ForeColor = System.Drawing.Color.Black;
             this.btn_BierGedestilleerde.Location = new System.Drawing.Point(372, 4);
-            this.btn_BierGedestilleerde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BierGedestilleerde.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BierGedestilleerde.Name = "btn_BierGedestilleerde";
             this.btn_BierGedestilleerde.Size = new System.Drawing.Size(265, 42);
             this.btn_BierGedestilleerde.TabIndex = 20;
@@ -2516,7 +2516,7 @@
             this.btn_BierWijn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_BierWijn.ForeColor = System.Drawing.Color.Black;
             this.btn_BierWijn.Location = new System.Drawing.Point(248, 4);
-            this.btn_BierWijn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BierWijn.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BierWijn.Name = "btn_BierWijn";
             this.btn_BierWijn.Size = new System.Drawing.Size(116, 42);
             this.btn_BierWijn.TabIndex = 19;
@@ -2727,7 +2727,7 @@
             this.btn_BierFrisdrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_BierFrisdrank.ForeColor = System.Drawing.Color.Black;
             this.btn_BierFrisdrank.Location = new System.Drawing.Point(0, 4);
-            this.btn_BierFrisdrank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BierFrisdrank.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BierFrisdrank.Name = "btn_BierFrisdrank";
             this.btn_BierFrisdrank.Size = new System.Drawing.Size(116, 42);
             this.btn_BierFrisdrank.TabIndex = 1;
@@ -2745,7 +2745,7 @@
             this.btn_BierBier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_BierBier.ForeColor = System.Drawing.Color.White;
             this.btn_BierBier.Location = new System.Drawing.Point(124, 4);
-            this.btn_BierBier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_BierBier.Margin = new System.Windows.Forms.Padding(4);
             this.btn_BierBier.Name = "btn_BierBier";
             this.btn_BierBier.Size = new System.Drawing.Size(116, 42);
             this.btn_BierBier.TabIndex = 0;
@@ -2800,7 +2800,7 @@
             this.pnl_Frisdrank.Controls.Add(this.btn_FrisdrankFrisdrank);
             this.pnl_Frisdrank.Controls.Add(this.btn_FrisdrankBier);
             this.pnl_Frisdrank.Location = new System.Drawing.Point(-1, 271);
-            this.pnl_Frisdrank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Frisdrank.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Frisdrank.Name = "pnl_Frisdrank";
             this.pnl_Frisdrank.Size = new System.Drawing.Size(813, 793);
             this.pnl_Frisdrank.TabIndex = 49;
@@ -3093,7 +3093,7 @@
             this.btn_FrisdrankKoffieThee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_FrisdrankKoffieThee.ForeColor = System.Drawing.Color.Black;
             this.btn_FrisdrankKoffieThee.Location = new System.Drawing.Point(645, 4);
-            this.btn_FrisdrankKoffieThee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_FrisdrankKoffieThee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_FrisdrankKoffieThee.Name = "btn_FrisdrankKoffieThee";
             this.btn_FrisdrankKoffieThee.Size = new System.Drawing.Size(165, 42);
             this.btn_FrisdrankKoffieThee.TabIndex = 21;
@@ -3112,7 +3112,7 @@
             this.btn_FrisdrankGedestilleerde.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_FrisdrankGedestilleerde.ForeColor = System.Drawing.Color.Black;
             this.btn_FrisdrankGedestilleerde.Location = new System.Drawing.Point(372, 4);
-            this.btn_FrisdrankGedestilleerde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_FrisdrankGedestilleerde.Margin = new System.Windows.Forms.Padding(4);
             this.btn_FrisdrankGedestilleerde.Name = "btn_FrisdrankGedestilleerde";
             this.btn_FrisdrankGedestilleerde.Size = new System.Drawing.Size(265, 42);
             this.btn_FrisdrankGedestilleerde.TabIndex = 20;
@@ -3131,7 +3131,7 @@
             this.btn_FrisdrankWijn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_FrisdrankWijn.ForeColor = System.Drawing.Color.Black;
             this.btn_FrisdrankWijn.Location = new System.Drawing.Point(248, 4);
-            this.btn_FrisdrankWijn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_FrisdrankWijn.Margin = new System.Windows.Forms.Padding(4);
             this.btn_FrisdrankWijn.Name = "btn_FrisdrankWijn";
             this.btn_FrisdrankWijn.Size = new System.Drawing.Size(116, 42);
             this.btn_FrisdrankWijn.TabIndex = 19;
@@ -3342,7 +3342,7 @@
             this.btn_FrisdrankFrisdrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_FrisdrankFrisdrank.ForeColor = System.Drawing.Color.White;
             this.btn_FrisdrankFrisdrank.Location = new System.Drawing.Point(0, 4);
-            this.btn_FrisdrankFrisdrank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_FrisdrankFrisdrank.Margin = new System.Windows.Forms.Padding(4);
             this.btn_FrisdrankFrisdrank.Name = "btn_FrisdrankFrisdrank";
             this.btn_FrisdrankFrisdrank.Size = new System.Drawing.Size(116, 42);
             this.btn_FrisdrankFrisdrank.TabIndex = 1;
@@ -3359,7 +3359,7 @@
             this.btn_FrisdrankBier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_FrisdrankBier.ForeColor = System.Drawing.Color.Black;
             this.btn_FrisdrankBier.Location = new System.Drawing.Point(124, 4);
-            this.btn_FrisdrankBier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_FrisdrankBier.Margin = new System.Windows.Forms.Padding(4);
             this.btn_FrisdrankBier.Name = "btn_FrisdrankBier";
             this.btn_FrisdrankBier.Size = new System.Drawing.Size(116, 42);
             this.btn_FrisdrankBier.TabIndex = 0;
@@ -3407,7 +3407,7 @@
             this.pnl_Wijn.Controls.Add(this.btn_WijnFrisdrank);
             this.pnl_Wijn.Controls.Add(this.btn_WijnBier);
             this.pnl_Wijn.Location = new System.Drawing.Point(-1, 271);
-            this.pnl_Wijn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Wijn.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Wijn.Name = "pnl_Wijn";
             this.pnl_Wijn.Size = new System.Drawing.Size(813, 793);
             this.pnl_Wijn.TabIndex = 51;
@@ -3615,7 +3615,7 @@
             this.btn_WijnKoffieThee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_WijnKoffieThee.ForeColor = System.Drawing.Color.Black;
             this.btn_WijnKoffieThee.Location = new System.Drawing.Point(645, 4);
-            this.btn_WijnKoffieThee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_WijnKoffieThee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_WijnKoffieThee.Name = "btn_WijnKoffieThee";
             this.btn_WijnKoffieThee.Size = new System.Drawing.Size(165, 42);
             this.btn_WijnKoffieThee.TabIndex = 21;
@@ -3634,7 +3634,7 @@
             this.btn_WijnGedestileerde.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_WijnGedestileerde.ForeColor = System.Drawing.Color.Black;
             this.btn_WijnGedestileerde.Location = new System.Drawing.Point(372, 4);
-            this.btn_WijnGedestileerde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_WijnGedestileerde.Margin = new System.Windows.Forms.Padding(4);
             this.btn_WijnGedestileerde.Name = "btn_WijnGedestileerde";
             this.btn_WijnGedestileerde.Size = new System.Drawing.Size(265, 42);
             this.btn_WijnGedestileerde.TabIndex = 20;
@@ -3653,7 +3653,7 @@
             this.btn_WijnWijn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_WijnWijn.ForeColor = System.Drawing.Color.White;
             this.btn_WijnWijn.Location = new System.Drawing.Point(248, 4);
-            this.btn_WijnWijn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_WijnWijn.Margin = new System.Windows.Forms.Padding(4);
             this.btn_WijnWijn.Name = "btn_WijnWijn";
             this.btn_WijnWijn.Size = new System.Drawing.Size(116, 42);
             this.btn_WijnWijn.TabIndex = 19;
@@ -3865,7 +3865,7 @@
             this.btn_WijnFrisdrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_WijnFrisdrank.ForeColor = System.Drawing.Color.Black;
             this.btn_WijnFrisdrank.Location = new System.Drawing.Point(0, 4);
-            this.btn_WijnFrisdrank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_WijnFrisdrank.Margin = new System.Windows.Forms.Padding(4);
             this.btn_WijnFrisdrank.Name = "btn_WijnFrisdrank";
             this.btn_WijnFrisdrank.Size = new System.Drawing.Size(116, 42);
             this.btn_WijnFrisdrank.TabIndex = 1;
@@ -3883,7 +3883,7 @@
             this.btn_WijnBier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_WijnBier.ForeColor = System.Drawing.Color.Black;
             this.btn_WijnBier.Location = new System.Drawing.Point(124, 4);
-            this.btn_WijnBier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_WijnBier.Margin = new System.Windows.Forms.Padding(4);
             this.btn_WijnBier.Name = "btn_WijnBier";
             this.btn_WijnBier.Size = new System.Drawing.Size(116, 42);
             this.btn_WijnBier.TabIndex = 0;
@@ -3928,7 +3928,7 @@
             this.pnl_GedestilleerdeDranken.Controls.Add(this.btn_GedestilleerdeFrisdrank);
             this.pnl_GedestilleerdeDranken.Controls.Add(this.btn_GedestilleerdeBier);
             this.pnl_GedestilleerdeDranken.Location = new System.Drawing.Point(-1, 271);
-            this.pnl_GedestilleerdeDranken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_GedestilleerdeDranken.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_GedestilleerdeDranken.Name = "pnl_GedestilleerdeDranken";
             this.pnl_GedestilleerdeDranken.Size = new System.Drawing.Size(813, 793);
             this.pnl_GedestilleerdeDranken.TabIndex = 52;
@@ -4097,7 +4097,7 @@
             this.btn_GedestilleerdeKoffieThee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_GedestilleerdeKoffieThee.ForeColor = System.Drawing.Color.Black;
             this.btn_GedestilleerdeKoffieThee.Location = new System.Drawing.Point(645, 4);
-            this.btn_GedestilleerdeKoffieThee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_GedestilleerdeKoffieThee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GedestilleerdeKoffieThee.Name = "btn_GedestilleerdeKoffieThee";
             this.btn_GedestilleerdeKoffieThee.Size = new System.Drawing.Size(165, 42);
             this.btn_GedestilleerdeKoffieThee.TabIndex = 21;
@@ -4116,7 +4116,7 @@
             this.btn_GedestilleerdeGedestilleerde.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_GedestilleerdeGedestilleerde.ForeColor = System.Drawing.Color.White;
             this.btn_GedestilleerdeGedestilleerde.Location = new System.Drawing.Point(372, 4);
-            this.btn_GedestilleerdeGedestilleerde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_GedestilleerdeGedestilleerde.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GedestilleerdeGedestilleerde.Name = "btn_GedestilleerdeGedestilleerde";
             this.btn_GedestilleerdeGedestilleerde.Size = new System.Drawing.Size(265, 42);
             this.btn_GedestilleerdeGedestilleerde.TabIndex = 20;
@@ -4135,7 +4135,7 @@
             this.btn_GedestilleerdeWijn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_GedestilleerdeWijn.ForeColor = System.Drawing.Color.Black;
             this.btn_GedestilleerdeWijn.Location = new System.Drawing.Point(248, 4);
-            this.btn_GedestilleerdeWijn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_GedestilleerdeWijn.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GedestilleerdeWijn.Name = "btn_GedestilleerdeWijn";
             this.btn_GedestilleerdeWijn.Size = new System.Drawing.Size(116, 42);
             this.btn_GedestilleerdeWijn.TabIndex = 19;
@@ -4346,7 +4346,7 @@
             this.btn_GedestilleerdeFrisdrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_GedestilleerdeFrisdrank.ForeColor = System.Drawing.Color.Black;
             this.btn_GedestilleerdeFrisdrank.Location = new System.Drawing.Point(0, 4);
-            this.btn_GedestilleerdeFrisdrank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_GedestilleerdeFrisdrank.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GedestilleerdeFrisdrank.Name = "btn_GedestilleerdeFrisdrank";
             this.btn_GedestilleerdeFrisdrank.Size = new System.Drawing.Size(116, 42);
             this.btn_GedestilleerdeFrisdrank.TabIndex = 1;
@@ -4364,7 +4364,7 @@
             this.btn_GedestilleerdeBier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_GedestilleerdeBier.ForeColor = System.Drawing.Color.Black;
             this.btn_GedestilleerdeBier.Location = new System.Drawing.Point(124, 4);
-            this.btn_GedestilleerdeBier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_GedestilleerdeBier.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GedestilleerdeBier.Name = "btn_GedestilleerdeBier";
             this.btn_GedestilleerdeBier.Size = new System.Drawing.Size(116, 42);
             this.btn_GedestilleerdeBier.TabIndex = 0;
@@ -4404,7 +4404,7 @@
             this.pnl_KoffieThee.Controls.Add(this.btn_KoffieTheeFrisdrank);
             this.pnl_KoffieThee.Controls.Add(this.btn_KoffieTheeBier);
             this.pnl_KoffieThee.Location = new System.Drawing.Point(-1, 271);
-            this.pnl_KoffieThee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_KoffieThee.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_KoffieThee.Name = "pnl_KoffieThee";
             this.pnl_KoffieThee.Size = new System.Drawing.Size(813, 793);
             this.pnl_KoffieThee.TabIndex = 53;
@@ -4563,7 +4563,7 @@
             this.btn_KoffieTheeKoffieThee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_KoffieTheeKoffieThee.ForeColor = System.Drawing.Color.White;
             this.btn_KoffieTheeKoffieThee.Location = new System.Drawing.Point(645, 4);
-            this.btn_KoffieTheeKoffieThee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KoffieTheeKoffieThee.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KoffieTheeKoffieThee.Name = "btn_KoffieTheeKoffieThee";
             this.btn_KoffieTheeKoffieThee.Size = new System.Drawing.Size(165, 42);
             this.btn_KoffieTheeKoffieThee.TabIndex = 21;
@@ -4582,7 +4582,7 @@
             this.btn_KoffieTheeGedestilleerde.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_KoffieTheeGedestilleerde.ForeColor = System.Drawing.Color.Black;
             this.btn_KoffieTheeGedestilleerde.Location = new System.Drawing.Point(372, 4);
-            this.btn_KoffieTheeGedestilleerde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KoffieTheeGedestilleerde.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KoffieTheeGedestilleerde.Name = "btn_KoffieTheeGedestilleerde";
             this.btn_KoffieTheeGedestilleerde.Size = new System.Drawing.Size(265, 42);
             this.btn_KoffieTheeGedestilleerde.TabIndex = 20;
@@ -4601,7 +4601,7 @@
             this.btn_KoffieTheeWijn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_KoffieTheeWijn.ForeColor = System.Drawing.Color.Black;
             this.btn_KoffieTheeWijn.Location = new System.Drawing.Point(248, 4);
-            this.btn_KoffieTheeWijn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KoffieTheeWijn.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KoffieTheeWijn.Name = "btn_KoffieTheeWijn";
             this.btn_KoffieTheeWijn.Size = new System.Drawing.Size(116, 42);
             this.btn_KoffieTheeWijn.TabIndex = 19;
@@ -4760,7 +4760,7 @@
             this.btn_KoffieTheeFrisdrank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_KoffieTheeFrisdrank.ForeColor = System.Drawing.Color.Black;
             this.btn_KoffieTheeFrisdrank.Location = new System.Drawing.Point(0, 4);
-            this.btn_KoffieTheeFrisdrank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KoffieTheeFrisdrank.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KoffieTheeFrisdrank.Name = "btn_KoffieTheeFrisdrank";
             this.btn_KoffieTheeFrisdrank.Size = new System.Drawing.Size(116, 42);
             this.btn_KoffieTheeFrisdrank.TabIndex = 1;
@@ -4778,7 +4778,7 @@
             this.btn_KoffieTheeBier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_KoffieTheeBier.ForeColor = System.Drawing.Color.Black;
             this.btn_KoffieTheeBier.Location = new System.Drawing.Point(124, 4);
-            this.btn_KoffieTheeBier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KoffieTheeBier.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KoffieTheeBier.Name = "btn_KoffieTheeBier";
             this.btn_KoffieTheeBier.Size = new System.Drawing.Size(116, 42);
             this.btn_KoffieTheeBier.TabIndex = 0;
@@ -4860,7 +4860,7 @@
             this.pnl_DinerBestelling.Controls.Add(this.btn_Diner2);
             this.pnl_DinerBestelling.Controls.Add(this.btn_Lunch2);
             this.pnl_DinerBestelling.Location = new System.Drawing.Point(-1, 271);
-            this.pnl_DinerBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_DinerBestelling.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_DinerBestelling.Name = "pnl_DinerBestelling";
             this.pnl_DinerBestelling.Size = new System.Drawing.Size(813, 793);
             this.pnl_DinerBestelling.TabIndex = 48;
@@ -5721,7 +5721,7 @@
             this.btn_Diner2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_Diner2.ForeColor = System.Drawing.Color.White;
             this.btn_Diner2.Location = new System.Drawing.Point(393, 1);
-            this.btn_Diner2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Diner2.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Diner2.Name = "btn_Diner2";
             this.btn_Diner2.Size = new System.Drawing.Size(137, 42);
             this.btn_Diner2.TabIndex = 1;
@@ -5738,7 +5738,7 @@
             this.btn_Lunch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_Lunch2.ForeColor = System.Drawing.Color.Black;
             this.btn_Lunch2.Location = new System.Drawing.Point(239, 1);
-            this.btn_Lunch2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Lunch2.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Lunch2.Name = "btn_Lunch2";
             this.btn_Lunch2.Size = new System.Drawing.Size(137, 42);
             this.btn_Lunch2.TabIndex = 0;
@@ -5752,7 +5752,7 @@
             this.pnl_MenuBalkTafels.Controls.Add(this.btn_Reserveringen);
             this.pnl_MenuBalkTafels.Controls.Add(this.btn_TafelOverzicht);
             this.pnl_MenuBalkTafels.Location = new System.Drawing.Point(0, 193);
-            this.pnl_MenuBalkTafels.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_MenuBalkTafels.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_MenuBalkTafels.Name = "pnl_MenuBalkTafels";
             this.pnl_MenuBalkTafels.Size = new System.Drawing.Size(813, 78);
             this.pnl_MenuBalkTafels.TabIndex = 22;
@@ -5795,7 +5795,7 @@
             this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_PrijsBestelling);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_Bestelling);
             this.pnl_BestellingsOverzicht.Location = new System.Drawing.Point(0, 266);
-            this.pnl_BestellingsOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_BestellingsOverzicht.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_BestellingsOverzicht.Name = "pnl_BestellingsOverzicht";
             this.pnl_BestellingsOverzicht.Size = new System.Drawing.Size(813, 794);
             this.pnl_BestellingsOverzicht.TabIndex = 74;
@@ -5821,7 +5821,7 @@
             this.pnl_BestellingVersturen.Controls.Add(this.btn_BestellingVersturenJa);
             this.pnl_BestellingVersturen.Controls.Add(this.lbl_BestellingVersturen);
             this.pnl_BestellingVersturen.Location = new System.Drawing.Point(120, 121);
-            this.pnl_BestellingVersturen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_BestellingVersturen.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_BestellingVersturen.Name = "pnl_BestellingVersturen";
             this.pnl_BestellingVersturen.Size = new System.Drawing.Size(582, 322);
             this.pnl_BestellingVersturen.TabIndex = 8;
@@ -5873,7 +5873,7 @@
             this.pnl_BestellingVerstuurd.Controls.Add(this.btn_BestellingVersturenOK);
             this.pnl_BestellingVerstuurd.Controls.Add(this.lbl_BestellingVerstuurd);
             this.pnl_BestellingVerstuurd.Location = new System.Drawing.Point(120, 121);
-            this.pnl_BestellingVerstuurd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_BestellingVerstuurd.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_BestellingVerstuurd.Name = "pnl_BestellingVerstuurd";
             this.pnl_BestellingVerstuurd.Size = new System.Drawing.Size(582, 322);
             this.pnl_BestellingVerstuurd.TabIndex = 9;
@@ -5934,7 +5934,7 @@
             // 
             this.txt_Opmerkingen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Opmerkingen.Location = new System.Drawing.Point(93, 529);
-            this.txt_Opmerkingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Opmerkingen.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Opmerkingen.Name = "txt_Opmerkingen";
             this.txt_Opmerkingen.Size = new System.Drawing.Size(621, 142);
             this.txt_Opmerkingen.TabIndex = 6;
@@ -6005,7 +6005,7 @@
             // 
             this.pictureBox1.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
             this.pictureBox1.Location = new System.Drawing.Point(611, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(187, 172);
             this.pictureBox1.TabIndex = 15;
@@ -6015,7 +6015,7 @@
             // 
             this.pnl_Dag.Controls.Add(this.lv_Dag);
             this.pnl_Dag.Location = new System.Drawing.Point(0, 266);
-            this.pnl_Dag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Dag.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Dag.Name = "pnl_Dag";
             this.pnl_Dag.Size = new System.Drawing.Size(813, 793);
             this.pnl_Dag.TabIndex = 57;
@@ -6024,7 +6024,7 @@
             // 
             this.lv_Dag.HideSelection = false;
             this.lv_Dag.Location = new System.Drawing.Point(39, 26);
-            this.lv_Dag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lv_Dag.Margin = new System.Windows.Forms.Padding(4);
             this.lv_Dag.Name = "lv_Dag";
             this.lv_Dag.Size = new System.Drawing.Size(731, 563);
             this.lv_Dag.TabIndex = 0;
@@ -6036,9 +6036,9 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
+            this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingBar);
             this.pnl_Base.Controls.Add(this.pnl_BestellingKeuken);
-            this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_KeukenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_DinerBestelling);
@@ -6070,596 +6070,6 @@
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(813, 1063);
             this.pnl_Base.TabIndex = 15;
-            // 
-            // pnl_AfrekenOverzicht
-            // 
-            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_Afgerekend);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_AfrekenPopUp);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro2);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedragInvoer);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedrag);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.cmb_BetaalMethode);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BetaalMethode);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Fooi);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Fooi);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Commentaar);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Commentaar);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Totaal);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TotaalBedrag);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelNrInvoer);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelAfreken);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenBetalen);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenAnnuleren);
-            this.pnl_AfrekenOverzicht.Location = new System.Drawing.Point(0, 266);
-            this.pnl_AfrekenOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_AfrekenOverzicht.Name = "pnl_AfrekenOverzicht";
-            this.pnl_AfrekenOverzicht.Size = new System.Drawing.Size(821, 793);
-            this.pnl_AfrekenOverzicht.TabIndex = 60;
-            // 
-            // gb_Afgerekend
-            // 
-            this.gb_Afgerekend.BackColor = System.Drawing.Color.Silver;
-            this.gb_Afgerekend.Controls.Add(this.btn_BetalingVoltooid);
-            this.gb_Afgerekend.Controls.Add(this.lbl_BetalingVoltooid);
-            this.gb_Afgerekend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gb_Afgerekend.Location = new System.Drawing.Point(108, 188);
-            this.gb_Afgerekend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_Afgerekend.Name = "gb_Afgerekend";
-            this.gb_Afgerekend.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_Afgerekend.Size = new System.Drawing.Size(579, 377);
-            this.gb_Afgerekend.TabIndex = 22;
-            this.gb_Afgerekend.TabStop = false;
-            // 
-            // btn_BetalingVoltooid
-            // 
-            this.btn_BetalingVoltooid.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_BetalingVoltooid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BetalingVoltooid.ForeColor = System.Drawing.Color.White;
-            this.btn_BetalingVoltooid.Location = new System.Drawing.Point(175, 286);
-            this.btn_BetalingVoltooid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_BetalingVoltooid.Name = "btn_BetalingVoltooid";
-            this.btn_BetalingVoltooid.Size = new System.Drawing.Size(248, 62);
-            this.btn_BetalingVoltooid.TabIndex = 20;
-            this.btn_BetalingVoltooid.Text = "Oke";
-            this.btn_BetalingVoltooid.UseVisualStyleBackColor = false;
-            this.btn_BetalingVoltooid.Click += new System.EventHandler(this.btn_BetalingVoltooid_Click);
-            // 
-            // lbl_BetalingVoltooid
-            // 
-            this.lbl_BetalingVoltooid.AutoSize = true;
-            this.lbl_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BetalingVoltooid.Location = new System.Drawing.Point(203, 155);
-            this.lbl_BetalingVoltooid.Name = "lbl_BetalingVoltooid";
-            this.lbl_BetalingVoltooid.Size = new System.Drawing.Size(192, 29);
-            this.lbl_BetalingVoltooid.TabIndex = 0;
-            this.lbl_BetalingVoltooid.Text = "Betaling voltooid";
-            // 
-            // gb_AfrekenPopUp
-            // 
-            this.gb_AfrekenPopUp.BackColor = System.Drawing.Color.Silver;
-            this.gb_AfrekenPopUp.Controls.Add(this.btn_AfrekenNee);
-            this.gb_AfrekenPopUp.Controls.Add(this.btnAfrekenJa);
-            this.gb_AfrekenPopUp.Controls.Add(this.lbl_AfrekenPopUp);
-            this.gb_AfrekenPopUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gb_AfrekenPopUp.Location = new System.Drawing.Point(108, 188);
-            this.gb_AfrekenPopUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_AfrekenPopUp.Name = "gb_AfrekenPopUp";
-            this.gb_AfrekenPopUp.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gb_AfrekenPopUp.Size = new System.Drawing.Size(579, 377);
-            this.gb_AfrekenPopUp.TabIndex = 19;
-            this.gb_AfrekenPopUp.TabStop = false;
-            // 
-            // btn_AfrekenNee
-            // 
-            this.btn_AfrekenNee.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_AfrekenNee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_AfrekenNee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfrekenNee.ForeColor = System.Drawing.Color.White;
-            this.btn_AfrekenNee.Location = new System.Drawing.Point(23, 286);
-            this.btn_AfrekenNee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_AfrekenNee.Name = "btn_AfrekenNee";
-            this.btn_AfrekenNee.Size = new System.Drawing.Size(248, 62);
-            this.btn_AfrekenNee.TabIndex = 21;
-            this.btn_AfrekenNee.Text = "Nee";
-            this.btn_AfrekenNee.UseVisualStyleBackColor = false;
-            this.btn_AfrekenNee.Click += new System.EventHandler(this.btn_AfrekenNee_Click);
-            // 
-            // btnAfrekenJa
-            // 
-            this.btnAfrekenJa.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnAfrekenJa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAfrekenJa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAfrekenJa.ForeColor = System.Drawing.Color.White;
-            this.btnAfrekenJa.Location = new System.Drawing.Point(305, 286);
-            this.btnAfrekenJa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAfrekenJa.Name = "btnAfrekenJa";
-            this.btnAfrekenJa.Size = new System.Drawing.Size(248, 62);
-            this.btnAfrekenJa.TabIndex = 20;
-            this.btnAfrekenJa.Text = "Ja";
-            this.btnAfrekenJa.UseVisualStyleBackColor = false;
-            this.btnAfrekenJa.Click += new System.EventHandler(this.btnAfrekenJa_Click);
-            // 
-            // lbl_AfrekenPopUp
-            // 
-            this.lbl_AfrekenPopUp.AutoSize = true;
-            this.lbl_AfrekenPopUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AfrekenPopUp.Location = new System.Drawing.Point(99, 149);
-            this.lbl_AfrekenPopUp.Name = "lbl_AfrekenPopUp";
-            this.lbl_AfrekenPopUp.Size = new System.Drawing.Size(378, 29);
-            this.lbl_AfrekenPopUp.TabIndex = 0;
-            this.lbl_AfrekenPopUp.Text = "Weet u zeker dat u wilt afrekenen?";
-            // 
-            // lbl_Euro2
-            // 
-            this.lbl_Euro2.AutoSize = true;
-            this.lbl_Euro2.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Euro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Euro2.Location = new System.Drawing.Point(620, 375);
-            this.lbl_Euro2.Name = "lbl_Euro2";
-            this.lbl_Euro2.Size = new System.Drawing.Size(20, 24);
-            this.lbl_Euro2.TabIndex = 18;
-            this.lbl_Euro2.Text = "€";
-            // 
-            // lbl_Euro
-            // 
-            this.lbl_Euro.AutoSize = true;
-            this.lbl_Euro.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Euro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Euro.Location = new System.Drawing.Point(620, 510);
-            this.lbl_Euro.Name = "lbl_Euro";
-            this.lbl_Euro.Size = new System.Drawing.Size(20, 24);
-            this.lbl_Euro.TabIndex = 13;
-            this.lbl_Euro.Text = "€";
-            // 
-            // lbl_EindBedragInvoer
-            // 
-            this.lbl_EindBedragInvoer.AutoSize = true;
-            this.lbl_EindBedragInvoer.BackColor = System.Drawing.Color.Silver;
-            this.lbl_EindBedragInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EindBedragInvoer.Location = new System.Drawing.Point(656, 511);
-            this.lbl_EindBedragInvoer.Name = "lbl_EindBedragInvoer";
-            this.lbl_EindBedragInvoer.Size = new System.Drawing.Size(109, 24);
-            this.lbl_EindBedragInvoer.TabIndex = 17;
-            this.lbl_EindBedragInvoer.Text = "Eindbedrag";
-            // 
-            // lbl_EindBedrag
-            // 
-            this.lbl_EindBedrag.BackColor = System.Drawing.Color.Silver;
-            this.lbl_EindBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EindBedrag.Location = new System.Drawing.Point(53, 501);
-            this.lbl_EindBedrag.Name = "lbl_EindBedrag";
-            this.lbl_EindBedrag.Size = new System.Drawing.Size(721, 43);
-            this.lbl_EindBedrag.TabIndex = 16;
-            this.lbl_EindBedrag.Text = "Eind bedrag:";
-            this.lbl_EindBedrag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmb_BetaalMethode
-            // 
-            this.cmb_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_BetaalMethode.FormattingEnabled = true;
-            this.cmb_BetaalMethode.Location = new System.Drawing.Point(488, 439);
-            this.cmb_BetaalMethode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmb_BetaalMethode.Name = "cmb_BetaalMethode";
-            this.cmb_BetaalMethode.Size = new System.Drawing.Size(277, 30);
-            this.cmb_BetaalMethode.TabIndex = 15;
-            // 
-            // lbl_BetaalMethode
-            // 
-            this.lbl_BetaalMethode.BackColor = System.Drawing.Color.Silver;
-            this.lbl_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BetaalMethode.Location = new System.Drawing.Point(52, 432);
-            this.lbl_BetaalMethode.Name = "lbl_BetaalMethode";
-            this.lbl_BetaalMethode.Size = new System.Drawing.Size(721, 43);
-            this.lbl_BetaalMethode.TabIndex = 14;
-            this.lbl_BetaalMethode.Text = "Betaalmethode:";
-            this.lbl_BetaalMethode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Fooi
-            // 
-            this.txt_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Fooi.Location = new System.Drawing.Point(653, 375);
-            this.txt_Fooi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Fooi.Name = "txt_Fooi";
-            this.txt_Fooi.Size = new System.Drawing.Size(111, 28);
-            this.txt_Fooi.TabIndex = 12;
-            // 
-            // lbl_Fooi
-            // 
-            this.lbl_Fooi.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fooi.Location = new System.Drawing.Point(53, 367);
-            this.lbl_Fooi.Name = "lbl_Fooi";
-            this.lbl_Fooi.Size = new System.Drawing.Size(721, 43);
-            this.lbl_Fooi.TabIndex = 11;
-            this.lbl_Fooi.Text = "Extra bijdrage:";
-            this.lbl_Fooi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Commentaar
-            // 
-            this.txt_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Commentaar.Location = new System.Drawing.Point(51, 121);
-            this.txt_Commentaar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Commentaar.Multiline = true;
-            this.txt_Commentaar.Name = "txt_Commentaar";
-            this.txt_Commentaar.Size = new System.Drawing.Size(724, 222);
-            this.txt_Commentaar.TabIndex = 10;
-            // 
-            // lbl_Commentaar
-            // 
-            this.lbl_Commentaar.AutoSize = true;
-            this.lbl_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Commentaar.Location = new System.Drawing.Point(41, 85);
-            this.lbl_Commentaar.Name = "lbl_Commentaar";
-            this.lbl_Commentaar.Size = new System.Drawing.Size(123, 24);
-            this.lbl_Commentaar.TabIndex = 9;
-            this.lbl_Commentaar.Text = "Commentaar:";
-            // 
-            // lbl_Totaal
-            // 
-            this.lbl_Totaal.AutoSize = true;
-            this.lbl_Totaal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Totaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Totaal.ForeColor = System.Drawing.Color.White;
-            this.lbl_Totaal.Location = new System.Drawing.Point(581, 18);
-            this.lbl_Totaal.Name = "lbl_Totaal";
-            this.lbl_Totaal.Size = new System.Drawing.Size(93, 29);
-            this.lbl_Totaal.TabIndex = 8;
-            this.lbl_Totaal.Text = "Totaal: ";
-            // 
-            // lbl_TotaalBedrag
-            // 
-            this.lbl_TotaalBedrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_TotaalBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TotaalBedrag.ForeColor = System.Drawing.Color.White;
-            this.lbl_TotaalBedrag.Location = new System.Drawing.Point(680, 16);
-            this.lbl_TotaalBedrag.Name = "lbl_TotaalBedrag";
-            this.lbl_TotaalBedrag.Size = new System.Drawing.Size(109, 36);
-            this.lbl_TotaalBedrag.TabIndex = 7;
-            this.lbl_TotaalBedrag.Text = "totBedrag";
-            // 
-            // lbl_TafelNrInvoer
-            // 
-            this.lbl_TafelNrInvoer.AutoSize = true;
-            this.lbl_TafelNrInvoer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_TafelNrInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelNrInvoer.ForeColor = System.Drawing.Color.White;
-            this.lbl_TafelNrInvoer.Location = new System.Drawing.Point(60, 16);
-            this.lbl_TafelNrInvoer.Name = "lbl_TafelNrInvoer";
-            this.lbl_TafelNrInvoer.Size = new System.Drawing.Size(84, 29);
-            this.lbl_TafelNrInvoer.TabIndex = 6;
-            this.lbl_TafelNrInvoer.Text = "tafelNr";
-            // 
-            // lbl_TafelAfreken
-            // 
-            this.lbl_TafelAfreken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_TafelAfreken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelAfreken.ForeColor = System.Drawing.Color.White;
-            this.lbl_TafelAfreken.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_TafelAfreken.Location = new System.Drawing.Point(-1, -1);
-            this.lbl_TafelAfreken.Name = "lbl_TafelAfreken";
-            this.lbl_TafelAfreken.Size = new System.Drawing.Size(815, 63);
-            this.lbl_TafelAfreken.TabIndex = 5;
-            this.lbl_TafelAfreken.Text = "Tafel";
-            this.lbl_TafelAfreken.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btn_AfrekenBetalen
-            // 
-            this.btn_AfrekenBetalen.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_AfrekenBetalen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_AfrekenBetalen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfrekenBetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_AfrekenBetalen.Location = new System.Drawing.Point(443, 654);
-            this.btn_AfrekenBetalen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_AfrekenBetalen.Name = "btn_AfrekenBetalen";
-            this.btn_AfrekenBetalen.Size = new System.Drawing.Size(309, 80);
-            this.btn_AfrekenBetalen.TabIndex = 4;
-            this.btn_AfrekenBetalen.Text = "Afrekenen";
-            this.btn_AfrekenBetalen.UseVisualStyleBackColor = false;
-            this.btn_AfrekenBetalen.Click += new System.EventHandler(this.btn_AfrekenBetalen_Click);
-            // 
-            // btn_AfrekenAnnuleren
-            // 
-            this.btn_AfrekenAnnuleren.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_AfrekenAnnuleren.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_AfrekenAnnuleren.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfrekenAnnuleren.ForeColor = System.Drawing.Color.White;
-            this.btn_AfrekenAnnuleren.Location = new System.Drawing.Point(59, 654);
-            this.btn_AfrekenAnnuleren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_AfrekenAnnuleren.Name = "btn_AfrekenAnnuleren";
-            this.btn_AfrekenAnnuleren.Size = new System.Drawing.Size(309, 80);
-            this.btn_AfrekenAnnuleren.TabIndex = 3;
-            this.btn_AfrekenAnnuleren.Text = "Annuleren";
-            this.btn_AfrekenAnnuleren.UseVisualStyleBackColor = false;
-            this.btn_AfrekenAnnuleren.Click += new System.EventHandler(this.btn_AfrekenAnnuleren_Click);
-            // 
-            // pnl_RekeningOverzicht
-            // 
-            this.pnl_RekeningOverzicht.Controls.Add(this.btn_BestellingOpnemen);
-            this.pnl_RekeningOverzicht.Controls.Add(this.btn_Afrekenen);
-            this.pnl_RekeningOverzicht.Controls.Add(this.lbl_TafelInfo);
-            this.pnl_RekeningOverzicht.Controls.Add(this.lv_RekeningOverzicht);
-            this.pnl_RekeningOverzicht.Location = new System.Drawing.Point(0, 266);
-            this.pnl_RekeningOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_RekeningOverzicht.Name = "pnl_RekeningOverzicht";
-            this.pnl_RekeningOverzicht.Size = new System.Drawing.Size(813, 793);
-            this.pnl_RekeningOverzicht.TabIndex = 59;
-            // 
-            // btn_BestellingOpnemen
-            // 
-            this.btn_BestellingOpnemen.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_BestellingOpnemen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_BestellingOpnemen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BestellingOpnemen.ForeColor = System.Drawing.Color.White;
-            this.btn_BestellingOpnemen.Location = new System.Drawing.Point(452, 652);
-            this.btn_BestellingOpnemen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_BestellingOpnemen.Name = "btn_BestellingOpnemen";
-            this.btn_BestellingOpnemen.Size = new System.Drawing.Size(309, 80);
-            this.btn_BestellingOpnemen.TabIndex = 3;
-            this.btn_BestellingOpnemen.Text = "Bestelling opnemen";
-            this.btn_BestellingOpnemen.UseVisualStyleBackColor = false;
-            this.btn_BestellingOpnemen.Click += new System.EventHandler(this.btn_BestellingOpnemen_Click);
-            // 
-            // btn_Afrekenen
-            // 
-            this.btn_Afrekenen.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_Afrekenen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Afrekenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Afrekenen.ForeColor = System.Drawing.Color.White;
-            this.btn_Afrekenen.Location = new System.Drawing.Point(31, 654);
-            this.btn_Afrekenen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Afrekenen.Name = "btn_Afrekenen";
-            this.btn_Afrekenen.Size = new System.Drawing.Size(309, 80);
-            this.btn_Afrekenen.TabIndex = 2;
-            this.btn_Afrekenen.Text = "Afrekenen";
-            this.btn_Afrekenen.UseVisualStyleBackColor = false;
-            this.btn_Afrekenen.Click += new System.EventHandler(this.btn_Afrekenen_Click);
-            // 
-            // lbl_TafelInfo
-            // 
-            this.lbl_TafelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbl_TafelInfo.Location = new System.Drawing.Point(28, 27);
-            this.lbl_TafelInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_TafelInfo.Name = "lbl_TafelInfo";
-            this.lbl_TafelInfo.Size = new System.Drawing.Size(733, 54);
-            this.lbl_TafelInfo.TabIndex = 1;
-            this.lbl_TafelInfo.Text = "lipsum Voor welke Tafel en eindbedrag";
-            // 
-            // lv_RekeningOverzicht
-            // 
-            this.lv_RekeningOverzicht.HideSelection = false;
-            this.lv_RekeningOverzicht.Location = new System.Drawing.Point(31, 137);
-            this.lv_RekeningOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lv_RekeningOverzicht.Name = "lv_RekeningOverzicht";
-            this.lv_RekeningOverzicht.Size = new System.Drawing.Size(731, 399);
-            this.lv_RekeningOverzicht.TabIndex = 0;
-            this.lv_RekeningOverzicht.UseCompatibleStateImageBehavior = false;
-            // 
-            // pnl_DatumKiezen
-            // 
-            this.pnl_DatumKiezen.Controls.Add(this.lbl_DatumKiezenTot);
-            this.pnl_DatumKiezen.Controls.Add(this.mc_DatumTot);
-            this.pnl_DatumKiezen.Controls.Add(this.mc_DatumVan);
-            this.pnl_DatumKiezen.Controls.Add(this.lbl_DatumKiezen);
-            this.pnl_DatumKiezen.Controls.Add(this.btn_DatumZoeken);
-            this.pnl_DatumKiezen.Controls.Add(this.lv_DatumKiezen);
-            this.pnl_DatumKiezen.Location = new System.Drawing.Point(0, 266);
-            this.pnl_DatumKiezen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_DatumKiezen.Name = "pnl_DatumKiezen";
-            this.pnl_DatumKiezen.Size = new System.Drawing.Size(813, 793);
-            this.pnl_DatumKiezen.TabIndex = 59;
-            // 
-            // lbl_DatumKiezenTot
-            // 
-            this.lbl_DatumKiezenTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbl_DatumKiezenTot.Location = new System.Drawing.Point(300, 26);
-            this.lbl_DatumKiezenTot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_DatumKiezenTot.Name = "lbl_DatumKiezenTot";
-            this.lbl_DatumKiezenTot.Size = new System.Drawing.Size(127, 42);
-            this.lbl_DatumKiezenTot.TabIndex = 5;
-            this.lbl_DatumKiezenTot.Text = "Datum kiezen Tot:";
-            // 
-            // mc_DatumTot
-            // 
-            this.mc_DatumTot.Location = new System.Drawing.Point(304, 86);
-            this.mc_DatumTot.MaxSelectionCount = 1;
-            this.mc_DatumTot.Name = "mc_DatumTot";
-            this.mc_DatumTot.TabIndex = 4;
-            // 
-            // mc_DatumVan
-            // 
-            this.mc_DatumVan.Location = new System.Drawing.Point(32, 86);
-            this.mc_DatumVan.MaxSelectionCount = 1;
-            this.mc_DatumVan.Name = "mc_DatumVan";
-            this.mc_DatumVan.TabIndex = 3;
-            // 
-            // lbl_DatumKiezen
-            // 
-            this.lbl_DatumKiezen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lbl_DatumKiezen.Location = new System.Drawing.Point(35, 30);
-            this.lbl_DatumKiezen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_DatumKiezen.Name = "lbl_DatumKiezen";
-            this.lbl_DatumKiezen.Size = new System.Drawing.Size(127, 42);
-            this.lbl_DatumKiezen.TabIndex = 2;
-            this.lbl_DatumKiezen.Text = "Datum kiezen Van:";
-            // 
-            // btn_DatumZoeken
-            // 
-            this.btn_DatumZoeken.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_DatumZoeken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DatumZoeken.ForeColor = System.Drawing.Color.White;
-            this.btn_DatumZoeken.Location = new System.Drawing.Point(579, 234);
-            this.btn_DatumZoeken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_DatumZoeken.Name = "btn_DatumZoeken";
-            this.btn_DatumZoeken.Size = new System.Drawing.Size(181, 59);
-            this.btn_DatumZoeken.TabIndex = 1;
-            this.btn_DatumZoeken.Text = "Zoeken";
-            this.btn_DatumZoeken.UseVisualStyleBackColor = false;
-            // 
-            // lv_DatumKiezen
-            // 
-            this.lv_DatumKiezen.HideSelection = false;
-            this.lv_DatumKiezen.Location = new System.Drawing.Point(31, 314);
-            this.lv_DatumKiezen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lv_DatumKiezen.Name = "lv_DatumKiezen";
-            this.lv_DatumKiezen.Size = new System.Drawing.Size(731, 458);
-            this.lv_DatumKiezen.TabIndex = 0;
-            this.lv_DatumKiezen.UseCompatibleStateImageBehavior = false;
-            // 
-            // pnl_MenuBalkKeukenOverzicht
-            // 
-            this.pnl_MenuBalkKeukenOverzicht.Controls.Add(this.btn_KeukenOverzicht);
-            this.pnl_MenuBalkKeukenOverzicht.Location = new System.Drawing.Point(1, 190);
-            this.pnl_MenuBalkKeukenOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_MenuBalkKeukenOverzicht.Name = "pnl_MenuBalkKeukenOverzicht";
-            this.pnl_MenuBalkKeukenOverzicht.Size = new System.Drawing.Size(813, 82);
-            this.pnl_MenuBalkKeukenOverzicht.TabIndex = 24;
-            // 
-            // btn_KeukenOverzicht
-            // 
-            this.btn_KeukenOverzicht.BackColor = System.Drawing.Color.Gray;
-            this.btn_KeukenOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_KeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KeukenOverzicht.Location = new System.Drawing.Point(-1, 0);
-            this.btn_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_KeukenOverzicht.Name = "btn_KeukenOverzicht";
-            this.btn_KeukenOverzicht.Size = new System.Drawing.Size(251, 78);
-            this.btn_KeukenOverzicht.TabIndex = 18;
-            this.btn_KeukenOverzicht.Text = "Keuken Overzicht";
-            this.btn_KeukenOverzicht.UseVisualStyleBackColor = false;
-            this.btn_KeukenOverzicht.Click += new System.EventHandler(this.btn_KeukenOverzicht_Click);
-            // 
-            // pnl_MenuBalkBarOverzicht
-            // 
-            this.pnl_MenuBalkBarOverzicht.Controls.Add(this.btn_BarOverzicht);
-            this.pnl_MenuBalkBarOverzicht.Location = new System.Drawing.Point(3, 186);
-            this.pnl_MenuBalkBarOverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_MenuBalkBarOverzicht.Name = "pnl_MenuBalkBarOverzicht";
-            this.pnl_MenuBalkBarOverzicht.Size = new System.Drawing.Size(813, 82);
-            this.pnl_MenuBalkBarOverzicht.TabIndex = 25;
-            // 
-            // btn_BarOverzicht
-            // 
-            this.btn_BarOverzicht.BackColor = System.Drawing.Color.Gray;
-            this.btn_BarOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BarOverzicht.Location = new System.Drawing.Point(-1, 0);
-            this.btn_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_BarOverzicht.Name = "btn_BarOverzicht";
-            this.btn_BarOverzicht.Size = new System.Drawing.Size(251, 78);
-            this.btn_BarOverzicht.TabIndex = 18;
-            this.btn_BarOverzicht.Text = "Bar Overzicht";
-            this.btn_BarOverzicht.UseVisualStyleBackColor = false;
-            this.btn_BarOverzicht.Click += new System.EventHandler(this.btn_BarOverzicht_Click);
-            // 
-            // pnl_KeukenOverzicht
-            // 
-            this.pnl_KeukenOverzicht.Controls.Add(this.btn_RefreshKeukenOverzicht);
-            this.pnl_KeukenOverzicht.Controls.Add(this.btn_ShowBestellingKeuken);
-            this.pnl_KeukenOverzicht.Controls.Add(this.lv_KeukenOverzicht);
-            this.pnl_KeukenOverzicht.Location = new System.Drawing.Point(1, 270);
-            this.pnl_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_KeukenOverzicht.Name = "pnl_KeukenOverzicht";
-            this.pnl_KeukenOverzicht.Size = new System.Drawing.Size(813, 789);
-            this.pnl_KeukenOverzicht.TabIndex = 16;
-            // 
-            // btn_ShowBestellingKeuken
-            // 
-            this.btn_ShowBestellingKeuken.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_ShowBestellingKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowBestellingKeuken.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowBestellingKeuken.Location = new System.Drawing.Point(267, 542);
-            this.btn_ShowBestellingKeuken.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ShowBestellingKeuken.Name = "btn_ShowBestellingKeuken";
-            this.btn_ShowBestellingKeuken.Size = new System.Drawing.Size(279, 58);
-            this.btn_ShowBestellingKeuken.TabIndex = 1;
-            this.btn_ShowBestellingKeuken.Text = "Laat bestelling zien";
-            this.btn_ShowBestellingKeuken.UseVisualStyleBackColor = false;
-            this.btn_ShowBestellingKeuken.Click += new System.EventHandler(this.btn_ShowBestellingKeuken_Click);
-            // 
-            // lv_KeukenOverzicht
-            // 
-            this.lv_KeukenOverzicht.HideSelection = false;
-            this.lv_KeukenOverzicht.Location = new System.Drawing.Point(13, 95);
-            this.lv_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lv_KeukenOverzicht.Name = "lv_KeukenOverzicht";
-            this.lv_KeukenOverzicht.Size = new System.Drawing.Size(773, 389);
-            this.lv_KeukenOverzicht.TabIndex = 0;
-            this.lv_KeukenOverzicht.UseCompatibleStateImageBehavior = false;
-            // 
-            // pnl_BarOverzicht
-            // 
-            this.pnl_BarOverzicht.Controls.Add(this.btn_RefreshBarOverzicht);
-            this.pnl_BarOverzicht.Controls.Add(this.btn_ShowBestellingBar);
-            this.pnl_BarOverzicht.Controls.Add(this.lv_BarOverzicht);
-            this.pnl_BarOverzicht.Location = new System.Drawing.Point(3, 265);
-            this.pnl_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_BarOverzicht.Name = "pnl_BarOverzicht";
-            this.pnl_BarOverzicht.Size = new System.Drawing.Size(813, 796);
-            this.pnl_BarOverzicht.TabIndex = 17;
-            // 
-            // btn_ShowBestellingBar
-            // 
-            this.btn_ShowBestellingBar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_ShowBestellingBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowBestellingBar.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowBestellingBar.Location = new System.Drawing.Point(267, 542);
-            this.btn_ShowBestellingBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_ShowBestellingBar.Name = "btn_ShowBestellingBar";
-            this.btn_ShowBestellingBar.Size = new System.Drawing.Size(279, 58);
-            this.btn_ShowBestellingBar.TabIndex = 1;
-            this.btn_ShowBestellingBar.Text = "Laat bestelling zien";
-            this.btn_ShowBestellingBar.UseVisualStyleBackColor = false;
-            this.btn_ShowBestellingBar.Click += new System.EventHandler(this.btn_ShowBestellingBar_Click);
-            // 
-            // lv_BarOverzicht
-            // 
-            this.lv_BarOverzicht.HideSelection = false;
-            this.lv_BarOverzicht.Location = new System.Drawing.Point(13, 112);
-            this.lv_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lv_BarOverzicht.Name = "lv_BarOverzicht";
-            this.lv_BarOverzicht.Size = new System.Drawing.Size(773, 372);
-            this.lv_BarOverzicht.TabIndex = 0;
-            this.lv_BarOverzicht.UseCompatibleStateImageBehavior = false;
-            // 
-            // pnl_MenuBalkReserveringen
-            // 
-            this.pnl_MenuBalkReserveringen.Controls.Add(this.btn_reserveringenRes);
-            this.pnl_MenuBalkReserveringen.Controls.Add(this.btn_TafelOverzichtRes);
-            this.pnl_MenuBalkReserveringen.Location = new System.Drawing.Point(1, 192);
-            this.pnl_MenuBalkReserveringen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_MenuBalkReserveringen.Name = "pnl_MenuBalkReserveringen";
-            this.pnl_MenuBalkReserveringen.Size = new System.Drawing.Size(813, 78);
-            this.pnl_MenuBalkReserveringen.TabIndex = 23;
-            // 
-            // btn_reserveringenRes
-            // 
-            this.btn_reserveringenRes.BackColor = System.Drawing.Color.Gray;
-            this.btn_reserveringenRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reserveringenRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reserveringenRes.Location = new System.Drawing.Point(563, 1);
-            this.btn_reserveringenRes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_reserveringenRes.Name = "btn_reserveringenRes";
-            this.btn_reserveringenRes.Size = new System.Drawing.Size(248, 78);
-            this.btn_reserveringenRes.TabIndex = 19;
-            this.btn_reserveringenRes.Text = "Reserveringen";
-            this.btn_reserveringenRes.UseVisualStyleBackColor = false;
-            this.btn_reserveringenRes.Click += new System.EventHandler(this.btn_reserveringenRes_Click);
-            // 
-            // btn_TafelOverzichtRes
-            // 
-            this.btn_TafelOverzichtRes.BackColor = System.Drawing.Color.LightGray;
-            this.btn_TafelOverzichtRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TafelOverzichtRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TafelOverzichtRes.Location = new System.Drawing.Point(-1, 0);
-            this.btn_TafelOverzichtRes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_TafelOverzichtRes.Name = "btn_TafelOverzichtRes";
-            this.btn_TafelOverzichtRes.Size = new System.Drawing.Size(251, 78);
-            this.btn_TafelOverzichtRes.TabIndex = 18;
-            this.btn_TafelOverzichtRes.Text = "Tafel Overzicht";
-            this.btn_TafelOverzichtRes.UseVisualStyleBackColor = false;
-            this.btn_TafelOverzichtRes.Click += new System.EventHandler(this.btn_TafelOverzichtRes_Click);
             // 
             // pnl_BestellingBar
             // 
@@ -6871,11 +6281,629 @@
             this.lbl_Tafel.TabIndex = 0;
             this.lbl_Tafel.Text = "Tafel";
             // 
+            // pnl_BarOverzicht
+            // 
+            this.pnl_BarOverzicht.Controls.Add(this.btn_RefreshBarOverzicht);
+            this.pnl_BarOverzicht.Controls.Add(this.btn_ShowBestellingBar);
+            this.pnl_BarOverzicht.Controls.Add(this.lv_BarOverzicht);
+            this.pnl_BarOverzicht.Location = new System.Drawing.Point(3, 265);
+            this.pnl_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_BarOverzicht.Name = "pnl_BarOverzicht";
+            this.pnl_BarOverzicht.Size = new System.Drawing.Size(813, 796);
+            this.pnl_BarOverzicht.TabIndex = 17;
+            // 
+            // btn_RefreshBarOverzicht
+            // 
+            this.btn_RefreshBarOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.btn_RefreshBarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RefreshBarOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
+            this.btn_RefreshBarOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RefreshBarOverzicht.Location = new System.Drawing.Point(592, 48);
+            this.btn_RefreshBarOverzicht.Name = "btn_RefreshBarOverzicht";
+            this.btn_RefreshBarOverzicht.Size = new System.Drawing.Size(194, 50);
+            this.btn_RefreshBarOverzicht.TabIndex = 3;
+            this.btn_RefreshBarOverzicht.Text = "Refresh";
+            this.btn_RefreshBarOverzicht.UseVisualStyleBackColor = false;
+            this.btn_RefreshBarOverzicht.Click += new System.EventHandler(this.btn_RefreshBarOverzicht_Click);
+            // 
+            // btn_ShowBestellingBar
+            // 
+            this.btn_ShowBestellingBar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_ShowBestellingBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ShowBestellingBar.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBestellingBar.Location = new System.Drawing.Point(267, 542);
+            this.btn_ShowBestellingBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ShowBestellingBar.Name = "btn_ShowBestellingBar";
+            this.btn_ShowBestellingBar.Size = new System.Drawing.Size(279, 58);
+            this.btn_ShowBestellingBar.TabIndex = 1;
+            this.btn_ShowBestellingBar.Text = "Laat bestelling zien";
+            this.btn_ShowBestellingBar.UseVisualStyleBackColor = false;
+            this.btn_ShowBestellingBar.Click += new System.EventHandler(this.btn_ShowBestellingBar_Click);
+            // 
+            // lv_BarOverzicht
+            // 
+            this.lv_BarOverzicht.HideSelection = false;
+            this.lv_BarOverzicht.Location = new System.Drawing.Point(13, 112);
+            this.lv_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lv_BarOverzicht.Name = "lv_BarOverzicht";
+            this.lv_BarOverzicht.Size = new System.Drawing.Size(773, 372);
+            this.lv_BarOverzicht.TabIndex = 0;
+            this.lv_BarOverzicht.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_KeukenOverzicht
+            // 
+            this.pnl_KeukenOverzicht.Controls.Add(this.btn_RefreshKeukenOverzicht);
+            this.pnl_KeukenOverzicht.Controls.Add(this.btn_ShowBestellingKeuken);
+            this.pnl_KeukenOverzicht.Controls.Add(this.lv_KeukenOverzicht);
+            this.pnl_KeukenOverzicht.Location = new System.Drawing.Point(1, 270);
+            this.pnl_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl_KeukenOverzicht.Name = "pnl_KeukenOverzicht";
+            this.pnl_KeukenOverzicht.Size = new System.Drawing.Size(813, 789);
+            this.pnl_KeukenOverzicht.TabIndex = 16;
+            // 
+            // btn_RefreshKeukenOverzicht
+            // 
+            this.btn_RefreshKeukenOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.btn_RefreshKeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RefreshKeukenOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
+            this.btn_RefreshKeukenOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RefreshKeukenOverzicht.Location = new System.Drawing.Point(591, 28);
+            this.btn_RefreshKeukenOverzicht.Name = "btn_RefreshKeukenOverzicht";
+            this.btn_RefreshKeukenOverzicht.Size = new System.Drawing.Size(194, 50);
+            this.btn_RefreshKeukenOverzicht.TabIndex = 2;
+            this.btn_RefreshKeukenOverzicht.Text = "Refresh";
+            this.btn_RefreshKeukenOverzicht.UseVisualStyleBackColor = false;
+            this.btn_RefreshKeukenOverzicht.Click += new System.EventHandler(this.btn_RefreshKeukenOverzicht_Click);
+            // 
+            // btn_ShowBestellingKeuken
+            // 
+            this.btn_ShowBestellingKeuken.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_ShowBestellingKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ShowBestellingKeuken.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBestellingKeuken.Location = new System.Drawing.Point(267, 542);
+            this.btn_ShowBestellingKeuken.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ShowBestellingKeuken.Name = "btn_ShowBestellingKeuken";
+            this.btn_ShowBestellingKeuken.Size = new System.Drawing.Size(279, 58);
+            this.btn_ShowBestellingKeuken.TabIndex = 1;
+            this.btn_ShowBestellingKeuken.Text = "Laat bestelling zien";
+            this.btn_ShowBestellingKeuken.UseVisualStyleBackColor = false;
+            this.btn_ShowBestellingKeuken.Click += new System.EventHandler(this.btn_ShowBestellingKeuken_Click);
+            // 
+            // lv_KeukenOverzicht
+            // 
+            this.lv_KeukenOverzicht.HideSelection = false;
+            this.lv_KeukenOverzicht.Location = new System.Drawing.Point(13, 95);
+            this.lv_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lv_KeukenOverzicht.Name = "lv_KeukenOverzicht";
+            this.lv_KeukenOverzicht.Size = new System.Drawing.Size(773, 389);
+            this.lv_KeukenOverzicht.TabIndex = 0;
+            this.lv_KeukenOverzicht.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_AfrekenOverzicht
+            // 
+            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_Afgerekend);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_AfrekenPopUp);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro2);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedragInvoer);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedrag);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.cmb_BetaalMethode);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BetaalMethode);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Fooi);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Fooi);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Commentaar);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Commentaar);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Totaal);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TotaalBedrag);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelNrInvoer);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelAfreken);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenBetalen);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenAnnuleren);
+            this.pnl_AfrekenOverzicht.Location = new System.Drawing.Point(0, 266);
+            this.pnl_AfrekenOverzicht.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_AfrekenOverzicht.Name = "pnl_AfrekenOverzicht";
+            this.pnl_AfrekenOverzicht.Size = new System.Drawing.Size(821, 793);
+            this.pnl_AfrekenOverzicht.TabIndex = 60;
+            // 
+            // gb_Afgerekend
+            // 
+            this.gb_Afgerekend.BackColor = System.Drawing.Color.Silver;
+            this.gb_Afgerekend.Controls.Add(this.btn_BetalingVoltooid);
+            this.gb_Afgerekend.Controls.Add(this.lbl_BetalingVoltooid);
+            this.gb_Afgerekend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gb_Afgerekend.Location = new System.Drawing.Point(108, 188);
+            this.gb_Afgerekend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_Afgerekend.Name = "gb_Afgerekend";
+            this.gb_Afgerekend.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_Afgerekend.Size = new System.Drawing.Size(579, 377);
+            this.gb_Afgerekend.TabIndex = 22;
+            this.gb_Afgerekend.TabStop = false;
+            // 
+            // btn_BetalingVoltooid
+            // 
+            this.btn_BetalingVoltooid.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_BetalingVoltooid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BetalingVoltooid.ForeColor = System.Drawing.Color.White;
+            this.btn_BetalingVoltooid.Location = new System.Drawing.Point(175, 286);
+            this.btn_BetalingVoltooid.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_BetalingVoltooid.Name = "btn_BetalingVoltooid";
+            this.btn_BetalingVoltooid.Size = new System.Drawing.Size(248, 62);
+            this.btn_BetalingVoltooid.TabIndex = 20;
+            this.btn_BetalingVoltooid.Text = "Oke";
+            this.btn_BetalingVoltooid.UseVisualStyleBackColor = false;
+            this.btn_BetalingVoltooid.Click += new System.EventHandler(this.btn_BetalingVoltooid_Click);
+            // 
+            // lbl_BetalingVoltooid
+            // 
+            this.lbl_BetalingVoltooid.AutoSize = true;
+            this.lbl_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BetalingVoltooid.Location = new System.Drawing.Point(203, 155);
+            this.lbl_BetalingVoltooid.Name = "lbl_BetalingVoltooid";
+            this.lbl_BetalingVoltooid.Size = new System.Drawing.Size(192, 29);
+            this.lbl_BetalingVoltooid.TabIndex = 0;
+            this.lbl_BetalingVoltooid.Text = "Betaling voltooid";
+            // 
+            // gb_AfrekenPopUp
+            // 
+            this.gb_AfrekenPopUp.BackColor = System.Drawing.Color.Silver;
+            this.gb_AfrekenPopUp.Controls.Add(this.btn_AfrekenNee);
+            this.gb_AfrekenPopUp.Controls.Add(this.btnAfrekenJa);
+            this.gb_AfrekenPopUp.Controls.Add(this.lbl_AfrekenPopUp);
+            this.gb_AfrekenPopUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gb_AfrekenPopUp.Location = new System.Drawing.Point(108, 188);
+            this.gb_AfrekenPopUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_AfrekenPopUp.Name = "gb_AfrekenPopUp";
+            this.gb_AfrekenPopUp.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gb_AfrekenPopUp.Size = new System.Drawing.Size(579, 377);
+            this.gb_AfrekenPopUp.TabIndex = 19;
+            this.gb_AfrekenPopUp.TabStop = false;
+            // 
+            // btn_AfrekenNee
+            // 
+            this.btn_AfrekenNee.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_AfrekenNee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AfrekenNee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfrekenNee.ForeColor = System.Drawing.Color.White;
+            this.btn_AfrekenNee.Location = new System.Drawing.Point(23, 286);
+            this.btn_AfrekenNee.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AfrekenNee.Name = "btn_AfrekenNee";
+            this.btn_AfrekenNee.Size = new System.Drawing.Size(248, 62);
+            this.btn_AfrekenNee.TabIndex = 21;
+            this.btn_AfrekenNee.Text = "Nee";
+            this.btn_AfrekenNee.UseVisualStyleBackColor = false;
+            this.btn_AfrekenNee.Click += new System.EventHandler(this.btn_AfrekenNee_Click);
+            // 
+            // btnAfrekenJa
+            // 
+            this.btnAfrekenJa.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAfrekenJa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAfrekenJa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAfrekenJa.ForeColor = System.Drawing.Color.White;
+            this.btnAfrekenJa.Location = new System.Drawing.Point(305, 286);
+            this.btnAfrekenJa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAfrekenJa.Name = "btnAfrekenJa";
+            this.btnAfrekenJa.Size = new System.Drawing.Size(248, 62);
+            this.btnAfrekenJa.TabIndex = 20;
+            this.btnAfrekenJa.Text = "Ja";
+            this.btnAfrekenJa.UseVisualStyleBackColor = false;
+            this.btnAfrekenJa.Click += new System.EventHandler(this.btnAfrekenJa_Click);
+            // 
+            // lbl_AfrekenPopUp
+            // 
+            this.lbl_AfrekenPopUp.AutoSize = true;
+            this.lbl_AfrekenPopUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AfrekenPopUp.Location = new System.Drawing.Point(99, 149);
+            this.lbl_AfrekenPopUp.Name = "lbl_AfrekenPopUp";
+            this.lbl_AfrekenPopUp.Size = new System.Drawing.Size(378, 29);
+            this.lbl_AfrekenPopUp.TabIndex = 0;
+            this.lbl_AfrekenPopUp.Text = "Weet u zeker dat u wilt afrekenen?";
+            // 
+            // lbl_Euro2
+            // 
+            this.lbl_Euro2.AutoSize = true;
+            this.lbl_Euro2.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Euro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Euro2.Location = new System.Drawing.Point(620, 375);
+            this.lbl_Euro2.Name = "lbl_Euro2";
+            this.lbl_Euro2.Size = new System.Drawing.Size(20, 24);
+            this.lbl_Euro2.TabIndex = 18;
+            this.lbl_Euro2.Text = "€";
+            // 
+            // lbl_Euro
+            // 
+            this.lbl_Euro.AutoSize = true;
+            this.lbl_Euro.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Euro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Euro.Location = new System.Drawing.Point(620, 510);
+            this.lbl_Euro.Name = "lbl_Euro";
+            this.lbl_Euro.Size = new System.Drawing.Size(20, 24);
+            this.lbl_Euro.TabIndex = 13;
+            this.lbl_Euro.Text = "€";
+            // 
+            // lbl_EindBedragInvoer
+            // 
+            this.lbl_EindBedragInvoer.AutoSize = true;
+            this.lbl_EindBedragInvoer.BackColor = System.Drawing.Color.Silver;
+            this.lbl_EindBedragInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EindBedragInvoer.Location = new System.Drawing.Point(656, 511);
+            this.lbl_EindBedragInvoer.Name = "lbl_EindBedragInvoer";
+            this.lbl_EindBedragInvoer.Size = new System.Drawing.Size(109, 24);
+            this.lbl_EindBedragInvoer.TabIndex = 17;
+            this.lbl_EindBedragInvoer.Text = "Eindbedrag";
+            // 
+            // lbl_EindBedrag
+            // 
+            this.lbl_EindBedrag.BackColor = System.Drawing.Color.Silver;
+            this.lbl_EindBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EindBedrag.Location = new System.Drawing.Point(53, 501);
+            this.lbl_EindBedrag.Name = "lbl_EindBedrag";
+            this.lbl_EindBedrag.Size = new System.Drawing.Size(721, 43);
+            this.lbl_EindBedrag.TabIndex = 16;
+            this.lbl_EindBedrag.Text = "Eind bedrag:";
+            this.lbl_EindBedrag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmb_BetaalMethode
+            // 
+            this.cmb_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_BetaalMethode.FormattingEnabled = true;
+            this.cmb_BetaalMethode.Location = new System.Drawing.Point(488, 439);
+            this.cmb_BetaalMethode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmb_BetaalMethode.Name = "cmb_BetaalMethode";
+            this.cmb_BetaalMethode.Size = new System.Drawing.Size(277, 30);
+            this.cmb_BetaalMethode.TabIndex = 15;
+            // 
+            // lbl_BetaalMethode
+            // 
+            this.lbl_BetaalMethode.BackColor = System.Drawing.Color.Silver;
+            this.lbl_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BetaalMethode.Location = new System.Drawing.Point(52, 432);
+            this.lbl_BetaalMethode.Name = "lbl_BetaalMethode";
+            this.lbl_BetaalMethode.Size = new System.Drawing.Size(721, 43);
+            this.lbl_BetaalMethode.TabIndex = 14;
+            this.lbl_BetaalMethode.Text = "Betaalmethode:";
+            this.lbl_BetaalMethode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Fooi
+            // 
+            this.txt_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Fooi.Location = new System.Drawing.Point(653, 375);
+            this.txt_Fooi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Fooi.Name = "txt_Fooi";
+            this.txt_Fooi.Size = new System.Drawing.Size(111, 28);
+            this.txt_Fooi.TabIndex = 12;
+            // 
+            // lbl_Fooi
+            // 
+            this.lbl_Fooi.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fooi.Location = new System.Drawing.Point(53, 367);
+            this.lbl_Fooi.Name = "lbl_Fooi";
+            this.lbl_Fooi.Size = new System.Drawing.Size(721, 43);
+            this.lbl_Fooi.TabIndex = 11;
+            this.lbl_Fooi.Text = "Extra bijdrage:";
+            this.lbl_Fooi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Commentaar
+            // 
+            this.txt_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Commentaar.Location = new System.Drawing.Point(51, 121);
+            this.txt_Commentaar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Commentaar.Multiline = true;
+            this.txt_Commentaar.Name = "txt_Commentaar";
+            this.txt_Commentaar.Size = new System.Drawing.Size(724, 222);
+            this.txt_Commentaar.TabIndex = 10;
+            // 
+            // lbl_Commentaar
+            // 
+            this.lbl_Commentaar.AutoSize = true;
+            this.lbl_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Commentaar.Location = new System.Drawing.Point(41, 85);
+            this.lbl_Commentaar.Name = "lbl_Commentaar";
+            this.lbl_Commentaar.Size = new System.Drawing.Size(123, 24);
+            this.lbl_Commentaar.TabIndex = 9;
+            this.lbl_Commentaar.Text = "Commentaar:";
+            // 
+            // lbl_Totaal
+            // 
+            this.lbl_Totaal.AutoSize = true;
+            this.lbl_Totaal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Totaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Totaal.ForeColor = System.Drawing.Color.White;
+            this.lbl_Totaal.Location = new System.Drawing.Point(581, 18);
+            this.lbl_Totaal.Name = "lbl_Totaal";
+            this.lbl_Totaal.Size = new System.Drawing.Size(93, 29);
+            this.lbl_Totaal.TabIndex = 8;
+            this.lbl_Totaal.Text = "Totaal: ";
+            // 
+            // lbl_TotaalBedrag
+            // 
+            this.lbl_TotaalBedrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_TotaalBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TotaalBedrag.ForeColor = System.Drawing.Color.White;
+            this.lbl_TotaalBedrag.Location = new System.Drawing.Point(680, 16);
+            this.lbl_TotaalBedrag.Name = "lbl_TotaalBedrag";
+            this.lbl_TotaalBedrag.Size = new System.Drawing.Size(109, 36);
+            this.lbl_TotaalBedrag.TabIndex = 7;
+            this.lbl_TotaalBedrag.Text = "totBedrag";
+            // 
+            // lbl_TafelNrInvoer
+            // 
+            this.lbl_TafelNrInvoer.AutoSize = true;
+            this.lbl_TafelNrInvoer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_TafelNrInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelNrInvoer.ForeColor = System.Drawing.Color.White;
+            this.lbl_TafelNrInvoer.Location = new System.Drawing.Point(60, 16);
+            this.lbl_TafelNrInvoer.Name = "lbl_TafelNrInvoer";
+            this.lbl_TafelNrInvoer.Size = new System.Drawing.Size(84, 29);
+            this.lbl_TafelNrInvoer.TabIndex = 6;
+            this.lbl_TafelNrInvoer.Text = "tafelNr";
+            // 
+            // lbl_TafelAfreken
+            // 
+            this.lbl_TafelAfreken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_TafelAfreken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelAfreken.ForeColor = System.Drawing.Color.White;
+            this.lbl_TafelAfreken.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_TafelAfreken.Location = new System.Drawing.Point(-1, -1);
+            this.lbl_TafelAfreken.Name = "lbl_TafelAfreken";
+            this.lbl_TafelAfreken.Size = new System.Drawing.Size(815, 63);
+            this.lbl_TafelAfreken.TabIndex = 5;
+            this.lbl_TafelAfreken.Text = "Tafel";
+            this.lbl_TafelAfreken.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btn_AfrekenBetalen
+            // 
+            this.btn_AfrekenBetalen.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_AfrekenBetalen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AfrekenBetalen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfrekenBetalen.ForeColor = System.Drawing.Color.White;
+            this.btn_AfrekenBetalen.Location = new System.Drawing.Point(443, 654);
+            this.btn_AfrekenBetalen.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AfrekenBetalen.Name = "btn_AfrekenBetalen";
+            this.btn_AfrekenBetalen.Size = new System.Drawing.Size(309, 80);
+            this.btn_AfrekenBetalen.TabIndex = 4;
+            this.btn_AfrekenBetalen.Text = "Afrekenen";
+            this.btn_AfrekenBetalen.UseVisualStyleBackColor = false;
+            this.btn_AfrekenBetalen.Click += new System.EventHandler(this.btn_AfrekenBetalen_Click);
+            // 
+            // btn_AfrekenAnnuleren
+            // 
+            this.btn_AfrekenAnnuleren.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_AfrekenAnnuleren.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AfrekenAnnuleren.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfrekenAnnuleren.ForeColor = System.Drawing.Color.White;
+            this.btn_AfrekenAnnuleren.Location = new System.Drawing.Point(59, 654);
+            this.btn_AfrekenAnnuleren.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_AfrekenAnnuleren.Name = "btn_AfrekenAnnuleren";
+            this.btn_AfrekenAnnuleren.Size = new System.Drawing.Size(309, 80);
+            this.btn_AfrekenAnnuleren.TabIndex = 3;
+            this.btn_AfrekenAnnuleren.Text = "Annuleren";
+            this.btn_AfrekenAnnuleren.UseVisualStyleBackColor = false;
+            this.btn_AfrekenAnnuleren.Click += new System.EventHandler(this.btn_AfrekenAnnuleren_Click);
+            // 
+            // pnl_RekeningOverzicht
+            // 
+            this.pnl_RekeningOverzicht.Controls.Add(this.btn_BestellingOpnemen);
+            this.pnl_RekeningOverzicht.Controls.Add(this.btn_Afrekenen);
+            this.pnl_RekeningOverzicht.Controls.Add(this.lbl_TafelInfo);
+            this.pnl_RekeningOverzicht.Controls.Add(this.lv_RekeningOverzicht);
+            this.pnl_RekeningOverzicht.Location = new System.Drawing.Point(0, 266);
+            this.pnl_RekeningOverzicht.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_RekeningOverzicht.Name = "pnl_RekeningOverzicht";
+            this.pnl_RekeningOverzicht.Size = new System.Drawing.Size(813, 793);
+            this.pnl_RekeningOverzicht.TabIndex = 59;
+            // 
+            // btn_BestellingOpnemen
+            // 
+            this.btn_BestellingOpnemen.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_BestellingOpnemen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_BestellingOpnemen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BestellingOpnemen.ForeColor = System.Drawing.Color.White;
+            this.btn_BestellingOpnemen.Location = new System.Drawing.Point(452, 652);
+            this.btn_BestellingOpnemen.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_BestellingOpnemen.Name = "btn_BestellingOpnemen";
+            this.btn_BestellingOpnemen.Size = new System.Drawing.Size(309, 80);
+            this.btn_BestellingOpnemen.TabIndex = 3;
+            this.btn_BestellingOpnemen.Text = "Bestelling opnemen";
+            this.btn_BestellingOpnemen.UseVisualStyleBackColor = false;
+            this.btn_BestellingOpnemen.Click += new System.EventHandler(this.btn_BestellingOpnemen_Click);
+            // 
+            // btn_Afrekenen
+            // 
+            this.btn_Afrekenen.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_Afrekenen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Afrekenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Afrekenen.ForeColor = System.Drawing.Color.White;
+            this.btn_Afrekenen.Location = new System.Drawing.Point(31, 654);
+            this.btn_Afrekenen.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Afrekenen.Name = "btn_Afrekenen";
+            this.btn_Afrekenen.Size = new System.Drawing.Size(309, 80);
+            this.btn_Afrekenen.TabIndex = 2;
+            this.btn_Afrekenen.Text = "Afrekenen";
+            this.btn_Afrekenen.UseVisualStyleBackColor = false;
+            this.btn_Afrekenen.Click += new System.EventHandler(this.btn_Afrekenen_Click);
+            // 
+            // lbl_TafelInfo
+            // 
+            this.lbl_TafelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_TafelInfo.Location = new System.Drawing.Point(28, 27);
+            this.lbl_TafelInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TafelInfo.Name = "lbl_TafelInfo";
+            this.lbl_TafelInfo.Size = new System.Drawing.Size(733, 54);
+            this.lbl_TafelInfo.TabIndex = 1;
+            this.lbl_TafelInfo.Text = "lipsum Voor welke Tafel en eindbedrag";
+            // 
+            // lv_RekeningOverzicht
+            // 
+            this.lv_RekeningOverzicht.HideSelection = false;
+            this.lv_RekeningOverzicht.Location = new System.Drawing.Point(31, 137);
+            this.lv_RekeningOverzicht.Margin = new System.Windows.Forms.Padding(4);
+            this.lv_RekeningOverzicht.Name = "lv_RekeningOverzicht";
+            this.lv_RekeningOverzicht.Size = new System.Drawing.Size(731, 399);
+            this.lv_RekeningOverzicht.TabIndex = 0;
+            this.lv_RekeningOverzicht.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_DatumKiezen
+            // 
+            this.pnl_DatumKiezen.Controls.Add(this.lbl_DatumKiezenTot);
+            this.pnl_DatumKiezen.Controls.Add(this.mc_DatumTot);
+            this.pnl_DatumKiezen.Controls.Add(this.mc_DatumVan);
+            this.pnl_DatumKiezen.Controls.Add(this.lbl_DatumKiezen);
+            this.pnl_DatumKiezen.Controls.Add(this.btn_DatumZoeken);
+            this.pnl_DatumKiezen.Controls.Add(this.lv_DatumKiezen);
+            this.pnl_DatumKiezen.Location = new System.Drawing.Point(0, 266);
+            this.pnl_DatumKiezen.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_DatumKiezen.Name = "pnl_DatumKiezen";
+            this.pnl_DatumKiezen.Size = new System.Drawing.Size(813, 793);
+            this.pnl_DatumKiezen.TabIndex = 59;
+            // 
+            // lbl_DatumKiezenTot
+            // 
+            this.lbl_DatumKiezenTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_DatumKiezenTot.Location = new System.Drawing.Point(300, 26);
+            this.lbl_DatumKiezenTot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_DatumKiezenTot.Name = "lbl_DatumKiezenTot";
+            this.lbl_DatumKiezenTot.Size = new System.Drawing.Size(127, 42);
+            this.lbl_DatumKiezenTot.TabIndex = 5;
+            this.lbl_DatumKiezenTot.Text = "Datum kiezen Tot:";
+            // 
+            // mc_DatumTot
+            // 
+            this.mc_DatumTot.Location = new System.Drawing.Point(304, 86);
+            this.mc_DatumTot.MaxSelectionCount = 1;
+            this.mc_DatumTot.Name = "mc_DatumTot";
+            this.mc_DatumTot.TabIndex = 4;
+            // 
+            // mc_DatumVan
+            // 
+            this.mc_DatumVan.Location = new System.Drawing.Point(32, 86);
+            this.mc_DatumVan.MaxSelectionCount = 1;
+            this.mc_DatumVan.Name = "mc_DatumVan";
+            this.mc_DatumVan.TabIndex = 3;
+            // 
+            // lbl_DatumKiezen
+            // 
+            this.lbl_DatumKiezen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lbl_DatumKiezen.Location = new System.Drawing.Point(35, 30);
+            this.lbl_DatumKiezen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_DatumKiezen.Name = "lbl_DatumKiezen";
+            this.lbl_DatumKiezen.Size = new System.Drawing.Size(127, 42);
+            this.lbl_DatumKiezen.TabIndex = 2;
+            this.lbl_DatumKiezen.Text = "Datum kiezen Van:";
+            // 
+            // btn_DatumZoeken
+            // 
+            this.btn_DatumZoeken.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_DatumZoeken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DatumZoeken.ForeColor = System.Drawing.Color.White;
+            this.btn_DatumZoeken.Location = new System.Drawing.Point(579, 234);
+            this.btn_DatumZoeken.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_DatumZoeken.Name = "btn_DatumZoeken";
+            this.btn_DatumZoeken.Size = new System.Drawing.Size(181, 59);
+            this.btn_DatumZoeken.TabIndex = 1;
+            this.btn_DatumZoeken.Text = "Zoeken";
+            this.btn_DatumZoeken.UseVisualStyleBackColor = false;
+            // 
+            // lv_DatumKiezen
+            // 
+            this.lv_DatumKiezen.HideSelection = false;
+            this.lv_DatumKiezen.Location = new System.Drawing.Point(31, 314);
+            this.lv_DatumKiezen.Margin = new System.Windows.Forms.Padding(4);
+            this.lv_DatumKiezen.Name = "lv_DatumKiezen";
+            this.lv_DatumKiezen.Size = new System.Drawing.Size(731, 458);
+            this.lv_DatumKiezen.TabIndex = 0;
+            this.lv_DatumKiezen.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnl_MenuBalkKeukenOverzicht
+            // 
+            this.pnl_MenuBalkKeukenOverzicht.Controls.Add(this.btn_KeukenOverzicht);
+            this.pnl_MenuBalkKeukenOverzicht.Location = new System.Drawing.Point(1, 190);
+            this.pnl_MenuBalkKeukenOverzicht.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MenuBalkKeukenOverzicht.Name = "pnl_MenuBalkKeukenOverzicht";
+            this.pnl_MenuBalkKeukenOverzicht.Size = new System.Drawing.Size(813, 82);
+            this.pnl_MenuBalkKeukenOverzicht.TabIndex = 24;
+            // 
+            // btn_KeukenOverzicht
+            // 
+            this.btn_KeukenOverzicht.BackColor = System.Drawing.Color.Gray;
+            this.btn_KeukenOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_KeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_KeukenOverzicht.Location = new System.Drawing.Point(-1, 0);
+            this.btn_KeukenOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_KeukenOverzicht.Name = "btn_KeukenOverzicht";
+            this.btn_KeukenOverzicht.Size = new System.Drawing.Size(251, 78);
+            this.btn_KeukenOverzicht.TabIndex = 18;
+            this.btn_KeukenOverzicht.Text = "Keuken Overzicht";
+            this.btn_KeukenOverzicht.UseVisualStyleBackColor = false;
+            this.btn_KeukenOverzicht.Click += new System.EventHandler(this.btn_KeukenOverzicht_Click);
+            // 
+            // pnl_MenuBalkBarOverzicht
+            // 
+            this.pnl_MenuBalkBarOverzicht.Controls.Add(this.btn_BarOverzicht);
+            this.pnl_MenuBalkBarOverzicht.Location = new System.Drawing.Point(3, 186);
+            this.pnl_MenuBalkBarOverzicht.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MenuBalkBarOverzicht.Name = "pnl_MenuBalkBarOverzicht";
+            this.pnl_MenuBalkBarOverzicht.Size = new System.Drawing.Size(813, 82);
+            this.pnl_MenuBalkBarOverzicht.TabIndex = 25;
+            // 
+            // btn_BarOverzicht
+            // 
+            this.btn_BarOverzicht.BackColor = System.Drawing.Color.Gray;
+            this.btn_BarOverzicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BarOverzicht.Location = new System.Drawing.Point(-1, 0);
+            this.btn_BarOverzicht.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_BarOverzicht.Name = "btn_BarOverzicht";
+            this.btn_BarOverzicht.Size = new System.Drawing.Size(251, 78);
+            this.btn_BarOverzicht.TabIndex = 18;
+            this.btn_BarOverzicht.Text = "Bar Overzicht";
+            this.btn_BarOverzicht.UseVisualStyleBackColor = false;
+            this.btn_BarOverzicht.Click += new System.EventHandler(this.btn_BarOverzicht_Click);
+            // 
+            // pnl_MenuBalkReserveringen
+            // 
+            this.pnl_MenuBalkReserveringen.Controls.Add(this.btn_reserveringenRes);
+            this.pnl_MenuBalkReserveringen.Controls.Add(this.btn_TafelOverzichtRes);
+            this.pnl_MenuBalkReserveringen.Location = new System.Drawing.Point(1, 192);
+            this.pnl_MenuBalkReserveringen.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MenuBalkReserveringen.Name = "pnl_MenuBalkReserveringen";
+            this.pnl_MenuBalkReserveringen.Size = new System.Drawing.Size(813, 78);
+            this.pnl_MenuBalkReserveringen.TabIndex = 23;
+            // 
+            // btn_reserveringenRes
+            // 
+            this.btn_reserveringenRes.BackColor = System.Drawing.Color.Gray;
+            this.btn_reserveringenRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reserveringenRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reserveringenRes.Location = new System.Drawing.Point(563, 1);
+            this.btn_reserveringenRes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_reserveringenRes.Name = "btn_reserveringenRes";
+            this.btn_reserveringenRes.Size = new System.Drawing.Size(248, 78);
+            this.btn_reserveringenRes.TabIndex = 19;
+            this.btn_reserveringenRes.Text = "Reserveringen";
+            this.btn_reserveringenRes.UseVisualStyleBackColor = false;
+            this.btn_reserveringenRes.Click += new System.EventHandler(this.btn_reserveringenRes_Click);
+            // 
+            // btn_TafelOverzichtRes
+            // 
+            this.btn_TafelOverzichtRes.BackColor = System.Drawing.Color.LightGray;
+            this.btn_TafelOverzichtRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TafelOverzichtRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TafelOverzichtRes.Location = new System.Drawing.Point(-1, 0);
+            this.btn_TafelOverzichtRes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_TafelOverzichtRes.Name = "btn_TafelOverzichtRes";
+            this.btn_TafelOverzichtRes.Size = new System.Drawing.Size(251, 78);
+            this.btn_TafelOverzichtRes.TabIndex = 18;
+            this.btn_TafelOverzichtRes.Text = "Tafel Overzicht";
+            this.btn_TafelOverzichtRes.UseVisualStyleBackColor = false;
+            this.btn_TafelOverzichtRes.Click += new System.EventHandler(this.btn_TafelOverzichtRes_Click);
+            // 
             // pnl_MenuBalkRekening
             // 
             this.pnl_MenuBalkRekening.Controls.Add(this.btn_RekeningTafelOverzicht);
             this.pnl_MenuBalkRekening.Location = new System.Drawing.Point(0, 193);
-            this.pnl_MenuBalkRekening.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_MenuBalkRekening.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_MenuBalkRekening.Name = "pnl_MenuBalkRekening";
             this.pnl_MenuBalkRekening.Size = new System.Drawing.Size(813, 78);
             this.pnl_MenuBalkRekening.TabIndex = 23;
@@ -6897,7 +6925,7 @@
             // 
             this.pnl_Maand.Controls.Add(this.lv_Maand);
             this.pnl_Maand.Location = new System.Drawing.Point(0, 266);
-            this.pnl_Maand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Maand.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Maand.Name = "pnl_Maand";
             this.pnl_Maand.Size = new System.Drawing.Size(813, 793);
             this.pnl_Maand.TabIndex = 58;
@@ -6906,7 +6934,7 @@
             // 
             this.lv_Maand.HideSelection = false;
             this.lv_Maand.Location = new System.Drawing.Point(39, 26);
-            this.lv_Maand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lv_Maand.Margin = new System.Windows.Forms.Padding(4);
             this.lv_Maand.Name = "lv_Maand";
             this.lv_Maand.Size = new System.Drawing.Size(731, 563);
             this.lv_Maand.TabIndex = 0;
@@ -6916,7 +6944,7 @@
             // 
             this.pnl_Week.Controls.Add(this.lv_Week);
             this.pnl_Week.Location = new System.Drawing.Point(0, 266);
-            this.pnl_Week.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Week.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Week.Name = "pnl_Week";
             this.pnl_Week.Size = new System.Drawing.Size(813, 793);
             this.pnl_Week.TabIndex = 58;
@@ -6925,7 +6953,7 @@
             // 
             this.lv_Week.HideSelection = false;
             this.lv_Week.Location = new System.Drawing.Point(39, 26);
-            this.lv_Week.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lv_Week.Margin = new System.Windows.Forms.Padding(4);
             this.lv_Week.Name = "lv_Week";
             this.lv_Week.Size = new System.Drawing.Size(731, 563);
             this.lv_Week.TabIndex = 0;
@@ -6939,7 +6967,7 @@
             this.pnl_MenuBalkFinanciën.Controls.Add(this.btn_Week);
             this.pnl_MenuBalkFinanciën.Controls.Add(this.btn_Dag);
             this.pnl_MenuBalkFinanciën.Location = new System.Drawing.Point(0, 193);
-            this.pnl_MenuBalkFinanciën.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_MenuBalkFinanciën.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_MenuBalkFinanciën.Name = "pnl_MenuBalkFinanciën";
             this.pnl_MenuBalkFinanciën.Size = new System.Drawing.Size(812, 78);
             this.pnl_MenuBalkFinanciën.TabIndex = 22;
@@ -6996,34 +7024,6 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
-            // btn_RefreshKeukenOverzicht
-            // 
-            this.btn_RefreshKeukenOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.btn_RefreshKeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RefreshKeukenOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
-            this.btn_RefreshKeukenOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RefreshKeukenOverzicht.Location = new System.Drawing.Point(591, 28);
-            this.btn_RefreshKeukenOverzicht.Name = "btn_RefreshKeukenOverzicht";
-            this.btn_RefreshKeukenOverzicht.Size = new System.Drawing.Size(194, 50);
-            this.btn_RefreshKeukenOverzicht.TabIndex = 2;
-            this.btn_RefreshKeukenOverzicht.Text = "Refresh";
-            this.btn_RefreshKeukenOverzicht.UseVisualStyleBackColor = false;
-            this.btn_RefreshKeukenOverzicht.Click += new System.EventHandler(this.btn_RefreshKeukenOverzicht_Click);
-            // 
-            // btn_RefreshBarOverzicht
-            // 
-            this.btn_RefreshBarOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.btn_RefreshBarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RefreshBarOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
-            this.btn_RefreshBarOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RefreshBarOverzicht.Location = new System.Drawing.Point(592, 48);
-            this.btn_RefreshBarOverzicht.Name = "btn_RefreshBarOverzicht";
-            this.btn_RefreshBarOverzicht.Size = new System.Drawing.Size(194, 50);
-            this.btn_RefreshBarOverzicht.TabIndex = 3;
-            this.btn_RefreshBarOverzicht.Text = "Refresh";
-            this.btn_RefreshBarOverzicht.UseVisualStyleBackColor = false;
-            this.btn_RefreshBarOverzicht.Click += new System.EventHandler(this.btn_RefreshBarOverzicht_Click);
-            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -7032,7 +7032,7 @@
             this.Controls.Add(this.pnl_Base);
             this.Controls.Add(this.pnl_LogIn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SomerenUI";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Chapoo";
@@ -7071,6 +7071,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_Dag.ResumeLayout(false);
             this.pnl_Base.ResumeLayout(false);
+            this.pnl_BestellingBar.ResumeLayout(false);
+            this.pnl_BestellingBar.PerformLayout();
+            this.gb_OpmerkingenBar.ResumeLayout(false);
+            this.gb_OpmerkingenBar.PerformLayout();
+            this.pnl_BestellingKeuken.ResumeLayout(false);
+            this.pnl_BestellingKeuken.PerformLayout();
+            this.gb_OpmerkingenKeuken.ResumeLayout(false);
+            this.gb_OpmerkingenKeuken.PerformLayout();
+            this.pnl_BarOverzicht.ResumeLayout(false);
+            this.pnl_KeukenOverzicht.ResumeLayout(false);
             this.pnl_AfrekenOverzicht.ResumeLayout(false);
             this.pnl_AfrekenOverzicht.PerformLayout();
             this.gb_Afgerekend.ResumeLayout(false);
@@ -7081,17 +7091,7 @@
             this.pnl_DatumKiezen.ResumeLayout(false);
             this.pnl_MenuBalkKeukenOverzicht.ResumeLayout(false);
             this.pnl_MenuBalkBarOverzicht.ResumeLayout(false);
-            this.pnl_KeukenOverzicht.ResumeLayout(false);
-            this.pnl_BarOverzicht.ResumeLayout(false);
             this.pnl_MenuBalkReserveringen.ResumeLayout(false);
-            this.pnl_BestellingBar.ResumeLayout(false);
-            this.pnl_BestellingBar.PerformLayout();
-            this.gb_OpmerkingenBar.ResumeLayout(false);
-            this.gb_OpmerkingenBar.PerformLayout();
-            this.pnl_BestellingKeuken.ResumeLayout(false);
-            this.pnl_BestellingKeuken.PerformLayout();
-            this.gb_OpmerkingenKeuken.ResumeLayout(false);
-            this.gb_OpmerkingenKeuken.PerformLayout();
             this.pnl_MenuBalkRekening.ResumeLayout(false);
             this.pnl_Maand.ResumeLayout(false);
             this.pnl_Week.ResumeLayout(false);
