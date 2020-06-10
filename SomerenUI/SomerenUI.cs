@@ -303,15 +303,16 @@ namespace SomerenUI
                 // Aanmaken van kolommen
                 lv_KeukenOverzicht.Columns.Add("Tafel", 200);
                 lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
-                // lv_KeukenOverzicht.Columns.Add("Last Name", 100);
+                lv_KeukenOverzicht.Columns.Add("Status", 100);
 
-                string[] bestellingen = new string[2];
+                string[] bestellingen = new string[3];
                 ListViewItem itm;
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
                     bestellingen[0] = "Tafel " + b.TafelID.ToString();
                     bestellingen[1] = b.BestellingID.ToString();
+                    bestellingen[2] = b.status.ToString();
 
                     itm = new ListViewItem(bestellingen);
                     lv_KeukenOverzicht.Items.Add(itm);
@@ -340,55 +341,55 @@ namespace SomerenUI
 
                 // Label tafelnummer laten zien
                 string geselecteerdeTafel = "";
+                string tafelStatus = "";
 
                 for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
                 {
                     if (lv_KeukenOverzicht.Items[i].Checked)
                     {
                        geselecteerdeTafel = lv_KeukenOverzicht.Items[i].Text;
+                       tafelStatus = lv_KeukenOverzicht.Items[i].SubItems[2].Text;
                     }
                 }
 
                 lbl_Tafel.Text = geselecteerdeTafel;
                 lbl_TafelNr.Text = "";
 
-                // Listview
-                int geselecteerdeBestelling = 0;
+                lbl_StatusKeuken.Text = tafelStatus;
 
-                for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
-                {
-                    if (lv_KeukenOverzicht.Items[i].Checked)
-                    {
-                        geselecteerdeBestelling = int.Parse(lv_KeukenOverzicht.Items[i].SubItems[1].Text);
-                    }
-                }
+                // Listview
+                int geselecteerdeBestelling = GetGeselecteerdeBestelling();
 
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GetGerechtlijstItems(geselecteerdeBestelling);
 
                 // clear the listview before filling it again
-               // lv_BestellingKeuken.Clear();
+                lv_BestellingenKeuken.Clear();
 
-                lv_KeukenOverzicht.View = View.Details;
-                lv_KeukenOverzicht.GridLines = true;
-                lv_KeukenOverzicht.FullRowSelect = true;
-                lv_KeukenOverzicht.CheckBoxes = true;
+                lv_BestellingenKeuken.View = View.Details;
+                lv_BestellingenKeuken.GridLines = true;
+                lv_BestellingenKeuken.FullRowSelect = true;
+                lv_BestellingenKeuken.CheckBoxes = true;
 
                 // Aanmaken van kolommen
-                lv_KeukenOverzicht.Columns.Add("Tafel", 200);
-                lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
-                lv_KeukenOverzicht.Columns.Add("Last Name", 100);
+                lv_BestellingenKeuken.Columns.Add("BestellingID", 80);
+                lv_BestellingenKeuken.Columns.Add("Gerecht", 200);
+                lv_BestellingenKeuken.Columns.Add("Aantal", 70);
+                lv_BestellingenKeuken.Columns.Add("Tijd", 80);
+                lv_BestellingenKeuken.Columns.Add("Status", 100);
 
-                string[] gerechten = new string[3];
+                string[] gerechten = new string[5];
                 ListViewItem itm;
 
                 foreach (SomerenModel.GerechtlijstItem g in gerechtList)
                 {
                     gerechten[0] = g.BestellingID.ToString();
                     gerechten[1] = g.GerechtNaam;
-                    gerechten[2] = g.status.ToString();
+                    gerechten[2] = g.Aantal.ToString();
+                    gerechten[3] = g.Tijd.ToString("HH:mm");
+                    gerechten[4] = g.status.ToString();
 
                     itm = new ListViewItem(gerechten);
-                    lv_KeukenOverzicht.Items.Add(itm);
+                    lv_BestellingenKeuken.Items.Add(itm);
                 }
 
             }
@@ -679,6 +680,8 @@ namespace SomerenUI
             {
                 showPanel("KeukenBestelling");
             }
+
+            VeranderStatusBestelling(Status.WordtBereid);
         }
         private bool checkGeselecteerdeBestelling()
         {
@@ -705,6 +708,26 @@ namespace SomerenUI
             }
 
             return true;
+        }
+        private void VeranderStatusBestelling(Status status)
+        {
+            int geselecteerdeBestelling = GetGeselecteerdeBestelling();
+
+            bestellingService.UpdateBestelling(status, geselecteerdeBestelling);
+        }
+        private int GetGeselecteerdeBestelling()
+        {
+            int geselecteerdeBestelling = 0;
+
+            for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
+            {
+                if (lv_KeukenOverzicht.Items[i].Checked)
+                {
+                    geselecteerdeBestelling = int.Parse(lv_KeukenOverzicht.Items[i].SubItems[1].Text);
+                }
+            }
+
+            return geselecteerdeBestelling;
         }
 
         private void btn_BarOverzicht_Click(object sender, EventArgs e)
@@ -888,6 +911,36 @@ namespace SomerenUI
 
         }
         private void btn_MinKalfstartaar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_KlaarVoorServerenKeuken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_GeserveerdKeuken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_GeserveerdBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_KlaarVoorServerenBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_RefreshBar_Click(object sender, EventArgs e)
         {
 
         }

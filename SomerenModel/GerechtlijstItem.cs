@@ -13,5 +13,6 @@ namespace SomerenModel
         public int Aantal { get; set; }
         public Status status { get; set; }
         public string GerechtNaam { get; set; }
+        public DateTime Tijd { get; set; }
     }
 }
