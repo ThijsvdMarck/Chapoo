@@ -34,5 +34,11 @@ namespace SomerenDAL
             }
             return tafels;
         }
+        public int getHuidigeBestelling()
+        {
+            //  Zoekt in table Tafel welke huidige bestellingID hoord bij het mee gegeven tafelnmr
+
+            return 1;
+        }
     }
 }

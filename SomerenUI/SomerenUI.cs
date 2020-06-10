@@ -64,70 +64,71 @@ namespace SomerenUI
             pnl_BestellingBar.Hide();
             pnl_BestellingKeuken.Hide();
             pnl_AfrekenOverzicht.Hide();
-           
+
         }
         private void SomerenUI_Load(object sender, EventArgs e)
         {
             showPanel("LogIn");
         }
-        
+
 
         private void showPanel(string panelName)
         {
 
-            if(panelName == "LogIn")
+            if (panelName == "LogIn")
             {
                 hideAllPanels();
                 pnl_LogIn.Show();
             }
-            else if(panelName == "Students")
+            else if (panelName == "Students")
             {
-             /*
-                // hide all other panels
-                pnl_Dashboard.Hide();
-                img_Dashboard.Hide();
+                /*
+                   // hide all other panels
+                   pnl_Dashboard.Hide();
+                   img_Dashboard.Hide();
 
-                // show students
-                pnl_Students.Show();
+                   // show students
+                   pnl_Students.Show();
 
-                
 
-                // fill the students listview within the students panel with a list of students
-                SomerenLogic.DrankLijstItem_Service test = new SomerenLogic.DrankLijstItem_Service();
-                List<DrankLijstItem> drankLijstItem  = test.GetDrankLijstItems();
 
-                // clear the listview before filling it again
-                listViewStudents.Clear();
+                   // fill the students listview within the students panel with a list of students
+                   SomerenLogic.DrankLijstItem_Service test = new SomerenLogic.DrankLijstItem_Service();
+                   List<DrankLijstItem> drankLijstItem  = test.GetDrankLijstItems();
 
-                listViewStudents.View = View.Details;
-                listViewStudents.GridLines = true;
-                listViewStudents.FullRowSelect = true;
+                   // clear the listview before filling it again
+                   listViewStudents.Clear();
 
-                // Aanmaken van kolommen
-                listViewStudents.Columns.Add("DrankNaam", 70);
-                listViewStudents.Columns.Add("BestellingID", 70);
-                listViewStudents.Columns.Add("Status", 100);
-                listViewStudents.Columns.Add("Aantal", 100);
+                   listViewStudents.View = View.Details;
+                   listViewStudents.GridLines = true;
+                   listViewStudents.FullRowSelect = true;
 
-                string[] drankLijstItems = new string[4];
-                ListViewItem itm;
+                   // Aanmaken van kolommen
+                   listViewStudents.Columns.Add("DrankNaam", 70);
+                   listViewStudents.Columns.Add("BestellingID", 70);
+                   listViewStudents.Columns.Add("Status", 100);
+                   listViewStudents.Columns.Add("Aantal", 100);
 
-                foreach (SomerenModel.DrankLijstItem d in drankLijstItem )
-                {
-                    drankLijstItems[0] = d.drankNaam;
-                    drankLijstItems[1] = d.bestellingID.ToString();
-                    drankLijstItems[2] = d.status.ToString();
-                    drankLijstItems[3] = d.aantal.ToString();
+                   string[] drankLijstItems = new string[4];
+                   ListViewItem itm;
 
-                    itm = new ListViewItem(drankLijstItems);
-                    listViewStudents.Items.Add(itm);
-                }
-             */
-            } 
-            else if (panelName == "Base"){
+                   foreach (SomerenModel.DrankLijstItem d in drankLijstItem )
+                   {
+                       drankLijstItems[0] = d.drankNaam;
+                       drankLijstItems[1] = d.bestellingID.ToString();
+                       drankLijstItems[2] = d.status.ToString();
+                       drankLijstItems[3] = d.aantal.ToString();
+
+                       itm = new ListViewItem(drankLijstItems);
+                       listViewStudents.Items.Add(itm);
+                   }
+                */
+            }
+            else if (panelName == "Base")
+            {
                 hideAllPanels();
                 pnl_Base.Show();
-            }           
+            }
             else if (panelName == "BestellingsOverzicht")
             {
                 hideAllPanels();
@@ -192,7 +193,34 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkBestelling.Show();
                 pnl_LunchBestelling.Show();
+
+                List<Drankje> drankList = drankService.GetDrankjes();
+                List<Gerecht> gerechtList = gerechtService.GetGerechten();
+
+                CB_DrinkenEten.Items.Clear();
+                CB_LunchDiner.Items.Clear();
+
+                CB_DrinkenEten.Items.Add("Eten");
+                CB_DrinkenEten.Items.Add("Drinken");
+
+                // Loopje die zorgt voor maar 1 malig toevoeging van een tpye dagtype
+                foreach (Gerecht d in gerechtList)
+                {
+                    CB_LunchDiner.Items.Add(d.dagType.ToString());
+                }
             }
+
+
+
+
+
+
+
+
+
+
+
+
             else if (panelName == "Overzicht")
             {
                 hideAllPanels();
@@ -303,16 +331,15 @@ namespace SomerenUI
                 // Aanmaken van kolommen
                 lv_KeukenOverzicht.Columns.Add("Tafel", 200);
                 lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
-                lv_KeukenOverzicht.Columns.Add("Status", 100);
+                // lv_KeukenOverzicht.Columns.Add("Last Name", 100);
 
-                string[] bestellingen = new string[3];
+                string[] bestellingen = new string[2];
                 ListViewItem itm;
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
                     bestellingen[0] = "Tafel " + b.TafelID.ToString();
                     bestellingen[1] = b.BestellingID.ToString();
-                    bestellingen[2] = b.status.ToString();
 
                     itm = new ListViewItem(bestellingen);
                     lv_KeukenOverzicht.Items.Add(itm);
@@ -341,55 +368,55 @@ namespace SomerenUI
 
                 // Label tafelnummer laten zien
                 string geselecteerdeTafel = "";
-                string tafelStatus = "";
 
                 for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
                 {
                     if (lv_KeukenOverzicht.Items[i].Checked)
                     {
-                       geselecteerdeTafel = lv_KeukenOverzicht.Items[i].Text;
-                       tafelStatus = lv_KeukenOverzicht.Items[i].SubItems[2].Text;
+                        geselecteerdeTafel = lv_KeukenOverzicht.Items[i].Text;
                     }
                 }
 
                 lbl_Tafel.Text = geselecteerdeTafel;
                 lbl_TafelNr.Text = "";
 
-                lbl_StatusKeuken.Text = tafelStatus;
-
                 // Listview
-                int geselecteerdeBestelling = GetGeselecteerdeBestelling();
+                int geselecteerdeBestelling = 0;
+
+                for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
+                {
+                    if (lv_KeukenOverzicht.Items[i].Checked)
+                    {
+                        geselecteerdeBestelling = int.Parse(lv_KeukenOverzicht.Items[i].SubItems[1].Text);
+                    }
+                }
 
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GetGerechtlijstItems(geselecteerdeBestelling);
 
                 // clear the listview before filling it again
-                lv_BestellingenKeuken.Clear();
+                // lv_BestellingKeuken.Clear();
 
-                lv_BestellingenKeuken.View = View.Details;
-                lv_BestellingenKeuken.GridLines = true;
-                lv_BestellingenKeuken.FullRowSelect = true;
-                lv_BestellingenKeuken.CheckBoxes = true;
+                lv_KeukenOverzicht.View = View.Details;
+                lv_KeukenOverzicht.GridLines = true;
+                lv_KeukenOverzicht.FullRowSelect = true;
+                lv_KeukenOverzicht.CheckBoxes = true;
 
                 // Aanmaken van kolommen
-                lv_BestellingenKeuken.Columns.Add("BestellingID", 80);
-                lv_BestellingenKeuken.Columns.Add("Gerecht", 200);
-                lv_BestellingenKeuken.Columns.Add("Aantal", 70);
-                lv_BestellingenKeuken.Columns.Add("Tijd", 80);
-                lv_BestellingenKeuken.Columns.Add("Status", 100);
+                lv_KeukenOverzicht.Columns.Add("Tafel", 200);
+                lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
+                lv_KeukenOverzicht.Columns.Add("Last Name", 100);
 
-                string[] gerechten = new string[5];
+                string[] gerechten = new string[3];
                 ListViewItem itm;
 
                 foreach (SomerenModel.GerechtlijstItem g in gerechtList)
                 {
                     gerechten[0] = g.BestellingID.ToString();
                     gerechten[1] = g.GerechtNaam;
-                    gerechten[2] = g.Aantal.ToString();
-                    gerechten[3] = g.Tijd.ToString("HH:mm");
-                    gerechten[4] = g.status.ToString();
+                    gerechten[2] = g.status.ToString();
 
                     itm = new ListViewItem(gerechten);
-                    lv_BestellingenKeuken.Items.Add(itm);
+                    lv_KeukenOverzicht.Items.Add(itm);
                 }
 
             }
@@ -448,7 +475,7 @@ namespace SomerenUI
         {
             showPanel("Bier");
         }
- 
+
         private void btn_Home_Click(object sender, EventArgs e)
         {
             showPanel("Overzicht");
@@ -680,8 +707,6 @@ namespace SomerenUI
             {
                 showPanel("KeukenBestelling");
             }
-
-            VeranderStatusBestelling(Status.WordtBereid);
         }
         private bool checkGeselecteerdeBestelling()
         {
@@ -708,26 +733,6 @@ namespace SomerenUI
             }
 
             return true;
-        }
-        private void VeranderStatusBestelling(Status status)
-        {
-            int geselecteerdeBestelling = GetGeselecteerdeBestelling();
-
-            bestellingService.UpdateBestelling(status, geselecteerdeBestelling);
-        }
-        private int GetGeselecteerdeBestelling()
-        {
-            int geselecteerdeBestelling = 0;
-
-            for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
-            {
-                if (lv_KeukenOverzicht.Items[i].Checked)
-                {
-                    geselecteerdeBestelling = int.Parse(lv_KeukenOverzicht.Items[i].SubItems[1].Text);
-                }
-            }
-
-            return geselecteerdeBestelling;
         }
 
         private void btn_BarOverzicht_Click(object sender, EventArgs e)
@@ -826,7 +831,7 @@ namespace SomerenUI
                 return;
             }
 
-            string query = "INSERT INTO drankje VALUES ('" + txt_DrankNaam.Text + "', " + txt_PrijsDrank.Text + ", '" + txt_Alcoholisch.Text + "', " + txt_HoeveelheidDrank.Text +")";
+            string query = "INSERT INTO drankje VALUES ('" + txt_DrankNaam.Text + "', " + txt_PrijsDrank.Text + ", '" + txt_Alcoholisch.Text + "', " + txt_HoeveelheidDrank.Text + ")";
             drankService.UpdateDrankje(query);
 
             txt_Alcoholisch.Clear();
@@ -898,12 +903,48 @@ namespace SomerenUI
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBox3.Items.Clear();
+            List<Drankje> drankList = drankService.GetDrankjes();
+            List<Gerecht> gerechtList = gerechtService.GetGerechten();
 
+            List<Gerecht> lunchGerechtList = new List<Gerecht>();
+            List<Gerecht> dinerGerechtList = new List<Gerecht>();
+
+            foreach (SomerenModel.Gerecht d in gerechtList)
+            {
+                if (d.dagType == DagType.Lunch)
+                {
+                    lunchGerechtList.Add(d);
+                }
+                else if (d.dagType == DagType.Diner)
+                {
+                    dinerGerechtList.Add(d);
+                }
+            } 
+
+
+
+            if (CB_DrinkenEten.Text == "Eten")
+            {
+                if (CB_LunchDiner.Text == "Lunch")
+                {
+                    foreach (SomerenModel.Gerecht d in gerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString());}
+                }
+                else if (CB_LunchDiner.Text == "Diner")
+                {
+
+                }
+                foreach (SomerenModel.Gerecht d in gerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+            }
+            else if (CB_DrinkenEten.Text == "Drinken")
+            {
+                foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
+            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            showPanel("LunchBestelling");
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -915,32 +956,7 @@ namespace SomerenUI
 
         }
 
-        private void btn_Refresh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_KlaarVoorServerenKeuken_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_GeserveerdKeuken_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_GeserveerdBar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_KlaarVoorServerenBar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_RefreshBar_Click(object sender, EventArgs e)
+        private void CB_LunchDiner_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

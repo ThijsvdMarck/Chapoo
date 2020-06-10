@@ -15,7 +15,7 @@ namespace SomerenDAL
 
         public List<DrankLijstItem> Db_Get_All_DrankLijstItems()
         {
-            string query = "SELECT Dranknaam, BestellingID, Aantal, [Status] FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID";
+            string query = "SELECT Dranknaam, BestellingID, Aantal, Tijd, [Status] FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -31,20 +31,23 @@ namespace SomerenDAL
                     drankNaam = (string)dr["Dranknaam"],
                     bestellingID = (int)dr["BestellingID"],
                     status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
-                    aantal = (int)(dr["Aantal"])
-
+                    aantal = (int)dr["Aantal"],
+                    tijd = (DateTime)dr["Tijd"]
                 };
                 drankLijstItems.Add(drankLijstItem);
             }
-            return drankLijstItems;
+            return drankLijstItems; 
         }
 
-        public void AddDrankLijsItem(int drankID, int bestellingID, int aantal, Status status)
+        public void AddDrankLijsItem(int drankID, int bestellingID, int aantal)
         {
-            string Status = status.ToString();
-            string AddDrankLijsItem = $"Insert into [Dranklijst] (DrankID, BestellingID, Aantal, Status) Values ( {drankID},{bestellingID},{aantal},'{status}')";
+
+            string status = Status.Besteld.ToString();
+            string AddDrankLijsItem = $"Insert into [Dranklijst] (DrankID, BestellingID, Aantal, Status, Tijd) Values ( {drankID},{bestellingID},{aantal},'{status}',{DateTime.Now})";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(AddDrankLijsItem, sqlParameters);
         }
+
+
     }
 }
