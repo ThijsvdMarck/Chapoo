@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace SomerenUI
 {
+    // Friet is lekker
     public partial class SomerenUI : Form
     {
         SomerenLogic.Drankje_Service drankService = new SomerenLogic.Drankje_Service();
