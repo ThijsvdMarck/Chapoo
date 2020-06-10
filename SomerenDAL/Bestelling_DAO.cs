@@ -15,7 +15,7 @@ namespace SomerenDAL
 
         public List<Bestelling> Db_Get_All_Bestellingen()
         {
-            string query = "SELECT BestellingID, TafelID, PersoneelID, Datum FROM [Bestelling]";
+            string query = "SELECT Bestelling.BestellingID, Tafel.TafelID, PersoneelID, Datum, [Status] FROM Bestelling JOIN Tafel ON Bestelling.BestellingID=Tafel.BestellingID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -27,16 +27,23 @@ namespace SomerenDAL
             foreach (DataRow dr in dataTable.Rows)
             {
                 Bestelling bestelling = new Bestelling()
-                {
-                    
+                {                  
                     BestellingID = (int)dr["BestellingID"],
                     TafelID = (int)dr["TafelID"],
-                    datum = (DateTime)dr["Datum"]                    
-                     
+                    datum = (DateTime)dr["Datum"],
+                    status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
                 };
                 bestellingen.Add(bestelling);
             }
             return bestellingen;
+        }
+
+        public void Db_Update_Bestelling(Status status, int bestelling)
+        {
+            string query = "UPDATE Bestelling SET[Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
         }
     }
 }
