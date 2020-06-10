@@ -759,7 +759,7 @@ namespace SomerenUI
 
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            showPanel("RekeningOverzicht");
+            
             /*if (statusBestelling = )
             { 
 
@@ -1455,6 +1455,11 @@ namespace SomerenUI
         private void btn_VoegToeFooi_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_TEST_Click(object sender, EventArgs e)
+        {
+            showPanel("RekeningOverzicht"); // Moet nog terug naar button 1 na UI.
         }
     }
 }

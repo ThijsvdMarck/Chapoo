@@ -102,6 +102,7 @@
             this.btn_Tafel2 = new System.Windows.Forms.Button();
             this.btn_Tafel4 = new System.Windows.Forms.Button();
             this.pnl_LunchBestelling = new System.Windows.Forms.Panel();
+            this.CB_SoortGerechtLunch = new System.Windows.Forms.ComboBox();
             this.CB_SoortGerechtDiner = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -437,6 +438,34 @@
             this.pnl_Dag = new System.Windows.Forms.Panel();
             this.lv_Dag = new System.Windows.Forms.ListView();
             this.pnl_Base = new System.Windows.Forms.Panel();
+            this.pnl_AfrekenOverzicht = new System.Windows.Forms.Panel();
+            this.gb_AfrekenPopUp = new System.Windows.Forms.GroupBox();
+            this.btn_AfrekenNee = new System.Windows.Forms.Button();
+            this.btnAfrekenJa = new System.Windows.Forms.Button();
+            this.lbl_AfrekenPopUp = new System.Windows.Forms.Label();
+            this.gb_Afgerekend = new System.Windows.Forms.GroupBox();
+            this.btn_BetalingVoltooid = new System.Windows.Forms.Button();
+            this.lbl_BetalingVoltooid = new System.Windows.Forms.Label();
+            this.lbl_Euro3 = new System.Windows.Forms.Label();
+            this.lbl_BTWBedrag = new System.Windows.Forms.Label();
+            this.lbl_BTW = new System.Windows.Forms.Label();
+            this.btn_VoegToeFooi = new System.Windows.Forms.Button();
+            this.lbl_Euro2 = new System.Windows.Forms.Label();
+            this.lbl_Euro = new System.Windows.Forms.Label();
+            this.lbl_EindBedragInvoer = new System.Windows.Forms.Label();
+            this.lbl_EindBedrag = new System.Windows.Forms.Label();
+            this.cmb_BetaalMethode = new System.Windows.Forms.ComboBox();
+            this.lbl_BetaalMethode = new System.Windows.Forms.Label();
+            this.txt_Fooi = new System.Windows.Forms.TextBox();
+            this.lbl_Fooi = new System.Windows.Forms.Label();
+            this.txt_Commentaar = new System.Windows.Forms.TextBox();
+            this.lbl_Commentaar = new System.Windows.Forms.Label();
+            this.lbl_Totaal = new System.Windows.Forms.Label();
+            this.lbl_TotaalBedrag = new System.Windows.Forms.Label();
+            this.lbl_TafelNrInvoer = new System.Windows.Forms.Label();
+            this.lbl_TafelAfreken = new System.Windows.Forms.Label();
+            this.btn_AfrekenBetalen = new System.Windows.Forms.Button();
+            this.btn_AfrekenAnnuleren = new System.Windows.Forms.Button();
             this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
             this.btn_RefreshBarOverzicht = new System.Windows.Forms.Button();
             this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
@@ -463,30 +492,6 @@
             this.btn_RefreshKeukenOverzicht = new System.Windows.Forms.Button();
             this.btn_ShowBestellingKeuken = new System.Windows.Forms.Button();
             this.lv_KeukenOverzicht = new System.Windows.Forms.ListView();
-            this.pnl_AfrekenOverzicht = new System.Windows.Forms.Panel();
-            this.gb_Afgerekend = new System.Windows.Forms.GroupBox();
-            this.btn_BetalingVoltooid = new System.Windows.Forms.Button();
-            this.lbl_BetalingVoltooid = new System.Windows.Forms.Label();
-            this.gb_AfrekenPopUp = new System.Windows.Forms.GroupBox();
-            this.btn_AfrekenNee = new System.Windows.Forms.Button();
-            this.btnAfrekenJa = new System.Windows.Forms.Button();
-            this.lbl_AfrekenPopUp = new System.Windows.Forms.Label();
-            this.lbl_Euro2 = new System.Windows.Forms.Label();
-            this.lbl_Euro = new System.Windows.Forms.Label();
-            this.lbl_EindBedragInvoer = new System.Windows.Forms.Label();
-            this.lbl_EindBedrag = new System.Windows.Forms.Label();
-            this.cmb_BetaalMethode = new System.Windows.Forms.ComboBox();
-            this.lbl_BetaalMethode = new System.Windows.Forms.Label();
-            this.txt_Fooi = new System.Windows.Forms.TextBox();
-            this.lbl_Fooi = new System.Windows.Forms.Label();
-            this.txt_Commentaar = new System.Windows.Forms.TextBox();
-            this.lbl_Commentaar = new System.Windows.Forms.Label();
-            this.lbl_Totaal = new System.Windows.Forms.Label();
-            this.lbl_TotaalBedrag = new System.Windows.Forms.Label();
-            this.lbl_TafelNrInvoer = new System.Windows.Forms.Label();
-            this.lbl_TafelAfreken = new System.Windows.Forms.Label();
-            this.btn_AfrekenBetalen = new System.Windows.Forms.Button();
-            this.btn_AfrekenAnnuleren = new System.Windows.Forms.Button();
             this.pnl_RekeningOverzicht = new System.Windows.Forms.Panel();
             this.btn_BestellingOpnemen = new System.Windows.Forms.Button();
             this.btn_Afrekenen = new System.Windows.Forms.Button();
@@ -517,11 +522,10 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.CB_SoortGerechtLunch = new System.Windows.Forms.ComboBox();
-            this.btn_VoegToeFooi = new System.Windows.Forms.Button();
-            this.lbl_Euro3 = new System.Windows.Forms.Label();
-            this.lbl_BTWBedrag = new System.Windows.Forms.Label();
-            this.lbl_BTW = new System.Windows.Forms.Label();
+            this.lbl_Vrij = new System.Windows.Forms.Label();
+            this.lbl_LopendeBestelling = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_TEST = new System.Windows.Forms.Button();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -548,15 +552,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Dag.SuspendLayout();
             this.pnl_Base.SuspendLayout();
+            this.pnl_AfrekenOverzicht.SuspendLayout();
+            this.gb_AfrekenPopUp.SuspendLayout();
+            this.gb_Afgerekend.SuspendLayout();
             this.pnl_BarOverzicht.SuspendLayout();
             this.pnl_BestellingBar.SuspendLayout();
             this.gb_OpmerkingenBar.SuspendLayout();
             this.pnl_BestellingKeuken.SuspendLayout();
             this.gb_OpmerkingenKeuken.SuspendLayout();
             this.pnl_KeukenOverzicht.SuspendLayout();
-            this.pnl_AfrekenOverzicht.SuspendLayout();
-            this.gb_Afgerekend.SuspendLayout();
-            this.gb_AfrekenPopUp.SuspendLayout();
             this.pnl_RekeningOverzicht.SuspendLayout();
             this.pnl_DatumKiezen.SuspendLayout();
             this.pnl_MenuBalkKeukenOverzicht.SuspendLayout();
@@ -1323,6 +1327,10 @@
             // 
             // pnl_TafelOverzicht
             // 
+            this.pnl_TafelOverzicht.Controls.Add(this.btn_TEST);
+            this.pnl_TafelOverzicht.Controls.Add(this.label1);
+            this.pnl_TafelOverzicht.Controls.Add(this.lbl_LopendeBestelling);
+            this.pnl_TafelOverzicht.Controls.Add(this.lbl_Vrij);
             this.pnl_TafelOverzicht.Controls.Add(this.lbl_SelecteerTafel);
             this.pnl_TafelOverzicht.Controls.Add(this.btn_Tafel9);
             this.pnl_TafelOverzicht.Controls.Add(this.btn_Tafel7);
@@ -1343,7 +1351,7 @@
             // lbl_SelecteerTafel
             // 
             this.lbl_SelecteerTafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lbl_SelecteerTafel.Location = new System.Drawing.Point(208, 18);
+            this.lbl_SelecteerTafel.Location = new System.Drawing.Point(292, 10);
             this.lbl_SelecteerTafel.Name = "lbl_SelecteerTafel";
             this.lbl_SelecteerTafel.Size = new System.Drawing.Size(274, 42);
             this.lbl_SelecteerTafel.TabIndex = 14;
@@ -1353,7 +1361,7 @@
             // 
             this.btn_Tafel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel9.Image = global::SomerenUI.Properties.Resources.Tafel9;
-            this.btn_Tafel9.Location = new System.Drawing.Point(167, 529);
+            this.btn_Tafel9.Location = new System.Drawing.Point(245, 517);
             this.btn_Tafel9.Name = "btn_Tafel9";
             this.btn_Tafel9.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel9.TabIndex = 13;
@@ -1364,7 +1372,7 @@
             // 
             this.btn_Tafel7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel7.Image = global::SomerenUI.Properties.Resources.Tafel7;
-            this.btn_Tafel7.Location = new System.Drawing.Point(167, 413);
+            this.btn_Tafel7.Location = new System.Drawing.Point(245, 401);
             this.btn_Tafel7.Name = "btn_Tafel7";
             this.btn_Tafel7.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel7.TabIndex = 12;
@@ -1375,7 +1383,7 @@
             // 
             this.btn_Tafel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel5.Image = global::SomerenUI.Properties.Resources.Tafel5;
-            this.btn_Tafel5.Location = new System.Drawing.Point(167, 302);
+            this.btn_Tafel5.Location = new System.Drawing.Point(245, 290);
             this.btn_Tafel5.Name = "btn_Tafel5";
             this.btn_Tafel5.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel5.TabIndex = 11;
@@ -1386,7 +1394,7 @@
             // 
             this.btn_Tafel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel1.Image = global::SomerenUI.Properties.Resources.Tafel1;
-            this.btn_Tafel1.Location = new System.Drawing.Point(167, 66);
+            this.btn_Tafel1.Location = new System.Drawing.Point(245, 54);
             this.btn_Tafel1.Name = "btn_Tafel1";
             this.btn_Tafel1.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel1.TabIndex = 10;
@@ -1397,7 +1405,7 @@
             // 
             this.btn_Tafel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel3.Image = global::SomerenUI.Properties.Resources.Tafel3;
-            this.btn_Tafel3.Location = new System.Drawing.Point(167, 190);
+            this.btn_Tafel3.Location = new System.Drawing.Point(245, 178);
             this.btn_Tafel3.Name = "btn_Tafel3";
             this.btn_Tafel3.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel3.TabIndex = 9;
@@ -1408,7 +1416,7 @@
             // 
             this.btn_Tafel10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel10.Image = global::SomerenUI.Properties.Resources.tafel10;
-            this.btn_Tafel10.Location = new System.Drawing.Point(339, 530);
+            this.btn_Tafel10.Location = new System.Drawing.Point(417, 518);
             this.btn_Tafel10.Name = "btn_Tafel10";
             this.btn_Tafel10.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel10.TabIndex = 8;
@@ -1419,7 +1427,7 @@
             // 
             this.btn_Tafel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel8.Image = global::SomerenUI.Properties.Resources.Tafel8;
-            this.btn_Tafel8.Location = new System.Drawing.Point(339, 414);
+            this.btn_Tafel8.Location = new System.Drawing.Point(417, 402);
             this.btn_Tafel8.Name = "btn_Tafel8";
             this.btn_Tafel8.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel8.TabIndex = 7;
@@ -1430,7 +1438,7 @@
             // 
             this.btn_Tafel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel6.Image = global::SomerenUI.Properties.Resources.Tafel6;
-            this.btn_Tafel6.Location = new System.Drawing.Point(339, 303);
+            this.btn_Tafel6.Location = new System.Drawing.Point(417, 291);
             this.btn_Tafel6.Name = "btn_Tafel6";
             this.btn_Tafel6.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel6.TabIndex = 6;
@@ -1441,7 +1449,7 @@
             // 
             this.btn_Tafel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel2.Image = global::SomerenUI.Properties.Resources.Tafel2;
-            this.btn_Tafel2.Location = new System.Drawing.Point(339, 67);
+            this.btn_Tafel2.Location = new System.Drawing.Point(417, 55);
             this.btn_Tafel2.Name = "btn_Tafel2";
             this.btn_Tafel2.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel2.TabIndex = 5;
@@ -1452,7 +1460,7 @@
             // 
             this.btn_Tafel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Tafel4.Image = global::SomerenUI.Properties.Resources.Tafel4;
-            this.btn_Tafel4.Location = new System.Drawing.Point(339, 191);
+            this.btn_Tafel4.Location = new System.Drawing.Point(417, 179);
             this.btn_Tafel4.Name = "btn_Tafel4";
             this.btn_Tafel4.Size = new System.Drawing.Size(100, 100);
             this.btn_Tafel4.TabIndex = 4;
@@ -1529,6 +1537,14 @@
             this.pnl_LunchBestelling.Name = "pnl_LunchBestelling";
             this.pnl_LunchBestelling.Size = new System.Drawing.Size(610, 644);
             this.pnl_LunchBestelling.TabIndex = 1;
+            // 
+            // CB_SoortGerechtLunch
+            // 
+            this.CB_SoortGerechtLunch.FormattingEnabled = true;
+            this.CB_SoortGerechtLunch.Location = new System.Drawing.Point(335, 451);
+            this.CB_SoortGerechtLunch.Name = "CB_SoortGerechtLunch";
+            this.CB_SoortGerechtLunch.Size = new System.Drawing.Size(147, 21);
+            this.CB_SoortGerechtLunch.TabIndex = 63;
             // 
             // CB_SoortGerechtDiner
             // 
@@ -5883,8 +5899,8 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
-            this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
+            this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingBar);
@@ -5917,6 +5933,368 @@
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(610, 864);
             this.pnl_Base.TabIndex = 15;
+            // 
+            // pnl_AfrekenOverzicht
+            // 
+            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_AfrekenPopUp);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_Afgerekend);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro3);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BTWBedrag);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BTW);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_VoegToeFooi);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro2);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedragInvoer);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedrag);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.cmb_BetaalMethode);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BetaalMethode);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Fooi);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Fooi);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Commentaar);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Commentaar);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Totaal);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TotaalBedrag);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelNrInvoer);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelAfreken);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenBetalen);
+            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenAnnuleren);
+            this.pnl_AfrekenOverzicht.Location = new System.Drawing.Point(0, 216);
+            this.pnl_AfrekenOverzicht.Name = "pnl_AfrekenOverzicht";
+            this.pnl_AfrekenOverzicht.Size = new System.Drawing.Size(616, 644);
+            this.pnl_AfrekenOverzicht.TabIndex = 60;
+            // 
+            // gb_AfrekenPopUp
+            // 
+            this.gb_AfrekenPopUp.BackColor = System.Drawing.Color.Silver;
+            this.gb_AfrekenPopUp.Controls.Add(this.btn_AfrekenNee);
+            this.gb_AfrekenPopUp.Controls.Add(this.btnAfrekenJa);
+            this.gb_AfrekenPopUp.Controls.Add(this.lbl_AfrekenPopUp);
+            this.gb_AfrekenPopUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gb_AfrekenPopUp.Location = new System.Drawing.Point(81, 153);
+            this.gb_AfrekenPopUp.Margin = new System.Windows.Forms.Padding(2);
+            this.gb_AfrekenPopUp.Name = "gb_AfrekenPopUp";
+            this.gb_AfrekenPopUp.Padding = new System.Windows.Forms.Padding(2);
+            this.gb_AfrekenPopUp.Size = new System.Drawing.Size(434, 306);
+            this.gb_AfrekenPopUp.TabIndex = 19;
+            this.gb_AfrekenPopUp.TabStop = false;
+            // 
+            // btn_AfrekenNee
+            // 
+            this.btn_AfrekenNee.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_AfrekenNee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AfrekenNee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfrekenNee.ForeColor = System.Drawing.Color.White;
+            this.btn_AfrekenNee.Location = new System.Drawing.Point(17, 232);
+            this.btn_AfrekenNee.Name = "btn_AfrekenNee";
+            this.btn_AfrekenNee.Size = new System.Drawing.Size(186, 50);
+            this.btn_AfrekenNee.TabIndex = 21;
+            this.btn_AfrekenNee.Text = "Nee";
+            this.btn_AfrekenNee.UseVisualStyleBackColor = false;
+            this.btn_AfrekenNee.Click += new System.EventHandler(this.btn_AfrekenNee_Click);
+            // 
+            // btnAfrekenJa
+            // 
+            this.btnAfrekenJa.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAfrekenJa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAfrekenJa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAfrekenJa.ForeColor = System.Drawing.Color.White;
+            this.btnAfrekenJa.Location = new System.Drawing.Point(229, 232);
+            this.btnAfrekenJa.Name = "btnAfrekenJa";
+            this.btnAfrekenJa.Size = new System.Drawing.Size(186, 50);
+            this.btnAfrekenJa.TabIndex = 20;
+            this.btnAfrekenJa.Text = "Ja";
+            this.btnAfrekenJa.UseVisualStyleBackColor = false;
+            this.btnAfrekenJa.Click += new System.EventHandler(this.btnAfrekenJa_Click);
+            // 
+            // lbl_AfrekenPopUp
+            // 
+            this.lbl_AfrekenPopUp.AutoSize = true;
+            this.lbl_AfrekenPopUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AfrekenPopUp.Location = new System.Drawing.Point(74, 121);
+            this.lbl_AfrekenPopUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_AfrekenPopUp.Name = "lbl_AfrekenPopUp";
+            this.lbl_AfrekenPopUp.Size = new System.Drawing.Size(297, 24);
+            this.lbl_AfrekenPopUp.TabIndex = 0;
+            this.lbl_AfrekenPopUp.Text = "Weet u zeker dat u wilt afrekenen?";
+            // 
+            // gb_Afgerekend
+            // 
+            this.gb_Afgerekend.BackColor = System.Drawing.Color.Silver;
+            this.gb_Afgerekend.Controls.Add(this.btn_BetalingVoltooid);
+            this.gb_Afgerekend.Controls.Add(this.lbl_BetalingVoltooid);
+            this.gb_Afgerekend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gb_Afgerekend.Location = new System.Drawing.Point(81, 153);
+            this.gb_Afgerekend.Margin = new System.Windows.Forms.Padding(2);
+            this.gb_Afgerekend.Name = "gb_Afgerekend";
+            this.gb_Afgerekend.Padding = new System.Windows.Forms.Padding(2);
+            this.gb_Afgerekend.Size = new System.Drawing.Size(434, 306);
+            this.gb_Afgerekend.TabIndex = 22;
+            this.gb_Afgerekend.TabStop = false;
+            // 
+            // btn_BetalingVoltooid
+            // 
+            this.btn_BetalingVoltooid.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_BetalingVoltooid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BetalingVoltooid.ForeColor = System.Drawing.Color.White;
+            this.btn_BetalingVoltooid.Location = new System.Drawing.Point(131, 232);
+            this.btn_BetalingVoltooid.Name = "btn_BetalingVoltooid";
+            this.btn_BetalingVoltooid.Size = new System.Drawing.Size(186, 50);
+            this.btn_BetalingVoltooid.TabIndex = 20;
+            this.btn_BetalingVoltooid.Text = "Oke";
+            this.btn_BetalingVoltooid.UseVisualStyleBackColor = false;
+            this.btn_BetalingVoltooid.Click += new System.EventHandler(this.btn_BetalingVoltooid_Click);
+            // 
+            // lbl_BetalingVoltooid
+            // 
+            this.lbl_BetalingVoltooid.AutoSize = true;
+            this.lbl_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BetalingVoltooid.Location = new System.Drawing.Point(152, 126);
+            this.lbl_BetalingVoltooid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_BetalingVoltooid.Name = "lbl_BetalingVoltooid";
+            this.lbl_BetalingVoltooid.Size = new System.Drawing.Size(147, 24);
+            this.lbl_BetalingVoltooid.TabIndex = 0;
+            this.lbl_BetalingVoltooid.Text = "Betaling voltooid";
+            // 
+            // lbl_Euro3
+            // 
+            this.lbl_Euro3.AutoSize = true;
+            this.lbl_Euro3.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Euro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Euro3.Location = new System.Drawing.Point(462, 411);
+            this.lbl_Euro3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Euro3.Name = "lbl_Euro3";
+            this.lbl_Euro3.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Euro3.TabIndex = 24;
+            this.lbl_Euro3.Text = "€";
+            // 
+            // lbl_BTWBedrag
+            // 
+            this.lbl_BTWBedrag.AutoSize = true;
+            this.lbl_BTWBedrag.BackColor = System.Drawing.Color.Silver;
+            this.lbl_BTWBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BTWBedrag.Location = new System.Drawing.Point(489, 412);
+            this.lbl_BTWBedrag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_BTWBedrag.Name = "lbl_BTWBedrag";
+            this.lbl_BTWBedrag.Size = new System.Drawing.Size(89, 18);
+            this.lbl_BTWBedrag.TabIndex = 26;
+            this.lbl_BTWBedrag.Text = "BTWBedrag";
+            // 
+            // lbl_BTW
+            // 
+            this.lbl_BTW.BackColor = System.Drawing.Color.Silver;
+            this.lbl_BTW.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BTW.Location = new System.Drawing.Point(37, 404);
+            this.lbl_BTW.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_BTW.Name = "lbl_BTW";
+            this.lbl_BTW.Size = new System.Drawing.Size(541, 35);
+            this.lbl_BTW.TabIndex = 25;
+            this.lbl_BTW.Text = "BTW:";
+            this.lbl_BTW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btn_VoegToeFooi
+            // 
+            this.btn_VoegToeFooi.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_VoegToeFooi.ForeColor = System.Drawing.Color.White;
+            this.btn_VoegToeFooi.Location = new System.Drawing.Point(491, 306);
+            this.btn_VoegToeFooi.Name = "btn_VoegToeFooi";
+            this.btn_VoegToeFooi.Size = new System.Drawing.Size(85, 23);
+            this.btn_VoegToeFooi.TabIndex = 23;
+            this.btn_VoegToeFooi.Text = "Voeg toe";
+            this.btn_VoegToeFooi.UseVisualStyleBackColor = false;
+            this.btn_VoegToeFooi.Click += new System.EventHandler(this.btn_VoegToeFooi_Click);
+            // 
+            // lbl_Euro2
+            // 
+            this.lbl_Euro2.AutoSize = true;
+            this.lbl_Euro2.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Euro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Euro2.Location = new System.Drawing.Point(366, 305);
+            this.lbl_Euro2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Euro2.Name = "lbl_Euro2";
+            this.lbl_Euro2.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Euro2.TabIndex = 18;
+            this.lbl_Euro2.Text = "€";
+            // 
+            // lbl_Euro
+            // 
+            this.lbl_Euro.AutoSize = true;
+            this.lbl_Euro.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Euro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Euro.Location = new System.Drawing.Point(462, 461);
+            this.lbl_Euro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Euro.Name = "lbl_Euro";
+            this.lbl_Euro.Size = new System.Drawing.Size(16, 18);
+            this.lbl_Euro.TabIndex = 13;
+            this.lbl_Euro.Text = "€";
+            // 
+            // lbl_EindBedragInvoer
+            // 
+            this.lbl_EindBedragInvoer.AutoSize = true;
+            this.lbl_EindBedragInvoer.BackColor = System.Drawing.Color.Silver;
+            this.lbl_EindBedragInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EindBedragInvoer.Location = new System.Drawing.Point(489, 462);
+            this.lbl_EindBedragInvoer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_EindBedragInvoer.Name = "lbl_EindBedragInvoer";
+            this.lbl_EindBedragInvoer.Size = new System.Drawing.Size(82, 18);
+            this.lbl_EindBedragInvoer.TabIndex = 17;
+            this.lbl_EindBedragInvoer.Text = "Eindbedrag";
+            // 
+            // lbl_EindBedrag
+            // 
+            this.lbl_EindBedrag.BackColor = System.Drawing.Color.Silver;
+            this.lbl_EindBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_EindBedrag.Location = new System.Drawing.Point(37, 454);
+            this.lbl_EindBedrag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_EindBedrag.Name = "lbl_EindBedrag";
+            this.lbl_EindBedrag.Size = new System.Drawing.Size(541, 35);
+            this.lbl_EindBedrag.TabIndex = 16;
+            this.lbl_EindBedrag.Text = "Eind bedrag:";
+            this.lbl_EindBedrag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmb_BetaalMethode
+            // 
+            this.cmb_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_BetaalMethode.FormattingEnabled = true;
+            this.cmb_BetaalMethode.Location = new System.Drawing.Point(366, 357);
+            this.cmb_BetaalMethode.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_BetaalMethode.Name = "cmb_BetaalMethode";
+            this.cmb_BetaalMethode.Size = new System.Drawing.Size(209, 25);
+            this.cmb_BetaalMethode.TabIndex = 15;
+            // 
+            // lbl_BetaalMethode
+            // 
+            this.lbl_BetaalMethode.BackColor = System.Drawing.Color.Silver;
+            this.lbl_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BetaalMethode.Location = new System.Drawing.Point(39, 351);
+            this.lbl_BetaalMethode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_BetaalMethode.Name = "lbl_BetaalMethode";
+            this.lbl_BetaalMethode.Size = new System.Drawing.Size(541, 35);
+            this.lbl_BetaalMethode.TabIndex = 14;
+            this.lbl_BetaalMethode.Text = "Betaalmethode:";
+            this.lbl_BetaalMethode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Fooi
+            // 
+            this.txt_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Fooi.Location = new System.Drawing.Point(389, 305);
+            this.txt_Fooi.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Fooi.Name = "txt_Fooi";
+            this.txt_Fooi.Size = new System.Drawing.Size(84, 24);
+            this.txt_Fooi.TabIndex = 12;
+            // 
+            // lbl_Fooi
+            // 
+            this.lbl_Fooi.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fooi.Location = new System.Drawing.Point(40, 298);
+            this.lbl_Fooi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Fooi.Name = "lbl_Fooi";
+            this.lbl_Fooi.Size = new System.Drawing.Size(541, 35);
+            this.lbl_Fooi.TabIndex = 11;
+            this.lbl_Fooi.Text = "Extra bijdrage:";
+            this.lbl_Fooi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_Commentaar
+            // 
+            this.txt_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Commentaar.Location = new System.Drawing.Point(38, 98);
+            this.txt_Commentaar.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Commentaar.Multiline = true;
+            this.txt_Commentaar.Name = "txt_Commentaar";
+            this.txt_Commentaar.Size = new System.Drawing.Size(544, 181);
+            this.txt_Commentaar.TabIndex = 10;
+            // 
+            // lbl_Commentaar
+            // 
+            this.lbl_Commentaar.AutoSize = true;
+            this.lbl_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Commentaar.Location = new System.Drawing.Point(31, 69);
+            this.lbl_Commentaar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Commentaar.Name = "lbl_Commentaar";
+            this.lbl_Commentaar.Size = new System.Drawing.Size(99, 18);
+            this.lbl_Commentaar.TabIndex = 9;
+            this.lbl_Commentaar.Text = "Commentaar:";
+            // 
+            // lbl_Totaal
+            // 
+            this.lbl_Totaal.AutoSize = true;
+            this.lbl_Totaal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_Totaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Totaal.ForeColor = System.Drawing.Color.White;
+            this.lbl_Totaal.Location = new System.Drawing.Point(436, 15);
+            this.lbl_Totaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Totaal.Name = "lbl_Totaal";
+            this.lbl_Totaal.Size = new System.Drawing.Size(71, 24);
+            this.lbl_Totaal.TabIndex = 8;
+            this.lbl_Totaal.Text = "Totaal: ";
+            // 
+            // lbl_TotaalBedrag
+            // 
+            this.lbl_TotaalBedrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_TotaalBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TotaalBedrag.ForeColor = System.Drawing.Color.White;
+            this.lbl_TotaalBedrag.Location = new System.Drawing.Point(510, 13);
+            this.lbl_TotaalBedrag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TotaalBedrag.Name = "lbl_TotaalBedrag";
+            this.lbl_TotaalBedrag.Size = new System.Drawing.Size(82, 29);
+            this.lbl_TotaalBedrag.TabIndex = 7;
+            this.lbl_TotaalBedrag.Text = "totBedrag";
+            // 
+            // lbl_TafelNrInvoer
+            // 
+            this.lbl_TafelNrInvoer.AutoSize = true;
+            this.lbl_TafelNrInvoer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_TafelNrInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelNrInvoer.ForeColor = System.Drawing.Color.White;
+            this.lbl_TafelNrInvoer.Location = new System.Drawing.Point(45, 13);
+            this.lbl_TafelNrInvoer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TafelNrInvoer.Name = "lbl_TafelNrInvoer";
+            this.lbl_TafelNrInvoer.Size = new System.Drawing.Size(63, 24);
+            this.lbl_TafelNrInvoer.TabIndex = 6;
+            this.lbl_TafelNrInvoer.Text = "tafelNr";
+            // 
+            // lbl_TafelAfreken
+            // 
+            this.lbl_TafelAfreken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_TafelAfreken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelAfreken.ForeColor = System.Drawing.Color.White;
+            this.lbl_TafelAfreken.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_TafelAfreken.Location = new System.Drawing.Point(-1, -1);
+            this.lbl_TafelAfreken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TafelAfreken.Name = "lbl_TafelAfreken";
+            this.lbl_TafelAfreken.Size = new System.Drawing.Size(611, 51);
+            this.lbl_TafelAfreken.TabIndex = 5;
+            this.lbl_TafelAfreken.Text = "Tafel";
+            this.lbl_TafelAfreken.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btn_AfrekenBetalen
+            // 
+            this.btn_AfrekenBetalen.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_AfrekenBetalen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AfrekenBetalen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfrekenBetalen.ForeColor = System.Drawing.Color.White;
+            this.btn_AfrekenBetalen.Location = new System.Drawing.Point(332, 531);
+            this.btn_AfrekenBetalen.Name = "btn_AfrekenBetalen";
+            this.btn_AfrekenBetalen.Size = new System.Drawing.Size(232, 65);
+            this.btn_AfrekenBetalen.TabIndex = 4;
+            this.btn_AfrekenBetalen.Text = "Afrekenen";
+            this.btn_AfrekenBetalen.UseVisualStyleBackColor = false;
+            this.btn_AfrekenBetalen.Click += new System.EventHandler(this.btn_AfrekenBetalen_Click);
+            // 
+            // btn_AfrekenAnnuleren
+            // 
+            this.btn_AfrekenAnnuleren.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_AfrekenAnnuleren.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AfrekenAnnuleren.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AfrekenAnnuleren.ForeColor = System.Drawing.Color.White;
+            this.btn_AfrekenAnnuleren.Location = new System.Drawing.Point(44, 531);
+            this.btn_AfrekenAnnuleren.Name = "btn_AfrekenAnnuleren";
+            this.btn_AfrekenAnnuleren.Size = new System.Drawing.Size(232, 65);
+            this.btn_AfrekenAnnuleren.TabIndex = 3;
+            this.btn_AfrekenAnnuleren.Text = "Annuleren";
+            this.btn_AfrekenAnnuleren.UseVisualStyleBackColor = false;
+            this.btn_AfrekenAnnuleren.Click += new System.EventHandler(this.btn_AfrekenAnnuleren_Click);
             // 
             // pnl_BarOverzicht
             // 
@@ -6235,320 +6613,6 @@
             this.lv_KeukenOverzicht.Size = new System.Drawing.Size(581, 317);
             this.lv_KeukenOverzicht.TabIndex = 0;
             this.lv_KeukenOverzicht.UseCompatibleStateImageBehavior = false;
-            // 
-            // pnl_AfrekenOverzicht
-            // 
-            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_AfrekenPopUp);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.gb_Afgerekend);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro3);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BTWBedrag);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BTW);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_VoegToeFooi);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro2);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Euro);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedragInvoer);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_EindBedrag);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.cmb_BetaalMethode);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_BetaalMethode);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Fooi);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Fooi);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.txt_Commentaar);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Commentaar);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_Totaal);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TotaalBedrag);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelNrInvoer);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.lbl_TafelAfreken);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenBetalen);
-            this.pnl_AfrekenOverzicht.Controls.Add(this.btn_AfrekenAnnuleren);
-            this.pnl_AfrekenOverzicht.Location = new System.Drawing.Point(0, 216);
-            this.pnl_AfrekenOverzicht.Name = "pnl_AfrekenOverzicht";
-            this.pnl_AfrekenOverzicht.Size = new System.Drawing.Size(616, 644);
-            this.pnl_AfrekenOverzicht.TabIndex = 60;
-            // 
-            // gb_Afgerekend
-            // 
-            this.gb_Afgerekend.BackColor = System.Drawing.Color.Silver;
-            this.gb_Afgerekend.Controls.Add(this.btn_BetalingVoltooid);
-            this.gb_Afgerekend.Controls.Add(this.lbl_BetalingVoltooid);
-            this.gb_Afgerekend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gb_Afgerekend.Location = new System.Drawing.Point(81, 153);
-            this.gb_Afgerekend.Margin = new System.Windows.Forms.Padding(2);
-            this.gb_Afgerekend.Name = "gb_Afgerekend";
-            this.gb_Afgerekend.Padding = new System.Windows.Forms.Padding(2);
-            this.gb_Afgerekend.Size = new System.Drawing.Size(434, 306);
-            this.gb_Afgerekend.TabIndex = 22;
-            this.gb_Afgerekend.TabStop = false;
-            // 
-            // btn_BetalingVoltooid
-            // 
-            this.btn_BetalingVoltooid.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_BetalingVoltooid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BetalingVoltooid.ForeColor = System.Drawing.Color.White;
-            this.btn_BetalingVoltooid.Location = new System.Drawing.Point(131, 232);
-            this.btn_BetalingVoltooid.Name = "btn_BetalingVoltooid";
-            this.btn_BetalingVoltooid.Size = new System.Drawing.Size(186, 50);
-            this.btn_BetalingVoltooid.TabIndex = 20;
-            this.btn_BetalingVoltooid.Text = "Oke";
-            this.btn_BetalingVoltooid.UseVisualStyleBackColor = false;
-            this.btn_BetalingVoltooid.Click += new System.EventHandler(this.btn_BetalingVoltooid_Click);
-            // 
-            // lbl_BetalingVoltooid
-            // 
-            this.lbl_BetalingVoltooid.AutoSize = true;
-            this.lbl_BetalingVoltooid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BetalingVoltooid.Location = new System.Drawing.Point(152, 126);
-            this.lbl_BetalingVoltooid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_BetalingVoltooid.Name = "lbl_BetalingVoltooid";
-            this.lbl_BetalingVoltooid.Size = new System.Drawing.Size(147, 24);
-            this.lbl_BetalingVoltooid.TabIndex = 0;
-            this.lbl_BetalingVoltooid.Text = "Betaling voltooid";
-            // 
-            // gb_AfrekenPopUp
-            // 
-            this.gb_AfrekenPopUp.BackColor = System.Drawing.Color.Silver;
-            this.gb_AfrekenPopUp.Controls.Add(this.btn_AfrekenNee);
-            this.gb_AfrekenPopUp.Controls.Add(this.btnAfrekenJa);
-            this.gb_AfrekenPopUp.Controls.Add(this.lbl_AfrekenPopUp);
-            this.gb_AfrekenPopUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.gb_AfrekenPopUp.Location = new System.Drawing.Point(81, 153);
-            this.gb_AfrekenPopUp.Margin = new System.Windows.Forms.Padding(2);
-            this.gb_AfrekenPopUp.Name = "gb_AfrekenPopUp";
-            this.gb_AfrekenPopUp.Padding = new System.Windows.Forms.Padding(2);
-            this.gb_AfrekenPopUp.Size = new System.Drawing.Size(434, 306);
-            this.gb_AfrekenPopUp.TabIndex = 19;
-            this.gb_AfrekenPopUp.TabStop = false;
-            // 
-            // btn_AfrekenNee
-            // 
-            this.btn_AfrekenNee.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_AfrekenNee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_AfrekenNee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfrekenNee.ForeColor = System.Drawing.Color.White;
-            this.btn_AfrekenNee.Location = new System.Drawing.Point(17, 232);
-            this.btn_AfrekenNee.Name = "btn_AfrekenNee";
-            this.btn_AfrekenNee.Size = new System.Drawing.Size(186, 50);
-            this.btn_AfrekenNee.TabIndex = 21;
-            this.btn_AfrekenNee.Text = "Nee";
-            this.btn_AfrekenNee.UseVisualStyleBackColor = false;
-            this.btn_AfrekenNee.Click += new System.EventHandler(this.btn_AfrekenNee_Click);
-            // 
-            // btnAfrekenJa
-            // 
-            this.btnAfrekenJa.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnAfrekenJa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAfrekenJa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAfrekenJa.ForeColor = System.Drawing.Color.White;
-            this.btnAfrekenJa.Location = new System.Drawing.Point(229, 232);
-            this.btnAfrekenJa.Name = "btnAfrekenJa";
-            this.btnAfrekenJa.Size = new System.Drawing.Size(186, 50);
-            this.btnAfrekenJa.TabIndex = 20;
-            this.btnAfrekenJa.Text = "Ja";
-            this.btnAfrekenJa.UseVisualStyleBackColor = false;
-            this.btnAfrekenJa.Click += new System.EventHandler(this.btnAfrekenJa_Click);
-            // 
-            // lbl_AfrekenPopUp
-            // 
-            this.lbl_AfrekenPopUp.AutoSize = true;
-            this.lbl_AfrekenPopUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AfrekenPopUp.Location = new System.Drawing.Point(74, 121);
-            this.lbl_AfrekenPopUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_AfrekenPopUp.Name = "lbl_AfrekenPopUp";
-            this.lbl_AfrekenPopUp.Size = new System.Drawing.Size(297, 24);
-            this.lbl_AfrekenPopUp.TabIndex = 0;
-            this.lbl_AfrekenPopUp.Text = "Weet u zeker dat u wilt afrekenen?";
-            // 
-            // lbl_Euro2
-            // 
-            this.lbl_Euro2.AutoSize = true;
-            this.lbl_Euro2.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Euro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Euro2.Location = new System.Drawing.Point(366, 305);
-            this.lbl_Euro2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Euro2.Name = "lbl_Euro2";
-            this.lbl_Euro2.Size = new System.Drawing.Size(16, 18);
-            this.lbl_Euro2.TabIndex = 18;
-            this.lbl_Euro2.Text = "€";
-            // 
-            // lbl_Euro
-            // 
-            this.lbl_Euro.AutoSize = true;
-            this.lbl_Euro.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Euro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Euro.Location = new System.Drawing.Point(462, 461);
-            this.lbl_Euro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Euro.Name = "lbl_Euro";
-            this.lbl_Euro.Size = new System.Drawing.Size(16, 18);
-            this.lbl_Euro.TabIndex = 13;
-            this.lbl_Euro.Text = "€";
-            // 
-            // lbl_EindBedragInvoer
-            // 
-            this.lbl_EindBedragInvoer.AutoSize = true;
-            this.lbl_EindBedragInvoer.BackColor = System.Drawing.Color.Silver;
-            this.lbl_EindBedragInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EindBedragInvoer.Location = new System.Drawing.Point(489, 462);
-            this.lbl_EindBedragInvoer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_EindBedragInvoer.Name = "lbl_EindBedragInvoer";
-            this.lbl_EindBedragInvoer.Size = new System.Drawing.Size(82, 18);
-            this.lbl_EindBedragInvoer.TabIndex = 17;
-            this.lbl_EindBedragInvoer.Text = "Eindbedrag";
-            // 
-            // lbl_EindBedrag
-            // 
-            this.lbl_EindBedrag.BackColor = System.Drawing.Color.Silver;
-            this.lbl_EindBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EindBedrag.Location = new System.Drawing.Point(37, 454);
-            this.lbl_EindBedrag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_EindBedrag.Name = "lbl_EindBedrag";
-            this.lbl_EindBedrag.Size = new System.Drawing.Size(541, 35);
-            this.lbl_EindBedrag.TabIndex = 16;
-            this.lbl_EindBedrag.Text = "Eind bedrag:";
-            this.lbl_EindBedrag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmb_BetaalMethode
-            // 
-            this.cmb_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_BetaalMethode.FormattingEnabled = true;
-            this.cmb_BetaalMethode.Location = new System.Drawing.Point(366, 357);
-            this.cmb_BetaalMethode.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_BetaalMethode.Name = "cmb_BetaalMethode";
-            this.cmb_BetaalMethode.Size = new System.Drawing.Size(209, 25);
-            this.cmb_BetaalMethode.TabIndex = 15;
-            // 
-            // lbl_BetaalMethode
-            // 
-            this.lbl_BetaalMethode.BackColor = System.Drawing.Color.Silver;
-            this.lbl_BetaalMethode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BetaalMethode.Location = new System.Drawing.Point(39, 351);
-            this.lbl_BetaalMethode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_BetaalMethode.Name = "lbl_BetaalMethode";
-            this.lbl_BetaalMethode.Size = new System.Drawing.Size(541, 35);
-            this.lbl_BetaalMethode.TabIndex = 14;
-            this.lbl_BetaalMethode.Text = "Betaalmethode:";
-            this.lbl_BetaalMethode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Fooi
-            // 
-            this.txt_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Fooi.Location = new System.Drawing.Point(389, 305);
-            this.txt_Fooi.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Fooi.Name = "txt_Fooi";
-            this.txt_Fooi.Size = new System.Drawing.Size(84, 24);
-            this.txt_Fooi.TabIndex = 12;
-            // 
-            // lbl_Fooi
-            // 
-            this.lbl_Fooi.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Fooi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fooi.Location = new System.Drawing.Point(40, 298);
-            this.lbl_Fooi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Fooi.Name = "lbl_Fooi";
-            this.lbl_Fooi.Size = new System.Drawing.Size(541, 35);
-            this.lbl_Fooi.TabIndex = 11;
-            this.lbl_Fooi.Text = "Extra bijdrage:";
-            this.lbl_Fooi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_Commentaar
-            // 
-            this.txt_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Commentaar.Location = new System.Drawing.Point(38, 98);
-            this.txt_Commentaar.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Commentaar.Multiline = true;
-            this.txt_Commentaar.Name = "txt_Commentaar";
-            this.txt_Commentaar.Size = new System.Drawing.Size(544, 181);
-            this.txt_Commentaar.TabIndex = 10;
-            // 
-            // lbl_Commentaar
-            // 
-            this.lbl_Commentaar.AutoSize = true;
-            this.lbl_Commentaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Commentaar.Location = new System.Drawing.Point(31, 69);
-            this.lbl_Commentaar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Commentaar.Name = "lbl_Commentaar";
-            this.lbl_Commentaar.Size = new System.Drawing.Size(99, 18);
-            this.lbl_Commentaar.TabIndex = 9;
-            this.lbl_Commentaar.Text = "Commentaar:";
-            // 
-            // lbl_Totaal
-            // 
-            this.lbl_Totaal.AutoSize = true;
-            this.lbl_Totaal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Totaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Totaal.ForeColor = System.Drawing.Color.White;
-            this.lbl_Totaal.Location = new System.Drawing.Point(436, 15);
-            this.lbl_Totaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Totaal.Name = "lbl_Totaal";
-            this.lbl_Totaal.Size = new System.Drawing.Size(71, 24);
-            this.lbl_Totaal.TabIndex = 8;
-            this.lbl_Totaal.Text = "Totaal: ";
-            // 
-            // lbl_TotaalBedrag
-            // 
-            this.lbl_TotaalBedrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_TotaalBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TotaalBedrag.ForeColor = System.Drawing.Color.White;
-            this.lbl_TotaalBedrag.Location = new System.Drawing.Point(510, 13);
-            this.lbl_TotaalBedrag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_TotaalBedrag.Name = "lbl_TotaalBedrag";
-            this.lbl_TotaalBedrag.Size = new System.Drawing.Size(82, 29);
-            this.lbl_TotaalBedrag.TabIndex = 7;
-            this.lbl_TotaalBedrag.Text = "totBedrag";
-            // 
-            // lbl_TafelNrInvoer
-            // 
-            this.lbl_TafelNrInvoer.AutoSize = true;
-            this.lbl_TafelNrInvoer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_TafelNrInvoer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelNrInvoer.ForeColor = System.Drawing.Color.White;
-            this.lbl_TafelNrInvoer.Location = new System.Drawing.Point(45, 13);
-            this.lbl_TafelNrInvoer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_TafelNrInvoer.Name = "lbl_TafelNrInvoer";
-            this.lbl_TafelNrInvoer.Size = new System.Drawing.Size(63, 24);
-            this.lbl_TafelNrInvoer.TabIndex = 6;
-            this.lbl_TafelNrInvoer.Text = "tafelNr";
-            // 
-            // lbl_TafelAfreken
-            // 
-            this.lbl_TafelAfreken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_TafelAfreken.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelAfreken.ForeColor = System.Drawing.Color.White;
-            this.lbl_TafelAfreken.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_TafelAfreken.Location = new System.Drawing.Point(-1, -1);
-            this.lbl_TafelAfreken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_TafelAfreken.Name = "lbl_TafelAfreken";
-            this.lbl_TafelAfreken.Size = new System.Drawing.Size(611, 51);
-            this.lbl_TafelAfreken.TabIndex = 5;
-            this.lbl_TafelAfreken.Text = "Tafel";
-            this.lbl_TafelAfreken.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btn_AfrekenBetalen
-            // 
-            this.btn_AfrekenBetalen.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_AfrekenBetalen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_AfrekenBetalen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfrekenBetalen.ForeColor = System.Drawing.Color.White;
-            this.btn_AfrekenBetalen.Location = new System.Drawing.Point(332, 531);
-            this.btn_AfrekenBetalen.Name = "btn_AfrekenBetalen";
-            this.btn_AfrekenBetalen.Size = new System.Drawing.Size(232, 65);
-            this.btn_AfrekenBetalen.TabIndex = 4;
-            this.btn_AfrekenBetalen.Text = "Afrekenen";
-            this.btn_AfrekenBetalen.UseVisualStyleBackColor = false;
-            this.btn_AfrekenBetalen.Click += new System.EventHandler(this.btn_AfrekenBetalen_Click);
-            // 
-            // btn_AfrekenAnnuleren
-            // 
-            this.btn_AfrekenAnnuleren.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_AfrekenAnnuleren.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_AfrekenAnnuleren.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfrekenAnnuleren.ForeColor = System.Drawing.Color.White;
-            this.btn_AfrekenAnnuleren.Location = new System.Drawing.Point(44, 531);
-            this.btn_AfrekenAnnuleren.Name = "btn_AfrekenAnnuleren";
-            this.btn_AfrekenAnnuleren.Size = new System.Drawing.Size(232, 65);
-            this.btn_AfrekenAnnuleren.TabIndex = 3;
-            this.btn_AfrekenAnnuleren.Text = "Annuleren";
-            this.btn_AfrekenAnnuleren.UseVisualStyleBackColor = false;
-            this.btn_AfrekenAnnuleren.Click += new System.EventHandler(this.btn_AfrekenAnnuleren_Click);
             // 
             // pnl_RekeningOverzicht
             // 
@@ -6875,61 +6939,49 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
-            // CB_SoortGerechtLunch
+            // lbl_Vrij
             // 
-            this.CB_SoortGerechtLunch.FormattingEnabled = true;
-            this.CB_SoortGerechtLunch.Location = new System.Drawing.Point(335, 451);
-            this.CB_SoortGerechtLunch.Name = "CB_SoortGerechtLunch";
-            this.CB_SoortGerechtLunch.Size = new System.Drawing.Size(147, 21);
-            this.CB_SoortGerechtLunch.TabIndex = 63;
+            this.lbl_Vrij.BackColor = System.Drawing.Color.White;
+            this.lbl_Vrij.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Vrij.Location = new System.Drawing.Point(50, 76);
+            this.lbl_Vrij.Name = "lbl_Vrij";
+            this.lbl_Vrij.Size = new System.Drawing.Size(90, 75);
+            this.lbl_Vrij.TabIndex = 15;
+            this.lbl_Vrij.Text = "Vrij";
+            this.lbl_Vrij.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_VoegToeFooi
+            // lbl_LopendeBestelling
             // 
-            this.btn_VoegToeFooi.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_VoegToeFooi.ForeColor = System.Drawing.Color.White;
-            this.btn_VoegToeFooi.Location = new System.Drawing.Point(491, 306);
-            this.btn_VoegToeFooi.Name = "btn_VoegToeFooi";
-            this.btn_VoegToeFooi.Size = new System.Drawing.Size(85, 23);
-            this.btn_VoegToeFooi.TabIndex = 23;
-            this.btn_VoegToeFooi.Text = "Voeg toe";
-            this.btn_VoegToeFooi.UseVisualStyleBackColor = false;
-            this.btn_VoegToeFooi.Click += new System.EventHandler(this.btn_VoegToeFooi_Click);
+            this.lbl_LopendeBestelling.BackColor = System.Drawing.Color.Yellow;
+            this.lbl_LopendeBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_LopendeBestelling.Location = new System.Drawing.Point(145, 175);
+            this.lbl_LopendeBestelling.Name = "lbl_LopendeBestelling";
+            this.lbl_LopendeBestelling.Size = new System.Drawing.Size(90, 81);
+            this.lbl_LopendeBestelling.TabIndex = 16;
+            this.lbl_LopendeBestelling.Text = "Lopende Bestelling";
+            this.lbl_LopendeBestelling.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_Euro3
+            // label1
             // 
-            this.lbl_Euro3.AutoSize = true;
-            this.lbl_Euro3.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Euro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Euro3.Location = new System.Drawing.Point(462, 411);
-            this.lbl_Euro3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Euro3.Name = "lbl_Euro3";
-            this.lbl_Euro3.Size = new System.Drawing.Size(16, 18);
-            this.lbl_Euro3.TabIndex = 24;
-            this.lbl_Euro3.Text = "€";
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Image = global::SomerenUI.Properties.Resources.Tafel1;
+            this.label1.Location = new System.Drawing.Point(32, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 100);
+            this.label1.TabIndex = 17;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_BTWBedrag
+            // btn_TEST
             // 
-            this.lbl_BTWBedrag.AutoSize = true;
-            this.lbl_BTWBedrag.BackColor = System.Drawing.Color.Silver;
-            this.lbl_BTWBedrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BTWBedrag.Location = new System.Drawing.Point(489, 412);
-            this.lbl_BTWBedrag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_BTWBedrag.Name = "lbl_BTWBedrag";
-            this.lbl_BTWBedrag.Size = new System.Drawing.Size(89, 18);
-            this.lbl_BTWBedrag.TabIndex = 26;
-            this.lbl_BTWBedrag.Text = "BTWBedrag";
-            // 
-            // lbl_BTW
-            // 
-            this.lbl_BTW.BackColor = System.Drawing.Color.Silver;
-            this.lbl_BTW.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BTW.Location = new System.Drawing.Point(37, 404);
-            this.lbl_BTW.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_BTW.Name = "lbl_BTW";
-            this.lbl_BTW.Size = new System.Drawing.Size(541, 35);
-            this.lbl_BTW.TabIndex = 25;
-            this.lbl_BTW.Text = "BTW:";
-            this.lbl_BTW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TEST.Location = new System.Drawing.Point(57, 292);
+            this.btn_TEST.Name = "btn_TEST";
+            this.btn_TEST.Size = new System.Drawing.Size(128, 80);
+            this.btn_TEST.TabIndex = 18;
+            this.btn_TEST.Text = "TEST";
+            this.btn_TEST.UseVisualStyleBackColor = true;
+            this.btn_TEST.Click += new System.EventHandler(this.btn_TEST_Click);
             // 
             // SomerenUI
             // 
@@ -6977,6 +7029,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_Dag.ResumeLayout(false);
             this.pnl_Base.ResumeLayout(false);
+            this.pnl_AfrekenOverzicht.ResumeLayout(false);
+            this.pnl_AfrekenOverzicht.PerformLayout();
+            this.gb_AfrekenPopUp.ResumeLayout(false);
+            this.gb_AfrekenPopUp.PerformLayout();
+            this.gb_Afgerekend.ResumeLayout(false);
+            this.gb_Afgerekend.PerformLayout();
             this.pnl_BarOverzicht.ResumeLayout(false);
             this.pnl_BestellingBar.ResumeLayout(false);
             this.pnl_BestellingBar.PerformLayout();
@@ -6987,12 +7045,6 @@
             this.gb_OpmerkingenKeuken.ResumeLayout(false);
             this.gb_OpmerkingenKeuken.PerformLayout();
             this.pnl_KeukenOverzicht.ResumeLayout(false);
-            this.pnl_AfrekenOverzicht.ResumeLayout(false);
-            this.pnl_AfrekenOverzicht.PerformLayout();
-            this.gb_Afgerekend.ResumeLayout(false);
-            this.gb_Afgerekend.PerformLayout();
-            this.gb_AfrekenPopUp.ResumeLayout(false);
-            this.gb_AfrekenPopUp.PerformLayout();
             this.pnl_RekeningOverzicht.ResumeLayout(false);
             this.pnl_DatumKiezen.ResumeLayout(false);
             this.pnl_MenuBalkKeukenOverzicht.ResumeLayout(false);
@@ -7501,6 +7553,10 @@
         private System.Windows.Forms.Label lbl_BTWBedrag;
         private System.Windows.Forms.Label lbl_BTW;
         private System.Windows.Forms.Button btn_VoegToeFooi;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_LopendeBestelling;
+        private System.Windows.Forms.Label lbl_Vrij;
+        private System.Windows.Forms.Button btn_TEST;
     }
 }
 
