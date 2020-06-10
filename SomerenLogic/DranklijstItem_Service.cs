@@ -13,11 +13,11 @@ namespace SomerenLogic
     {
         DrankLijstItem_DAO drankLijstItem_db = new DrankLijstItem_DAO();
 
-        public List<DrankLijstItem> GetDrankLijstItems()
+        public List<DrankLijstItem> GetDrankLijstItems(int bestelling)
         {
             try
             {
-                List<DrankLijstItem> drankLijstItem = drankLijstItem_db.Db_Get_All_DrankLijstItems();
+                List<DrankLijstItem> drankLijstItem = drankLijstItem_db.Db_Get_All_DrankLijstItems(bestelling);
                 return drankLijstItem;
             }
             catch (Exception)
@@ -39,6 +39,18 @@ namespace SomerenLogic
         public void AddDrankLijsItem(int DrankID, int BestellingID, int Aantal)
         {
             drankLijstItem_db.AddDrankLijsItem( DrankID,  BestellingID,  Aantal);
+        }
+
+        public void UpdateDrankItem(Status status, int bestelling, int drankje)
+        {
+            try
+            {
+                drankLijstItem_db.Db_Update_DrankItem(status, bestelling, drankje);
+            }
+            catch (Exception)
+            {
+                //
+            }
         }
 
     }

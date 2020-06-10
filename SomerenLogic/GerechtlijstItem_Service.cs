@@ -36,5 +36,19 @@ namespace SomerenLogic
             }
 
         }
+
+        public void UpdateGerechtItem(Status status, int bestelling, int gerecht)
+        {
+            try
+            {
+                gerechtlijst_db.Db_Update_GerechtItem(status, bestelling, gerecht);
+            }
+            catch (Exception)
+            {
+                //
+            }
+        }
     }
+
+    
 }

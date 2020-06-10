@@ -26,6 +26,11 @@ namespace SomerenModel
         Besteld, WordtBereid, KlaarVoorServeren, Geserveerd
     }
 
+    public enum StatusBestelling
+    {
+        Open, Afgerond, Betaald
+    }
+
     public enum BetaalMethode
     {
         CreditCard, Contant, Pin

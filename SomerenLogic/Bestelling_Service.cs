@@ -34,7 +34,7 @@ namespace SomerenLogic
 
         }
 
-        public void UpdateBestelling(Status status, int bestelling)
+        public void UpdateBestelling(StatusBestelling status, int bestelling)
         {
             try
             {

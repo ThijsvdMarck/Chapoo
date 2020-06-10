@@ -13,9 +13,9 @@ namespace SomerenDAL
     public class DrankLijstItem_DAO : Base
     {
 
-        public List<DrankLijstItem> Db_Get_All_DrankLijstItems()
+        public List<DrankLijstItem> Db_Get_All_DrankLijstItems(int bestelling)
         {
-            string query = "SELECT Dranknaam, BestellingID, Aantal, Tijd, [Status] FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID";
+            string query = "SELECT BestellingID, Dranklijst.DrankID, Aantal, [Status], Drankje.Dranknaam, Tijd FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID WHERE BestellingID = " + bestelling.ToString();
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -32,7 +32,8 @@ namespace SomerenDAL
                     bestellingID = (int)dr["BestellingID"],
                     status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
                     aantal = (int)dr["Aantal"],
-                    tijd = (DateTime)dr["Tijd"]
+                    tijd = (DateTime)dr["Tijd"],
+                    drankID = (int)dr["DrankID"]
                 };
                 drankLijstItems.Add(drankLijstItem);
             }
@@ -48,6 +49,14 @@ namespace SomerenDAL
             ExecuteEditQuery(AddDrankLijsItem, sqlParameters);
         }
 
+
+        public void Db_Update_DrankItem(Status status, int bestelling, int drankje)
+        {
+            string query = "UPDATE Dranklijst SET[Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString() + " AND DrankID = " + drankje.ToString();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
     }
 }
