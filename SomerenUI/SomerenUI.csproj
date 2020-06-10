@@ -48,17 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Methods.cs" />
-    <Compile Include="SomerenUI.cs">
+    <Compile Include="..\..\..\Project applicatiebouw\chapoo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SomerenUI.Designer.cs">
-      <DependentUpon>SomerenUI.cs</DependentUpon>
+    <Compile Include="..\..\..\Project applicatiebouw\chapoo.Designer.cs">
+      <DependentUpon>chapoo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Methods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="SomerenUI.resx">
-      <DependentUpon>SomerenUI.cs</DependentUpon>
+    <EmbeddedResource Include="..\..\..\Project applicatiebouw\chapoo.resx">
+      <DependentUpon>chapoo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,6 +132,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tafel10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh2.0Kleiner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh2.0NogKleiner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh3.0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
