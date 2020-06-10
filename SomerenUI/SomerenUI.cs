@@ -341,17 +341,21 @@ namespace SomerenUI
 
                 // Label tafelnummer laten zien
                 string geselecteerdeTafel = "";
+                string tafelStatus = "";
 
                 for (int i = 0; i < lv_KeukenOverzicht.Items.Count; i++)
                 {
                     if (lv_KeukenOverzicht.Items[i].Checked)
                     {
                        geselecteerdeTafel = lv_KeukenOverzicht.Items[i].Text;
+                       tafelStatus = lv_KeukenOverzicht.Items[i].SubItems[2].Text;
                     }
                 }
 
                 lbl_Tafel.Text = geselecteerdeTafel;
                 lbl_TafelNr.Text = "";
+
+                lbl_StatusKeuken.Text = tafelStatus;
 
                 // Listview
                 int geselecteerdeBestelling = GetGeselecteerdeBestelling();
@@ -907,6 +911,36 @@ namespace SomerenUI
 
         }
         private void btn_MinKalfstartaar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_KlaarVoorServerenKeuken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_GeserveerdKeuken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_GeserveerdBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_KlaarVoorServerenBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_RefreshBar_Click(object sender, EventArgs e)
         {
 
         }
