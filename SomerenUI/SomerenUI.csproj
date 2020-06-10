@@ -48,18 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\Project applicatiebouw\chapoo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\..\..\Project applicatiebouw\chapoo.Designer.cs">
-      <DependentUpon>chapoo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\..\..\Project applicatiebouw\chapoo.resx">
-      <DependentUpon>chapoo.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="SomerenUI.cs" />
+    <Compile Include="SomerenUI.Designer.cs">
+      <DependentUpon>SomerenUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,6 +65,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SomerenUI.resx">
+      <DependentUpon>SomerenUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
