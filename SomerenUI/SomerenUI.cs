@@ -852,8 +852,8 @@ namespace SomerenUI
                 pnl_AfrekenOverzicht.Show();
                 gb_Afgerekend.Hide();
                 gb_AfrekenPopUp.Hide();
-                
-                //lbl_TafelNrInvoer.Text = geselecteerdeTafel;
+
+                lbl_TafelNrInvoer.Text = tafelnummer.ToString();
 
                 cmb_BetaalMethode.Items.Clear();
 
