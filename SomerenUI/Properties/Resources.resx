@@ -151,6 +151,9 @@
   <data name="tafel10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tafel10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tafel4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,16 +163,16 @@
   <data name="Refresh2.0Kleiner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh2.0Kleiner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chapoo_logo_klein1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chapoo_logo_klein.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Tafel6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tafel6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tafel4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Chapoo_logo_klein1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chapoo_logo_klein.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Refresh3.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh3.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel1transparant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel1transparant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

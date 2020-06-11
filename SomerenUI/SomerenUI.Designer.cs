@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SomerenUI));
             this.pnl_LogIn = new System.Windows.Forms.Panel();
-            this.pic_LogoChapoo = new System.Windows.Forms.PictureBox();
-            this.pic_Poppetje = new System.Windows.Forms.PictureBox();
             this.btn_LogIn = new System.Windows.Forms.Button();
             this.txt_LogIn = new System.Windows.Forms.TextBox();
             this.pnl_Voorraad = new System.Windows.Forms.Panel();
@@ -84,27 +82,11 @@
             this.btn_Rtoevoegen = new System.Windows.Forms.Button();
             this.pnl_Overzicht = new System.Windows.Forms.Panel();
             this.btn_LogUit = new System.Windows.Forms.Button();
-            this.btn_Bar = new System.Windows.Forms.Button();
-            this.btn_Keuken = new System.Windows.Forms.Button();
-            this.btn_Financien = new System.Windows.Forms.Button();
-            this.btn_Voorraad = new System.Windows.Forms.Button();
-            this.btn_Tafels = new System.Windows.Forms.Button();
             this.pnl_TafelOverzicht = new System.Windows.Forms.Panel();
             this.btn_TEST = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_LopendeBestelling = new System.Windows.Forms.Label();
             this.lbl_Vrij = new System.Windows.Forms.Label();
             this.lbl_SelecteerTafel = new System.Windows.Forms.Label();
-            this.btn_Tafel9 = new System.Windows.Forms.Button();
-            this.btn_Tafel7 = new System.Windows.Forms.Button();
-            this.btn_Tafel5 = new System.Windows.Forms.Button();
-            this.btn_Tafel1 = new System.Windows.Forms.Button();
-            this.btn_Tafel3 = new System.Windows.Forms.Button();
-            this.btn_Tafel10 = new System.Windows.Forms.Button();
-            this.btn_Tafel8 = new System.Windows.Forms.Button();
-            this.btn_Tafel6 = new System.Windows.Forms.Button();
-            this.btn_Tafel2 = new System.Windows.Forms.Button();
-            this.btn_Tafel4 = new System.Windows.Forms.Button();
             this.pnl_LunchBestelling = new System.Windows.Forms.Panel();
             this.CB_SoortDrankje = new System.Windows.Forms.ComboBox();
             this.CB_SoortGerechtLunch = new System.Windows.Forms.ComboBox();
@@ -437,9 +419,6 @@
             this.lbl_AantalBestelling = new System.Windows.Forms.Label();
             this.lbl_PrijsBestelling = new System.Windows.Forms.Label();
             this.lbl_Bestelling = new System.Windows.Forms.Label();
-            this.pic_ChapooHead = new System.Windows.Forms.PictureBox();
-            this.btn_Home = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_Dag = new System.Windows.Forms.Panel();
             this.lv_Dag = new System.Windows.Forms.ListView();
             this.pnl_Base = new System.Windows.Forms.Panel();
@@ -472,7 +451,6 @@
             this.btn_AfrekenBetalen = new System.Windows.Forms.Button();
             this.btn_AfrekenAnnuleren = new System.Windows.Forms.Button();
             this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
-            this.btn_RefreshBarOverzicht = new System.Windows.Forms.Button();
             this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
             this.lv_BarOverzicht = new System.Windows.Forms.ListView();
             this.pnl_BestellingBar = new System.Windows.Forms.Panel();
@@ -494,7 +472,6 @@
             this.lbl_TafelNr = new System.Windows.Forms.Label();
             this.lbl_Tafel = new System.Windows.Forms.Label();
             this.pnl_KeukenOverzicht = new System.Windows.Forms.Panel();
-            this.btn_RefreshKeukenOverzicht = new System.Windows.Forms.Button();
             this.btn_ShowBestellingKeuken = new System.Windows.Forms.Button();
             this.lv_KeukenOverzicht = new System.Windows.Forms.ListView();
             this.pnl_RekeningOverzicht = new System.Windows.Forms.Panel();
@@ -528,9 +505,30 @@
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
             this.lv_BestellingsOverzicht = new System.Windows.Forms.ListView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Home = new System.Windows.Forms.Button();
+            this.pic_ChapooHead = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Tafel9 = new System.Windows.Forms.Button();
+            this.btn_Tafel7 = new System.Windows.Forms.Button();
+            this.btn_Tafel5 = new System.Windows.Forms.Button();
+            this.btn_Tafel1 = new System.Windows.Forms.Button();
+            this.btn_Tafel3 = new System.Windows.Forms.Button();
+            this.btn_Tafel10 = new System.Windows.Forms.Button();
+            this.btn_Tafel8 = new System.Windows.Forms.Button();
+            this.btn_Tafel6 = new System.Windows.Forms.Button();
+            this.btn_Tafel2 = new System.Windows.Forms.Button();
+            this.btn_Tafel4 = new System.Windows.Forms.Button();
+            this.btn_RefreshBarOverzicht = new System.Windows.Forms.Button();
+            this.btn_RefreshKeukenOverzicht = new System.Windows.Forms.Button();
+            this.btn_Bar = new System.Windows.Forms.Button();
+            this.btn_Keuken = new System.Windows.Forms.Button();
+            this.btn_Financien = new System.Windows.Forms.Button();
+            this.btn_Voorraad = new System.Windows.Forms.Button();
+            this.btn_Tafels = new System.Windows.Forms.Button();
+            this.pic_LogoChapoo = new System.Windows.Forms.PictureBox();
+            this.pic_Poppetje = new System.Windows.Forms.PictureBox();
             this.pnl_LogIn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
             this.pnl_Voorraad.SuspendLayout();
             this.gb_DrankToevoegen.SuspendLayout();
             this.gb_GerechtToevoegen.SuspendLayout();
@@ -550,8 +548,6 @@
             this.pnl_BestellingsOverzicht.SuspendLayout();
             this.pnl_BestellingVersturen.SuspendLayout();
             this.pnl_BestellingVerstuurd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Dag.SuspendLayout();
             this.pnl_Base.SuspendLayout();
             this.pnl_AfrekenOverzicht.SuspendLayout();
@@ -572,6 +568,10 @@
             this.pnl_Maand.SuspendLayout();
             this.pnl_Week.SuspendLayout();
             this.pnl_MenuBalkFinanciën.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_LogIn
@@ -586,25 +586,6 @@
             this.pnl_LogIn.Name = "pnl_LogIn";
             this.pnl_LogIn.Size = new System.Drawing.Size(609, 856);
             this.pnl_LogIn.TabIndex = 0;
-            // 
-            // pic_LogoChapoo
-            // 
-            this.pic_LogoChapoo.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
-            this.pic_LogoChapoo.Location = new System.Drawing.Point(459, 0);
-            this.pic_LogoChapoo.Name = "pic_LogoChapoo";
-            this.pic_LogoChapoo.Size = new System.Drawing.Size(140, 140);
-            this.pic_LogoChapoo.TabIndex = 4;
-            this.pic_LogoChapoo.TabStop = false;
-            // 
-            // pic_Poppetje
-            // 
-            this.pic_Poppetje.Image = ((System.Drawing.Image)(resources.GetObject("pic_Poppetje.Image")));
-            this.pic_Poppetje.Location = new System.Drawing.Point(96, 373);
-            this.pic_Poppetje.Margin = new System.Windows.Forms.Padding(2);
-            this.pic_Poppetje.Name = "pic_Poppetje";
-            this.pic_Poppetje.Size = new System.Drawing.Size(44, 41);
-            this.pic_Poppetje.TabIndex = 3;
-            this.pic_Poppetje.TabStop = false;
             // 
             // btn_LogIn
             // 
@@ -1252,81 +1233,6 @@
             this.btn_LogUit.UseVisualStyleBackColor = false;
             this.btn_LogUit.Click += new System.EventHandler(this.btn_LogUit_Click);
             // 
-            // btn_Bar
-            // 
-            this.btn_Bar.BackColor = System.Drawing.Color.White;
-            this.btn_Bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Bar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Bar.Image")));
-            this.btn_Bar.Location = new System.Drawing.Point(11, 10);
-            this.btn_Bar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Bar.Name = "btn_Bar";
-            this.btn_Bar.Size = new System.Drawing.Size(240, 158);
-            this.btn_Bar.TabIndex = 2;
-            this.btn_Bar.Text = "Bar";
-            this.btn_Bar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Bar.UseVisualStyleBackColor = false;
-            this.btn_Bar.Click += new System.EventHandler(this.btn_Bar_Click);
-            // 
-            // btn_Keuken
-            // 
-            this.btn_Keuken.BackColor = System.Drawing.Color.White;
-            this.btn_Keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Keuken.Image = ((System.Drawing.Image)(resources.GetObject("btn_Keuken.Image")));
-            this.btn_Keuken.Location = new System.Drawing.Point(359, 10);
-            this.btn_Keuken.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Keuken.Name = "btn_Keuken";
-            this.btn_Keuken.Size = new System.Drawing.Size(240, 158);
-            this.btn_Keuken.TabIndex = 4;
-            this.btn_Keuken.Text = "Keuken";
-            this.btn_Keuken.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Keuken.UseVisualStyleBackColor = false;
-            this.btn_Keuken.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_Financien
-            // 
-            this.btn_Financien.BackColor = System.Drawing.Color.White;
-            this.btn_Financien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Financien.Image = ((System.Drawing.Image)(resources.GetObject("btn_Financien.Image")));
-            this.btn_Financien.Location = new System.Drawing.Point(359, 439);
-            this.btn_Financien.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Financien.Name = "btn_Financien";
-            this.btn_Financien.Size = new System.Drawing.Size(240, 158);
-            this.btn_Financien.TabIndex = 11;
-            this.btn_Financien.Text = "Financiën";
-            this.btn_Financien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Financien.UseVisualStyleBackColor = false;
-            this.btn_Financien.Click += new System.EventHandler(this.btn_Financien_Click);
-            // 
-            // btn_Voorraad
-            // 
-            this.btn_Voorraad.BackColor = System.Drawing.Color.White;
-            this.btn_Voorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Voorraad.Image = ((System.Drawing.Image)(resources.GetObject("btn_Voorraad.Image")));
-            this.btn_Voorraad.Location = new System.Drawing.Point(13, 439);
-            this.btn_Voorraad.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Voorraad.Name = "btn_Voorraad";
-            this.btn_Voorraad.Size = new System.Drawing.Size(240, 158);
-            this.btn_Voorraad.TabIndex = 10;
-            this.btn_Voorraad.Text = "Voorraad";
-            this.btn_Voorraad.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Voorraad.UseVisualStyleBackColor = false;
-            this.btn_Voorraad.Click += new System.EventHandler(this.btn_Voorraad_Click);
-            // 
-            // btn_Tafels
-            // 
-            this.btn_Tafels.BackColor = System.Drawing.Color.White;
-            this.btn_Tafels.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Tafels.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tafels.Image")));
-            this.btn_Tafels.Location = new System.Drawing.Point(11, 201);
-            this.btn_Tafels.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Tafels.Name = "btn_Tafels";
-            this.btn_Tafels.Size = new System.Drawing.Size(587, 191);
-            this.btn_Tafels.TabIndex = 6;
-            this.btn_Tafels.Text = "Tafels";
-            this.btn_Tafels.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Tafels.UseVisualStyleBackColor = false;
-            this.btn_Tafels.Click += new System.EventHandler(this.btn_Tafels_Click);
-            // 
             // pnl_TafelOverzicht
             // 
             this.pnl_TafelOverzicht.Controls.Add(this.btn_TEST);
@@ -1360,18 +1266,6 @@
             this.btn_TEST.UseVisualStyleBackColor = true;
             this.btn_TEST.Click += new System.EventHandler(this.btn_TEST_Click);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Image = global::SomerenUI.Properties.Resources.Tafel1;
-            this.label1.Location = new System.Drawing.Point(32, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 100);
-            this.label1.TabIndex = 17;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbl_LopendeBestelling
             // 
             this.lbl_LopendeBestelling.BackColor = System.Drawing.Color.Yellow;
@@ -1402,116 +1296,6 @@
             this.lbl_SelecteerTafel.Size = new System.Drawing.Size(274, 42);
             this.lbl_SelecteerTafel.TabIndex = 14;
             this.lbl_SelecteerTafel.Text = "Selecteer een tafel";
-            // 
-            // btn_Tafel9
-            // 
-            this.btn_Tafel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel9.Image = global::SomerenUI.Properties.Resources.Tafel9;
-            this.btn_Tafel9.Location = new System.Drawing.Point(245, 517);
-            this.btn_Tafel9.Name = "btn_Tafel9";
-            this.btn_Tafel9.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel9.TabIndex = 13;
-            this.btn_Tafel9.UseVisualStyleBackColor = true;
-            this.btn_Tafel9.Click += new System.EventHandler(this.btn_Tafel9_Click);
-            // 
-            // btn_Tafel7
-            // 
-            this.btn_Tafel7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel7.Image = global::SomerenUI.Properties.Resources.Tafel7;
-            this.btn_Tafel7.Location = new System.Drawing.Point(245, 401);
-            this.btn_Tafel7.Name = "btn_Tafel7";
-            this.btn_Tafel7.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel7.TabIndex = 12;
-            this.btn_Tafel7.UseVisualStyleBackColor = true;
-            this.btn_Tafel7.Click += new System.EventHandler(this.btn_Tafel7_Click);
-            // 
-            // btn_Tafel5
-            // 
-            this.btn_Tafel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel5.Image = global::SomerenUI.Properties.Resources.Tafel5;
-            this.btn_Tafel5.Location = new System.Drawing.Point(245, 290);
-            this.btn_Tafel5.Name = "btn_Tafel5";
-            this.btn_Tafel5.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel5.TabIndex = 11;
-            this.btn_Tafel5.UseVisualStyleBackColor = true;
-            this.btn_Tafel5.Click += new System.EventHandler(this.btn_Tafel5_Click);
-            // 
-            // btn_Tafel1
-            // 
-            this.btn_Tafel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel1.Image = global::SomerenUI.Properties.Resources.Tafel1;
-            this.btn_Tafel1.Location = new System.Drawing.Point(245, 54);
-            this.btn_Tafel1.Name = "btn_Tafel1";
-            this.btn_Tafel1.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel1.TabIndex = 10;
-            this.btn_Tafel1.UseVisualStyleBackColor = true;
-            this.btn_Tafel1.Click += new System.EventHandler(this.btn_Tafel1_Click);
-            // 
-            // btn_Tafel3
-            // 
-            this.btn_Tafel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel3.Image = global::SomerenUI.Properties.Resources.Tafel3;
-            this.btn_Tafel3.Location = new System.Drawing.Point(245, 178);
-            this.btn_Tafel3.Name = "btn_Tafel3";
-            this.btn_Tafel3.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel3.TabIndex = 9;
-            this.btn_Tafel3.UseVisualStyleBackColor = true;
-            this.btn_Tafel3.Click += new System.EventHandler(this.btn_Tafel3_Click);
-            // 
-            // btn_Tafel10
-            // 
-            this.btn_Tafel10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel10.Image = global::SomerenUI.Properties.Resources.tafel10;
-            this.btn_Tafel10.Location = new System.Drawing.Point(417, 518);
-            this.btn_Tafel10.Name = "btn_Tafel10";
-            this.btn_Tafel10.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel10.TabIndex = 8;
-            this.btn_Tafel10.UseVisualStyleBackColor = true;
-            this.btn_Tafel10.Click += new System.EventHandler(this.btn_Tafel10_Click);
-            // 
-            // btn_Tafel8
-            // 
-            this.btn_Tafel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel8.Image = global::SomerenUI.Properties.Resources.Tafel8;
-            this.btn_Tafel8.Location = new System.Drawing.Point(417, 402);
-            this.btn_Tafel8.Name = "btn_Tafel8";
-            this.btn_Tafel8.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel8.TabIndex = 7;
-            this.btn_Tafel8.UseVisualStyleBackColor = true;
-            this.btn_Tafel8.Click += new System.EventHandler(this.btn_Tafel8_Click);
-            // 
-            // btn_Tafel6
-            // 
-            this.btn_Tafel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel6.Image = global::SomerenUI.Properties.Resources.Tafel6;
-            this.btn_Tafel6.Location = new System.Drawing.Point(417, 291);
-            this.btn_Tafel6.Name = "btn_Tafel6";
-            this.btn_Tafel6.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel6.TabIndex = 6;
-            this.btn_Tafel6.UseVisualStyleBackColor = true;
-            this.btn_Tafel6.Click += new System.EventHandler(this.btn_Tafel6_Click);
-            // 
-            // btn_Tafel2
-            // 
-            this.btn_Tafel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel2.Image = global::SomerenUI.Properties.Resources.Tafel2;
-            this.btn_Tafel2.Location = new System.Drawing.Point(417, 55);
-            this.btn_Tafel2.Name = "btn_Tafel2";
-            this.btn_Tafel2.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel2.TabIndex = 5;
-            this.btn_Tafel2.UseVisualStyleBackColor = true;
-            this.btn_Tafel2.Click += new System.EventHandler(this.btn_Tafel2_Click);
-            // 
-            // btn_Tafel4
-            // 
-            this.btn_Tafel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tafel4.Image = global::SomerenUI.Properties.Resources.Tafel4;
-            this.btn_Tafel4.Location = new System.Drawing.Point(417, 179);
-            this.btn_Tafel4.Name = "btn_Tafel4";
-            this.btn_Tafel4.Size = new System.Drawing.Size(100, 100);
-            this.btn_Tafel4.TabIndex = 4;
-            this.btn_Tafel4.UseVisualStyleBackColor = true;
-            this.btn_Tafel4.Click += new System.EventHandler(this.btn_Tafel4_Click);
             // 
             // pnl_LunchBestelling
             // 
@@ -5904,37 +5688,6 @@
             this.lbl_Bestelling.Text = "Bestelling";
             this.lbl_Bestelling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pic_ChapooHead
-            // 
-            this.pic_ChapooHead.Image = ((System.Drawing.Image)(resources.GetObject("pic_ChapooHead.Image")));
-            this.pic_ChapooHead.Location = new System.Drawing.Point(0, 0);
-            this.pic_ChapooHead.Margin = new System.Windows.Forms.Padding(2);
-            this.pic_ChapooHead.Name = "pic_ChapooHead";
-            this.pic_ChapooHead.Size = new System.Drawing.Size(608, 158);
-            this.pic_ChapooHead.TabIndex = 16;
-            this.pic_ChapooHead.TabStop = false;
-            // 
-            // btn_Home
-            // 
-            this.btn_Home.BackColor = System.Drawing.Color.White;
-            this.btn_Home.Image = ((System.Drawing.Image)(resources.GetObject("btn_Home.Image")));
-            this.btn_Home.Location = new System.Drawing.Point(2, 105);
-            this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Home.Name = "btn_Home";
-            this.btn_Home.Size = new System.Drawing.Size(44, 54);
-            this.btn_Home.TabIndex = 17;
-            this.btn_Home.UseVisualStyleBackColor = false;
-            this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
-            this.pictureBox1.Location = new System.Drawing.Point(458, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnl_Dag
             // 
             this.pnl_Dag.Controls.Add(this.lv_Dag);
@@ -6366,21 +6119,6 @@
             this.pnl_BarOverzicht.Size = new System.Drawing.Size(610, 647);
             this.pnl_BarOverzicht.TabIndex = 17;
             // 
-            // btn_RefreshBarOverzicht
-            // 
-            this.btn_RefreshBarOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.btn_RefreshBarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RefreshBarOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
-            this.btn_RefreshBarOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RefreshBarOverzicht.Location = new System.Drawing.Point(444, 39);
-            this.btn_RefreshBarOverzicht.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_RefreshBarOverzicht.Name = "btn_RefreshBarOverzicht";
-            this.btn_RefreshBarOverzicht.Size = new System.Drawing.Size(146, 41);
-            this.btn_RefreshBarOverzicht.TabIndex = 3;
-            this.btn_RefreshBarOverzicht.Text = "Refresh";
-            this.btn_RefreshBarOverzicht.UseVisualStyleBackColor = false;
-            this.btn_RefreshBarOverzicht.Click += new System.EventHandler(this.btn_RefreshBarOverzicht_Click);
-            // 
             // btn_ShowBestellingBar
             // 
             this.btn_ShowBestellingBar.BackColor = System.Drawing.Color.ForestGreen;
@@ -6633,21 +6371,6 @@
             this.pnl_KeukenOverzicht.Name = "pnl_KeukenOverzicht";
             this.pnl_KeukenOverzicht.Size = new System.Drawing.Size(610, 641);
             this.pnl_KeukenOverzicht.TabIndex = 16;
-            // 
-            // btn_RefreshKeukenOverzicht
-            // 
-            this.btn_RefreshKeukenOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.btn_RefreshKeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RefreshKeukenOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
-            this.btn_RefreshKeukenOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RefreshKeukenOverzicht.Location = new System.Drawing.Point(443, 23);
-            this.btn_RefreshKeukenOverzicht.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_RefreshKeukenOverzicht.Name = "btn_RefreshKeukenOverzicht";
-            this.btn_RefreshKeukenOverzicht.Size = new System.Drawing.Size(146, 41);
-            this.btn_RefreshKeukenOverzicht.TabIndex = 2;
-            this.btn_RefreshKeukenOverzicht.Text = "Refresh";
-            this.btn_RefreshKeukenOverzicht.UseVisualStyleBackColor = false;
-            this.btn_RefreshKeukenOverzicht.Click += new System.EventHandler(this.btn_RefreshKeukenOverzicht_Click);
             // 
             // btn_ShowBestellingKeuken
             // 
@@ -7007,6 +6730,283 @@
             this.lv_BestellingsOverzicht.TabIndex = 15;
             this.lv_BestellingsOverzicht.UseCompatibleStateImageBehavior = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
+            this.pictureBox1.Location = new System.Drawing.Point(458, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_Home
+            // 
+            this.btn_Home.BackColor = System.Drawing.Color.White;
+            this.btn_Home.Image = ((System.Drawing.Image)(resources.GetObject("btn_Home.Image")));
+            this.btn_Home.Location = new System.Drawing.Point(2, 105);
+            this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Home.Name = "btn_Home";
+            this.btn_Home.Size = new System.Drawing.Size(44, 54);
+            this.btn_Home.TabIndex = 17;
+            this.btn_Home.UseVisualStyleBackColor = false;
+            this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
+            // 
+            // pic_ChapooHead
+            // 
+            this.pic_ChapooHead.Image = ((System.Drawing.Image)(resources.GetObject("pic_ChapooHead.Image")));
+            this.pic_ChapooHead.Location = new System.Drawing.Point(0, 0);
+            this.pic_ChapooHead.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_ChapooHead.Name = "pic_ChapooHead";
+            this.pic_ChapooHead.Size = new System.Drawing.Size(608, 158);
+            this.pic_ChapooHead.TabIndex = 16;
+            this.pic_ChapooHead.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Image = global::SomerenUI.Properties.Resources.Tafel1;
+            this.label1.Location = new System.Drawing.Point(32, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 100);
+            this.label1.TabIndex = 17;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_Tafel9
+            // 
+            this.btn_Tafel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel9.Image = global::SomerenUI.Properties.Resources.Tafel9;
+            this.btn_Tafel9.Location = new System.Drawing.Point(245, 517);
+            this.btn_Tafel9.Name = "btn_Tafel9";
+            this.btn_Tafel9.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel9.TabIndex = 13;
+            this.btn_Tafel9.UseVisualStyleBackColor = true;
+            this.btn_Tafel9.Click += new System.EventHandler(this.btn_Tafel9_Click);
+            // 
+            // btn_Tafel7
+            // 
+            this.btn_Tafel7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel7.Image = global::SomerenUI.Properties.Resources.Tafel7;
+            this.btn_Tafel7.Location = new System.Drawing.Point(245, 401);
+            this.btn_Tafel7.Name = "btn_Tafel7";
+            this.btn_Tafel7.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel7.TabIndex = 12;
+            this.btn_Tafel7.UseVisualStyleBackColor = true;
+            this.btn_Tafel7.Click += new System.EventHandler(this.btn_Tafel7_Click);
+            // 
+            // btn_Tafel5
+            // 
+            this.btn_Tafel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel5.Image = global::SomerenUI.Properties.Resources.Tafel5;
+            this.btn_Tafel5.Location = new System.Drawing.Point(245, 290);
+            this.btn_Tafel5.Name = "btn_Tafel5";
+            this.btn_Tafel5.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel5.TabIndex = 11;
+            this.btn_Tafel5.UseVisualStyleBackColor = true;
+            this.btn_Tafel5.Click += new System.EventHandler(this.btn_Tafel5_Click);
+            // 
+            // btn_Tafel1
+            // 
+            this.btn_Tafel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel1.Image = global::SomerenUI.Properties.Resources.Tafel1;
+            this.btn_Tafel1.Location = new System.Drawing.Point(245, 54);
+            this.btn_Tafel1.Name = "btn_Tafel1";
+            this.btn_Tafel1.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel1.TabIndex = 10;
+            this.btn_Tafel1.UseVisualStyleBackColor = true;
+            this.btn_Tafel1.Click += new System.EventHandler(this.btn_Tafel1_Click);
+            // 
+            // btn_Tafel3
+            // 
+            this.btn_Tafel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel3.Image = global::SomerenUI.Properties.Resources.Tafel3;
+            this.btn_Tafel3.Location = new System.Drawing.Point(245, 178);
+            this.btn_Tafel3.Name = "btn_Tafel3";
+            this.btn_Tafel3.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel3.TabIndex = 9;
+            this.btn_Tafel3.UseVisualStyleBackColor = true;
+            this.btn_Tafel3.Click += new System.EventHandler(this.btn_Tafel3_Click);
+            // 
+            // btn_Tafel10
+            // 
+            this.btn_Tafel10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel10.Image = global::SomerenUI.Properties.Resources.tafel10;
+            this.btn_Tafel10.Location = new System.Drawing.Point(417, 518);
+            this.btn_Tafel10.Name = "btn_Tafel10";
+            this.btn_Tafel10.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel10.TabIndex = 8;
+            this.btn_Tafel10.UseVisualStyleBackColor = true;
+            this.btn_Tafel10.Click += new System.EventHandler(this.btn_Tafel10_Click);
+            // 
+            // btn_Tafel8
+            // 
+            this.btn_Tafel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel8.Image = global::SomerenUI.Properties.Resources.Tafel8;
+            this.btn_Tafel8.Location = new System.Drawing.Point(417, 402);
+            this.btn_Tafel8.Name = "btn_Tafel8";
+            this.btn_Tafel8.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel8.TabIndex = 7;
+            this.btn_Tafel8.UseVisualStyleBackColor = true;
+            this.btn_Tafel8.Click += new System.EventHandler(this.btn_Tafel8_Click);
+            // 
+            // btn_Tafel6
+            // 
+            this.btn_Tafel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel6.Image = global::SomerenUI.Properties.Resources.Tafel6;
+            this.btn_Tafel6.Location = new System.Drawing.Point(417, 291);
+            this.btn_Tafel6.Name = "btn_Tafel6";
+            this.btn_Tafel6.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel6.TabIndex = 6;
+            this.btn_Tafel6.UseVisualStyleBackColor = true;
+            this.btn_Tafel6.Click += new System.EventHandler(this.btn_Tafel6_Click);
+            // 
+            // btn_Tafel2
+            // 
+            this.btn_Tafel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel2.Image = global::SomerenUI.Properties.Resources.Tafel2;
+            this.btn_Tafel2.Location = new System.Drawing.Point(417, 55);
+            this.btn_Tafel2.Name = "btn_Tafel2";
+            this.btn_Tafel2.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel2.TabIndex = 5;
+            this.btn_Tafel2.UseVisualStyleBackColor = true;
+            this.btn_Tafel2.Click += new System.EventHandler(this.btn_Tafel2_Click);
+            // 
+            // btn_Tafel4
+            // 
+            this.btn_Tafel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Tafel4.Image = global::SomerenUI.Properties.Resources.Tafel4;
+            this.btn_Tafel4.Location = new System.Drawing.Point(417, 179);
+            this.btn_Tafel4.Name = "btn_Tafel4";
+            this.btn_Tafel4.Size = new System.Drawing.Size(100, 100);
+            this.btn_Tafel4.TabIndex = 4;
+            this.btn_Tafel4.UseVisualStyleBackColor = true;
+            this.btn_Tafel4.Click += new System.EventHandler(this.btn_Tafel4_Click);
+            // 
+            // btn_RefreshBarOverzicht
+            // 
+            this.btn_RefreshBarOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.btn_RefreshBarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RefreshBarOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
+            this.btn_RefreshBarOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RefreshBarOverzicht.Location = new System.Drawing.Point(444, 39);
+            this.btn_RefreshBarOverzicht.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_RefreshBarOverzicht.Name = "btn_RefreshBarOverzicht";
+            this.btn_RefreshBarOverzicht.Size = new System.Drawing.Size(146, 41);
+            this.btn_RefreshBarOverzicht.TabIndex = 3;
+            this.btn_RefreshBarOverzicht.Text = "Refresh";
+            this.btn_RefreshBarOverzicht.UseVisualStyleBackColor = false;
+            this.btn_RefreshBarOverzicht.Click += new System.EventHandler(this.btn_RefreshBarOverzicht_Click);
+            // 
+            // btn_RefreshKeukenOverzicht
+            // 
+            this.btn_RefreshKeukenOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.btn_RefreshKeukenOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RefreshKeukenOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
+            this.btn_RefreshKeukenOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RefreshKeukenOverzicht.Location = new System.Drawing.Point(443, 23);
+            this.btn_RefreshKeukenOverzicht.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_RefreshKeukenOverzicht.Name = "btn_RefreshKeukenOverzicht";
+            this.btn_RefreshKeukenOverzicht.Size = new System.Drawing.Size(146, 41);
+            this.btn_RefreshKeukenOverzicht.TabIndex = 2;
+            this.btn_RefreshKeukenOverzicht.Text = "Refresh";
+            this.btn_RefreshKeukenOverzicht.UseVisualStyleBackColor = false;
+            this.btn_RefreshKeukenOverzicht.Click += new System.EventHandler(this.btn_RefreshKeukenOverzicht_Click);
+            // 
+            // btn_Bar
+            // 
+            this.btn_Bar.BackColor = System.Drawing.Color.White;
+            this.btn_Bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Bar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Bar.Image")));
+            this.btn_Bar.Location = new System.Drawing.Point(11, 10);
+            this.btn_Bar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Bar.Name = "btn_Bar";
+            this.btn_Bar.Size = new System.Drawing.Size(240, 158);
+            this.btn_Bar.TabIndex = 2;
+            this.btn_Bar.Text = "Bar";
+            this.btn_Bar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Bar.UseVisualStyleBackColor = false;
+            this.btn_Bar.Click += new System.EventHandler(this.btn_Bar_Click);
+            // 
+            // btn_Keuken
+            // 
+            this.btn_Keuken.BackColor = System.Drawing.Color.White;
+            this.btn_Keuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Keuken.Image = ((System.Drawing.Image)(resources.GetObject("btn_Keuken.Image")));
+            this.btn_Keuken.Location = new System.Drawing.Point(359, 10);
+            this.btn_Keuken.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Keuken.Name = "btn_Keuken";
+            this.btn_Keuken.Size = new System.Drawing.Size(240, 158);
+            this.btn_Keuken.TabIndex = 4;
+            this.btn_Keuken.Text = "Keuken";
+            this.btn_Keuken.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Keuken.UseVisualStyleBackColor = false;
+            this.btn_Keuken.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Financien
+            // 
+            this.btn_Financien.BackColor = System.Drawing.Color.White;
+            this.btn_Financien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Financien.Image = ((System.Drawing.Image)(resources.GetObject("btn_Financien.Image")));
+            this.btn_Financien.Location = new System.Drawing.Point(359, 439);
+            this.btn_Financien.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Financien.Name = "btn_Financien";
+            this.btn_Financien.Size = new System.Drawing.Size(240, 158);
+            this.btn_Financien.TabIndex = 11;
+            this.btn_Financien.Text = "Financiën";
+            this.btn_Financien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Financien.UseVisualStyleBackColor = false;
+            this.btn_Financien.Click += new System.EventHandler(this.btn_Financien_Click);
+            // 
+            // btn_Voorraad
+            // 
+            this.btn_Voorraad.BackColor = System.Drawing.Color.White;
+            this.btn_Voorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voorraad.Image = ((System.Drawing.Image)(resources.GetObject("btn_Voorraad.Image")));
+            this.btn_Voorraad.Location = new System.Drawing.Point(13, 439);
+            this.btn_Voorraad.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Voorraad.Name = "btn_Voorraad";
+            this.btn_Voorraad.Size = new System.Drawing.Size(240, 158);
+            this.btn_Voorraad.TabIndex = 10;
+            this.btn_Voorraad.Text = "Voorraad";
+            this.btn_Voorraad.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Voorraad.UseVisualStyleBackColor = false;
+            this.btn_Voorraad.Click += new System.EventHandler(this.btn_Voorraad_Click);
+            // 
+            // btn_Tafels
+            // 
+            this.btn_Tafels.BackColor = System.Drawing.Color.White;
+            this.btn_Tafels.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Tafels.Image = ((System.Drawing.Image)(resources.GetObject("btn_Tafels.Image")));
+            this.btn_Tafels.Location = new System.Drawing.Point(11, 201);
+            this.btn_Tafels.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Tafels.Name = "btn_Tafels";
+            this.btn_Tafels.Size = new System.Drawing.Size(587, 191);
+            this.btn_Tafels.TabIndex = 6;
+            this.btn_Tafels.Text = "Tafels";
+            this.btn_Tafels.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Tafels.UseVisualStyleBackColor = false;
+            this.btn_Tafels.Click += new System.EventHandler(this.btn_Tafels_Click);
+            // 
+            // pic_LogoChapoo
+            // 
+            this.pic_LogoChapoo.Image = global::SomerenUI.Properties.Resources.Chapoo_logo_klein1;
+            this.pic_LogoChapoo.Location = new System.Drawing.Point(459, 0);
+            this.pic_LogoChapoo.Name = "pic_LogoChapoo";
+            this.pic_LogoChapoo.Size = new System.Drawing.Size(140, 140);
+            this.pic_LogoChapoo.TabIndex = 4;
+            this.pic_LogoChapoo.TabStop = false;
+            // 
+            // pic_Poppetje
+            // 
+            this.pic_Poppetje.Image = ((System.Drawing.Image)(resources.GetObject("pic_Poppetje.Image")));
+            this.pic_Poppetje.Location = new System.Drawing.Point(96, 373);
+            this.pic_Poppetje.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_Poppetje.Name = "pic_Poppetje";
+            this.pic_Poppetje.Size = new System.Drawing.Size(44, 41);
+            this.pic_Poppetje.TabIndex = 3;
+            this.pic_Poppetje.TabStop = false;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7021,8 +7021,6 @@
             this.Load += new System.EventHandler(this.SomerenUI_Load);
             this.pnl_LogIn.ResumeLayout(false);
             this.pnl_LogIn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).EndInit();
             this.pnl_Voorraad.ResumeLayout(false);
             this.pnl_Voorraad.PerformLayout();
             this.gb_DrankToevoegen.ResumeLayout(false);
@@ -7049,8 +7047,6 @@
             this.pnl_BestellingVersturen.PerformLayout();
             this.pnl_BestellingVerstuurd.ResumeLayout(false);
             this.pnl_BestellingVerstuurd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_Dag.ResumeLayout(false);
             this.pnl_Base.ResumeLayout(false);
             this.pnl_AfrekenOverzicht.ResumeLayout(false);
@@ -7078,6 +7074,10 @@
             this.pnl_Maand.ResumeLayout(false);
             this.pnl_Week.ResumeLayout(false);
             this.pnl_MenuBalkFinanciën.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ChapooHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).EndInit();
             this.ResumeLayout(false);
 
         }
