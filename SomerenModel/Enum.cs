@@ -25,7 +25,10 @@ namespace SomerenModel
     {
         Besteld, WordtBereid, KlaarVoorServeren, Geserveerd
     }
-
+    public enum SoortDrankje
+    {
+        Frisdrank, Bier, Wijn, GedestilleerdeDrank, KoffieThee
+    }
     public enum StatusBestelling
     {
         Open, Afgerond, Betaald
@@ -44,4 +47,6 @@ namespace SomerenModel
     {
         Ja, Nee
     }
+
 }
+

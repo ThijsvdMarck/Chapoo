@@ -109,7 +109,7 @@
             this.CB_SoortGerechtLunch = new System.Windows.Forms.ComboBox();
             this.CB_SoortGerechtDiner = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.CB_Aantal = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.CB_LunchDiner = new System.Windows.Forms.ComboBox();
             this.CB_EtenDrinken = new System.Windows.Forms.ComboBox();
@@ -1516,7 +1516,7 @@
             this.pnl_LunchBestelling.Controls.Add(this.CB_SoortGerechtLunch);
             this.pnl_LunchBestelling.Controls.Add(this.CB_SoortGerechtDiner);
             this.pnl_LunchBestelling.Controls.Add(this.button1);
-            this.pnl_LunchBestelling.Controls.Add(this.comboBox4);
+            this.pnl_LunchBestelling.Controls.Add(this.CB_Aantal);
             this.pnl_LunchBestelling.Controls.Add(this.comboBox3);
             this.pnl_LunchBestelling.Controls.Add(this.CB_LunchDiner);
             this.pnl_LunchBestelling.Controls.Add(this.CB_EtenDrinken);
@@ -1609,14 +1609,14 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox4
+            // CB_Aantal
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(529, 499);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(41, 21);
-            this.comboBox4.TabIndex = 60;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.CB_Aantal.FormattingEnabled = true;
+            this.CB_Aantal.Location = new System.Drawing.Point(529, 499);
+            this.CB_Aantal.Name = "CB_Aantal";
+            this.CB_Aantal.Size = new System.Drawing.Size(41, 21);
+            this.CB_Aantal.TabIndex = 60;
+            this.CB_Aantal.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -7541,7 +7541,7 @@
         private System.Windows.Forms.Button btn_AfrekenNee;
         private System.Windows.Forms.Button btnAfrekenJa;
         private System.Windows.Forms.Label lbl_AfrekenPopUp;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox CB_Aantal;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox CB_LunchDiner;
         private System.Windows.Forms.ComboBox CB_EtenDrinken;

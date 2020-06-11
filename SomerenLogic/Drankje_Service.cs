@@ -26,9 +26,10 @@ namespace SomerenLogic
                 List<Drankje> drankje = new List<Drankje>();
                 Drankje a = new Drankje();
                 a.drankID = 1;
-                a.drankNaam = "Pussy juice";
+                a.drankNaam = "water";
                 a.voorraad = 42069;
-               
+                a.prijs = 0.00;
+                a.soortDrankje = SoortDrankje.Frisdrank;
                 return drankje;
                 //throw new Exception("Someren couldn't connect to the database");
             }

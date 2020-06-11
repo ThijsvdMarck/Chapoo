@@ -13,8 +13,7 @@ namespace SomerenModel
         public Alcholisch alcholisch { get; set; } // heeft het drankje alcohol? (ja of nee)
         public int voorraad { get; set; } // voorraad van drankjes
         public double prijs { get; set; } // prijs van het drankje
-
-        
+        public SoortDrankje soortDrankje { get; set; } // type drankje
     }
 }
         
