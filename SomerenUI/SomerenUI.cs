@@ -486,22 +486,23 @@ namespace SomerenUI
 
                 foreach (Button btn in buttons)
                 {
+                    // Standaard kleur
                     btn.BackColor = Color.White;
                 }               
 
+                // kijken of er openstaande bestellingen etc in de keuken zijn
                 List<GerechtlijstItem> gerechtlijst = gerechtlijstItemService.GetGerechtlijstItemsTafel();
                 CheckStatusGerechten(gerechtlijst);
 
                 foreach (Button btn in buttons)
                 {
-                    if (btn.BackColor != Color.Green && btn.BackColor != Color.Yellow)
+                    if (btn.BackColor != Color.Green || btn.BackColor != Color.Yellow)
                     {
+                        // kijken of er bestellingen met een hogere prioriteit status bij de bar zijn
                         List<DrankLijstItem> dranklijst = drankLijstService.GetDrankLijstItemsTafel();
                         CheckStatusDrankjes(dranklijst);
                     }
                 }
-                
-
                 
             }
             else if (panelName == "Voorraad")
@@ -568,7 +569,7 @@ namespace SomerenUI
                 pnl_RekeningOverzicht.Show();
             //    lv_RekeningOverzicht.
                           
-            
+                
             }
             else if (panelName == "Reserveringen")
             {
@@ -670,8 +671,8 @@ namespace SomerenUI
                     }
                 }
 
-                lbl_Tafel.Text = geselecteerdeTafel;
-                lbl_TafelNr.Text = "";
+                lbl_TafelBar.Text = geselecteerdeTafel;
+                lbl_TafelNrBar.Text = "";
 
                 lbl_StatusBar.Text = tafelStatus;
 
@@ -1522,61 +1523,51 @@ namespace SomerenUI
             LATEN WE NOG EVEN LEEG WANT TEST BUTTON CODE KOMT HIER
             */
         }
-
         private void btn_Tafel2_Click(object sender, EventArgs e)
         {
             tafelnummer = 2;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel3_Click(object sender, EventArgs e)
         {
             tafelnummer = 3;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel4_Click(object sender, EventArgs e)
         {
             tafelnummer = 4;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel5_Click(object sender, EventArgs e)
         {
             tafelnummer = 5;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel6_Click(object sender, EventArgs e)
         {
             tafelnummer = 6;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel7_Click(object sender, EventArgs e)
         {
             tafelnummer = 7;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel8_Click(object sender, EventArgs e)
         {
             tafelnummer = 8;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel9_Click(object sender, EventArgs e)
         {
             tafelnummer = 9;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel10_Click(object sender, EventArgs e)
         {
             tafelnummer = 10;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_TEST_Click(object sender, EventArgs e)
         {
             tafelnummer = 1;
@@ -1584,6 +1575,8 @@ namespace SomerenUI
             //Iets met dit tafelnummer met de status KLAARVOORSERVEREN, moet de knop groen worden
 
         }
+
+        // Restaurant overzicht (buttons van kleur veranderen)
         private void CheckStatusGerechten(List<GerechtlijstItem> gerechtlijst)
         {
             foreach (GerechtlijstItem g in gerechtlijst)
@@ -1710,6 +1703,7 @@ namespace SomerenUI
                 button.BackColor = Color.LightBlue;
             }
         }
+
 
         private void btn_VoegToeFooi_Click(object sender, EventArgs e)
         {
