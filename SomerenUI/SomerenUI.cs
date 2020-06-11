@@ -1732,9 +1732,13 @@ namespace SomerenUI
         private void btn_VoegToeBestelling_Click(object sender, EventArgs e)
         {
             // Button alleen mogen inklikken als alle velden ingevuld zijn
-             if (CB_EtenDrinken.Text == "Drinken")
+            if (CB_EtenDrinken.Text == "Drinken")
             {
-                drankLijstService.AddDrankLijsItem(drankService.GetDrankID(CB_Items.Text), tafelService.GetHuidigeBestelling(tafelnummer), int.Parse(CB_Aantal.Text));
+                drankLijstService.AddDrankLijstItem(drankService.GetDrankID(CB_Items.Text), tafelService.GetHuidigeBestelling(tafelnummer), int.Parse(CB_Aantal.Text));
+            }
+            else if (CB_EtenDrinken.Text == "Eten")
+            {
+                gerechtlijstItemService.AddGerechtLijstItem(gerechtService.GetGerechtID(CB_Items.Text), tafelService.GetHuidigeBestelling(tafelnummer), int.Parse(CB_Aantal.Text));
             }
 
 

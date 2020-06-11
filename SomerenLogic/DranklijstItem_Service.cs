@@ -61,7 +61,7 @@ namespace SomerenLogic
 
         }
 
-        public void AddDrankLijsItem(int DrankID, int BestellingID, int Aantal)
+        public void AddDrankLijstItem(int DrankID, int BestellingID, int Aantal)
         {
             drankLijstItem_db.AddDrankLijsItem( DrankID,  BestellingID,  Aantal);
         }
