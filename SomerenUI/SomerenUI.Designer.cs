@@ -527,6 +527,7 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
+            this.lv_BestellingsOverzicht = new System.Windows.Forms.ListView();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -5717,15 +5718,16 @@
             // 
             // pnl_BestellingsOverzicht
             // 
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_BestellingsOverzicht);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Annuleren);
-            this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVersturen);
-            this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVerstuurd);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Bestel);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_BestellingOpmerkingen);
             this.pnl_BestellingsOverzicht.Controls.Add(this.txt_Opmerkingen);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_AantalBestelling);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_PrijsBestelling);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_Bestelling);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVersturen);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVerstuurd);
             this.pnl_BestellingsOverzicht.Location = new System.Drawing.Point(0, 216);
             this.pnl_BestellingsOverzicht.Name = "pnl_BestellingsOverzicht";
             this.pnl_BestellingsOverzicht.Size = new System.Drawing.Size(610, 645);
@@ -5956,6 +5958,7 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
+            this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
@@ -5966,7 +5969,6 @@
             this.pnl_Base.Controls.Add(this.pnl_DinerBestelling);
             this.pnl_Base.Controls.Add(this.pnl_Overzicht);
             this.pnl_Base.Controls.Add(this.pnl_RekeningOverzicht);
-            this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_DatumKiezen);
             this.pnl_Base.Controls.Add(this.pnl_Frisdrank);
             this.pnl_Base.Controls.Add(this.pnl_Voorraad);
@@ -6996,6 +6998,15 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
+            // lv_BestellingsOverzicht
+            // 
+            this.lv_BestellingsOverzicht.HideSelection = false;
+            this.lv_BestellingsOverzicht.Location = new System.Drawing.Point(70, 82);
+            this.lv_BestellingsOverzicht.Name = "lv_BestellingsOverzicht";
+            this.lv_BestellingsOverzicht.Size = new System.Drawing.Size(467, 321);
+            this.lv_BestellingsOverzicht.TabIndex = 15;
+            this.lv_BestellingsOverzicht.UseCompatibleStateImageBehavior = false;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7571,6 +7582,7 @@
         private System.Windows.Forms.Label lbl_Vrij;
         private System.Windows.Forms.Button btn_TEST;
         private System.Windows.Forms.ComboBox CB_SoortDrankje;
+        private System.Windows.Forms.ListView lv_BestellingsOverzicht;
     }
 }
 
