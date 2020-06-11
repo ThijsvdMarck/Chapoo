@@ -575,45 +575,52 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkRekening.Show();
                 pnl_RekeningOverzicht.Show();
+
+                StatusBestelling huidigeStatus = bestellingService.GetHuidigeBestellingStatus(tafelnummer);
+
                 lbl_TafelInfo.Text = "Tafel " + tafelnummer.ToString();
-                List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
-                List<DrankLijstItem> drankList = drankLijstService.GetDrankjesBestellingVanTafel(tafelnummer);
 
-                lv_RekeningOverzicht.Clear();
-
-                lv_RekeningOverzicht.View = View.Details;
-                lv_RekeningOverzicht.GridLines = true;
-                lv_RekeningOverzicht.FullRowSelect = true;
-
-                // Aanmaken van kolommen
-                lv_RekeningOverzicht.Columns.Add("Aantal", 80);
-                lv_RekeningOverzicht.Columns.Add("Drankje/Gerecht", 200);
-                lv_RekeningOverzicht.Columns.Add("Prijs", 80);
-                lv_RekeningOverzicht.Columns.Add("Individuele prijs", 100);
-
-                string[] bestellingen = new string[4];
-                ListViewItem itm;
-
-                foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                if (huidigeStatus != StatusBestelling.Betaald)
                 {
-                    bestellingen[0] = g.Aantal.ToString();
-                    bestellingen[1] = g.GerechtNaam;
-                    bestellingen[2] = (g.Prijs * g.Aantal).ToString("0.00");
-                    bestellingen[3] = g.Prijs.ToString("0.00");
+                    List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
+                    List<DrankLijstItem> drankList = drankLijstService.GetDrankjesBestellingVanTafel(tafelnummer);
 
-                    itm = new ListViewItem(bestellingen);
-                    lv_RekeningOverzicht.Items.Add(itm);
-                }
-                
-                foreach (SomerenModel.DrankLijstItem d in drankList)
-                {
-                    bestellingen[0] = d.aantal.ToString();
-                    bestellingen[1] = d.drankNaam;
-                    bestellingen[2] = (d.Prijs * d.aantal).ToString("0.00");
-                    bestellingen[3] = d.Prijs.ToString("0.00"); 
+                    lv_RekeningOverzicht.Clear();
 
-                    itm = new ListViewItem(bestellingen);
-                    lv_RekeningOverzicht.Items.Add(itm);
+                    lv_RekeningOverzicht.View = View.Details;
+                    lv_RekeningOverzicht.GridLines = true;
+                    lv_RekeningOverzicht.FullRowSelect = true;
+
+                    // Aanmaken van kolommen
+                    lv_RekeningOverzicht.Columns.Add("Aantal", 80);
+                    lv_RekeningOverzicht.Columns.Add("Drankje/Gerecht", 200);
+                    lv_RekeningOverzicht.Columns.Add("Prijs", 80);
+                    lv_RekeningOverzicht.Columns.Add("Individuele prijs", 100);
+
+                    string[] bestellingen = new string[4];
+                    ListViewItem itm;
+
+                    foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                    {
+                        bestellingen[0] = g.Aantal.ToString();
+                        bestellingen[1] = g.GerechtNaam;
+                        bestellingen[2] = (g.Prijs * g.Aantal).ToString("0.00");
+                        bestellingen[3] = g.Prijs.ToString("0.00");
+
+                        itm = new ListViewItem(bestellingen);
+                        lv_RekeningOverzicht.Items.Add(itm);
+                    }
+
+                    foreach (SomerenModel.DrankLijstItem d in drankList)
+                    {
+                        bestellingen[0] = d.aantal.ToString();
+                        bestellingen[1] = d.drankNaam;
+                        bestellingen[2] = (d.Prijs * d.aantal).ToString("0.00");
+                        bestellingen[3] = d.Prijs.ToString("0.00");
+
+                        itm = new ListViewItem(bestellingen);
+                        lv_RekeningOverzicht.Items.Add(itm);
+                    }
                 }
 
 
@@ -653,12 +660,15 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
-                    bestellingen[0] = "Tafel " + b.TafelID.ToString();
-                    bestellingen[1] = b.BestellingID.ToString();
-                    bestellingen[2] = b.statusKeuken.ToString();
+                    if (b.statusBar != StatusBestelling.Betaald)
+                    {
+                        bestellingen[0] = "Tafel " + b.TafelID.ToString();
+                        bestellingen[1] = b.BestellingID.ToString();
+                        bestellingen[2] = b.statusKeuken.ToString();
 
-                    itm = new ListViewItem(bestellingen);
-                    lv_KeukenOverzicht.Items.Add(itm);
+                        itm = new ListViewItem(bestellingen);
+                        lv_KeukenOverzicht.Items.Add(itm);
+                    }                      
                 }
 
             }
@@ -690,12 +700,15 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
-                    bestellingen[0] = "Tafel " + b.TafelID.ToString();
-                    bestellingen[1] = b.BestellingID.ToString();
-                    bestellingen[2] = b.statusBar.ToString();
+                    if (b.statusBar != StatusBestelling.Betaald)
+                    {
+                        bestellingen[0] = "Tafel " + b.TafelID.ToString();
+                        bestellingen[1] = b.BestellingID.ToString();
+                        bestellingen[2] = b.statusBar.ToString();
 
-                    itm = new ListViewItem(bestellingen);
-                    lv_BarOverzicht.Items.Add(itm);
+                        itm = new ListViewItem(bestellingen);
+                        lv_BarOverzicht.Items.Add(itm);
+                    }
                 }
             }
             else if (panelName == "BarBestelling")
@@ -760,11 +773,11 @@ namespace SomerenUI
 
                     if (d.status == Status.KlaarVoorServeren)
                     {
-                        itm.BackColor = Color.MistyRose;
+                        itm.BackColor = Color.Green;
                     }
                     else if (d.status == Status.Geserveerd)
                     {
-                        itm.BackColor = Color.Pink;
+                        itm.BackColor = Color.LightBlue;
                     }
 
                     lv_BarBestelling.Items.Add(itm);
@@ -834,11 +847,11 @@ namespace SomerenUI
 
                     if (g.status == Status.KlaarVoorServeren)
                     {
-                        itm.BackColor = Color.MistyRose;
+                        itm.BackColor = Color.Green;
                     }     
                     else if (g.status == Status.Geserveerd)
                     {
-                        itm.BackColor = Color.Pink;
+                        itm.BackColor = Color.LightBlue;
                     }
 
                     lv_BestellingenKeuken.Items.Add(itm);
@@ -1786,6 +1799,11 @@ namespace SomerenUI
         }
         private void AfrondenBestelling()
         {
+            if (txt_Fooi.Text == "")
+            {
+                txt_Fooi.Text = (0.0).ToString();
+            }
+
             int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
 
             rekeningService.InsertRekening(double.Parse(txt_Fooi.Text), txt_Commentaar.Text, (BetaalMethode)cmb_BetaalMethode.SelectedItem, bestelling, totaalPrijs);

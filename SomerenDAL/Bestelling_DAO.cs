@@ -54,5 +54,23 @@ namespace SomerenDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
+
+        // Status van huidige bestelling ophalen
+        public StatusBestelling GetHuidigeBestellingStatus(int TafelNummer)
+        {
+            string query = "SELECT StatusBar FROM Tafel JOIN Bestelling ON Bestelling.BestellingID=Tafel.BestellingID WHERE TafelID = " + TafelNummer;
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTableForBestellingStatus(ExecuteSelectQuery(query, sqlParameters));
+
+        }
+        private StatusBestelling ReadTableForBestellingStatus(DataTable dataTable)
+        {
+            StatusBestelling huidigeStatus = StatusBestelling.Open;
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                huidigeStatus = (StatusBestelling)Enum.Parse(typeof(StatusBestelling), (string)dr["StatusBar"]);
+            }
+            return huidigeStatus;
+        }
     }
 }

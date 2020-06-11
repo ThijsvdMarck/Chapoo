@@ -57,5 +57,10 @@ namespace SomerenLogic
                 //
             }
         }
+
+        public StatusBestelling GetHuidigeBestellingStatus(int TafelNummer)
+        {
+            return bestelling_db.GetHuidigeBestellingStatus(TafelNummer);
+        }
     }
 }

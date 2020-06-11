@@ -12,8 +12,11 @@ namespace SomerenDAL
 {
     public class Rekening_DAO : Base
     {
-        public void Db_Insert_Rekening(double fooi, string commentaar, BetaalMethode betaalMethode, int bestellingID, double eindBedrag)
+        public void Db_Insert_Rekening(double Fooi, string commentaar, BetaalMethode betaalMethode, int bestellingID, double eindBedrag)
         {
+            double fooi = 0.0;
+            fooi = Fooi;
+
             string query = "INSERT INTO Rekening VALUES(" + fooi + ", '" + commentaar + "', '" + betaalMethode.ToString() + "', " + bestellingID + ", "+ eindBedrag + ")";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
