@@ -58,5 +58,30 @@ namespace SomerenDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        public List<GerechtlijstItem> Db_Get_Gerechten_Bestelling(int tafelID)
+        {
+            string query = "SELECT Gerechtnaam, Aantal, Prijs, TafelID FROM Gerechtlijst JOIN Gerecht ON Gerecht.GerechtID=Gerechtlijst.GerechtID JOIN Bestelling ON Bestelling.BestellingID=Gerechtlijst.BestellingID JOIN Tafel ON Tafel.BestellingID=Bestelling.BestellingID WHERE TafelID=" + tafelID.ToString();
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTablesVoorTafelBestelling(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private List<GerechtlijstItem> ReadTablesVoorTafelBestelling(DataTable dataTable)
+        {
+            List<GerechtlijstItem> gerechtLijstItems = new List<GerechtlijstItem>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                GerechtlijstItem gerechtLijstItem = new GerechtlijstItem()
+                {
+                    GerechtNaam = (string)dr["Gerechtnaam"],
+                    Aantal = (int)dr["Aantal"],
+                    Prijs = (float)dr["Prijs"],
+                    TafelID = (int)dr["TafelID"]
+                };
+                gerechtLijstItems.Add(gerechtLijstItem);
+            }
+            return gerechtLijstItems;
+        }
+
     }
 }

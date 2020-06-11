@@ -15,5 +15,6 @@ namespace SomerenModel
         public string GerechtNaam { get; set; }
         public DateTime Tijd { get; set; }
         public int TafelID { get; set; }
+        public float Prijs { get; set; }
     }
 }

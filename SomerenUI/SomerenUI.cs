@@ -572,9 +572,48 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkRekening.Show();
                 pnl_RekeningOverzicht.Show();
-            //    lv_RekeningOverzicht.
-                          
+
+                List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
+                List<DrankLijstItem> drankList = drankLijstService.GetDrankjesBestellingVanTafel(tafelnummer);
+
+                lv_RekeningOverzicht.Clear();
+
+                lv_RekeningOverzicht.View = View.Details;
+                lv_RekeningOverzicht.GridLines = true;
+                lv_RekeningOverzicht.FullRowSelect = true;
+
+                // Aanmaken van kolommen
+                lv_RekeningOverzicht.Columns.Add("Aantal", 80);
+                lv_RekeningOverzicht.Columns.Add("Drankje/Gerecht", 200);
+                lv_RekeningOverzicht.Columns.Add("Prijs", 80);
+                lv_RekeningOverzicht.Columns.Add("Individuele prijs", 100);
+
+                string[] bestellingen = new string[4];
+                ListViewItem itm;
+
+                foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                {
+                    bestellingen[0] = g.Aantal.ToString();
+                    bestellingen[1] = g.GerechtNaam;
+                    bestellingen[2] = (g.Prijs * g.Aantal).ToString();
+                    bestellingen[3] = g.Prijs.ToString();
+
+                    itm = new ListViewItem(bestellingen);
+                    lv_RekeningOverzicht.Items.Add(itm);
+                }
                 
+                foreach (SomerenModel.DrankLijstItem d in drankList)
+                {
+                    bestellingen[0] = d.aantal.ToString();
+                    bestellingen[1] = d.drankNaam;
+                    bestellingen[2] = (d.Prijs * d.aantal).ToString();
+                    bestellingen[3] = d.Prijs.ToString(); 
+
+                    itm = new ListViewItem(bestellingen);
+                    lv_RekeningOverzicht.Items.Add(itm);
+                }
+
+
             }
             else if (panelName == "Reserveringen")
             {
