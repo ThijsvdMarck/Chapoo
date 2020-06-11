@@ -14,11 +14,20 @@ namespace SomerenDAL
     {
         public List<GerechtlijstItem> Db_Get_All_GerechtlijstItems(int geselecteerdeBestelling)
         {
-            string query = "SELECT BestellingID, Gerechtlijst.GerechtID, Aantal, [Status], Gerecht.Gerechtnaam, Tijd FROM Gerechtlijst JOIN Gerecht ON Gerechtlijst.GerechtID = Gerecht.GerechtID WHERE BestellingID = " + geselecteerdeBestelling.ToString();
+            string query = "SELECT Bestelling.BestellingID, Gerechtlijst.GerechtID, Aantal, [Status], Gerecht.Gerechtnaam, Tijd, TafelID FROM Gerechtlijst JOIN Gerecht ON Gerechtlijst.GerechtID = Gerecht.GerechtID JOIN Bestelling ON Gerechtlijst.BestellingID=Bestelling.BestellingID JOIN Tafel ON Tafel.BestellingID=Bestelling.BestellingID WHERE Gerechtlijst.BestellingID =" + geselecteerdeBestelling.ToString();
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
+
+        
+        public List<GerechtlijstItem> Db_Get_All_GerechtlijstItemsTafel()
+        {
+            string query = "SELECT Bestelling.BestellingID, Gerechtlijst.GerechtID, Aantal, [Status], Gerecht.Gerechtnaam, Tijd, TafelID FROM Gerechtlijst JOIN Gerecht ON Gerechtlijst.GerechtID = Gerecht.GerechtID JOIN Bestelling ON Gerechtlijst.BestellingID=Bestelling.BestellingID JOIN Tafel ON Tafel.BestellingID=Bestelling.BestellingID";
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        } 
 
         private List<GerechtlijstItem> ReadTables(DataTable dataTable)
         {
@@ -33,7 +42,8 @@ namespace SomerenDAL
                     status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
                     GerechtNaam = (string)dr["Gerechtnaam"],
                     Tijd = (DateTime)dr["Tijd"],
-                    GerechtID = (int)dr["GerechtID"]
+                    GerechtID = (int)dr["GerechtID"],
+                    TafelID = (int)dr["TafelID"]
                 };
                 gerechtItems.Add(gerechtlijstItem);
             }

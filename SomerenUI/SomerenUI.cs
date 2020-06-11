@@ -25,6 +25,7 @@ namespace SomerenUI
 
 
         int tafelnummer;
+        
 
         public SomerenUI()
         {
@@ -475,6 +476,39 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_TafelOverzicht.Show();
                 pnl_MenuBalkTafels.Show();
+
+                List<Button> buttons = new List<Button>();
+                buttons.Add(btn_TEST);
+                buttons.Add(btn_Tafel2);
+                buttons.Add(btn_Tafel3);
+                buttons.Add(btn_Tafel4);
+                buttons.Add(btn_Tafel5);
+                buttons.Add(btn_Tafel6);
+                buttons.Add(btn_Tafel7);
+                buttons.Add(btn_Tafel8);
+                buttons.Add(btn_Tafel9);
+                buttons.Add(btn_Tafel10);
+
+                foreach (Button btn in buttons)
+                {
+                    // Standaard kleur
+                    btn.BackColor = Color.White;
+                }               
+
+                // kijken of er openstaande bestellingen etc in de keuken zijn
+                List<GerechtlijstItem> gerechtlijst = gerechtlijstItemService.GetGerechtlijstItemsTafel();
+                CheckStatusGerechten(gerechtlijst);
+
+                foreach (Button btn in buttons)
+                {
+                    if (btn.BackColor != Color.Green || btn.BackColor != Color.Yellow)
+                    {
+                        // kijken of er bestellingen met een hogere prioriteit status bij de bar zijn
+                        List<DrankLijstItem> dranklijst = drankLijstService.GetDrankLijstItemsTafel();
+                        CheckStatusDrankjes(dranklijst);
+                    }
+                }
+                
             }
             else if (panelName == "Voorraad")
             {
@@ -539,30 +573,8 @@ namespace SomerenUI
                 pnl_MenuBalkRekening.Show();
                 pnl_RekeningOverzicht.Show();
             //    lv_RekeningOverzicht.
-            /*
-                foreach (GerechtlijstItem g in gerechtlijst)
-                {
-                    if (g.TafelID == 1)
-                    {
-                        if (g.status == Status.Besteld && btn_TEST.BackColor != Color.Green)
-                        {
-                            //daarna prio
-                            btn_TEST.BackColor = Color.Yellow;
-                        }
-                        else if (g.status == Status.KlaarVoorServeren)
-                        {
-                            //grootste prioriteit 
-                            btn_TEST.BackColor = Color.Green;
-                        }
-                        else if (g.status == Status.Geserveerd && btn_TEST.BackColor != Color.Green && btn_TEST.BackColor != Color.Yellow)
-                        {
-                            btn_TEST.BackColor = Color.LightBlue;
-                        }
-                    }
-
-
-                }
-            */
+                          
+                
             }
             else if (panelName == "Reserveringen")
             {
@@ -664,8 +676,8 @@ namespace SomerenUI
                     }
                 }
 
-                lbl_Tafel.Text = geselecteerdeTafel;
-                lbl_TafelNr.Text = "";
+                lbl_TafelBar.Text = geselecteerdeTafel;
+                lbl_TafelNrBar.Text = "";
 
                 lbl_StatusBar.Text = tafelStatus;
 
@@ -1520,67 +1532,185 @@ namespace SomerenUI
             LATEN WE NOG EVEN LEEG WANT TEST BUTTON CODE KOMT HIER
             */
         }
-
         private void btn_Tafel2_Click(object sender, EventArgs e)
         {
             tafelnummer = 2;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel3_Click(object sender, EventArgs e)
         {
             tafelnummer = 3;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel4_Click(object sender, EventArgs e)
         {
             tafelnummer = 4;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel5_Click(object sender, EventArgs e)
         {
             tafelnummer = 5;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel6_Click(object sender, EventArgs e)
         {
             tafelnummer = 6;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel7_Click(object sender, EventArgs e)
         {
             tafelnummer = 7;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel8_Click(object sender, EventArgs e)
         {
             tafelnummer = 8;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel9_Click(object sender, EventArgs e)
         {
             tafelnummer = 9;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_Tafel10_Click(object sender, EventArgs e)
         {
             tafelnummer = 10;
             showPanel("RekeningOverzicht");
         }
-
         private void btn_TEST_Click(object sender, EventArgs e)
         {
             tafelnummer = 1;
             showPanel("RekeningOverzicht"); // Moet nog terug naar button 1 na UI.
             //Iets met dit tafelnummer met de status KLAARVOORSERVEREN, moet de knop groen worden
 
+        }
+
+        // Restaurant overzicht (buttons van kleur veranderen)
+        private void CheckStatusGerechten(List<GerechtlijstItem> gerechtlijst)
+        {
+            foreach (GerechtlijstItem g in gerechtlijst)
+            {
+                if (g.TafelID == 1)
+                {
+                    VeranderButtonKleurGerecht(g, btn_TEST);
+                }
+                else if (g.TafelID == 2)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel2);
+                }
+                else if (g.TafelID == 3)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel3);
+                }
+                else if (g.TafelID == 4)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel4);
+                }
+                else if (g.TafelID == 5)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel5);
+                }
+                else if (g.TafelID == 6)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel6);
+                }
+                else if (g.TafelID == 7)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel7);
+                }
+                else if (g.TafelID == 8)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel8);
+                }
+                else if (g.TafelID == 9)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel9);
+                }
+                else if (g.TafelID == 10)
+                {
+                    VeranderButtonKleurGerecht(g, btn_Tafel10);
+                }
+            }
+        }
+        private void VeranderButtonKleurGerecht(GerechtlijstItem g, Button button)
+        {
+            if (g.status == Status.Besteld && button.BackColor != Color.Green)
+            {
+                //daarna prio
+                button.BackColor = Color.Yellow;
+            }
+            else if (g.status == Status.KlaarVoorServeren)
+            {
+                //grootste prioriteit 
+                button.BackColor = Color.Green;
+            }
+            else if (g.status == Status.Geserveerd && button.BackColor != Color.Green && button.BackColor != Color.Yellow)
+            {
+                button.BackColor = Color.LightBlue;
+            }
+        }
+        private void CheckStatusDrankjes(List<DrankLijstItem> dranklijst)
+        {
+            foreach (DrankLijstItem d in dranklijst)
+            {
+                if (d.TafelID == 1)
+                {
+                    VeranderButtonKleurDrankje(d, btn_TEST);
+                }
+                else if (d.TafelID == 2)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel2);
+                }
+                else if (d.TafelID == 3)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel3);
+                }
+                else if (d.TafelID == 4)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel4);
+                }
+                else if (d.TafelID == 5)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel5);
+                }
+                else if (d.TafelID == 6)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel6);
+                }
+                else if (d.TafelID == 7)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel7);
+                }
+                else if (d.TafelID == 8)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel8);
+                }
+                else if (d.TafelID == 9)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel9);
+                }
+                else if (d.TafelID == 10)
+                {
+                    VeranderButtonKleurDrankje(d, btn_Tafel10);
+                }
+            }
+        }
+        private void VeranderButtonKleurDrankje(DrankLijstItem d, Button button)
+        {
+            if (d.status == Status.Besteld && button.BackColor != Color.Green)
+            {
+                //daarna prio
+                button.BackColor = Color.Yellow;
+            }
+            else if (d.status == Status.KlaarVoorServeren)
+            {
+                //grootste prioriteit 
+                button.BackColor = Color.Green;
+            }
+            else if (d.status == Status.Geserveerd && button.BackColor != Color.Green && button.BackColor != Color.Yellow)
+            {
+                button.BackColor = Color.LightBlue;
+            }
         }
 
 
