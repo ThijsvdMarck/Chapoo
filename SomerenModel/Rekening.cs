@@ -8,10 +8,9 @@ namespace SomerenModel
 {
     class Rekening
     {
-        public float fooi { get; set; }
+        public double fooi { get; set; }
         public string commentaar { get; set; }
         public BetaalMethode betaalMethode { get; set; } // pin cash creditcard
-
         public Bestelling Bestelling { get; set; }
     }
 }

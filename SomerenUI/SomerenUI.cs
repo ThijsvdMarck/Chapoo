@@ -22,10 +22,13 @@ namespace SomerenUI
         SomerenLogic.GerechtlijstItem_Service gerechtlijstItemService = new SomerenLogic.GerechtlijstItem_Service();
         SomerenLogic.DrankLijstItem_Service drankLijstService = new SomerenLogic.DrankLijstItem_Service();
         SomerenLogic.Tafel_Service tafelService = new SomerenLogic.Tafel_Service();
+        SomerenLogic.Rekening_Service rekeningService = new SomerenLogic.Rekening_Service();
 
 
         int tafelnummer;
-        
+        double totaalPrijs;
+
+
 
         public SomerenUI()
         {
@@ -853,12 +856,23 @@ namespace SomerenUI
                 gb_Afgerekend.Hide();
                 gb_AfrekenPopUp.Hide();
 
+                // combobox betaalmethode
+                cmb_BetaalMethode.Items.Clear();
+
+                cmb_BetaalMethode.Items.Add(BetaalMethode.Pin);
+                cmb_BetaalMethode.Items.Add(BetaalMethode.Contant);
+                cmb_BetaalMethode.Items.Add(BetaalMethode.CreditCard);
+
+                cmb_BetaalMethode.SelectedIndex = 0;
+
+                txt_Fooi.Clear();
+
                 lbl_TafelNrInvoer.Text = tafelnummer.ToString();
                
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
                 List<DrankLijstItem> drankList = drankLijstService.GetDrankjesBestellingVanTafel(tafelnummer);
 
-                double totaalPrijs = 0;
+                totaalPrijs = 0;
                 double btwPrijs = 0;
 
                 foreach (SomerenModel.GerechtlijstItem g in gerechtList)
@@ -880,17 +894,10 @@ namespace SomerenUI
                     }
                 }
 
-                lbl_EindBedragInvoer.Text = totaalPrijs.ToString();
+                lbl_EindBedragInvoer.Text = totaalPrijs.ToString("0.00");
                 lbl_TotaalBedrag.Text = "€" + totaalPrijs.ToString("0.00");
                 lbl_BTWBedrag.Text = btwPrijs.ToString("0.00");
-
-                cmb_BetaalMethode.Items.Clear();
-
-                cmb_BetaalMethode.Items.Add(BetaalMethode.Pin);
-                cmb_BetaalMethode.Items.Add(BetaalMethode.Contant);
-                cmb_BetaalMethode.Items.Add(BetaalMethode.CreditCard);
-
-                cmb_BetaalMethode.SelectedIndex = 0;
+               
             }
 
         }
@@ -1521,38 +1528,7 @@ namespace SomerenUI
 
             vulGerechtVoorraad();
         }
-
-        private void btn_AfrekenBetalen_Click(object sender, EventArgs e)
-        {
-            gb_AfrekenPopUp.Show();
-        }
-
-        private void btn_AfrekenAnnuleren_Click(object sender, EventArgs e)
-        {
-            showPanel("RekeningOverzicht");
-        }
-
-        private void btn_AfrekenNee_Click(object sender, EventArgs e)
-        {
-            gb_AfrekenPopUp.Hide();
-        }
-
-        private void btnAfrekenJa_Click(object sender, EventArgs e)
-        {
-            gb_AfrekenPopUp.Hide();
-            gb_Afgerekend.Show();
-        }
-
-        private void btn_BetalingVoltooid_Click(object sender, EventArgs e)
-        {
-            showPanel("Overzicht");
-        }
-
-        private void btn_Afrekenen_Click(object sender, EventArgs e)
-        {
-            showPanel("Afrekenen");
-        }
-
+        
         private void btn_LogUit_Click(object sender, EventArgs e)
         {
             showPanel("LogIn");
@@ -1781,11 +1757,53 @@ namespace SomerenUI
             }
         }
 
-
+        // Afrekenen
         private void btn_VoegToeFooi_Click(object sender, EventArgs e)
         {
-           //
+            double fooi = double.Parse(txt_Fooi.Text);
+            totaalPrijs += fooi;
+
+            lbl_EindBedragInvoer.Text = totaalPrijs.ToString("0.00");
         }
+        private void btn_AfrekenBetalen_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Show();
+        }
+        private void btn_AfrekenAnnuleren_Click(object sender, EventArgs e)
+        {
+            showPanel("RekeningOverzicht");
+        }
+        private void btn_AfrekenNee_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Hide();
+        }
+        private void btnAfrekenJa_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Hide();
+            gb_Afgerekend.Show();
+
+            AfrondenBestelling();
+        }
+        private void AfrondenBestelling()
+        {
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+
+            rekeningService.InsertRekening(double.Parse(txt_Fooi.Text), txt_Commentaar.Text, (BetaalMethode)cmb_BetaalMethode.SelectedItem, bestelling, totaalPrijs);
+
+            VeranderStatusBestellingBar(StatusBestelling.Betaald, bestelling);
+            VeranderStatusBestellingKeuken(StatusBestelling.Betaald, bestelling);
+        }
+        private void btn_BetalingVoltooid_Click(object sender, EventArgs e)
+        {
+            showPanel("Overzicht");
+        }
+        private void btn_Afrekenen_Click(object sender, EventArgs e)
+        {
+            showPanel("Afrekenen");
+        }
+
+
+
 
         private void CB_SoortGerechtLunch_SelectedIndexChanged(object sender, EventArgs e)
         {
