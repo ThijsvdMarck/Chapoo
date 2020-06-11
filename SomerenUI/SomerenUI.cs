@@ -24,10 +24,14 @@ namespace SomerenUI
         SomerenLogic.DrankLijstItem_Service drankLijstItemService = new SomerenLogic.DrankLijstItem_Service();
         SomerenLogic.Tafel_Service tafelService = new SomerenLogic.Tafel_Service();
         SomerenLogic.Personeel_Service personeelService = new SomerenLogic.Personeel_Service();
+        SomerenLogic.Rekening_Service rekeningService = new SomerenLogic.Rekening_Service();
+
 
 
         int tafelnummer;
-        
+        double totaalPrijs;
+
+
 
         public SomerenUI()
         {
@@ -640,9 +644,55 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkRekening.Show();
                 pnl_RekeningOverzicht.Show();
-            //    lv_RekeningOverzicht.
-                          
-                
+
+                StatusBestelling huidigeStatus = bestellingService.GetHuidigeBestellingStatus(tafelnummer);
+
+                lbl_TafelInfo.Text = "Tafel " + tafelnummer.ToString();
+
+                if (huidigeStatus != StatusBestelling.Betaald)
+                {
+                    List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
+                    List<DrankLijstItem> drankList = drankLijstItemService.GetDrankjesBestellingVanTafel(tafelnummer);
+
+                    lv_RekeningOverzicht.Clear();
+
+                    lv_RekeningOverzicht.View = View.Details;
+                    lv_RekeningOverzicht.GridLines = true;
+                    lv_RekeningOverzicht.FullRowSelect = true;
+
+                    // Aanmaken van kolommen
+                    lv_RekeningOverzicht.Columns.Add("Aantal", 80);
+                    lv_RekeningOverzicht.Columns.Add("Drankje/Gerecht", 200);
+                    lv_RekeningOverzicht.Columns.Add("Prijs", 80);
+                    lv_RekeningOverzicht.Columns.Add("Individuele prijs", 100);
+
+                    string[] bestellingen = new string[4];
+                    ListViewItem itm;
+
+                    foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                    {
+                        bestellingen[0] = g.Aantal.ToString();
+                        bestellingen[1] = g.GerechtNaam;
+                        bestellingen[2] = (g.Prijs * g.Aantal).ToString("0.00");
+                        bestellingen[3] = g.Prijs.ToString("0.00");
+
+                        itm = new ListViewItem(bestellingen);
+                        lv_RekeningOverzicht.Items.Add(itm);
+                    }
+
+                    foreach (SomerenModel.DrankLijstItem d in drankList)
+                    {
+                        bestellingen[0] = d.aantal.ToString();
+                        bestellingen[1] = d.drankNaam;
+                        bestellingen[2] = (d.Prijs * d.aantal).ToString("0.00");
+                        bestellingen[3] = d.Prijs.ToString("0.00");
+
+                        itm = new ListViewItem(bestellingen);
+                        lv_RekeningOverzicht.Items.Add(itm);
+                    }
+                }
+
+
             }
             else if (panelName == "Reserveringen")
             {
@@ -679,12 +729,15 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
-                    bestellingen[0] = "Tafel " + b.TafelID.ToString();
-                    bestellingen[1] = b.BestellingID.ToString();
-                    bestellingen[2] = b.statusKeuken.ToString();
+                    if (b.statusBar != StatusBestelling.Betaald)
+                    {
+                        bestellingen[0] = "Tafel " + b.TafelID.ToString();
+                        bestellingen[1] = b.BestellingID.ToString();
+                        bestellingen[2] = b.statusKeuken.ToString();
 
-                    itm = new ListViewItem(bestellingen);
-                    lv_KeukenOverzicht.Items.Add(itm);
+                        itm = new ListViewItem(bestellingen);
+                        lv_KeukenOverzicht.Items.Add(itm);
+                    }                      
                 }
 
             }
@@ -716,12 +769,15 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
-                    bestellingen[0] = "Tafel " + b.TafelID.ToString();
-                    bestellingen[1] = b.BestellingID.ToString();
-                    bestellingen[2] = b.statusBar.ToString();
+                    if (b.statusBar != StatusBestelling.Betaald)
+                    {
+                        bestellingen[0] = "Tafel " + b.TafelID.ToString();
+                        bestellingen[1] = b.BestellingID.ToString();
+                        bestellingen[2] = b.statusBar.ToString();
 
-                    itm = new ListViewItem(bestellingen);
-                    lv_BarOverzicht.Items.Add(itm);
+                        itm = new ListViewItem(bestellingen);
+                        lv_BarOverzicht.Items.Add(itm);
+                    }
                 }
             }
             else if (panelName == "BarBestelling")
@@ -786,11 +842,11 @@ namespace SomerenUI
 
                     if (d.status == Status.KlaarVoorServeren)
                     {
-                        itm.BackColor = Color.MistyRose;
+                        itm.BackColor = Color.Green;
                     }
                     else if (d.status == Status.Geserveerd)
                     {
-                        itm.BackColor = Color.Pink;
+                        itm.BackColor = Color.LightBlue;
                     }
 
                     lv_BarBestelling.Items.Add(itm);
@@ -860,11 +916,11 @@ namespace SomerenUI
 
                     if (g.status == Status.KlaarVoorServeren)
                     {
-                        itm.BackColor = Color.MistyRose;
+                        itm.BackColor = Color.Green;
                     }     
                     else if (g.status == Status.Geserveerd)
                     {
-                        itm.BackColor = Color.Pink;
+                        itm.BackColor = Color.LightBlue;
                     }
 
                     lv_BestellingenKeuken.Items.Add(itm);
@@ -881,9 +937,8 @@ namespace SomerenUI
                 pnl_AfrekenOverzicht.Show();
                 gb_Afgerekend.Hide();
                 gb_AfrekenPopUp.Hide();
-                
-                //lbl_TafelNrInvoer.Text = geselecteerdeTafel;
 
+                // combobox betaalmethode
                 cmb_BetaalMethode.Items.Clear();
 
                 cmb_BetaalMethode.Items.Add(BetaalMethode.Pin);
@@ -891,6 +946,40 @@ namespace SomerenUI
                 cmb_BetaalMethode.Items.Add(BetaalMethode.CreditCard);
 
                 cmb_BetaalMethode.SelectedIndex = 0;
+
+                txt_Fooi.Clear();
+
+                lbl_TafelNrInvoer.Text = tafelnummer.ToString();
+               
+                List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
+                List<DrankLijstItem> drankList = drankLijstItemService.GetDrankjesBestellingVanTafel(tafelnummer);
+
+                totaalPrijs = 0;
+                double btwPrijs = 0;
+
+                foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                {
+                    totaalPrijs += (g.Aantal * g.Prijs);
+                    btwPrijs += (g.Prijs * 0.09 * g.Aantal);
+                }
+                
+                foreach (SomerenModel.DrankLijstItem d in drankList)
+                {
+                    totaalPrijs += (d.aantal * d.Prijs);
+                    if (d.alcoholisch == Alcholisch.Ja)
+                    {
+                        btwPrijs += (d.Prijs * 0.21 * d.aantal);
+                    }
+                    else
+                    {
+                        btwPrijs += (d.Prijs * 0.09 * d.aantal);
+                    }
+                }
+
+                lbl_EindBedragInvoer.Text = totaalPrijs.ToString("0.00");
+                lbl_TotaalBedrag.Text = "€" + totaalPrijs.ToString("0.00");
+                lbl_BTWBedrag.Text = btwPrijs.ToString("0.00");
+               
             }
 
         }
@@ -1570,38 +1659,7 @@ namespace SomerenUI
 
             vulGerechtVoorraad();
         }
-
-        private void btn_AfrekenBetalen_Click(object sender, EventArgs e)
-        {
-            gb_AfrekenPopUp.Show();
-        }
-
-        private void btn_AfrekenAnnuleren_Click(object sender, EventArgs e)
-        {
-            showPanel("RekeningOverzicht");
-        }
-
-        private void btn_AfrekenNee_Click(object sender, EventArgs e)
-        {
-            gb_AfrekenPopUp.Hide();
-        }
-
-        private void btnAfrekenJa_Click(object sender, EventArgs e)
-        {
-            gb_AfrekenPopUp.Hide();
-            gb_Afgerekend.Show();
-        }
-
-        private void btn_BetalingVoltooid_Click(object sender, EventArgs e)
-        {
-            showPanel("Overzicht");
-        }
-
-        private void btn_Afrekenen_Click(object sender, EventArgs e)
-        {
-            showPanel("Afrekenen");
-        }
-
+        
         private void btn_LogUit_Click(object sender, EventArgs e)
         {
             showPanel("LogIn");
@@ -1830,11 +1888,58 @@ namespace SomerenUI
             }
         }
 
-
+        // Afrekenen
         private void btn_VoegToeFooi_Click(object sender, EventArgs e)
         {
-           //
+            double fooi = double.Parse(txt_Fooi.Text);
+            totaalPrijs += fooi;
+
+            lbl_EindBedragInvoer.Text = totaalPrijs.ToString("0.00");
         }
+        private void btn_AfrekenBetalen_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Show();
+        }
+        private void btn_AfrekenAnnuleren_Click(object sender, EventArgs e)
+        {
+            showPanel("RekeningOverzicht");
+        }
+        private void btn_AfrekenNee_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Hide();
+        }
+        private void btnAfrekenJa_Click(object sender, EventArgs e)
+        {
+            gb_AfrekenPopUp.Hide();
+            gb_Afgerekend.Show();
+
+            AfrondenBestelling();
+        }
+        private void AfrondenBestelling()
+        {
+            if (txt_Fooi.Text == "")
+            {
+                txt_Fooi.Text = (0.0).ToString();
+            }
+
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+
+            rekeningService.InsertRekening(double.Parse(txt_Fooi.Text), txt_Commentaar.Text, (BetaalMethode)cmb_BetaalMethode.SelectedItem, bestelling, totaalPrijs);
+
+            VeranderStatusBestellingBar(StatusBestelling.Betaald, bestelling);
+            VeranderStatusBestellingKeuken(StatusBestelling.Betaald, bestelling);
+        }
+        private void btn_BetalingVoltooid_Click(object sender, EventArgs e)
+        {
+            showPanel("Overzicht");
+        }
+        private void btn_Afrekenen_Click(object sender, EventArgs e)
+        {
+            showPanel("Afrekenen");
+        }
+
+
+
 
         private void CB_SoortGerechtLunch_SelectedIndexChanged(object sender, EventArgs e)
         {

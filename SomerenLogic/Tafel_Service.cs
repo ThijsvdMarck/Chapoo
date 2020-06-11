@@ -39,5 +39,7 @@ namespace SomerenLogic
         {
            return tafel_db.GetHuidigeBestelling(TafelNummer);
         }
+
+     
     }
 }

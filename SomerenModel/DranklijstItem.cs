@@ -15,5 +15,7 @@ namespace SomerenModel
         public DateTime tijd { get; set; }
         public int drankID { get; set; }
         public int TafelID { get; set; }
+        public double Prijs { get; set; }
+        public Alcholisch alcoholisch { get; set; }
     }
 }
