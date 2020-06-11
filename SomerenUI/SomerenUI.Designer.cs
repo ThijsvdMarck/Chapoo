@@ -108,9 +108,9 @@
             this.pnl_LunchBestelling = new System.Windows.Forms.Panel();
             this.CB_SoortGerechtLunch = new System.Windows.Forms.ComboBox();
             this.CB_SoortGerechtDiner = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_VoegToeBestelling = new System.Windows.Forms.Button();
             this.CB_Aantal = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.CB_Items = new System.Windows.Forms.ComboBox();
             this.CB_LunchDiner = new System.Windows.Forms.ComboBox();
             this.CB_EtenDrinken = new System.Windows.Forms.ComboBox();
             this.lbl_PrijsBoerenKazen = new System.Windows.Forms.Label();
@@ -526,6 +526,7 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
+            this.CB_SoortDrankje = new System.Windows.Forms.ComboBox();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -1513,11 +1514,12 @@
             // 
             // pnl_LunchBestelling
             // 
+            this.pnl_LunchBestelling.Controls.Add(this.CB_SoortDrankje);
             this.pnl_LunchBestelling.Controls.Add(this.CB_SoortGerechtLunch);
             this.pnl_LunchBestelling.Controls.Add(this.CB_SoortGerechtDiner);
-            this.pnl_LunchBestelling.Controls.Add(this.button1);
+            this.pnl_LunchBestelling.Controls.Add(this.btn_VoegToeBestelling);
             this.pnl_LunchBestelling.Controls.Add(this.CB_Aantal);
-            this.pnl_LunchBestelling.Controls.Add(this.comboBox3);
+            this.pnl_LunchBestelling.Controls.Add(this.CB_Items);
             this.pnl_LunchBestelling.Controls.Add(this.CB_LunchDiner);
             this.pnl_LunchBestelling.Controls.Add(this.CB_EtenDrinken);
             this.pnl_LunchBestelling.Controls.Add(this.lbl_PrijsBoerenKazen);
@@ -1600,14 +1602,14 @@
             this.CB_SoortGerechtDiner.TabIndex = 62;
             this.CB_SoortGerechtDiner.SelectedIndexChanged += new System.EventHandler(this.CB_SoortGerecht_SelectedIndexChanged);
             // 
-            // button1
+            // btn_VoegToeBestelling
             // 
-            this.button1.Location = new System.Drawing.Point(26, 563);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(556, 50);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_VoegToeBestelling.Location = new System.Drawing.Point(26, 563);
+            this.btn_VoegToeBestelling.Name = "btn_VoegToeBestelling";
+            this.btn_VoegToeBestelling.Size = new System.Drawing.Size(556, 50);
+            this.btn_VoegToeBestelling.TabIndex = 61;
+            this.btn_VoegToeBestelling.Text = "Voeg toe aan bestelling";
+            this.btn_VoegToeBestelling.UseVisualStyleBackColor = true;
             // 
             // CB_Aantal
             // 
@@ -1618,14 +1620,14 @@
             this.CB_Aantal.TabIndex = 60;
             this.CB_Aantal.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
-            // comboBox3
+            // CB_Items
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(24, 499);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(455, 21);
-            this.comboBox3.TabIndex = 59;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.CB_Items.FormattingEnabled = true;
+            this.CB_Items.Location = new System.Drawing.Point(24, 499);
+            this.CB_Items.Name = "CB_Items";
+            this.CB_Items.Size = new System.Drawing.Size(455, 21);
+            this.CB_Items.TabIndex = 59;
+            this.CB_Items.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // CB_LunchDiner
             // 
@@ -6984,6 +6986,14 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
+            // CB_SoortDrankje
+            // 
+            this.CB_SoortDrankje.FormattingEnabled = true;
+            this.CB_SoortDrankje.Location = new System.Drawing.Point(188, 451);
+            this.CB_SoortDrankje.Name = "CB_SoortDrankje";
+            this.CB_SoortDrankje.Size = new System.Drawing.Size(133, 21);
+            this.CB_SoortDrankje.TabIndex = 64;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7542,11 +7552,11 @@
         private System.Windows.Forms.Button btnAfrekenJa;
         private System.Windows.Forms.Label lbl_AfrekenPopUp;
         private System.Windows.Forms.ComboBox CB_Aantal;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox CB_Items;
         private System.Windows.Forms.ComboBox CB_LunchDiner;
         private System.Windows.Forms.ComboBox CB_EtenDrinken;
         private System.Windows.Forms.ComboBox CB_SoortGerechtDiner;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_VoegToeBestelling;
         private System.Windows.Forms.Button btn_RefreshKeukenOverzicht;
         private System.Windows.Forms.Button btn_RefreshBarOverzicht;
         private System.Windows.Forms.ComboBox CB_SoortGerechtLunch;
@@ -7558,6 +7568,7 @@
         private System.Windows.Forms.Label lbl_LopendeBestelling;
         private System.Windows.Forms.Label lbl_Vrij;
         private System.Windows.Forms.Button btn_TEST;
+        private System.Windows.Forms.ComboBox CB_SoortDrankje;
     }
 }
 
