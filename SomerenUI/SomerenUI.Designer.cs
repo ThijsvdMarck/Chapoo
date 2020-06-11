@@ -90,6 +90,10 @@
             this.btn_Voorraad = new System.Windows.Forms.Button();
             this.btn_Tafels = new System.Windows.Forms.Button();
             this.pnl_TafelOverzicht = new System.Windows.Forms.Panel();
+            this.btn_TEST = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_LopendeBestelling = new System.Windows.Forms.Label();
+            this.lbl_Vrij = new System.Windows.Forms.Label();
             this.lbl_SelecteerTafel = new System.Windows.Forms.Label();
             this.btn_Tafel9 = new System.Windows.Forms.Button();
             this.btn_Tafel7 = new System.Windows.Forms.Button();
@@ -105,7 +109,7 @@
             this.CB_SoortGerechtLunch = new System.Windows.Forms.ComboBox();
             this.CB_SoortGerechtDiner = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.CB_Aantal = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.CB_LunchDiner = new System.Windows.Forms.ComboBox();
             this.CB_EtenDrinken = new System.Windows.Forms.ComboBox();
@@ -522,10 +526,6 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.lbl_Vrij = new System.Windows.Forms.Label();
-            this.lbl_LopendeBestelling = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_TEST = new System.Windows.Forms.Button();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -1348,6 +1348,50 @@
             this.pnl_TafelOverzicht.Size = new System.Drawing.Size(610, 646);
             this.pnl_TafelOverzicht.TabIndex = 20;
             // 
+            // btn_TEST
+            // 
+            this.btn_TEST.Location = new System.Drawing.Point(57, 292);
+            this.btn_TEST.Name = "btn_TEST";
+            this.btn_TEST.Size = new System.Drawing.Size(128, 80);
+            this.btn_TEST.TabIndex = 18;
+            this.btn_TEST.Text = "TEST";
+            this.btn_TEST.UseVisualStyleBackColor = true;
+            this.btn_TEST.Click += new System.EventHandler(this.btn_TEST_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Image = global::SomerenUI.Properties.Resources.Tafel1;
+            this.label1.Location = new System.Drawing.Point(32, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 100);
+            this.label1.TabIndex = 17;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_LopendeBestelling
+            // 
+            this.lbl_LopendeBestelling.BackColor = System.Drawing.Color.Yellow;
+            this.lbl_LopendeBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_LopendeBestelling.Location = new System.Drawing.Point(145, 175);
+            this.lbl_LopendeBestelling.Name = "lbl_LopendeBestelling";
+            this.lbl_LopendeBestelling.Size = new System.Drawing.Size(90, 81);
+            this.lbl_LopendeBestelling.TabIndex = 16;
+            this.lbl_LopendeBestelling.Text = "Lopende Bestelling";
+            this.lbl_LopendeBestelling.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Vrij
+            // 
+            this.lbl_Vrij.BackColor = System.Drawing.Color.White;
+            this.lbl_Vrij.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_Vrij.Location = new System.Drawing.Point(50, 76);
+            this.lbl_Vrij.Name = "lbl_Vrij";
+            this.lbl_Vrij.Size = new System.Drawing.Size(90, 75);
+            this.lbl_Vrij.TabIndex = 15;
+            this.lbl_Vrij.Text = "Vrij";
+            this.lbl_Vrij.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbl_SelecteerTafel
             // 
             this.lbl_SelecteerTafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -1472,7 +1516,7 @@
             this.pnl_LunchBestelling.Controls.Add(this.CB_SoortGerechtLunch);
             this.pnl_LunchBestelling.Controls.Add(this.CB_SoortGerechtDiner);
             this.pnl_LunchBestelling.Controls.Add(this.button1);
-            this.pnl_LunchBestelling.Controls.Add(this.comboBox4);
+            this.pnl_LunchBestelling.Controls.Add(this.CB_Aantal);
             this.pnl_LunchBestelling.Controls.Add(this.comboBox3);
             this.pnl_LunchBestelling.Controls.Add(this.CB_LunchDiner);
             this.pnl_LunchBestelling.Controls.Add(this.CB_EtenDrinken);
@@ -1545,6 +1589,7 @@
             this.CB_SoortGerechtLunch.Name = "CB_SoortGerechtLunch";
             this.CB_SoortGerechtLunch.Size = new System.Drawing.Size(147, 21);
             this.CB_SoortGerechtLunch.TabIndex = 63;
+            this.CB_SoortGerechtLunch.SelectedIndexChanged += new System.EventHandler(this.CB_SoortGerechtLunch_SelectedIndexChanged);
             // 
             // CB_SoortGerechtDiner
             // 
@@ -1564,14 +1609,14 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox4
+            // CB_Aantal
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(529, 499);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(41, 21);
-            this.comboBox4.TabIndex = 60;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.CB_Aantal.FormattingEnabled = true;
+            this.CB_Aantal.Location = new System.Drawing.Point(529, 499);
+            this.CB_Aantal.Name = "CB_Aantal";
+            this.CB_Aantal.Size = new System.Drawing.Size(41, 21);
+            this.CB_Aantal.TabIndex = 60;
+            this.CB_Aantal.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -5899,9 +5944,9 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pic_ChapooHead);
+            this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
-            this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingBar);
             this.pnl_Base.Controls.Add(this.pnl_BestellingKeuken);
@@ -6939,50 +6984,6 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
-            // lbl_Vrij
-            // 
-            this.lbl_Vrij.BackColor = System.Drawing.Color.White;
-            this.lbl_Vrij.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Vrij.Location = new System.Drawing.Point(50, 76);
-            this.lbl_Vrij.Name = "lbl_Vrij";
-            this.lbl_Vrij.Size = new System.Drawing.Size(90, 75);
-            this.lbl_Vrij.TabIndex = 15;
-            this.lbl_Vrij.Text = "Vrij";
-            this.lbl_Vrij.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_LopendeBestelling
-            // 
-            this.lbl_LopendeBestelling.BackColor = System.Drawing.Color.Yellow;
-            this.lbl_LopendeBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_LopendeBestelling.Location = new System.Drawing.Point(145, 175);
-            this.lbl_LopendeBestelling.Name = "lbl_LopendeBestelling";
-            this.lbl_LopendeBestelling.Size = new System.Drawing.Size(90, 81);
-            this.lbl_LopendeBestelling.TabIndex = 16;
-            this.lbl_LopendeBestelling.Text = "Lopende Bestelling";
-            this.lbl_LopendeBestelling.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Image = global::SomerenUI.Properties.Resources.Tafel1;
-            this.label1.Location = new System.Drawing.Point(32, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 100);
-            this.label1.TabIndex = 17;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_TEST
-            // 
-            this.btn_TEST.Location = new System.Drawing.Point(57, 292);
-            this.btn_TEST.Name = "btn_TEST";
-            this.btn_TEST.Size = new System.Drawing.Size(128, 80);
-            this.btn_TEST.TabIndex = 18;
-            this.btn_TEST.Text = "TEST";
-            this.btn_TEST.UseVisualStyleBackColor = true;
-            this.btn_TEST.Click += new System.EventHandler(this.btn_TEST_Click);
-            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7540,7 +7541,7 @@
         private System.Windows.Forms.Button btn_AfrekenNee;
         private System.Windows.Forms.Button btnAfrekenJa;
         private System.Windows.Forms.Label lbl_AfrekenPopUp;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox CB_Aantal;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox CB_LunchDiner;
         private System.Windows.Forms.ComboBox CB_EtenDrinken;

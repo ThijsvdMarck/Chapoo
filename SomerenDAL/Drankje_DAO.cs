@@ -15,7 +15,7 @@ namespace SomerenDAL
 
         public List<Drankje> Db_Get_All_Drankjes()
         {
-            string query = "SELECT DrankID, Dranknaam, Voorraad, Alcoholisch, Prijs FROM [Drankje]";
+            string query = "SELECT DrankID, Dranknaam, Voorraad, Alcoholisch, Prijs, Soortdrankje FROM [Drankje]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -32,8 +32,8 @@ namespace SomerenDAL
                     drankNaam = (string)dr["Dranknaam"],
                     voorraad = (int)dr["Voorraad"],
                     alcholisch = (Alcholisch)Enum.Parse(typeof(Alcholisch), (string)dr["Alcoholisch"]),
-                    prijs = (double)dr["Prijs"]
-
+                    prijs = (double)dr["Prijs"],
+                    soortDrankje = (SoortDrankje)Enum.Parse(typeof(SoortDrankje), (string)dr["Soortdrankje"])
                 };
                 drankjes.Add(drankje);
             }
