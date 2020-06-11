@@ -572,7 +572,7 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkRekening.Show();
                 pnl_RekeningOverzicht.Show();
-
+                lbl_TafelInfo.Text = "Tafel " + tafelnummer.ToString();
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
                 List<DrankLijstItem> drankList = drankLijstService.GetDrankjesBestellingVanTafel(tafelnummer);
 
@@ -854,7 +854,14 @@ namespace SomerenUI
                 gb_AfrekenPopUp.Hide();
 
                 lbl_TafelNrInvoer.Text = tafelnummer.ToString();
-
+               
+                List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
+                
+                
+                //foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                //{
+                //   prij 
+                //}
                 cmb_BetaalMethode.Items.Clear();
 
                 cmb_BetaalMethode.Items.Add(BetaalMethode.Pin);
