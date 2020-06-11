@@ -856,12 +856,34 @@ namespace SomerenUI
                 lbl_TafelNrInvoer.Text = tafelnummer.ToString();
                
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
+                List<DrankLijstItem> drankList = drankLijstService.GetDrankjesBestellingVanTafel(tafelnummer);
+
+                double totaalPrijs = 0;
+                double btwPrijs = 0;
+
+                foreach (SomerenModel.GerechtlijstItem g in gerechtList)
+                {
+                    totaalPrijs += (g.Aantal * g.Prijs);
+                    btwPrijs += (g.Prijs * 0.09 * g.Aantal);
+                }
                 
-                
-                //foreach (SomerenModel.GerechtlijstItem g in gerechtList)
-                //{
-                //   prij 
-                //}
+                foreach (SomerenModel.DrankLijstItem d in drankList)
+                {
+                    totaalPrijs += (d.aantal * d.Prijs);
+                    if (d.alcoholisch == Alcholisch.Ja)
+                    {
+                        btwPrijs += (d.Prijs * 0.21 * d.aantal);
+                    }
+                    else
+                    {
+                        btwPrijs += (d.Prijs * 0.09 * d.aantal);
+                    }
+                }
+
+                lbl_EindBedragInvoer.Text = totaalPrijs.ToString();
+                lbl_TotaalBedrag.Text = "€" + totaalPrijs.ToString("0.00");
+                lbl_BTWBedrag.Text = btwPrijs.ToString("0.00");
+
                 cmb_BetaalMethode.Items.Clear();
 
                 cmb_BetaalMethode.Items.Add(BetaalMethode.Pin);

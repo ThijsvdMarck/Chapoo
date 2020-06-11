@@ -38,7 +38,7 @@ namespace SomerenDAL
                 GerechtlijstItem gerechtlijstItem = new GerechtlijstItem()
                 {
                     BestellingID = (int)dr["BestellingID"],
-                    Aantal = (int)dr["Aantal"],
+                    Aantal = (int)dr["Aantal"], 
                     status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
                     GerechtNaam = (string)dr["Gerechtnaam"],
                     Tijd = (DateTime)dr["Tijd"],
