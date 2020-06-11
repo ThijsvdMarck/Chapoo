@@ -15,7 +15,14 @@ namespace SomerenDAL
 
         public List<DrankLijstItem> Db_Get_All_DrankLijstItems(int bestelling)
         {
-            string query = "SELECT BestellingID, Dranklijst.DrankID, Aantal, [Status], Drankje.Dranknaam, Tijd FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID WHERE BestellingID = " + bestelling.ToString();
+            string query = "SELECT Dranklijst.BestellingID, Dranklijst.DrankID, Aantal, [Status], Drankje.Dranknaam, Tijd, TafelID FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID JOIN Bestelling ON Dranklijst.BestellingID=Bestelling.BestellingID JOIN Tafel ON Tafel.BestellingID=Bestelling.BestellingID WHERE Dranklijst.BestellingID = " + bestelling.ToString();
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<DrankLijstItem> Db_Get_All_DrankLijstItemsTafel()
+        {
+            string query = "SELECT Dranklijst.BestellingID, Dranklijst.DrankID, Aantal, [Status], Drankje.Dranknaam, Tijd, TafelID FROM Dranklijst JOIN Drankje ON Dranklijst.DrankID = Drankje.DrankID JOIN Bestelling ON Dranklijst.BestellingID=Bestelling.BestellingID JOIN Tafel ON Tafel.BestellingID=Bestelling.BestellingID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -33,7 +40,8 @@ namespace SomerenDAL
                     status = (Status)Enum.Parse(typeof(Status), (string)dr["Status"]),
                     aantal = (int)dr["Aantal"],
                     tijd = (DateTime)dr["Tijd"],
-                    drankID = (int)dr["DrankID"]
+                    drankID = (int)dr["DrankID"],
+                    TafelID = (int)dr["TafelID"]
                 };
                 drankLijstItems.Add(drankLijstItem);
             }
