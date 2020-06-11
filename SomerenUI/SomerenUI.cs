@@ -595,8 +595,8 @@ namespace SomerenUI
                 {
                     bestellingen[0] = g.Aantal.ToString();
                     bestellingen[1] = g.GerechtNaam;
-                    bestellingen[2] = (g.Prijs * g.Aantal).ToString();
-                    bestellingen[3] = g.Prijs.ToString();
+                    bestellingen[2] = (g.Prijs * g.Aantal).ToString("0.00");
+                    bestellingen[3] = g.Prijs.ToString("0.00");
 
                     itm = new ListViewItem(bestellingen);
                     lv_RekeningOverzicht.Items.Add(itm);
@@ -606,8 +606,8 @@ namespace SomerenUI
                 {
                     bestellingen[0] = d.aantal.ToString();
                     bestellingen[1] = d.drankNaam;
-                    bestellingen[2] = (d.Prijs * d.aantal).ToString();
-                    bestellingen[3] = d.Prijs.ToString(); 
+                    bestellingen[2] = (d.Prijs * d.aantal).ToString("0.00");
+                    bestellingen[3] = d.Prijs.ToString("0.00"); 
 
                     itm = new ListViewItem(bestellingen);
                     lv_RekeningOverzicht.Items.Add(itm);

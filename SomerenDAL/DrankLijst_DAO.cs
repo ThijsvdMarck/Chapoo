@@ -86,7 +86,7 @@ namespace SomerenDAL
                     drankNaam = (string)dr["Dranknaam"],
                     aantal = (int)dr["Aantal"],
                     alcoholisch = (Alcholisch)Enum.Parse(typeof(Alcholisch), (string)dr["Alcoholisch"]),
-                    Prijs = (float)dr["Prijs"],
+                    Prijs = (double)dr["Prijs"],
                     TafelID = (int)dr["TafelID"]
                 };
                 drankLijstItems.Add(drankLijstItem);

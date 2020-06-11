@@ -75,7 +75,7 @@ namespace SomerenDAL
                 {
                     GerechtNaam = (string)dr["Gerechtnaam"],
                     Aantal = (int)dr["Aantal"],
-                    Prijs = (float)dr["Prijs"],
+                    Prijs = (double)dr["Prijs"],
                     TafelID = (int)dr["TafelID"]
                 };
                 gerechtLijstItems.Add(gerechtLijstItem);
