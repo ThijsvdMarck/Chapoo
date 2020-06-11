@@ -18,12 +18,12 @@ namespace SomerenModel
 
     public enum Functie
     {
-        barpersoneel, kok, bediening, eigenaar
+        Barpersoneel, Kok, Serveerder, Manager
     }
 
     public enum Status
     {
-        Besteld, WordtBereid, KlaarVoorServeren, Geserveerd
+        Besteld, WordtBereid, KlaarVoorServeren, Geserveerd, Opslag
     }
     public enum SoortDrankje
     {

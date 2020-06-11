@@ -14,7 +14,7 @@ namespace SomerenDAL
     {
         public List<Personeel> Db_Get_All_Personeel()
         {
-            string query = "SELECT PersoneelID, Naam, Functie FROM [Personeel]";
+            string query = "SELECT PersoneelID, Naam, Functie, Geboortedatum FROM [Personeel]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -28,8 +28,9 @@ namespace SomerenDAL
                 Personeel personeel = new Personeel()
                 {
                     PersoneelID = (int)dr["PersoneelID"],
-                    Naam = (string)(dr["Naam"].ToString()),
-                    functie = (Functie)Enum.Parse(typeof(Functie), (string)dr["Functie"])
+                    Naam = (string)dr["Naam"],
+                    functie = (Functie)Enum.Parse(typeof(Functie), (string)dr["Functie"]),
+                    geboortedatum = DateTime.Now
                 };
                 personeels.Add(personeel);
             }

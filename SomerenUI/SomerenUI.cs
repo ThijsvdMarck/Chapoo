@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+// Test voor save
 namespace SomerenUI
 {
     // Friet is lekker
@@ -20,8 +21,9 @@ namespace SomerenUI
         SomerenLogic.Gerecht_Service gerechtService = new SomerenLogic.Gerecht_Service();
         SomerenLogic.Bestelling_Service bestellingService = new SomerenLogic.Bestelling_Service();
         SomerenLogic.GerechtlijstItem_Service gerechtlijstItemService = new SomerenLogic.GerechtlijstItem_Service();
-        SomerenLogic.DrankLijstItem_Service drankLijstService = new SomerenLogic.DrankLijstItem_Service();
+        SomerenLogic.DrankLijstItem_Service drankLijstItemService = new SomerenLogic.DrankLijstItem_Service();
         SomerenLogic.Tafel_Service tafelService = new SomerenLogic.Tafel_Service();
+        SomerenLogic.Personeel_Service personeelService = new SomerenLogic.Personeel_Service();
 
 
         int tafelnummer;
@@ -69,6 +71,8 @@ namespace SomerenUI
             pnl_BestellingBar.Hide();
             pnl_BestellingKeuken.Hide();
             pnl_AfrekenOverzicht.Hide();
+            pnl_BestellingVersturen.Hide();
+            pnl_BestellingVerstuurd.Hide();
 
         }
         private void GetItemList()
@@ -285,10 +289,21 @@ namespace SomerenUI
                  foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
              }*/
         }
+        private List<GerechtlijstItem> GetGerechtItemLijst() {
+
+            List<GerechtlijstItem> gerechtBestellingsOverzichtList = gerechtlijstItemService.GetGerechtlijstItemsTafel();
+            return gerechtBestellingsOverzichtList;
+        }        
+        private List<DrankLijstItem> GetDrankItemLijst()
+        {
+            List<DrankLijstItem> drankBestellingsOverzichtList = drankLijstItemService.GetDrankLijstItemsTafel();
+            return drankBestellingsOverzichtList;
+        }
 
         private void SomerenUI_Load(object sender, EventArgs e)
         {
             showPanel("LogIn");
+
         }
 
 
@@ -355,6 +370,56 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkBestelling.Show();
                 pnl_BestellingsOverzicht.Show();
+                pnl_BestellingVersturen.Hide();
+                pnl_BestellingVerstuurd.Hide();
+
+                // clear the listview before filling it again
+                lv_BestellingsOverzicht.Clear();
+
+                lv_BestellingsOverzicht.View = View.Details;
+                //lv_BestellingsOverzicht.GridLines = true;
+                lv_BestellingsOverzicht.FullRowSelect = true;
+                lv_BestellingsOverzicht.CheckBoxes = true;
+
+                // Aanmaken van kolommen
+                lv_BestellingsOverzicht.Columns.Add("Naam", 200);
+                //lv_BestellingsOverzicht.Columns.Add("Prijs", 200);
+                lv_BestellingsOverzicht.Columns.Add("Aantal", 100);
+
+                List<DrankLijstItem> drankBestellingsOverzichtList = GetDrankItemLijst();
+                List<GerechtlijstItem> gerechtBestellingsOverzichtList = GetGerechtItemLijst();
+
+                string[] bestellingen = new string[2];
+                ListViewItem itm;
+
+                foreach (SomerenModel.DrankLijstItem b in drankBestellingsOverzichtList)
+                {
+                    if (b.status == Status.Opslag && b.aantal > 0)
+                    {
+                        bestellingen[0] = b.drankNaam.ToString();
+                        //bestellingen[1] = b..ToString();
+                        bestellingen[1] = b.aantal.ToString();
+
+                        itm = new ListViewItem(bestellingen);
+                        lv_BestellingsOverzicht.Items.Add(itm);
+                    }
+
+
+                }
+                foreach (SomerenModel.GerechtlijstItem b in gerechtBestellingsOverzichtList)
+                {
+                    if (b.status == Status.Opslag && b.Aantal > 0)
+                    {
+                        bestellingen[0] = b.GerechtNaam.ToString();
+                        //bestellingen[1] = b..ToString();
+                        bestellingen[1] = b.Aantal.ToString();
+
+                        itm = new ListViewItem(bestellingen);
+                        lv_BestellingsOverzicht.Items.Add(itm);
+                    }
+
+                }
+
             }
             else if (panelName == "BestellingVersturen")
             {
@@ -418,6 +483,9 @@ namespace SomerenUI
                 CB_LunchDiner.Items.Clear();
                 CB_EtenDrinken.Items.Clear();
                 CB_SoortGerechtDiner.Items.Clear();
+                CB_SoortGerechtLunch.Items.Clear();
+                CB_SoortDrankje.Items.Clear();
+                CB_Aantal.Items.Clear();
 
 
                 CB_LunchDiner.Items.Add(DagType.Lunch.ToString());
@@ -504,7 +572,7 @@ namespace SomerenUI
                     if (btn.BackColor != Color.Green || btn.BackColor != Color.Yellow)
                     {
                         // kijken of er bestellingen met een hogere prioriteit status bij de bar zijn
-                        List<DrankLijstItem> dranklijst = drankLijstService.GetDrankLijstItemsTafel();
+                        List<DrankLijstItem> dranklijst = drankLijstItemService.GetDrankLijstItemsTafel();
                         CheckStatusDrankjes(dranklijst);
                     }
                 }
@@ -684,7 +752,7 @@ namespace SomerenUI
                 // Listview
                 int geselecteerdeBestelling = GetGeselecteerdeBestellingBar();
 
-                List<DrankLijstItem> drankList = drankLijstService.GetDrankLijstItems(geselecteerdeBestelling);
+                List<DrankLijstItem> drankList = drankLijstItemService.GetDrankLijstItems(geselecteerdeBestelling);
 
                 // clear the listview before filling it again
                 lv_BarBestelling.Clear();
@@ -846,6 +914,44 @@ namespace SomerenUI
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
             showPanel("Overzicht");
+
+            /* List<Personeel> personeelList = personeelService.GetPersoneel();
+            foreach (Personeel item in personeelList)
+            {
+                if (txt_LogIn.Text == item.PersoneelID.ToString())
+                {
+                    showPanel("Overzicht");
+                    break;
+
+                }
+            }
+            foreach (Personeel item in personeelList)
+            {
+                if (txt_LogIn.Text != item.PersoneelID.ToString())
+                {
+                    {
+                        string message = "Error";
+                        string caption = "Verkeerde toegangscode";
+                        MessageBoxButtons buttons = MessageBoxButtons.OK;
+                        DialogResult result;
+
+                        // Displays the MessageBox.
+                        result = MessageBox.Show(message, caption, buttons);
+                        if (result == System.Windows.Forms.DialogResult.OK)
+                        {
+
+                            showPanel("LogIn");
+
+                        }
+                    }
+                    
+                }
+            }*/
+
+
+
+
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -1015,7 +1121,18 @@ namespace SomerenUI
 
         private void btn_BestellingVersturenJa_Click(object sender, EventArgs e)
         {
-            showPanel("BestellingVerstuurd");
+            List<GerechtlijstItem> gerechtBestellingsOverzichtList = GetGerechtItemLijst();
+            List<DrankLijstItem> drankBestellingsOverzichtList = GetDrankItemLijst();
+
+            foreach (GerechtlijstItem item in gerechtBestellingsOverzichtList)
+            {
+                gerechtlijstItemService.UpdateGerechtItem(Status.Besteld, tafelService.GetHuidigeBestelling(tafelnummer), gerechtService.GetGerechtID(item.GerechtNaam));
+            }
+            foreach (DrankLijstItem item in drankBestellingsOverzichtList)
+            {
+                drankLijstItemService.UpdateDrankItem(Status.Besteld, tafelService.GetHuidigeBestelling(tafelnummer), drankService.GetDrankID(item.drankNaam));
+            }
+            showPanel("Tafels");
         }
 
         private void btn_BestellingVersturenOK_Click(object sender, EventArgs e)
@@ -1296,7 +1413,7 @@ namespace SomerenUI
                     int geselecteerdeBestelling = GetGeselecteerdeBestellingBar();
                     int geselecteerdDrankje = GetGeselecteerdDrankje();
 
-                    drankLijstService.UpdateDrankItem(status, geselecteerdeBestelling, geselecteerdDrankje);
+                    drankLijstItemService.UpdateDrankItem(status, geselecteerdeBestelling, geselecteerdDrankje);
                 }
             }
         }
@@ -1497,7 +1614,7 @@ namespace SomerenUI
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CB_Aantal.Text = "0";
+            CB_Aantal.Text = "1";
             if (CB_Items.Text != "")
             {
                 CB_Aantal.Show();
@@ -1579,7 +1696,7 @@ namespace SomerenUI
         }
         private void btn_TEST_Click(object sender, EventArgs e)
         {
-            tafelnummer = 1;
+            tafelnummer = 6;
             showPanel("RekeningOverzicht"); // Moet nog terug naar button 1 na UI.
             //Iets met dit tafelnummer met de status KLAARVOORSERVEREN, moet de knop groen worden
 
@@ -1731,10 +1848,11 @@ namespace SomerenUI
 
         private void btn_VoegToeBestelling_Click(object sender, EventArgs e)
         {
+            List<DrankLijstItem> drankListItemOpslag = new List<DrankLijstItem>();
             // Button alleen mogen inklikken als alle velden ingevuld zijn
             if (CB_EtenDrinken.Text == "Drinken")
             {
-                drankLijstService.AddDrankLijstItem(drankService.GetDrankID(CB_Items.Text), tafelService.GetHuidigeBestelling(tafelnummer), int.Parse(CB_Aantal.Text));
+                drankLijstItemService.AddDrankLijstItem(drankService.GetDrankID(CB_Items.Text), tafelService.GetHuidigeBestelling(tafelnummer), int.Parse(CB_Aantal.Text));
             }
             else if (CB_EtenDrinken.Text == "Eten")
             {
@@ -1743,18 +1861,18 @@ namespace SomerenUI
 
 
 
-            //string message = "DrankID bij Tafel 6";
-            //string caption = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff");
-            //MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            //DialogResult result;
+            string message = "Item is toegevoegd";
+            string caption = "Item toegevoegd";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
 
-            //// Displays the MessageBox.
-            //result = MessageBox.Show(message, caption, buttons);
-            //if (result == System.Windows.Forms.DialogResult.Yes)
-            //{
-            //    // Closes the parent form.
-            //    this.Close();
-            //}
+            // Displays the MessageBox.
+            result = MessageBox.Show(message, caption, buttons);
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+
+                showPanel("LunchBestelling");
+            }
 
 
         }

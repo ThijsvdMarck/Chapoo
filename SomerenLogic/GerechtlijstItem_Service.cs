@@ -73,6 +73,10 @@ namespace SomerenLogic
                 //
             }
         }
+        public void AddGerechtLijstItem(int gerechtID, int bestellingID, int aantal)
+        {
+            gerechtlijst_db.AddGerechtLijsItem(gerechtID, bestellingID, aantal);
+        }
     }
 
     

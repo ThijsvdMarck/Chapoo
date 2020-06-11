@@ -48,13 +48,12 @@ namespace SomerenDAL
             return drankLijstItems; 
         }
 
-        public void AddDrankLijsItem(int drankID, int bestellingID, int aantal)
+        public void AddDrankLijstItem(int drankID, int bestellingID, int aantal)
         {
             /*DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")*/
             // 29 - 5 - 20 13:50:00
             DateTime Datum = DateTime.Now;
-            string status = Status.Besteld.ToString();
-            string AddDrankLijsItem = "INSERT into [Dranklijst] (DrankID, BestellingID, Aantal, Status, Tijd) Values (" + drankID + "," + bestellingID + "," + aantal + ",'" + Status.Besteld.ToString() + "', '" + Datum.ToString("yyyy/MM/dd HH:mm:ss.fff") + "')";
+            string AddDrankLijsItem = "INSERT into [Dranklijst] (DrankID, BestellingID, Aantal, Status, Tijd) Values (" + drankID + "," + bestellingID + "," + aantal + ",'" + Status.Opslag.ToString() + "', '" + Datum.ToString("yyyy/MM/dd HH:mm:ss.fff") + "')";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(AddDrankLijsItem, sqlParameters);
         }

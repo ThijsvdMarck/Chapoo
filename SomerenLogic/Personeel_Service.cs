@@ -26,7 +26,7 @@ namespace SomerenLogic
                 Personeel a = new Personeel();
                 a.PersoneelID = 111111;
                 a.Naam = "VLEESSSSS!!!";
-                a.functie = Functie.bediening;
+                a.functie = Functie.Serveerder;
 
                 personeels.Add(a);
 

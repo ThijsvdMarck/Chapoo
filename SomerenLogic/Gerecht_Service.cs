@@ -46,5 +46,9 @@ namespace SomerenLogic
                 //
             }
         }
+        public int GetGerechtID(string GerechtNaam)
+        {
+            return gerecht_db.GetGerechtID(GerechtNaam);
+        }
     }
 }

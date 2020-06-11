@@ -46,6 +46,21 @@ namespace SomerenDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
+        public int GetGerechtID(string GerechtNaam)
+        {
+            string query = "SELECT GerechtID FROM Gerecht WHERE Gerechtnaam = '" + GerechtNaam + "'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTableForGerechtID(ExecuteSelectQuery(query, sqlParameters));
 
+        }
+        private int ReadTableForGerechtID(DataTable dataTable)
+        {
+            int GerechtID = 0;
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                GerechtID = (int)dr["GerechtID"];
+            }
+            return GerechtID;
+        }
     }
 }
