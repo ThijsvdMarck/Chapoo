@@ -22,7 +22,7 @@ namespace SomerenUI
         SomerenLogic.GerechtlijstItem_Service gerechtlijstItemService = new SomerenLogic.GerechtlijstItem_Service();
         SomerenLogic.DrankLijstItem_Service drankLijstService = new SomerenLogic.DrankLijstItem_Service();
 
-
+        int tafelnummer;
 
         public SomerenUI()
         {
@@ -453,7 +453,31 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkRekening.Show();
                 pnl_RekeningOverzicht.Show();
+            //    lv_RekeningOverzicht.
+            /*
+                foreach (GerechtlijstItem g in gerechtlijst)
+                {
+                    if (g.TafelID == 1)
+                    {
+                        if (g.status == Status.Besteld && btn_TEST.BackColor != Color.Green)
+                        {
+                            //daarna prio
+                            btn_TEST.BackColor = Color.Yellow;
+                        }
+                        else if (g.status == Status.KlaarVoorServeren)
+                        {
+                            //grootste prioriteit 
+                            btn_TEST.BackColor = Color.Green;
+                        }
+                        else if (g.status == Status.Geserveerd && btn_TEST.BackColor != Color.Green && btn_TEST.BackColor != Color.Yellow)
+                        {
+                            btn_TEST.BackColor = Color.LightBlue;
+                        }
+                    }
 
+
+                }
+            */
             }
             else if (panelName == "Reserveringen")
             {
@@ -483,7 +507,7 @@ namespace SomerenUI
                 // Aanmaken van kolommen
                 lv_KeukenOverzicht.Columns.Add("Tafel", 200);
                 lv_KeukenOverzicht.Columns.Add("BestellingID", 200);
-                lv_KeukenOverzicht.Columns.Add("Status", 100);
+                lv_KeukenOverzicht.Columns.Add("Status gerechten", 100);
 
                 string[] bestellingen = new string[3];
                 ListViewItem itm;
@@ -492,7 +516,7 @@ namespace SomerenUI
                 {
                     bestellingen[0] = "Tafel " + b.TafelID.ToString();
                     bestellingen[1] = b.BestellingID.ToString();
-                    bestellingen[2] = b.status.ToString();
+                    bestellingen[2] = b.statusKeuken.ToString();
 
                     itm = new ListViewItem(bestellingen);
                     lv_KeukenOverzicht.Items.Add(itm);
@@ -520,7 +544,7 @@ namespace SomerenUI
                 // Aanmaken van kolommen
                 lv_BarOverzicht.Columns.Add("Tafel", 200);
                 lv_BarOverzicht.Columns.Add("BestellingID", 200);
-                lv_BarOverzicht.Columns.Add("Status", 100);
+                lv_BarOverzicht.Columns.Add("Status drankjes", 100);
 
                 string[] bestellingen = new string[3];
                 ListViewItem itm;
@@ -529,7 +553,7 @@ namespace SomerenUI
                 {
                     bestellingen[0] = "Tafel " + b.TafelID.ToString();
                     bestellingen[1] = b.BestellingID.ToString();
-                    bestellingen[2] = b.status.ToString();
+                    bestellingen[2] = b.statusBar.ToString();
 
                     itm = new ListViewItem(bestellingen);
                     lv_BarOverzicht.Items.Add(itm);
@@ -755,15 +779,6 @@ namespace SomerenUI
         private void btn_Tafels_Click(object sender, EventArgs e)
         {
             showPanel("Tafels");
-        }
-
-        private void btn_Tafel1_Click(object sender, EventArgs e)
-        {
-            
-            /*if (statusBestelling = )
-            { 
-
-            }*/
         }
 
         private void btn_Drinken_Click(object sender, EventArgs e)
@@ -1001,9 +1016,9 @@ namespace SomerenUI
 
             return true;
         }
-        private void VeranderStatusBestelling(StatusBestelling status, int geselecteerdeBestelling)
+        private void VeranderStatusBestellingKeuken(StatusBestelling status, int geselecteerdeBestelling)
         {
-            bestellingService.UpdateBestelling(status, geselecteerdeBestelling);
+            bestellingService.UpdateBestellingKeuken(status, geselecteerdeBestelling);
         }
         private int GetGeselecteerdeBestellingKeuken()
         {
@@ -1064,7 +1079,7 @@ namespace SomerenUI
 
             if (CheckAllesGeserveerdKeuken(ref bestelling))
             {
-                VeranderStatusBestelling(StatusBestelling.Afgerond, bestelling);
+                VeranderStatusBestellingKeuken(StatusBestelling.Afgerond, bestelling);
             }
 
         }
@@ -1133,6 +1148,10 @@ namespace SomerenUI
 
             return true;
         }
+        private void VeranderStatusBestellingBar(StatusBestelling status, int geselecteerdeBestelling)
+        {
+            bestellingService.UpdateBestellingBar(status, geselecteerdeBestelling);
+        }
         private int GetGeselecteerdeBestellingBar()
         {
             int geselecteerdeBestelling = 0;
@@ -1192,7 +1211,7 @@ namespace SomerenUI
 
             if (CheckAllesGeserveerdBar(ref bestelling))
             {
-                VeranderStatusBestelling(StatusBestelling.Afgerond, bestelling);
+                VeranderStatusBestellingBar(StatusBestelling.Afgerond, bestelling);
             }
         }
         private bool CheckAllesGeserveerdBar(ref int bestelling)
@@ -1374,7 +1393,6 @@ namespace SomerenUI
             showPanel("LogIn");
         }
 
-
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetGerechtList();
@@ -1399,67 +1417,87 @@ namespace SomerenUI
             GetGerechtList();
         }
 
-
-       
-
         private void CB_SoortGerecht_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetGerechtList();
         }
 
+
+
+        //tafelbuttons
+        private void btn_Tafel1_Click(object sender, EventArgs e)
+        {
+            /*
+            LATEN WE NOG EVEN LEEG WANT TEST BUTTON CODE KOMT HIER
+            */
+        }
+
         private void btn_Tafel2_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 2;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel3_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 3;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel4_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 4;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel5_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 5;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel6_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 6;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel7_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 7;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel8_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 8;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel9_Click(object sender, EventArgs e)
         {
-
+            tafelnummer = 9;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_Tafel10_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_VoegToeFooi_Click(object sender, EventArgs e)
-        {
-
+            tafelnummer = 10;
+            showPanel("RekeningOverzicht");
         }
 
         private void btn_TEST_Click(object sender, EventArgs e)
         {
+            tafelnummer = 1;
             showPanel("RekeningOverzicht"); // Moet nog terug naar button 1 na UI.
+            //Iets met dit tafelnummer met de status KLAARVOORSERVEREN, moet de knop groen worden
+
+        }
+
+
+        private void btn_VoegToeFooi_Click(object sender, EventArgs e)
+        {
+           //
         }
     }
 }

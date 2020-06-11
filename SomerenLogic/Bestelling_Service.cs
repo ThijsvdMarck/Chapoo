@@ -34,11 +34,23 @@ namespace SomerenLogic
 
         }
 
-        public void UpdateBestelling(StatusBestelling status, int bestelling)
+        public void UpdateBestellingKeuken(StatusBestelling status, int bestelling)
         {
             try
             {
-                bestelling_db.Db_Update_Bestelling(status, bestelling);
+                bestelling_db.Db_Update_BestellingKeuken(status, bestelling);
+            }
+            catch (Exception)
+            {
+                //
+            }
+        }
+
+        public void UpdateBestellingBar(StatusBestelling status, int bestelling)
+        {
+            try
+            {
+                bestelling_db.Db_Update_BestellingBar(status, bestelling);
             }
             catch (Exception)
             {

@@ -15,7 +15,7 @@ namespace SomerenDAL
 
         public List<Bestelling> Db_Get_All_Bestellingen()
         {
-            string query = "SELECT Bestelling.BestellingID, Tafel.TafelID, PersoneelID, Datum, [Status] FROM Bestelling JOIN Tafel ON Bestelling.BestellingID=Tafel.BestellingID";
+            string query = "SELECT Bestelling.BestellingID, Tafel.TafelID, PersoneelID, Datum, [StatusKeuken], StatusBar FROM Bestelling JOIN Tafel ON Bestelling.BestellingID=Tafel.BestellingID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -31,16 +31,25 @@ namespace SomerenDAL
                     BestellingID = (int)dr["BestellingID"],
                     TafelID = (int)dr["TafelID"],
                     datum = (DateTime)dr["Datum"],
-                    status = (StatusBestelling)Enum.Parse(typeof(StatusBestelling), (string)dr["Status"]),
+                    statusKeuken = (StatusBestelling)Enum.Parse(typeof(StatusBestelling), (string)dr["StatusKeuken"]),
+                    statusBar = (StatusBestelling)Enum.Parse(typeof(StatusBestelling), (string)dr["StatusBar"])
                 };
                 bestellingen.Add(bestelling);
             }
             return bestellingen;
         }
 
-        public void Db_Update_Bestelling(StatusBestelling status, int bestelling)
+        public void Db_Update_BestellingKeuken(StatusBestelling status, int bestelling)
         {
-            string query = "UPDATE Bestelling SET[Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString();
+            string query = "UPDATE Bestelling SET[StatusKeuken] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void Db_Update_BestellingBar(StatusBestelling status, int bestelling)
+        {
+            string query = "UPDATE Bestelling SET[StatusBar] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString();
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
