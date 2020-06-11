@@ -21,6 +21,8 @@ namespace SomerenUI
         SomerenLogic.Bestelling_Service bestellingService = new SomerenLogic.Bestelling_Service();
         SomerenLogic.GerechtlijstItem_Service gerechtlijstItemService = new SomerenLogic.GerechtlijstItem_Service();
         SomerenLogic.DrankLijstItem_Service drankLijstService = new SomerenLogic.DrankLijstItem_Service();
+        SomerenLogic.Tafel_Service tafelService = new SomerenLogic.Tafel_Service();
+
 
         int tafelnummer;
 
@@ -68,13 +70,9 @@ namespace SomerenUI
             pnl_AfrekenOverzicht.Hide();
 
         }
-        private void GetGerechtList()
+        private void GetItemList()
         {
-            if (CB_Items.Text != "")
-            {
-                CB_Aantal.Show();
-            }
-
+            CB_Aantal.Hide();
             CB_Items.Items.Clear();
             CB_Items.Hide();
             CB_Items.Text = "";
@@ -100,10 +98,6 @@ namespace SomerenUI
             List<Drankje> gedestilleerdDrankList = new List<Drankje>();
             List<Drankje> koffietheeDrankList = new List<Drankje>();
 
-
-            
-
-            
 
             foreach (SomerenModel.Gerecht d in gerechtList)
             {
@@ -173,29 +167,29 @@ namespace SomerenUI
                 CB_LunchDiner.Hide();
                 CB_SoortGerechtDiner.Hide();
                 CB_SoortGerechtLunch.Hide();
-                
+                CB_SoortDrankje.Show();
 
-                if (false)
+                if (CB_SoortDrankje.Text == "Frisdrank")
                 {
                     CB_Items.Show();
                     foreach (SomerenModel.Drankje d in frisdrankDrankList) { CB_Items.Items.Add(d.drankNaam.ToString()); }
                 }
-                else if (true)
+                else if (CB_SoortDrankje.Text == "Bier")
                 {
                     CB_Items.Show();
                     foreach (SomerenModel.Drankje d in  bierListDrankList) { CB_Items.Items.Add(d.drankNaam.ToString()); }
                 }
-                else if (true)
+                else if (CB_SoortDrankje.Text == "Gedestilleerde Dranken")
                 {
                     CB_Items.Show();
                     foreach (SomerenModel.Drankje d in gedestilleerdDrankList) { CB_Items.Items.Add(d.drankNaam.ToString()); }
                 }
-                else if (true)
+                else if (CB_SoortDrankje.Text == "Koffie/Thee")
                 {
                     CB_Items.Show();
                     foreach (SomerenModel.Drankje d in koffietheeDrankList) { CB_Items.Items.Add(d.drankNaam.ToString()); }
                 }
-                else if (true)
+                else if (CB_SoortDrankje.Text == "Wijn")
                 {
                     CB_Items.Show();
                     foreach (SomerenModel.Drankje d in wijnListDrankList) { CB_Items.Items.Add(d.drankNaam.ToString()); }                    
@@ -204,10 +198,13 @@ namespace SomerenUI
             else if (CB_EtenDrinken.Text == "Eten")
             {
                 CB_LunchDiner.Show();
+                CB_SoortDrankje.Hide();
+
                 if (CB_LunchDiner.Text == "Lunch")
                 {
                     CB_SoortGerechtLunch.Show();
                     CB_SoortGerechtDiner.Hide();
+                   
 
                     if (CB_SoortGerechtLunch.Text == "Voorgerecht")
                     {
@@ -233,7 +230,7 @@ namespace SomerenUI
                 {
                     CB_SoortGerechtDiner.Show();
                     CB_SoortGerechtLunch.Hide();
-
+                    
 
                     if (CB_SoortGerechtDiner.Text == "Voorgerecht")
                     {
@@ -263,30 +260,31 @@ namespace SomerenUI
 
 
 
-            
 
 
 
-           /* List<Gerecht> lunchGerechtList = GetGerechtList(DagType.Lunch);
-            List<Gerecht> dinerGerechtList = GetGerechtList(DagType.Diner);
 
-            if (CB_DrinkenEten.Text == "Eten")
-            {
-                if (CB_LunchDiner.Text == "Lunch")
-                {
-                    foreach (SomerenModel.Gerecht d in lunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
-                }
-                else if (CB_LunchDiner.Text == "Diner")
-                {
-                    foreach (SomerenModel.Gerecht d in dinerGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
-                }
+            /* List<Gerecht> lunchGerechtList = GetGerechtList(DagType.Lunch);
+             List<Gerecht> dinerGerechtList = GetGerechtList(DagType.Diner);
 
-            }
-            else if (CB_DrinkenEten.Text == "Drinken")
-            {
-                foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
-            }*/
+             if (CB_DrinkenEten.Text == "Eten")
+             {
+                 if (CB_LunchDiner.Text == "Lunch")
+                 {
+                     foreach (SomerenModel.Gerecht d in lunchGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                 }
+                 else if (CB_LunchDiner.Text == "Diner")
+                 {
+                     foreach (SomerenModel.Gerecht d in dinerGerechtList) { comboBox3.Items.Add(d.gerechtNaam.ToString()); }
+                 }
+
+             }
+             else if (CB_DrinkenEten.Text == "Drinken")
+             {
+                 foreach (SomerenModel.Drankje d in drankList) { comboBox3.Items.Add(d.drankNaam.ToString()); }
+             }*/
         }
+
         private void SomerenUI_Load(object sender, EventArgs e)
         {
             showPanel("LogIn");
@@ -436,6 +434,12 @@ namespace SomerenUI
                 CB_SoortGerechtDiner.Items.Add("Hoofdgerecht");
                 CB_SoortGerechtDiner.Items.Add("Nagerecht");
 
+                CB_SoortDrankje.Items.Add("Frisdrank");
+                CB_SoortDrankje.Items.Add("Bier");
+                CB_SoortDrankje.Items.Add("Wijn");
+                CB_SoortDrankje.Items.Add("Gedestilleerde Dranken");
+                CB_SoortDrankje.Items.Add("Koffie/Thee");
+
                 CB_Aantal.Items.Add("1");
                 CB_Aantal.Items.Add("2");
                 CB_Aantal.Items.Add("3");
@@ -449,6 +453,7 @@ namespace SomerenUI
                 CB_LunchDiner.Hide();
                 CB_SoortGerechtDiner.Hide();
                 CB_SoortGerechtLunch.Hide();
+                CB_SoortDrankje.Hide();
                 CB_Items.Hide();
                 CB_Aantal.Hide();
             }
@@ -1475,12 +1480,16 @@ namespace SomerenUI
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GetGerechtList();
+            GetItemList();
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            CB_Aantal.Text = "0";
+            if (CB_Items.Text != "")
+            {
+                CB_Aantal.Show();
+            }
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -1494,12 +1503,12 @@ namespace SomerenUI
 
         private void CB_LunchDiner_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GetGerechtList();
+            GetItemList();
         }
 
         private void CB_SoortGerecht_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GetGerechtList();
+            GetItemList();
         }
 
 
@@ -1582,7 +1591,38 @@ namespace SomerenUI
 
         private void CB_SoortGerechtLunch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GetGerechtList();
+            GetItemList();
+        }
+
+        private void CB_SoortDrankje_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetItemList();
+        }
+
+        private void btn_VoegToeBestelling_Click(object sender, EventArgs e)
+        {
+            // Button alleen mogen inklikken als alle velden ingevuld zijn
+             if (CB_EtenDrinken.Text == "Drinken")
+            {
+                drankLijstService.AddDrankLijsItem(drankService.GetDrankID(CB_Items.Text), tafelService.GetHuidigeBestelling(tafelnummer), int.Parse(CB_Aantal.Text));
+            }
+
+
+
+            //string message = "DrankID bij Tafel 6";
+            //string caption = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff");
+            //MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            //DialogResult result;
+
+            //// Displays the MessageBox.
+            //result = MessageBox.Show(message, caption, buttons);
+            //if (result == System.Windows.Forms.DialogResult.Yes)
+            //{
+            //    // Closes the parent form.
+            //    this.Close();
+            //}
+
+
         }
     }
 }

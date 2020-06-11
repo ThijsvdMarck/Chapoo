@@ -34,11 +34,29 @@ namespace SomerenDAL
             }
             return tafels;
         }
-        public int getHuidigeBestelling()
+        public int GetHuidigeBestelling(int TafelNummer)
         {
-            //  Zoekt in table Tafel welke huidige bestellingID hoord bij het mee gegeven tafelnmr
+            string query = "SELECT BestellingID FROM Tafel WHERE TafelID = " + TafelNummer;
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTableForBestellingID(ExecuteSelectQuery(query, sqlParameters));
 
-            return 1;
+        }
+        private int ReadTableForBestellingID(DataTable dataTable)
+        {
+            int BestellingID = 0;
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                BestellingID = (int)dr["BestellingID"];
+            }
+            return BestellingID;
+        }
+
+        public void Db_Update_GerechtItem(Status status, int bestelling, int gerecht)
+        {
+            string query = "UPDATE Gerechtlijst SET[Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString() + " AND GerechtID = " + gerecht.ToString();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
         }
     }
 }

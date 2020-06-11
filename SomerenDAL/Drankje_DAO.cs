@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Collections.ObjectModel;
 using SomerenModel;
+using System.Runtime.CompilerServices;
 
 namespace SomerenDAL
 {
@@ -39,7 +40,22 @@ namespace SomerenDAL
             }
             return drankjes;
         }
+        public int GetDrankID(string Dranknaam)
+        {
+            string query = "SELECT DrankID FROM Drankje WHERE Dranknaam = '" + Dranknaam + "'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTableForDrankID(ExecuteSelectQuery(query, sqlParameters));
 
+        }
+        private int ReadTableForDrankID(DataTable dataTable)
+        {
+            int DrankID = 0;
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                DrankID = (int)dr["DrankID"];
+            }
+            return DrankID;
+        }
 
         public void Db_Update_Drankje(string query)
         {

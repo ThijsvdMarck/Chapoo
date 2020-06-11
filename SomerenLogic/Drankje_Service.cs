@@ -35,7 +35,10 @@ namespace SomerenLogic
             }
 
         }
-
+        public int GetDrankID(string Dranknaam)
+        {
+            return drankje_db.GetDrankID(Dranknaam);
+        }
         public void UpdateDrankje(string query)
         {
             try

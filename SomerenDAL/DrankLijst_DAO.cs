@@ -42,9 +42,11 @@ namespace SomerenDAL
 
         public void AddDrankLijsItem(int drankID, int bestellingID, int aantal)
         {
-
+            /*DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")*/
+            // 29 - 5 - 20 13:50:00
+            DateTime Datum = DateTime.Now;
             string status = Status.Besteld.ToString();
-            string AddDrankLijsItem = $"Insert into [Dranklijst] (DrankID, BestellingID, Aantal, Status, Tijd) Values ( {drankID},{bestellingID},{aantal},'{status}',{DateTime.Now})";
+            string AddDrankLijsItem = "INSERT into [Dranklijst] (DrankID, BestellingID, Aantal, Status, Tijd) Values (" + drankID + "," + bestellingID + "," + aantal + ",'" + Status.Besteld.ToString() + "', '" + Datum.ToString("yyyy/MM/dd HH:mm:ss.fff") + "')";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(AddDrankLijsItem, sqlParameters);
         }

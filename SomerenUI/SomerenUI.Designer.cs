@@ -106,6 +106,7 @@
             this.btn_Tafel2 = new System.Windows.Forms.Button();
             this.btn_Tafel4 = new System.Windows.Forms.Button();
             this.pnl_LunchBestelling = new System.Windows.Forms.Panel();
+            this.CB_SoortDrankje = new System.Windows.Forms.ComboBox();
             this.CB_SoortGerechtLunch = new System.Windows.Forms.ComboBox();
             this.CB_SoortGerechtDiner = new System.Windows.Forms.ComboBox();
             this.btn_VoegToeBestelling = new System.Windows.Forms.Button();
@@ -526,7 +527,6 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.CB_SoortDrankje = new System.Windows.Forms.ComboBox();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -1584,6 +1584,15 @@
             this.pnl_LunchBestelling.Size = new System.Drawing.Size(610, 644);
             this.pnl_LunchBestelling.TabIndex = 1;
             // 
+            // CB_SoortDrankje
+            // 
+            this.CB_SoortDrankje.FormattingEnabled = true;
+            this.CB_SoortDrankje.Location = new System.Drawing.Point(188, 451);
+            this.CB_SoortDrankje.Name = "CB_SoortDrankje";
+            this.CB_SoortDrankje.Size = new System.Drawing.Size(133, 21);
+            this.CB_SoortDrankje.TabIndex = 64;
+            this.CB_SoortDrankje.SelectedIndexChanged += new System.EventHandler(this.CB_SoortDrankje_SelectedIndexChanged);
+            // 
             // CB_SoortGerechtLunch
             // 
             this.CB_SoortGerechtLunch.FormattingEnabled = true;
@@ -1610,6 +1619,7 @@
             this.btn_VoegToeBestelling.TabIndex = 61;
             this.btn_VoegToeBestelling.Text = "Voeg toe aan bestelling";
             this.btn_VoegToeBestelling.UseVisualStyleBackColor = true;
+            this.btn_VoegToeBestelling.Click += new System.EventHandler(this.btn_VoegToeBestelling_Click);
             // 
             // CB_Aantal
             // 
@@ -6985,14 +6995,6 @@
             this.btn_Dag.Text = "Dag";
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
-            // 
-            // CB_SoortDrankje
-            // 
-            this.CB_SoortDrankje.FormattingEnabled = true;
-            this.CB_SoortDrankje.Location = new System.Drawing.Point(188, 451);
-            this.CB_SoortDrankje.Name = "CB_SoortDrankje";
-            this.CB_SoortDrankje.Size = new System.Drawing.Size(133, 21);
-            this.CB_SoortDrankje.TabIndex = 64;
             // 
             // SomerenUI
             // 
