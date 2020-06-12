@@ -62,5 +62,17 @@ namespace SomerenLogic
         {
             return bestelling_db.GetHuidigeBestellingStatus(TafelNummer);
         }
+
+        public void MaakBestellingAan(int ID, DateTime now)
+        {
+            try
+            {
+                bestelling_db.Db_Maak_Bestelling(ID, now);
+            }
+            catch (Exception)
+            {
+                //
+            }
+        }
     }
 }

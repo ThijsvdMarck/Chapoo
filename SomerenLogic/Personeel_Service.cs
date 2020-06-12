@@ -35,5 +35,11 @@ namespace SomerenLogic
             }
 
         }
+
+        public int GetIngelogdeID(string naam)
+        {
+            int ID = personeel_db.Db_Get_Ingelogd_ID(naam);
+            return ID;
+        }
     }
 }

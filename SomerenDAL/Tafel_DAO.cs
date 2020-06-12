@@ -48,6 +48,11 @@ namespace SomerenDAL
             {
                 BestellingID = (int)dr["BestellingID"];
             }
+
+            if (BestellingID.ToString() == null)
+            {
+                BestellingID = 0;
+            }
             return BestellingID;
         }
 

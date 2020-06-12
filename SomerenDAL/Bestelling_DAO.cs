@@ -72,5 +72,13 @@ namespace SomerenDAL
             }
             return huidigeStatus;
         }
+
+        public void Db_Maak_Bestelling(int ID, DateTime now)
+        {
+            string query = "INSERT INTO Bestelling(PersoneelID, Datum) VALUES(" + ID.ToString() + ", '" + now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

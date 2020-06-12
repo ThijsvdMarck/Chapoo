@@ -36,5 +36,22 @@ namespace SomerenDAL
             }
             return personeels;
         }
+
+        public int Db_Get_Ingelogde_ID(string naam)
+        {
+            string query = "SELECT PersoneelID FROM [Personeel] WHERE Naam = " + naam;
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadID(ExecuteSelectQuery(query, sqlParameters));
+        }
+        private int ReadID(DataTable dataTable)
+        {
+            int ID;
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                ID = (int)dr["PersoneelID"];
+            }
+            return ID;
+        }
     }
 }
