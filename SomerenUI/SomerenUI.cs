@@ -342,6 +342,8 @@ namespace SomerenUI
                 pnl_BestellingVersturen.Hide();
                 pnl_BestellingVerstuurd.Hide();
 
+
+                //Eten
                 // clear the listview before filling it again
                 lv_Eten.Clear();
 
@@ -351,12 +353,32 @@ namespace SomerenUI
                 lv_Eten.CheckBoxes = true;
 
                 // Aanmaken van kolommen
-                lv_Eten.Columns.Add("Naam", 200);
+                lv_Eten.Columns.Add("ID", 50);
+                lv_Eten.Columns.Add("Naam", 300);
                 //lv_BestellingsOverzicht.Columns.Add("Prijs", 200);
                 lv_Eten.Columns.Add("Aantal", 100);
+                
+               
 
-                List<DrankLijstItem> drankBestellingsOverzichtList = GetDrankItemLijst();
+                //Eten
+                // clear the listview before filling it again
+                lv_Drinken.Clear();
+
+                lv_Drinken.View = View.Details;
+                //lv_BestellingsOverzicht.GridLines = true;
+                lv_Drinken.FullRowSelect = true;
+                lv_Drinken.CheckBoxes = true;
+
+                // Aanmaken van kolommen
+                lv_Drinken.Columns.Add("ID", 50);
+                lv_Drinken.Columns.Add("Naam", 300);
+                //lv_BestellingsOverzicht.Columns.Add("Prijs", 200);
+                lv_Drinken.Columns.Add("Aantal", 100);
+
+
+
                 List<GerechtlijstItem> gerechtBestellingsOverzichtList = GetGerechtItemLijst();
+                List<DrankLijstItem> drankBestellingsOverzichtList = GetDrankItemLijst();
 
                 string[] bestellingen = new string[3];
                 ListViewItem itm;
@@ -372,7 +394,7 @@ namespace SomerenUI
                         
 
                         itm = new ListViewItem(bestellingen);
-                        lv_Eten.Items.Add(itm);
+                        lv_Drinken.Items.Add(itm);
                     }
 
 
@@ -391,6 +413,7 @@ namespace SomerenUI
                     }
 
                 }
+
 
             }
             else if (panelName == "BestellingVersturen")
@@ -1948,50 +1971,48 @@ namespace SomerenUI
 
 
 
-            int geselecteerdeID = 0;
+            int geselecteerdeEtenID = 13;
+            int geselecteerdeDrankID = 0;
             string etenDrinken;
 
             for (int i = 0; i < lv_Eten.Items.Count; i++)
             {
                 if (lv_Eten.Items[i].Checked)
                 {
-                    geselecteerdeID = int.Parse(lv_Eten.Items[i].SubItems[1].Text);
-                }
-            }
-            for (int i = 0; i < lv_Eten.Items.Count; i++)
-            {
-                if (lv_Eten.Items[i].Checked)
-                {
-                    etenDrinken = lv_Eten.Items[i].SubItems[1].Text.ToString();
+                  //  geselecteerdeEtenID = int.Parse(lv_Eten.Items[i].SubItems[0].Text);
                 }
             }
 
-            if (true)
+            for (int i = 0; i < lv_Drinken.Items.Count; i++)
             {
-                foreach (var item in dranklijst)
+                if (lv_Drinken.Items[i].Checked)
                 {
-                    if (item.status == Status.Opslag)
-                    {
-                        drankLijstItemService.DeleteDrankLijstItem(geselecteerdeID, tafelService.GetHuidigeBestelling(tafelnummer), item.aantal - 1);
-                    }
+                    geselecteerdeDrankID = int.Parse(lv_Drinken.Items[i].SubItems[0].Text);
                 }
             }
-            else if (true)
+            foreach (var item in dranklijst)
             {
-                foreach (var item in gerechtLijst)
+                if (item.status == Status.Opslag)
                 {
-                    if (item.status == Status.Opslag)
-                    {
-                        gerechtlijstItemService.DeleteGerechtLijstItem(geselecteerdeID, tafelService.GetHuidigeBestelling(tafelnummer), item.Aantal - 1);
-                    }
+                    drankLijstItemService.DeleteDrankLijstItem(geselecteerdeDrankID, tafelService.GetHuidigeBestelling(tafelnummer), (item.aantal - 1));
                 }
             }
+            foreach (var item in gerechtLijst)
+            {
+                if (item.status == Status.Opslag)
+                {
+                    gerechtlijstItemService.DeleteGerechtLijstItem(geselecteerdeEtenID, tafelService.GetHuidigeBestelling(tafelnummer), (item.Aantal - 1));
+                }
+            }
+        }
+
+
+           
+      
             
 
  
-        }
-
-        private void lv_BestellingsOverzicht_SelectedIndexChanged(object sender, EventArgs e)
+         private void lv_BestellingsOverzicht_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

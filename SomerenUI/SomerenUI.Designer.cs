@@ -360,6 +360,7 @@
             this.btn_Reserveringen = new System.Windows.Forms.Button();
             this.btn_TafelOverzicht = new System.Windows.Forms.Button();
             this.pnl_BestellingsOverzicht = new System.Windows.Forms.Panel();
+            this.lv_Drinken = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_PlusBesteldItem = new System.Windows.Forms.Button();
             this.btn_MinBestelItem = new System.Windows.Forms.Button();
@@ -478,7 +479,6 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.lv_Drinken = new System.Windows.Forms.ListView();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -4863,12 +4863,12 @@
             // 
             // pnl_BestellingsOverzicht
             // 
-            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Drinken);
             this.pnl_BestellingsOverzicht.Controls.Add(this.label1);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_PlusBesteldItem);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_MinBestelItem);
             this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVersturen);
             this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVerstuurd);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Drinken);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Eten);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Annuleren);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Bestel);
@@ -4878,6 +4878,15 @@
             this.pnl_BestellingsOverzicht.Name = "pnl_BestellingsOverzicht";
             this.pnl_BestellingsOverzicht.Size = new System.Drawing.Size(610, 645);
             this.pnl_BestellingsOverzicht.TabIndex = 74;
+            // 
+            // lv_Drinken
+            // 
+            this.lv_Drinken.HideSelection = false;
+            this.lv_Drinken.Location = new System.Drawing.Point(72, 252);
+            this.lv_Drinken.Name = "lv_Drinken";
+            this.lv_Drinken.Size = new System.Drawing.Size(467, 141);
+            this.lv_Drinken.TabIndex = 19;
+            this.lv_Drinken.UseCompatibleStateImageBehavior = false;
             // 
             // label1
             // 
@@ -5083,13 +5092,13 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pictureBox2);
+            this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_RekeningOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_MenuBalkBestelling);
-            this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingBar);
             this.pnl_Base.Controls.Add(this.pnl_BestellingKeuken);
             this.pnl_Base.Controls.Add(this.pnl_KeukenOverzicht);
@@ -6309,15 +6318,6 @@
             this.btn_Dag.Text = "Dag";
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
-            // 
-            // lv_Drinken
-            // 
-            this.lv_Drinken.HideSelection = false;
-            this.lv_Drinken.Location = new System.Drawing.Point(72, 252);
-            this.lv_Drinken.Name = "lv_Drinken";
-            this.lv_Drinken.Size = new System.Drawing.Size(467, 141);
-            this.lv_Drinken.TabIndex = 19;
-            this.lv_Drinken.UseCompatibleStateImageBehavior = false;
             // 
             // SomerenUI
             // 
