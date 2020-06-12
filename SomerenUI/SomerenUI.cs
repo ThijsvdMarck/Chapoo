@@ -1465,6 +1465,27 @@ namespace SomerenUI
         }
         private bool CheckAllesGeserveerdBar(ref int bestelling)
         {
+            List<DrankLijstItem> drankList = GetDrankItemLijst();
+            bool Afgerond = false;
+
+            foreach (DrankLijstItem item in drankList)
+            {
+                if (item.status == Status.Geserveerd && item.bestellingID == )
+                {
+                    Afgerond = true;
+                }
+                else if (item.bestellingID == )
+                {
+                    Afgerond = false;
+                }
+
+            }
+            if (Afgerond = true)
+            {
+
+            }
+
+
             int count = 0;
 
             for (int i = 0; i < lv_BarBestelling.Items.Count; i++)
