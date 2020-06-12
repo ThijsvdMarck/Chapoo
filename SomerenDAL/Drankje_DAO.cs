@@ -57,8 +57,10 @@ namespace SomerenDAL
             return DrankID;
         }
 
-        public void Db_Update_Drankje(string query)
+        public void Db_Update_Drankje(string naam, string prijs, string alcoholisch, string hoeveelheid)
         {
+            string query = "INSERT INTO drankje VALUES ('" + naam + "', " + prijs + ", '" + alcoholisch + "', " + hoeveelheid + ")";
+
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }

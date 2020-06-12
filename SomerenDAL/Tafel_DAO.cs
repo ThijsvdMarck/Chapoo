@@ -53,7 +53,23 @@ namespace SomerenDAL
 
         public void Db_Update_GerechtItem(Status status, int bestelling, int gerecht)
         {
-            string query = "UPDATE Gerechtlijst SET[Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString() + " AND GerechtID = " + gerecht.ToString();
+            string query = "UPDATE Gerechtlijst SET [Status] = '" + status.ToString() + "' WHERE BestellingID = " + bestelling.ToString() + " AND GerechtID = " + gerecht.ToString();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void Db_Update_BestellingID_Tafel(int bestelling, int tafelNr)
+        {
+            string bestellingID;
+            bestellingID = bestelling.ToString();
+
+            if (bestelling == 0)
+            {
+                bestellingID = null;
+            }
+
+            string query = "UPDATE Tafel SET [BestellingID] = " + bestellingID + " WHERE TafelID = " + tafelNr.ToString();
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);

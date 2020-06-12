@@ -41,8 +41,10 @@ namespace SomerenDAL
             return gerechten;
         }
 
-        public void Db_Update_Gerecht(string query)
+        public void Db_Update_Gerecht(string naam, string prijs, string soortGerecht, string typeGerecht, string hoeveelheid)
         {
+            string query = "INSERT INTO gerecht VALUES ('" + naam + "', " + prijs + ", '" + soortGerecht + "', '" + typeGerecht + "', " + hoeveelheid + ")";
+
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }

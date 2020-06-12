@@ -35,11 +35,11 @@ namespace SomerenLogic
 
         }
 
-        public void UpdateGerecht(string query)
+        public void UpdateGerecht(string naam, string prijs, string soortGerecht, string typeGerecht, string hoeveelheid)
         {
             try
             {
-                gerecht_db.Db_Update_Gerecht(query);
+                gerecht_db.Db_Update_Gerecht(naam, prijs, soortGerecht, typeGerecht, hoeveelheid);
             }
             catch (Exception)
             {
