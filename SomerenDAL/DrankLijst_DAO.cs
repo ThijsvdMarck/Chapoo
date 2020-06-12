@@ -67,16 +67,16 @@ namespace SomerenDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+
         public List<DrankLijstItem> Db_Get_Drankjes_Bestelling(int tafelID)
         {
             string query = "SELECT Dranknaam, Aantal, Prijs, Alcoholisch, TafelID FROM Dranklijst JOIN Drankje ON Drankje.DrankID=Dranklijst.DrankID JOIN Bestelling ON Bestelling.BestellingID=Dranklijst.BestellingID JOIN Tafel ON Tafel.BestellingID=Bestelling.BestellingID WHERE TafelID=" + tafelID.ToString();
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTablesVoorTafelBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
-        public void Db_Delete_DrankItem(int aantal, int bestelling, int drankje)
+        public void Db_Wijzig_Aantal_DrankItem(int aantal, int bestelling, int drankje)
         {
-            string query = "UPDATE Dranklijst SET[Aantal] = '" + aantal.ToString() + "' WHERE BestellingID = " + bestelling.ToString() + " AND GerechtID = " + drankje.ToString();
-
+            string query = "UPDATE Dranklijst SET[Aantal] =" + aantal.ToString() + " WHERE BestellingID = " + bestelling.ToString() + " AND DrankID = " + drankje.ToString();
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
