@@ -19,6 +19,10 @@ namespace SomerenModel
     public enum Functie
     {
         Barpersoneel, Kok, Serveerder, Manager
+        // Barpersoneel = Bar & Voorraad
+        // Kok = Keuken & Voorraad
+        // Serveerder = Tafels & Bar
+        // Manager = Alles
     }
 
     public enum Status

@@ -5076,9 +5076,9 @@
             this.pnl_Base.Controls.Add(this.lbl_TijdHeader);
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
-            this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
-            this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
+            this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
+            this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_RekeningOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_MenuBalkBestelling);
