@@ -402,16 +402,18 @@ namespace SomerenUI
                 List<DrankLijstItem> drankBestellingsOverzichtList = GetDrankItemLijst();
                 List<GerechtlijstItem> gerechtBestellingsOverzichtList = GetGerechtItemLijst();
 
-                string[] bestellingen = new string[2];
+                string[] bestellingen = new string[3];
                 ListViewItem itm;
 
                 foreach (SomerenModel.DrankLijstItem b in drankBestellingsOverzichtList)
                 {
                     if (b.status == Status.Opslag && b.aantal > 0)
                     {
-                        bestellingen[0] = b.drankNaam.ToString();
+                        bestellingen[0] = b.drankID.ToString();
+                        bestellingen[1] = b.drankNaam.ToString();
                         //bestellingen[1] = b..ToString();
-                        bestellingen[1] = b.aantal.ToString();
+                        bestellingen[2] = b.aantal.ToString();
+                        
 
                         itm = new ListViewItem(bestellingen);
                         lv_BestellingsOverzicht.Items.Add(itm);
@@ -423,9 +425,10 @@ namespace SomerenUI
                 {
                     if (b.status == Status.Opslag && b.Aantal > 0)
                     {
-                        bestellingen[0] = b.GerechtNaam.ToString();
+                        bestellingen[0] = b.GerechtID.ToString();
+                        bestellingen[1] = b.GerechtNaam.ToString();
                         //bestellingen[1] = b..ToString();
-                        bestellingen[1] = b.Aantal.ToString();
+                        bestellingen[2] = b.Aantal.ToString();
 
                         itm = new ListViewItem(bestellingen);
                         lv_BestellingsOverzicht.Items.Add(itm);
@@ -492,6 +495,7 @@ namespace SomerenUI
                 pnl_MenuBalkBestelling.Show();
                 pnl_LunchBestelling.Show();
 
+
                 //Clear comboboxes
                 CB_Items.Items.Clear();
                 CB_LunchDiner.Items.Clear();
@@ -502,7 +506,7 @@ namespace SomerenUI
                 CB_Aantal.Items.Clear();
 
                 CB_EtenDrinken.DroppedDown = true;
-
+                btn_VoegToeBestelling.Enabled = false;
 
                 CB_LunchDiner.Items.Add(DagType.Lunch.ToString());
                 CB_LunchDiner.Items.Add(DagType.Diner.ToString());
@@ -1692,6 +1696,12 @@ namespace SomerenUI
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+
+            if (CB_Items.Text != "")
+            {
+                btn_VoegToeBestelling.Enabled = true;
+            }
+
         }
         private void btn_MinKalfstartaar_Click(object sender, EventArgs e)
         {
@@ -1958,6 +1968,7 @@ namespace SomerenUI
 
         private void btn_VoegToeBestelling_Click(object sender, EventArgs e)
         {
+
             List<DrankLijstItem> drankListItemOpslag = new List<DrankLijstItem>();
             // Button alleen mogen inklikken als alle velden ingevuld zijn
             if (CB_EtenDrinken.Text == "Drinken")
@@ -1998,6 +2009,62 @@ namespace SomerenUI
         }
 
         private void lbl_NaamMedewerker_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_MinBestelItem_Click(object sender, EventArgs e)
+        {
+            List<DrankLijstItem> dranklijst = GetDrankItemLijst();
+            List<GerechtlijstItem> gerechtLijst = GetGerechtItemLijst();
+
+
+
+
+            int geselecteerdeID = 0;
+            string etenDrinken;
+
+            for (int i = 0; i < lv_BestellingsOverzicht.Items.Count; i++)
+            {
+                if (lv_BestellingsOverzicht.Items[i].Checked)
+                {
+                    geselecteerdeID = int.Parse(lv_BestellingsOverzicht.Items[i].SubItems[1].Text);
+                }
+            }
+            for (int i = 0; i < lv_BestellingsOverzicht.Items.Count; i++)
+            {
+                if (lv_BestellingsOverzicht.Items[i].Checked)
+                {
+                    etenDrinken = lv_BestellingsOverzicht.Items[i].SubItems[1].Text.ToString();
+                }
+            }
+
+            if (true)
+            {
+                foreach (var item in dranklijst)
+                {
+                    if (item.status == Status.Opslag)
+                    {
+                        drankLijstItemService.DeleteDrankLijstItem(geselecteerdeID, tafelService.GetHuidigeBestelling(tafelnummer), item.aantal - 1);
+                    }
+                }
+            }
+            else if (true)
+            {
+                foreach (var item in gerechtLijst)
+                {
+                    if (item.status == Status.Opslag)
+                    {
+                        gerechtlijstItemService.DeleteGerechtLijstItem(geselecteerdeID, tafelService.GetHuidigeBestelling(tafelnummer), item.Aantal - 1);
+                    }
+                }
+            }
+            
+
+ 
+        }
+
+        private void lv_BestellingsOverzicht_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

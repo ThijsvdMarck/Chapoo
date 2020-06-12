@@ -79,6 +79,11 @@ namespace SomerenLogic
             gerechtlijst_db.AddGerechtLijsItem(gerechtID, bestellingID, aantal);
 
         }
+        public void DeleteGerechtLijstItem(int gerechtID, int bestellingID, int aantal)
+        {
+            gerechtlijst_db.Db_Delete_GerechtItem(aantal, bestellingID, gerechtID);
+
+        }
         public List<GerechtlijstItem> GerechtenBestellingVanTafel(int tafelID)
         {
             try

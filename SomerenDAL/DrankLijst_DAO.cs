@@ -73,7 +73,13 @@ namespace SomerenDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTablesVoorTafelBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
+        public void Db_Delete_DrankItem(int aantal, int bestelling, int drankje)
+        {
+            string query = "UPDATE Dranklijst SET[Aantal] = '" + aantal.ToString() + "' WHERE BestellingID = " + bestelling.ToString() + " AND GerechtID = " + drankje.ToString();
 
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
         private List<DrankLijstItem> ReadTablesVoorTafelBestelling(DataTable dataTable)
         {
             List<DrankLijstItem> drankLijstItems = new List<DrankLijstItem>();

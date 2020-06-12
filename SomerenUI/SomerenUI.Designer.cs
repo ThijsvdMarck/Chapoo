@@ -4910,6 +4910,7 @@
             this.btn_MinBestelItem.TabIndex = 16;
             this.btn_MinBestelItem.Text = "-";
             this.btn_MinBestelItem.UseVisualStyleBackColor = false;
+            this.btn_MinBestelItem.Click += new System.EventHandler(this.btn_MinBestelItem_Click);
             // 
             // pnl_BestellingVersturen
             // 
@@ -5005,6 +5006,7 @@
             this.lv_BestellingsOverzicht.Size = new System.Drawing.Size(467, 321);
             this.lv_BestellingsOverzicht.TabIndex = 15;
             this.lv_BestellingsOverzicht.UseCompatibleStateImageBehavior = false;
+            this.lv_BestellingsOverzicht.SelectedIndexChanged += new System.EventHandler(this.lv_BestellingsOverzicht_SelectedIndexChanged);
             // 
             // btn_Annuleren
             // 
@@ -5079,8 +5081,8 @@
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pictureBox2);
-            this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
+            this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
             this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_RekeningOverzicht);
