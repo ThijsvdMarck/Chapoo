@@ -59,8 +59,8 @@ namespace SomerenDAL
         }
         public void Db_Delete_GerechtItem(int aantal, int bestelling, int gerecht)
         {
-            string query = "UPDATE Gerechtlijst SET[Aantal] = '" + aantal.ToString() + "' WHERE BestellingID = " + bestelling.ToString() + " AND GerechtID = " + gerecht.ToString();
-
+            string query = "UPDATE Gerechtlijst SET [Aantal] = " + aantal.ToString() + " WHERE BestellingID = " + bestelling.ToString() + " AND GerechtID = " + gerecht.ToString();
+            
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }

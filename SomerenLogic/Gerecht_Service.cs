@@ -50,5 +50,9 @@ namespace SomerenLogic
         {
             return gerecht_db.GetGerechtID(GerechtNaam);
         }
+        public void WijzigVoorraadGerecht(int gerechtID, int aantal)
+        {
+            gerecht_db.Db_Wijzig_Voorraad_Gerecht(gerechtID, aantal);
+        }
     }
 }

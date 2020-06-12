@@ -47,6 +47,12 @@ namespace SomerenDAL
             return ReadTableForDrankID(ExecuteSelectQuery(query, sqlParameters));
 
         }
+        public void Db_Wijzig_Voorraad_Drankje(int drankID, int aantal)
+        {
+            string query = "UPDATE Drankje SET[Voorraad] =" + aantal.ToString() + " WHERE DrankID = " + drankID.ToString();
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
         private int ReadTableForDrankID(DataTable dataTable)
         {
             int DrankID = 0;

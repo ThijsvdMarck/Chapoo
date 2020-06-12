@@ -55,6 +55,12 @@ namespace SomerenDAL
             return ReadTableForGerechtID(ExecuteSelectQuery(query, sqlParameters));
 
         }
+        public void Db_Wijzig_Voorraad_Gerecht(int gerechtID, int aantal)
+        {
+            string query = "UPDATE Gerecht SET[Voorraad] =" + aantal.ToString() + " WHERE GerechtID = " + gerechtID.ToString();
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
         private int ReadTableForGerechtID(DataTable dataTable)
         {
             int GerechtID = 0;

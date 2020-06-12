@@ -39,6 +39,10 @@ namespace SomerenLogic
         {
             return drankje_db.GetDrankID(Dranknaam);
         }
+        public void WijzigVoorraadDrankje(int drankID, int aantal)
+        {
+            drankje_db.Db_Wijzig_Voorraad_Drankje(drankID, aantal);
+        }
         public void UpdateDrankje(string naam, string prijs, string alcoholisch, string hoeveelheid)
         {
             try

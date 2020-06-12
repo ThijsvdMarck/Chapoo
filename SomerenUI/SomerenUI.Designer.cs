@@ -370,6 +370,7 @@
             this.pnl_BestellingVerstuurd = new System.Windows.Forms.Panel();
             this.btn_BestellingVersturenOK = new System.Windows.Forms.Button();
             this.lbl_BestellingVerstuurd = new System.Windows.Forms.Label();
+            this.lv_Drinken = new System.Windows.Forms.ListView();
             this.lv_Eten = new System.Windows.Forms.ListView();
             this.btn_Annuleren = new System.Windows.Forms.Button();
             this.btn_Bestel = new System.Windows.Forms.Button();
@@ -383,6 +384,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Home = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
+            this.btn_RefreshBarOverzicht = new System.Windows.Forms.Button();
+            this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
+            this.lv_BarOverzicht = new System.Windows.Forms.ListView();
             this.pnl_LunchBestelling = new System.Windows.Forms.Panel();
             this.lbl_KiesItem = new System.Windows.Forms.Label();
             this.CB_SoortDrankje = new System.Windows.Forms.ComboBox();
@@ -427,10 +432,6 @@
             this.btn_Afrekenen = new System.Windows.Forms.Button();
             this.lbl_TafelInfo = new System.Windows.Forms.Label();
             this.lv_RekeningOverzicht = new System.Windows.Forms.ListView();
-            this.pnl_BarOverzicht = new System.Windows.Forms.Panel();
-            this.btn_RefreshBarOverzicht = new System.Windows.Forms.Button();
-            this.btn_ShowBestellingBar = new System.Windows.Forms.Button();
-            this.lv_BarOverzicht = new System.Windows.Forms.ListView();
             this.pnl_BestellingBar = new System.Windows.Forms.Panel();
             this.btn_AfgerondBar = new System.Windows.Forms.Button();
             this.btn_ServerenBar = new System.Windows.Forms.Button();
@@ -478,7 +479,6 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.lv_Drinken = new System.Windows.Forms.ListView();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -504,12 +504,12 @@
             this.pnl_Base.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnl_BarOverzicht.SuspendLayout();
             this.pnl_LunchBestelling.SuspendLayout();
             this.pnl_AfrekenOverzicht.SuspendLayout();
             this.gb_AfrekenPopUp.SuspendLayout();
             this.gb_Afgerekend.SuspendLayout();
             this.pnl_RekeningOverzicht.SuspendLayout();
-            this.pnl_BarOverzicht.SuspendLayout();
             this.pnl_BestellingBar.SuspendLayout();
             this.gb_OpmerkingenBar.SuspendLayout();
             this.pnl_BestellingKeuken.SuspendLayout();
@@ -4863,12 +4863,12 @@
             // 
             // pnl_BestellingsOverzicht
             // 
-            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Drinken);
             this.pnl_BestellingsOverzicht.Controls.Add(this.label1);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_PlusBesteldItem);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_MinBestelItem);
             this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVersturen);
             this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVerstuurd);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Drinken);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Eten);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Annuleren);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Bestel);
@@ -4900,6 +4900,7 @@
             this.btn_PlusBesteldItem.TabIndex = 17;
             this.btn_PlusBesteldItem.Text = "+";
             this.btn_PlusBesteldItem.UseVisualStyleBackColor = false;
+            this.btn_PlusBesteldItem.Click += new System.EventHandler(this.btn_PlusBesteldItem_Click);
             // 
             // btn_MinBestelItem
             // 
@@ -5000,6 +5001,15 @@
             this.lbl_BestellingVerstuurd.TabIndex = 14;
             this.lbl_BestellingVerstuurd.Text = "Bestelling verstuurd";
             // 
+            // lv_Drinken
+            // 
+            this.lv_Drinken.HideSelection = false;
+            this.lv_Drinken.Location = new System.Drawing.Point(72, 252);
+            this.lv_Drinken.Name = "lv_Drinken";
+            this.lv_Drinken.Size = new System.Drawing.Size(467, 141);
+            this.lv_Drinken.TabIndex = 19;
+            this.lv_Drinken.UseCompatibleStateImageBehavior = false;
+            // 
             // lv_Eten
             // 
             this.lv_Eten.HideSelection = false;
@@ -5023,6 +5033,7 @@
             this.btn_Annuleren.TabIndex = 13;
             this.btn_Annuleren.Text = "Annuleren";
             this.btn_Annuleren.UseVisualStyleBackColor = false;
+            this.btn_Annuleren.Click += new System.EventHandler(this.btn_Annuleren_Click);
             // 
             // btn_Bestel
             // 
@@ -5084,12 +5095,12 @@
             this.pnl_Base.Controls.Add(this.btn_Home);
             this.pnl_Base.Controls.Add(this.pictureBox2);
             this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
-            this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
+            this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
+            this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_AfrekenOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_RekeningOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_MenuBalkBestelling);
-            this.pnl_Base.Controls.Add(this.pnl_BarOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingBar);
             this.pnl_Base.Controls.Add(this.pnl_BestellingKeuken);
             this.pnl_Base.Controls.Add(this.pnl_KeukenOverzicht);
@@ -5172,6 +5183,56 @@
             this.pictureBox2.Size = new System.Drawing.Size(612, 153);
             this.pictureBox2.TabIndex = 77;
             this.pictureBox2.TabStop = false;
+            // 
+            // pnl_BarOverzicht
+            // 
+            this.pnl_BarOverzicht.Controls.Add(this.btn_RefreshBarOverzicht);
+            this.pnl_BarOverzicht.Controls.Add(this.btn_ShowBestellingBar);
+            this.pnl_BarOverzicht.Controls.Add(this.lv_BarOverzicht);
+            this.pnl_BarOverzicht.Location = new System.Drawing.Point(2, 215);
+            this.pnl_BarOverzicht.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_BarOverzicht.Name = "pnl_BarOverzicht";
+            this.pnl_BarOverzicht.Size = new System.Drawing.Size(610, 647);
+            this.pnl_BarOverzicht.TabIndex = 17;
+            // 
+            // btn_RefreshBarOverzicht
+            // 
+            this.btn_RefreshBarOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.btn_RefreshBarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RefreshBarOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
+            this.btn_RefreshBarOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RefreshBarOverzicht.Location = new System.Drawing.Point(444, 39);
+            this.btn_RefreshBarOverzicht.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_RefreshBarOverzicht.Name = "btn_RefreshBarOverzicht";
+            this.btn_RefreshBarOverzicht.Size = new System.Drawing.Size(146, 41);
+            this.btn_RefreshBarOverzicht.TabIndex = 3;
+            this.btn_RefreshBarOverzicht.Text = "Refresh";
+            this.btn_RefreshBarOverzicht.UseVisualStyleBackColor = false;
+            this.btn_RefreshBarOverzicht.Click += new System.EventHandler(this.btn_RefreshBarOverzicht_Click);
+            // 
+            // btn_ShowBestellingBar
+            // 
+            this.btn_ShowBestellingBar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_ShowBestellingBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ShowBestellingBar.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowBestellingBar.Location = new System.Drawing.Point(200, 440);
+            this.btn_ShowBestellingBar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ShowBestellingBar.Name = "btn_ShowBestellingBar";
+            this.btn_ShowBestellingBar.Size = new System.Drawing.Size(209, 47);
+            this.btn_ShowBestellingBar.TabIndex = 1;
+            this.btn_ShowBestellingBar.Text = "Laat bestelling zien";
+            this.btn_ShowBestellingBar.UseVisualStyleBackColor = false;
+            this.btn_ShowBestellingBar.Click += new System.EventHandler(this.btn_ShowBestellingBar_Click);
+            // 
+            // lv_BarOverzicht
+            // 
+            this.lv_BarOverzicht.HideSelection = false;
+            this.lv_BarOverzicht.Location = new System.Drawing.Point(10, 91);
+            this.lv_BarOverzicht.Margin = new System.Windows.Forms.Padding(2);
+            this.lv_BarOverzicht.Name = "lv_BarOverzicht";
+            this.lv_BarOverzicht.Size = new System.Drawing.Size(581, 303);
+            this.lv_BarOverzicht.TabIndex = 0;
+            this.lv_BarOverzicht.UseCompatibleStateImageBehavior = false;
             // 
             // pnl_LunchBestelling
             // 
@@ -5724,56 +5785,6 @@
             this.lv_RekeningOverzicht.TabIndex = 0;
             this.lv_RekeningOverzicht.UseCompatibleStateImageBehavior = false;
             // 
-            // pnl_BarOverzicht
-            // 
-            this.pnl_BarOverzicht.Controls.Add(this.btn_RefreshBarOverzicht);
-            this.pnl_BarOverzicht.Controls.Add(this.btn_ShowBestellingBar);
-            this.pnl_BarOverzicht.Controls.Add(this.lv_BarOverzicht);
-            this.pnl_BarOverzicht.Location = new System.Drawing.Point(2, 215);
-            this.pnl_BarOverzicht.Margin = new System.Windows.Forms.Padding(2);
-            this.pnl_BarOverzicht.Name = "pnl_BarOverzicht";
-            this.pnl_BarOverzicht.Size = new System.Drawing.Size(610, 647);
-            this.pnl_BarOverzicht.TabIndex = 17;
-            // 
-            // btn_RefreshBarOverzicht
-            // 
-            this.btn_RefreshBarOverzicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.btn_RefreshBarOverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RefreshBarOverzicht.Image = global::SomerenUI.Properties.Resources.Refresh3_0;
-            this.btn_RefreshBarOverzicht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_RefreshBarOverzicht.Location = new System.Drawing.Point(444, 39);
-            this.btn_RefreshBarOverzicht.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_RefreshBarOverzicht.Name = "btn_RefreshBarOverzicht";
-            this.btn_RefreshBarOverzicht.Size = new System.Drawing.Size(146, 41);
-            this.btn_RefreshBarOverzicht.TabIndex = 3;
-            this.btn_RefreshBarOverzicht.Text = "Refresh";
-            this.btn_RefreshBarOverzicht.UseVisualStyleBackColor = false;
-            this.btn_RefreshBarOverzicht.Click += new System.EventHandler(this.btn_RefreshBarOverzicht_Click);
-            // 
-            // btn_ShowBestellingBar
-            // 
-            this.btn_ShowBestellingBar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btn_ShowBestellingBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowBestellingBar.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowBestellingBar.Location = new System.Drawing.Point(200, 440);
-            this.btn_ShowBestellingBar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ShowBestellingBar.Name = "btn_ShowBestellingBar";
-            this.btn_ShowBestellingBar.Size = new System.Drawing.Size(209, 47);
-            this.btn_ShowBestellingBar.TabIndex = 1;
-            this.btn_ShowBestellingBar.Text = "Laat bestelling zien";
-            this.btn_ShowBestellingBar.UseVisualStyleBackColor = false;
-            this.btn_ShowBestellingBar.Click += new System.EventHandler(this.btn_ShowBestellingBar_Click);
-            // 
-            // lv_BarOverzicht
-            // 
-            this.lv_BarOverzicht.HideSelection = false;
-            this.lv_BarOverzicht.Location = new System.Drawing.Point(10, 91);
-            this.lv_BarOverzicht.Margin = new System.Windows.Forms.Padding(2);
-            this.lv_BarOverzicht.Name = "lv_BarOverzicht";
-            this.lv_BarOverzicht.Size = new System.Drawing.Size(581, 303);
-            this.lv_BarOverzicht.TabIndex = 0;
-            this.lv_BarOverzicht.UseCompatibleStateImageBehavior = false;
-            // 
             // pnl_BestellingBar
             // 
             this.pnl_BestellingBar.Controls.Add(this.btn_AfgerondBar);
@@ -6310,15 +6321,6 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
-            // lv_Drinken
-            // 
-            this.lv_Drinken.HideSelection = false;
-            this.lv_Drinken.Location = new System.Drawing.Point(72, 252);
-            this.lv_Drinken.Name = "lv_Drinken";
-            this.lv_Drinken.Size = new System.Drawing.Size(467, 141);
-            this.lv_Drinken.TabIndex = 19;
-            this.lv_Drinken.UseCompatibleStateImageBehavior = false;
-            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6366,6 +6368,7 @@
             this.pnl_Base.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnl_BarOverzicht.ResumeLayout(false);
             this.pnl_LunchBestelling.ResumeLayout(false);
             this.pnl_LunchBestelling.PerformLayout();
             this.pnl_AfrekenOverzicht.ResumeLayout(false);
@@ -6376,7 +6379,6 @@
             this.gb_Afgerekend.PerformLayout();
             this.pnl_RekeningOverzicht.ResumeLayout(false);
             this.pnl_RekeningOverzicht.PerformLayout();
-            this.pnl_BarOverzicht.ResumeLayout(false);
             this.pnl_BestellingBar.ResumeLayout(false);
             this.pnl_BestellingBar.PerformLayout();
             this.gb_OpmerkingenBar.ResumeLayout(false);
