@@ -40,6 +40,10 @@ namespace SomerenLogic
            return tafel_db.GetHuidigeBestelling(TafelNummer);
         }
 
+        public void UpdateBestellingIDTafel(int bestelling, int tafelNr)
+        {
+            tafel_db.Db_Update_BestellingID_Tafel(bestelling, tafelNr);
+        }
      
     }
 }

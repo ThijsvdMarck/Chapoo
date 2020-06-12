@@ -39,11 +39,11 @@ namespace SomerenLogic
         {
             return drankje_db.GetDrankID(Dranknaam);
         }
-        public void UpdateDrankje(string query)
+        public void UpdateDrankje(string naam, string prijs, string alcoholisch, string hoeveelheid)
         {
             try
             {
-                drankje_db.Db_Update_Drankje(query);
+                drankje_db.Db_Update_Drankje(naam, prijs, alcoholisch, hoeveelheid);
             }
             catch (Exception)
             {

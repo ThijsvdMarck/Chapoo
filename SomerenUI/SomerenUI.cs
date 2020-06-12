@@ -660,6 +660,7 @@ namespace SomerenUI
                 StatusBestelling huidigeStatus = bestellingService.GetHuidigeBestellingStatus(tafelnummer);
 
                 lbl_TafelInfo.Text = "Tafel " + tafelnummer.ToString();
+               
 
                 if (huidigeStatus != StatusBestelling.Betaald)
                 {
@@ -678,11 +679,14 @@ namespace SomerenUI
                     lv_RekeningOverzicht.Columns.Add("Prijs", 80);
                     lv_RekeningOverzicht.Columns.Add("Individuele prijs", 100);
 
+                    totaalPrijs = 0;
                     string[] bestellingen = new string[4];
                     ListViewItem itm;
 
                     foreach (SomerenModel.GerechtlijstItem g in gerechtList)
                     {
+                        totaalPrijs += (g.Aantal * g.Prijs);
+
                         bestellingen[0] = g.Aantal.ToString();
                         bestellingen[1] = g.GerechtNaam;
                         bestellingen[2] = (g.Prijs * g.Aantal).ToString("0.00");
@@ -694,6 +698,8 @@ namespace SomerenUI
 
                     foreach (SomerenModel.DrankLijstItem d in drankList)
                     {
+                        totaalPrijs += (d.aantal * d.Prijs);
+
                         bestellingen[0] = d.aantal.ToString();
                         bestellingen[1] = d.drankNaam;
                         bestellingen[2] = (d.Prijs * d.aantal).ToString("0.00");
@@ -704,7 +710,7 @@ namespace SomerenUI
                     }
                 }
 
-
+                lbl_TotaalBedragRekeningOverzicht.Text = "€" + totaalPrijs.ToString();
             }
             else if (panelName == "Reserveringen")
             {
@@ -843,25 +849,28 @@ namespace SomerenUI
 
                 foreach (SomerenModel.DrankLijstItem d in drankList)
                 {
-                    drankjes[0] = d.bestellingID.ToString();
-                    drankjes[1] = d.drankNaam;
-                    drankjes[2] = d.aantal.ToString();
-                    drankjes[3] = d.tijd.ToString("HH:mm");
-                    drankjes[4] = d.status.ToString();
-                    drankjes[5] = d.drankID.ToString();
-
-                    itm = new ListViewItem(drankjes);
-
-                    if (d.status == Status.KlaarVoorServeren)
+                    if (d.status != Status.Opslag)
                     {
-                        itm.BackColor = Color.Green;
-                    }
-                    else if (d.status == Status.Geserveerd)
-                    {
-                        itm.BackColor = Color.LightBlue;
-                    }
+                        drankjes[0] = d.bestellingID.ToString();
+                        drankjes[1] = d.drankNaam;
+                        drankjes[2] = d.aantal.ToString();
+                        drankjes[3] = d.tijd.ToString("HH:mm");
+                        drankjes[4] = d.status.ToString();
+                        drankjes[5] = d.drankID.ToString();
 
-                    lv_BarBestelling.Items.Add(itm);
+                        itm = new ListViewItem(drankjes);
+
+                        if (d.status == Status.KlaarVoorServeren)
+                        {
+                            itm.BackColor = Color.Green;
+                        }
+                        else if (d.status == Status.Geserveerd)
+                        {
+                            itm.BackColor = Color.LightBlue;
+                        }
+
+                        lv_BarBestelling.Items.Add(itm);
+                    }
             
                 }
 
@@ -917,25 +926,28 @@ namespace SomerenUI
 
                 foreach (SomerenModel.GerechtlijstItem g in gerechtList)
                 {
-                    gerechten[0] = g.BestellingID.ToString();
-                    gerechten[1] = g.GerechtNaam;
-                    gerechten[2] = g.Aantal.ToString();
-                    gerechten[3] = g.Tijd.ToString("HH:mm");
-                    gerechten[4] = g.status.ToString();
-                    gerechten[5] = g.GerechtID.ToString();
-
-                    itm = new ListViewItem(gerechten);
-
-                    if (g.status == Status.KlaarVoorServeren)
+                    if (g.status != Status.Opslag)
                     {
-                        itm.BackColor = Color.Green;
-                    }     
-                    else if (g.status == Status.Geserveerd)
-                    {
-                        itm.BackColor = Color.LightBlue;
+                        gerechten[0] = g.BestellingID.ToString();
+                        gerechten[1] = g.GerechtNaam;
+                        gerechten[2] = g.Aantal.ToString();
+                        gerechten[3] = g.Tijd.ToString("HH:mm");
+                        gerechten[4] = g.status.ToString();
+                        gerechten[5] = g.GerechtID.ToString();
+
+                        itm = new ListViewItem(gerechten);
+
+                        if (g.status == Status.KlaarVoorServeren)
+                        {
+                            itm.BackColor = Color.Green;
+                        }
+                        else if (g.status == Status.Geserveerd)
+                        {
+                            itm.BackColor = Color.LightBlue;
+                        }
+
+                        lv_BestellingenKeuken.Items.Add(itm);
                     }
-
-                    lv_BestellingenKeuken.Items.Add(itm);
             
                 }
 
@@ -965,19 +977,16 @@ namespace SomerenUI
                
                 List<GerechtlijstItem> gerechtList = gerechtlijstItemService.GerechtenBestellingVanTafel(tafelnummer);
                 List<DrankLijstItem> drankList = drankLijstItemService.GetDrankjesBestellingVanTafel(tafelnummer);
-
-                totaalPrijs = 0;
+                
                 double btwPrijs = 0;
 
                 foreach (SomerenModel.GerechtlijstItem g in gerechtList)
                 {
-                    totaalPrijs += (g.Aantal * g.Prijs);
                     btwPrijs += (g.Prijs * 0.09 * g.Aantal);
                 }
                 
                 foreach (SomerenModel.DrankLijstItem d in drankList)
                 {
-                    totaalPrijs += (d.aantal * d.Prijs);
                     if (d.alcoholisch == Alcholisch.Ja)
                     {
                         btwPrijs += (d.Prijs * 0.21 * d.aantal);
@@ -1546,14 +1555,13 @@ namespace SomerenUI
         }
 
 
-
+        // Voorraad
         private void btn_DrankVoorraad_Click(object sender, EventArgs e)
         {
             gb_GerechtToevoegen.Hide();
             gb_DrankToevoegen.Show();
             vulDrankVoorraad();
         }
-
         private void vulDrankVoorraad()
         {
             List<Drankje> drankList = drankService.GetDrankjes();
@@ -1585,7 +1593,6 @@ namespace SomerenUI
 
             }
         }
-
         private void btn_Gerechtvoorraad_Click(object sender, EventArgs e)
         {
             gb_GerechtToevoegen.Show();
@@ -1624,7 +1631,6 @@ namespace SomerenUI
                 lv_Voorraad.Items.Add(itm);
             }
         }
-
         private void btn_VoegToeDrank_Click(object sender, EventArgs e)
         {
             if (txt_DrankNaam.Text == "" || txt_HoeveelheidDrank.Text == "" || txt_Alcoholisch.Text == "" || txt_PrijsDrank.Text == "")
@@ -1633,8 +1639,7 @@ namespace SomerenUI
                 return;
             }
 
-            string query = "INSERT INTO drankje VALUES ('" + txt_DrankNaam.Text + "', " + txt_PrijsDrank.Text + ", '" + txt_Alcoholisch.Text + "', " + txt_HoeveelheidDrank.Text + ")";
-            drankService.UpdateDrankje(query);
+            drankService.UpdateDrankje(txt_DrankNaam.Text, txt_PrijsDrank.Text, txt_Alcoholisch.Text, txt_HoeveelheidDrank.Text);
 
             txt_Alcoholisch.Clear();
             txt_HoeveelheidDrank.Clear();
@@ -1643,7 +1648,6 @@ namespace SomerenUI
 
             vulDrankVoorraad();
         }
-
         private void btn_VoegToeGerecht_Click(object sender, EventArgs e)
         {
 
@@ -1653,8 +1657,7 @@ namespace SomerenUI
                 return;
             }
 
-            string query = "INSERT INTO gerecht VALUES ('" + txt_NaamGerecht.Text + "', " + txt_PrijsGerecht.Text + ", '" + txt_SoortGerecht.Text + "', '" + txt_TypeGerecht.Text + "', " + txt_HoeveelheidGerecht.Text + ")";
-            gerechtService.UpdateGerecht(query);
+            gerechtService.UpdateGerecht(txt_NaamGerecht.Text, txt_PrijsGerecht.Text, txt_SoortGerecht.Text, txt_TypeGerecht.Text, txt_HoeveelheidGerecht.Text);
 
             txt_TypeGerecht.Clear();
             txt_HoeveelheidGerecht.Clear();
@@ -1664,12 +1667,13 @@ namespace SomerenUI
 
 
             vulGerechtVoorraad();
-        }
-        
+        }       
         private void btn_LogUit_Click(object sender, EventArgs e)
         {
             showPanel("LogIn");
         }
+
+
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1927,6 +1931,8 @@ namespace SomerenUI
 
             VeranderStatusBestellingBar(StatusBestelling.Betaald, bestelling);
             VeranderStatusBestellingKeuken(StatusBestelling.Betaald, bestelling);
+
+            tafelService.UpdateBestellingIDTafel(0, tafelnummer);
         }
         private void btn_BetalingVoltooid_Click(object sender, EventArgs e)
         {
