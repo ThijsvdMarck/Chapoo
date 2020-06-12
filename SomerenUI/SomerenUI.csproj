@@ -137,6 +137,36 @@
   <ItemGroup>
     <None Include="Resources\Tafel1transparant.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel2trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel3trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel4trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel5trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel6trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel7trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel8trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tafel9trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tafel10trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TafelLegenda.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

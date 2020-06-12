@@ -118,61 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Tafel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="someren" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\someren.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tafel5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tafel9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tafel3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tafel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chapoo_logo_klein" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chapoo_logo_klein.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Refresh2.0NogKleiner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Refresh2.0NogKleiner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tafel8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Refresh2.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Refresh2.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tafel10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tafel10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tafel4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Refresh.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tafel7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tafel4trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel4trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Refresh2.0Kleiner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh2.0Kleiner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tafel6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tafel6trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel6trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel2trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel2trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh2.0NogKleiner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh2.0NogKleiner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel8trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel8trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh2.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh2.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel1transparant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel1transparant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chapoo_logo_klein" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chapoo_logo_klein.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel5trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel5trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel7trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel7trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel3trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel3trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel9trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel9trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chapoo_logo_klein1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chapoo_logo_klein.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tafel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tafel10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tafel10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Refresh3.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh3.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tafel1transparant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tafel1transparant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tafel6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tafel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tafel2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tafel10trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tafel10trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="someren" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\someren.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TafelLegenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TafelLegenda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

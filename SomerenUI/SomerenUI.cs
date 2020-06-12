@@ -550,7 +550,7 @@ namespace SomerenUI
                 pnl_MenuBalkTafels.Show();
 
                 List<Button> buttons = new List<Button>();
-                buttons.Add(btn_TEST);
+                buttons.Add(btn_Tafel1);
                 buttons.Add(btn_Tafel2);
                 buttons.Add(btn_Tafel3);
                 buttons.Add(btn_Tafel4);
@@ -1703,9 +1703,8 @@ namespace SomerenUI
         //tafelbuttons
         private void btn_Tafel1_Click(object sender, EventArgs e)
         {
-            /*
-            LATEN WE NOG EVEN LEEG WANT TEST BUTTON CODE KOMT HIER
-            */
+            tafelnummer = 1;
+            showPanel("RekeningOverzicht");
         }
         private void btn_Tafel2_Click(object sender, EventArgs e)
         {
@@ -1752,13 +1751,7 @@ namespace SomerenUI
             tafelnummer = 10;
             showPanel("RekeningOverzicht");
         }
-        private void btn_TEST_Click(object sender, EventArgs e)
-        {
-            tafelnummer = 6;
-            showPanel("RekeningOverzicht"); // Moet nog terug naar button 1 na UI.
-            //Iets met dit tafelnummer met de status KLAARVOORSERVEREN, moet de knop groen worden
 
-        }
 
         // Restaurant overzicht (buttons van kleur veranderen)
         private void CheckStatusGerechten(List<GerechtlijstItem> gerechtlijst)
@@ -1767,7 +1760,7 @@ namespace SomerenUI
             {
                 if (g.TafelID == 1)
                 {
-                    VeranderButtonKleurGerecht(g, btn_TEST);
+                    VeranderButtonKleurGerecht(g, btn_Tafel1);
                 }
                 else if (g.TafelID == 2)
                 {
@@ -1821,7 +1814,7 @@ namespace SomerenUI
             }
             else if (g.status == Status.Geserveerd && button.BackColor != Color.Green && button.BackColor != Color.Yellow)
             {
-                button.BackColor = Color.LightBlue;
+                button.BackColor = Color.SkyBlue;
             }
         }
         private void CheckStatusDrankjes(List<DrankLijstItem> dranklijst)
@@ -1830,7 +1823,7 @@ namespace SomerenUI
             {
                 if (d.TafelID == 1)
                 {
-                    VeranderButtonKleurDrankje(d, btn_TEST);
+                    VeranderButtonKleurDrankje(d, btn_Tafel1);
                 }
                 else if (d.TafelID == 2)
                 {
@@ -1884,7 +1877,7 @@ namespace SomerenUI
             }
             else if (d.status == Status.Geserveerd && button.BackColor != Color.Green && button.BackColor != Color.Yellow)
             {
-                button.BackColor = Color.LightBlue;
+                button.BackColor = Color.SkyBlue;
             }
         }
 
