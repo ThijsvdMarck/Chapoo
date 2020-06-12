@@ -477,6 +477,7 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -520,6 +521,7 @@
             this.pnl_Maand.SuspendLayout();
             this.pnl_Week.SuspendLayout();
             this.pnl_MenuBalkFinanciën.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_LogIn
@@ -5076,6 +5078,7 @@
             this.pnl_Base.Controls.Add(this.lbl_TijdHeader);
             this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.btn_Home);
+            this.pnl_Base.Controls.Add(this.pictureBox2);
             this.pnl_Base.Controls.Add(this.pnl_TafelOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_BestellingsOverzicht);
             this.pnl_Base.Controls.Add(this.pnl_LunchBestelling);
@@ -5129,7 +5132,7 @@
             this.lbl_TijdHeader.AutoSize = true;
             this.lbl_TijdHeader.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_TijdHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TijdHeader.Location = new System.Drawing.Point(406, 124);
+            this.lbl_TijdHeader.Location = new System.Drawing.Point(403, 124);
             this.lbl_TijdHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_TijdHeader.Name = "lbl_TijdHeader";
             this.lbl_TijdHeader.Size = new System.Drawing.Size(0, 24);
@@ -5149,7 +5152,7 @@
             // 
             this.btn_Home.BackColor = System.Drawing.Color.White;
             this.btn_Home.Image = ((System.Drawing.Image)(resources.GetObject("btn_Home.Image")));
-            this.btn_Home.Location = new System.Drawing.Point(2, 105);
+            this.btn_Home.Location = new System.Drawing.Point(1, 99);
             this.btn_Home.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Home.Name = "btn_Home";
             this.btn_Home.Size = new System.Drawing.Size(44, 54);
@@ -6294,6 +6297,15 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(612, 153);
+            this.pictureBox2.TabIndex = 77;
+            this.pictureBox2.TabStop = false;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6368,6 +6380,7 @@
             this.pnl_Maand.ResumeLayout(false);
             this.pnl_Week.ResumeLayout(false);
             this.pnl_MenuBalkFinanciën.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6822,6 +6835,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_PlusBesteldItem;
         private System.Windows.Forms.Button btn_MinBestelItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
