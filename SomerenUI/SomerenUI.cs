@@ -343,17 +343,17 @@ namespace SomerenUI
                 pnl_BestellingVerstuurd.Hide();
 
                 // clear the listview before filling it again
-                lv_BestellingsOverzicht.Clear();
+                lv_Eten.Clear();
 
-                lv_BestellingsOverzicht.View = View.Details;
+                lv_Eten.View = View.Details;
                 //lv_BestellingsOverzicht.GridLines = true;
-                lv_BestellingsOverzicht.FullRowSelect = true;
-                lv_BestellingsOverzicht.CheckBoxes = true;
+                lv_Eten.FullRowSelect = true;
+                lv_Eten.CheckBoxes = true;
 
                 // Aanmaken van kolommen
-                lv_BestellingsOverzicht.Columns.Add("Naam", 200);
+                lv_Eten.Columns.Add("Naam", 200);
                 //lv_BestellingsOverzicht.Columns.Add("Prijs", 200);
-                lv_BestellingsOverzicht.Columns.Add("Aantal", 100);
+                lv_Eten.Columns.Add("Aantal", 100);
 
                 List<DrankLijstItem> drankBestellingsOverzichtList = GetDrankItemLijst();
                 List<GerechtlijstItem> gerechtBestellingsOverzichtList = GetGerechtItemLijst();
@@ -372,7 +372,7 @@ namespace SomerenUI
                         
 
                         itm = new ListViewItem(bestellingen);
-                        lv_BestellingsOverzicht.Items.Add(itm);
+                        lv_Eten.Items.Add(itm);
                     }
 
 
@@ -387,7 +387,7 @@ namespace SomerenUI
                         bestellingen[2] = b.Aantal.ToString();
 
                         itm = new ListViewItem(bestellingen);
-                        lv_BestellingsOverzicht.Items.Add(itm);
+                        lv_Eten.Items.Add(itm);
                     }
 
                 }
@@ -1951,18 +1951,18 @@ namespace SomerenUI
             int geselecteerdeID = 0;
             string etenDrinken;
 
-            for (int i = 0; i < lv_BestellingsOverzicht.Items.Count; i++)
+            for (int i = 0; i < lv_Eten.Items.Count; i++)
             {
-                if (lv_BestellingsOverzicht.Items[i].Checked)
+                if (lv_Eten.Items[i].Checked)
                 {
-                    geselecteerdeID = int.Parse(lv_BestellingsOverzicht.Items[i].SubItems[1].Text);
+                    geselecteerdeID = int.Parse(lv_Eten.Items[i].SubItems[1].Text);
                 }
             }
-            for (int i = 0; i < lv_BestellingsOverzicht.Items.Count; i++)
+            for (int i = 0; i < lv_Eten.Items.Count; i++)
             {
-                if (lv_BestellingsOverzicht.Items[i].Checked)
+                if (lv_Eten.Items[i].Checked)
                 {
-                    etenDrinken = lv_BestellingsOverzicht.Items[i].SubItems[1].Text.ToString();
+                    etenDrinken = lv_Eten.Items[i].SubItems[1].Text.ToString();
                 }
             }
 

@@ -370,7 +370,7 @@
             this.pnl_BestellingVerstuurd = new System.Windows.Forms.Panel();
             this.btn_BestellingVersturenOK = new System.Windows.Forms.Button();
             this.lbl_BestellingVerstuurd = new System.Windows.Forms.Label();
-            this.lv_BestellingsOverzicht = new System.Windows.Forms.ListView();
+            this.lv_Eten = new System.Windows.Forms.ListView();
             this.btn_Annuleren = new System.Windows.Forms.Button();
             this.btn_Bestel = new System.Windows.Forms.Button();
             this.lbl_BestellingOpmerkingen = new System.Windows.Forms.Label();
@@ -382,6 +382,7 @@
             this.lbl_TijdHeader = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Home = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_LunchBestelling = new System.Windows.Forms.Panel();
             this.lbl_KiesItem = new System.Windows.Forms.Label();
             this.CB_SoortDrankje = new System.Windows.Forms.ComboBox();
@@ -477,7 +478,7 @@
             this.btn_Maand = new System.Windows.Forms.Button();
             this.btn_Week = new System.Windows.Forms.Button();
             this.btn_Dag = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lv_Drinken = new System.Windows.Forms.ListView();
             this.pnl_LogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoChapoo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Poppetje)).BeginInit();
@@ -502,6 +503,7 @@
             this.pnl_Dag.SuspendLayout();
             this.pnl_Base.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_LunchBestelling.SuspendLayout();
             this.pnl_AfrekenOverzicht.SuspendLayout();
             this.gb_AfrekenPopUp.SuspendLayout();
@@ -521,7 +523,6 @@
             this.pnl_Maand.SuspendLayout();
             this.pnl_Week.SuspendLayout();
             this.pnl_MenuBalkFinanciën.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_LogIn
@@ -4862,12 +4863,13 @@
             // 
             // pnl_BestellingsOverzicht
             // 
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Drinken);
             this.pnl_BestellingsOverzicht.Controls.Add(this.label1);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_PlusBesteldItem);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_MinBestelItem);
             this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVersturen);
             this.pnl_BestellingsOverzicht.Controls.Add(this.pnl_BestellingVerstuurd);
-            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_BestellingsOverzicht);
+            this.pnl_BestellingsOverzicht.Controls.Add(this.lv_Eten);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Annuleren);
             this.pnl_BestellingsOverzicht.Controls.Add(this.btn_Bestel);
             this.pnl_BestellingsOverzicht.Controls.Add(this.lbl_BestellingOpmerkingen);
@@ -4998,15 +5000,15 @@
             this.lbl_BestellingVerstuurd.TabIndex = 14;
             this.lbl_BestellingVerstuurd.Text = "Bestelling verstuurd";
             // 
-            // lv_BestellingsOverzicht
+            // lv_Eten
             // 
-            this.lv_BestellingsOverzicht.HideSelection = false;
-            this.lv_BestellingsOverzicht.Location = new System.Drawing.Point(72, 82);
-            this.lv_BestellingsOverzicht.Name = "lv_BestellingsOverzicht";
-            this.lv_BestellingsOverzicht.Size = new System.Drawing.Size(467, 321);
-            this.lv_BestellingsOverzicht.TabIndex = 15;
-            this.lv_BestellingsOverzicht.UseCompatibleStateImageBehavior = false;
-            this.lv_BestellingsOverzicht.SelectedIndexChanged += new System.EventHandler(this.lv_BestellingsOverzicht_SelectedIndexChanged);
+            this.lv_Eten.HideSelection = false;
+            this.lv_Eten.Location = new System.Drawing.Point(72, 82);
+            this.lv_Eten.Name = "lv_Eten";
+            this.lv_Eten.Size = new System.Drawing.Size(467, 141);
+            this.lv_Eten.TabIndex = 15;
+            this.lv_Eten.UseCompatibleStateImageBehavior = false;
+            this.lv_Eten.SelectedIndexChanged += new System.EventHandler(this.lv_BestellingsOverzicht_SelectedIndexChanged);
             // 
             // btn_Annuleren
             // 
@@ -5161,6 +5163,15 @@
             this.btn_Home.TabIndex = 17;
             this.btn_Home.UseVisualStyleBackColor = false;
             this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(612, 153);
+            this.pictureBox2.TabIndex = 77;
+            this.pictureBox2.TabStop = false;
             // 
             // pnl_LunchBestelling
             // 
@@ -6299,14 +6310,14 @@
             this.btn_Dag.UseVisualStyleBackColor = true;
             this.btn_Dag.Click += new System.EventHandler(this.btn_Dag_Click);
             // 
-            // pictureBox2
+            // lv_Drinken
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(612, 153);
-            this.pictureBox2.TabIndex = 77;
-            this.pictureBox2.TabStop = false;
+            this.lv_Drinken.HideSelection = false;
+            this.lv_Drinken.Location = new System.Drawing.Point(72, 252);
+            this.lv_Drinken.Name = "lv_Drinken";
+            this.lv_Drinken.Size = new System.Drawing.Size(467, 141);
+            this.lv_Drinken.TabIndex = 19;
+            this.lv_Drinken.UseCompatibleStateImageBehavior = false;
             // 
             // SomerenUI
             // 
@@ -6354,6 +6365,7 @@
             this.pnl_Base.ResumeLayout(false);
             this.pnl_Base.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_LunchBestelling.ResumeLayout(false);
             this.pnl_LunchBestelling.PerformLayout();
             this.pnl_AfrekenOverzicht.ResumeLayout(false);
@@ -6382,7 +6394,6 @@
             this.pnl_Maand.ResumeLayout(false);
             this.pnl_Week.ResumeLayout(false);
             this.pnl_MenuBalkFinanciën.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -6812,7 +6823,7 @@
         private System.Windows.Forms.Label lbl_BTWBedrag;
         private System.Windows.Forms.Label lbl_BTW;
         private System.Windows.Forms.Button btn_VoegToeFooi;
-        private System.Windows.Forms.ListView lv_BestellingsOverzicht;
+        private System.Windows.Forms.ListView lv_Eten;
         private System.Windows.Forms.Label lbl_TijdHeader;
         private System.Windows.Forms.Label lbl_NaamMedewerker;
         private System.Windows.Forms.Label lbl_TotaalBedragRekeningOverzicht;
@@ -6838,6 +6849,7 @@
         private System.Windows.Forms.Button btn_PlusBesteldItem;
         private System.Windows.Forms.Button btn_MinBestelItem;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ListView lv_Drinken;
     }
 }
 
