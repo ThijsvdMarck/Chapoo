@@ -688,6 +688,8 @@ namespace SomerenUI
 
                 List<Bestelling> bestellingList = bestellingService.GetBestelling();
 
+
+
                 // clear the listview before filling it again
                 lv_KeukenOverzicht.Clear();
 
@@ -706,6 +708,8 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
+                    CheckAllesGeserveerdKeuken(b.BestellingID);
+
                     if (b.statusBar != StatusBestelling.Betaald)
                     {
                         bestellingen[0] = "Tafel " + b.TafelID.ToString();
@@ -746,6 +750,8 @@ namespace SomerenUI
 
                 foreach (SomerenModel.Bestelling b in bestellingList)
                 {
+                    CheckAllesGeserveerdBar(b.BestellingID);
+
                     if (b.statusBar != StatusBestelling.Betaald)
                     {
                         bestellingen[0] = "Tafel " + b.TafelID.ToString();
@@ -821,11 +827,11 @@ namespace SomerenUI
 
                         if (d.status == Status.KlaarVoorServeren)
                         {
-                            itm.BackColor = Color.Green;
+                            itm.BackColor = Color.LightGreen;
                         }
                         else if (d.status == Status.Geserveerd)
                         {
-                            itm.BackColor = Color.LightBlue;
+                            itm.BackColor = Color.SkyBlue;
                         }
 
                         lv_BarBestelling.Items.Add(itm);
@@ -898,11 +904,11 @@ namespace SomerenUI
 
                         if (g.status == Status.KlaarVoorServeren)
                         {
-                            itm.BackColor = Color.Green;
+                            itm.BackColor = Color.LightGreen;
                         }
                         else if (g.status == Status.Geserveerd)
                         {
-                            itm.BackColor = Color.LightBlue;
+                            itm.BackColor = Color.SkyBlue;
                         }
 
                         lv_BestellingenKeuken.Items.Add(itm);
@@ -961,7 +967,6 @@ namespace SomerenUI
                 lbl_BTWBedrag.Text = btwPrijs.ToString("0.00");
                
             }
-
         }
 
 
@@ -1337,35 +1342,35 @@ namespace SomerenUI
         private void btn_AfgerondKeuken_Click(object sender, EventArgs e)
         {
             VeranderStatusGerechten(Status.Geserveerd);
-            int bestelling = 0;
-            showPanel("KeukenBestelling");
+            showPanel("KeukenBestelling");            
+        }
+        private void CheckAllesGeserveerdKeuken(int bestelling)
+        {
+            List<GerechtlijstItem> gerechtList = GetGerechtItemLijst();
+            bool Afgerond = false;
 
-            if (CheckAllesGeserveerdKeuken(ref bestelling))
+            foreach (GerechtlijstItem item in gerechtList)
+            {
+                if (item.status == Status.Geserveerd && item.BestellingID == bestelling)
+                {
+                    Afgerond = true;
+                }
+                else if (item.status != Status.Opslag && item.BestellingID == bestelling)
+                {
+                    Afgerond = false;
+                    break;
+                }
+
+            }
+
+            if (Afgerond)
             {
                 VeranderStatusBestellingKeuken(StatusBestelling.Afgerond, bestelling);
             }
-
-        }
-        private bool CheckAllesGeserveerdKeuken(ref int bestelling)
-        {
-            int count = 0;
-
-            for (int i = 0; i < lv_BestellingenKeuken.Items.Count; i++)
+            else
             {
-                if (lv_BestellingenKeuken.Items[i].SubItems[4].Text == "Geserveerd")
-                {
-                    count++;
-                }
-
-                bestelling = int.Parse(lv_BestellingenKeuken.Items[i].SubItems[0].Text);
+                VeranderStatusBestellingKeuken(StatusBestelling.Open, bestelling);
             }
-
-            if (count == lv_BestellingenKeuken.Items.Count)
-            {
-                return true;
-            }
-
-            return false;
         }
 
 
@@ -1455,55 +1460,35 @@ namespace SomerenUI
         private void btn_AfgerondBar_Click(object sender, EventArgs e)
         {
             VeranderStatusDrankjes(Status.Geserveerd);
-            int bestelling = 0;
             showPanel("BarBestelling");
-
-            if (CheckAllesGeserveerdBar(ref bestelling))
-            {
-                VeranderStatusBestellingBar(StatusBestelling.Afgerond, bestelling);
-            }
         }
-        private bool CheckAllesGeserveerdBar(ref int bestelling)
+        private void CheckAllesGeserveerdBar(int bestelling)
         {
             List<DrankLijstItem> drankList = GetDrankItemLijst();
             bool Afgerond = false;
 
             foreach (DrankLijstItem item in drankList)
             {
-                if (item.status == Status.Geserveerd && item.bestellingID == )
+                if (item.status == Status.Geserveerd && item.bestellingID == bestelling)
                 {
                     Afgerond = true;
                 }
-                else if (item.bestellingID == )
+                else if (item.status != Status.Opslag && item.bestellingID == bestelling)
                 {
                     Afgerond = false;
+                    break;
                 }
 
             }
-            if (Afgerond = true)
+
+            if (Afgerond)
             {
-
+                VeranderStatusBestellingBar(StatusBestelling.Afgerond, bestelling);
             }
-
-
-            int count = 0;
-
-            for (int i = 0; i < lv_BarBestelling.Items.Count; i++)
+            else
             {
-                if (lv_BarBestelling.Items[i].SubItems[4].Text == "Geserveerd")
-                {
-                    count++;
-                }
-
-                bestelling = int.Parse(lv_BarBestelling.Items[i].SubItems[0].Text);
+                VeranderStatusBestellingBar(StatusBestelling.Open, bestelling);
             }
-
-            if (count == lv_BarBestelling.Items.Count)
-            {
-                return true;
-            }
-
-            return false;
         }
 
 
