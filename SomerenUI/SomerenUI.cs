@@ -1238,11 +1238,19 @@ namespace SomerenUI
 
             foreach (GerechtlijstItem item in gerechtBestellingsOverzichtList)
             {
-                gerechtlijstItemService.UpdateGerechtItem(Status.Besteld, tafelService.GetHuidigeBestelling(tafelnummer), gerechtService.GetGerechtID(item.GerechtNaam));
+                if (item.status == Status.Opslag)
+                {
+                    gerechtlijstItemService.UpdateGerechtItem(Status.Besteld, tafelService.GetHuidigeBestelling(tafelnummer), gerechtService.GetGerechtID(item.GerechtNaam));
+                }
+              
             }
             foreach (DrankLijstItem item in drankBestellingsOverzichtList)
             {
-                drankLijstItemService.UpdateDrankItem(Status.Besteld, tafelService.GetHuidigeBestelling(tafelnummer), drankService.GetDrankID(item.drankNaam));
+                if (item.status == Status.Opslag)
+                {
+                    drankLijstItemService.UpdateDrankItem(Status.Besteld, tafelService.GetHuidigeBestelling(tafelnummer), drankService.GetDrankID(item.drankNaam));
+                }
+                    
             }
             showPanel("Tafels");
         }
@@ -1966,6 +1974,7 @@ namespace SomerenUI
             {
                 button.BackColor = Color.SkyBlue;
             }
+
         }
 
         // Afrekenen

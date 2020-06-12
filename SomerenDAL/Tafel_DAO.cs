@@ -72,7 +72,7 @@ namespace SomerenDAL
 
             if (bestelling == 0)
             {
-                bestellingID = null;
+                bestellingID = "null";
             }
 
             string query = "UPDATE Tafel SET [BestellingID] = " + bestellingID + " WHERE TafelID = " + tafelNr.ToString();
