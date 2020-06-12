@@ -327,50 +327,6 @@ namespace SomerenUI
                 hideAllPanels();
                 pnl_LogIn.Show();
             }
-            else if (panelName == "Students")
-            {
-                /*
-                   // hide all other panels
-                   pnl_Dashboard.Hide();
-                   img_Dashboard.Hide();
-
-                   // show students
-                   pnl_Students.Show();
-
-
-
-                   // fill the students listview within the students panel with a list of students
-                   SomerenLogic.DrankLijstItem_Service test = new SomerenLogic.DrankLijstItem_Service();
-                   List<DrankLijstItem> drankLijstItem  = test.GetDrankLijstItems();
-
-                   // clear the listview before filling it again
-                   listViewStudents.Clear();
-
-                   listViewStudents.View = View.Details;
-                   listViewStudents.GridLines = true;
-                   listViewStudents.FullRowSelect = true;
-
-                   // Aanmaken van kolommen
-                   listViewStudents.Columns.Add("DrankNaam", 70);
-                   listViewStudents.Columns.Add("BestellingID", 70);
-                   listViewStudents.Columns.Add("Status", 100);
-                   listViewStudents.Columns.Add("Aantal", 100);
-
-                   string[] drankLijstItems = new string[4];
-                   ListViewItem itm;
-
-                   foreach (SomerenModel.DrankLijstItem d in drankLijstItem )
-                   {
-                       drankLijstItems[0] = d.drankNaam;
-                       drankLijstItems[1] = d.bestellingID.ToString();
-                       drankLijstItems[2] = d.status.ToString();
-                       drankLijstItems[3] = d.aantal.ToString();
-
-                       itm = new ListViewItem(drankLijstItems);
-                       listViewStudents.Items.Add(itm);
-                   }
-                */
-            }
             else if (panelName == "Base")
             {
                 hideAllPanels();
@@ -729,7 +685,6 @@ namespace SomerenUI
                 pnl_Base.Show();
                 pnl_MenuBalkKeukenOverzicht.Show();
                 pnl_KeukenOverzicht.Show();
-
 
                 List<Bestelling> bestellingList = bestellingService.GetBestelling();
 
@@ -1356,20 +1311,6 @@ namespace SomerenUI
 
             return geselecteerdeBestelling;
         }
-        private int GetGeselecteerdGerecht()
-        {
-            int geselecteerdGerecht = 0;
-
-            for (int i = 0; i < lv_BestellingenKeuken.Items.Count; i++)
-            {
-                if (lv_BestellingenKeuken.Items[i].Checked)
-                {
-                    geselecteerdGerecht = int.Parse(lv_BestellingenKeuken.Items[i].SubItems[5].Text);
-                }
-            }
-
-            return geselecteerdGerecht;
-        }
         private void btn_RefreshKeukenOverzicht_Click(object sender, EventArgs e)
         {
             showPanel("KeukenOverzicht");
@@ -1387,7 +1328,7 @@ namespace SomerenUI
                 {
                     //update status
                     int geselecteerdeBestelling = GetGeselecteerdeBestellingKeuken();
-                    int geselecteerdGerecht = GetGeselecteerdGerecht();
+                    int geselecteerdGerecht = int.Parse(lv_BestellingenKeuken.Items[i].SubItems[5].Text);
 
                     gerechtlijstItemService.UpdateGerechtItem(status, geselecteerdeBestelling, geselecteerdGerecht);
                 }
@@ -1488,20 +1429,6 @@ namespace SomerenUI
 
             return geselecteerdeBestelling;
         }
-        private int GetGeselecteerdDrankje()
-        {
-            int geselecteerdDrankje = 0;
-
-            for (int i = 0; i < lv_BarBestelling.Items.Count; i++)
-            {
-                if (lv_BarBestelling.Items[i].Checked)
-                {
-                    geselecteerdDrankje = int.Parse(lv_BarBestelling.Items[i].SubItems[5].Text);
-                }
-            }
-
-            return geselecteerdDrankje;
-        }
         private void btn_RefreshBarOverzicht_Click(object sender, EventArgs e)
         {
             showPanel("BarOverzicht");
@@ -1519,7 +1446,7 @@ namespace SomerenUI
                 {
                     //update status
                     int geselecteerdeBestelling = GetGeselecteerdeBestellingBar();
-                    int geselecteerdDrankje = GetGeselecteerdDrankje();
+                    int geselecteerdDrankje = int.Parse(lv_BarBestelling.Items[i].SubItems[5].Text);
 
                     drankLijstItemService.UpdateDrankItem(status, geselecteerdeBestelling, geselecteerdDrankje);
                 }
