@@ -30,6 +30,8 @@ namespace SomerenUI
 
         int tafelnummer;
         double totaalPrijs;
+        bool loggedIn =  false;
+        string naamIngelogde;
 
 
 
@@ -306,13 +308,19 @@ namespace SomerenUI
 
         private void SomerenUI_Load(object sender, EventArgs e)
         {
+
             showPanel("LogIn");
+            
 
         }
 
 
         private void showPanel(string panelName)
         {
+            lbl_TijdHeader.Text = DateTime.Now.ToString("HH:mm");
+            lbl_NaamMedewerker.Text = naamIngelogde;
+
+
 
             if (panelName == "LogIn")
             {
@@ -367,6 +375,7 @@ namespace SomerenUI
             {
                 hideAllPanels();
                 pnl_Base.Show();
+
             }
             else if (panelName == "BestellingsOverzicht")
             {
@@ -1005,25 +1014,24 @@ namespace SomerenUI
 
         private void btn_LogIn_Click(object sender, EventArgs e)
         {
-            showPanel("Overzicht");
+            List<Personeel> personeelList = personeelService.GetPersoneel();
 
-            /* List<Personeel> personeelList = personeelService.GetPersoneel();
             foreach (Personeel item in personeelList)
             {
                 if (txt_LogIn.Text == item.PersoneelID.ToString())
                 {
-                    showPanel("Overzicht");
+                    naamIngelogde = item.Naam;
+                    showPanel("Overzicht"); 
+                    loggedIn = true;
                     break;
-
                 }
+
             }
-            foreach (Personeel item in personeelList)
+
+            if (loggedIn == false)
             {
-                if (txt_LogIn.Text != item.PersoneelID.ToString())
-                {
-                    {
-                        string message = "Error";
-                        string caption = "Verkeerde toegangscode";
+                        string caption = "Error";
+                        string message = "Verkeerde toegangscode";
                         MessageBoxButtons buttons = MessageBoxButtons.OK;
                         DialogResult result;
 
@@ -1031,14 +1039,9 @@ namespace SomerenUI
                         result = MessageBox.Show(message, caption, buttons);
                         if (result == System.Windows.Forms.DialogResult.OK)
                         {
-
                             showPanel("LogIn");
-
                         }
-                    }
-                    
-                }
-            }*/
+            }
 
 
 
@@ -1979,6 +1982,16 @@ namespace SomerenUI
         }
 
         private void lbl_KiesItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_TijdHeader_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_NaamMedewerker_Click(object sender, EventArgs e)
         {
 
         }
