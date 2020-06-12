@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,6 +44,11 @@ namespace SomerenLogic
         public void UpdateBestellingIDTafel(int bestelling, int tafelNr)
         {
             tafel_db.Db_Update_BestellingID_Tafel(bestelling, tafelNr);
+        }
+
+        public void KoppelBestelling(int bestelling, int tafelNr)
+        {
+            tafel_db.Db_Koppel_Bestelling(bestelling, tafelNr);
         }
      
     }

@@ -37,15 +37,15 @@ namespace SomerenDAL
             return personeels;
         }
 
-        public int Db_Get_Ingelogde_ID(string naam)
+        public int Db_Get_Ingelogd_ID(string naam)
         {
-            string query = "SELECT PersoneelID FROM [Personeel] WHERE Naam = " + naam;
+            string query = "SELECT PersoneelID FROM [Personeel] WHERE Naam = '" + naam + "'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadID(ExecuteSelectQuery(query, sqlParameters));
         }
         private int ReadID(DataTable dataTable)
         {
-            int ID;
+            int ID = 0;
 
             foreach (DataRow dr in dataTable.Rows)
             {

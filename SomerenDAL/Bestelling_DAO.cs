@@ -73,12 +73,28 @@ namespace SomerenDAL
             return huidigeStatus;
         }
 
-        public void Db_Maak_Bestelling(int ID, DateTime now)
+        public void Db_Maak_Bestelling(int ID, DateTime now, StatusBestelling statusKeuken, StatusBestelling statusBar)
         {
-            string query = "INSERT INTO Bestelling(PersoneelID, Datum) VALUES(" + ID.ToString() + ", '" + now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "')";
+            string query = "INSERT INTO Bestelling(PersoneelID, Datum, StatusKeuken, StatusBar) VALUES(" + ID.ToString() + ", '" + now.ToString("yyyy-MM-dd HH:mm:ss.fff") + "', '" + statusKeuken + "', '" + statusBar + "')";
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public int Db_Get_NieuwsteBestelling()
+        {
+            string query = "SELECT BestellingID FROM Bestelling WHERE BestellingID = (SELECT MAX(BestellingID) FROM Bestelling)";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadNieuwsteBestelling(ExecuteSelectQuery(query, sqlParameters));
+        }
+        private int ReadNieuwsteBestelling(DataTable dataTable)
+        {
+            int bestellingID = 0;
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                bestellingID = (int)dr["BestellingID"];
+            }
+            return bestellingID;
         }
     }
 }

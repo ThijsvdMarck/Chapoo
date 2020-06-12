@@ -63,16 +63,21 @@ namespace SomerenLogic
             return bestelling_db.GetHuidigeBestellingStatus(TafelNummer);
         }
 
-        public void MaakBestellingAan(int ID, DateTime now)
+        public void MaakBestellingAan(int ID, DateTime now, StatusBestelling statusKeuken, StatusBestelling statusBar)
         {
             try
             {
-                bestelling_db.Db_Maak_Bestelling(ID, now);
+                bestelling_db.Db_Maak_Bestelling(ID, now, statusKeuken, statusBar);
             }
             catch (Exception)
             {
                 //
             }
+        }
+
+        public int GetNieuwsteBestelling()
+        {
+            return bestelling_db.Db_Get_NieuwsteBestelling();
         }
     }
 }

@@ -1665,55 +1665,138 @@ namespace SomerenUI
             int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
             if (bestelling == 0)
             {
-                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now);
-            }
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
 
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
 
             showPanel("RekeningOverzicht");           
         }
         private void btn_Tafel2_Click(object sender, EventArgs e)
         {
             tafelnummer = 2;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel3_Click(object sender, EventArgs e)
         {
             tafelnummer = 3;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel4_Click(object sender, EventArgs e)
         {
             tafelnummer = 4;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel5_Click(object sender, EventArgs e)
         {
             tafelnummer = 5;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel6_Click(object sender, EventArgs e)
         {
             tafelnummer = 6;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel7_Click(object sender, EventArgs e)
         {
             tafelnummer = 7;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel8_Click(object sender, EventArgs e)
         {
             tafelnummer = 8;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel9_Click(object sender, EventArgs e)
         {
             tafelnummer = 9;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
         private void btn_Tafel10_Click(object sender, EventArgs e)
         {
             tafelnummer = 10;
+            int bestelling = tafelService.GetHuidigeBestelling(tafelnummer);
+            if (bestelling == 0)
+            {
+                bestellingService.MaakBestellingAan(GetIngelogdPersID(), DateTime.Now, StatusBestelling.Open, StatusBestelling.Open);
+
+                bestelling = bestellingService.GetNieuwsteBestelling();
+                tafelService.KoppelBestelling(bestelling, tafelnummer);
+            }
+
             showPanel("RekeningOverzicht");
         }
 

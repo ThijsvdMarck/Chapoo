@@ -43,17 +43,18 @@ namespace SomerenDAL
         }
         private int ReadTableForBestellingID(DataTable dataTable)
         {
-            int BestellingID = 0;
+            int bestellingID = 0;
+
             foreach (DataRow dr in dataTable.Rows)
             {
-                BestellingID = (int)dr["BestellingID"];
+                if (!dr.IsNull(0))
+                {
+                    bestellingID = (int)dr["BestellingID"];
+                }
+
             }
 
-            if (BestellingID.ToString() == null)
-            {
-                BestellingID = 0;
-            }
-            return BestellingID;
+            return bestellingID;
         }
 
         public void Db_Update_GerechtItem(Status status, int bestelling, int gerecht)
@@ -75,6 +76,14 @@ namespace SomerenDAL
             }
 
             string query = "UPDATE Tafel SET [BestellingID] = " + bestellingID + " WHERE TafelID = " + tafelNr.ToString();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void Db_Koppel_Bestelling(int bestelling, int tafelNr)
+        {
+            string query = "UPDATE Tafel SET BestellingID = " + bestelling + " WHERE TafelID = " + tafelNr;
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
