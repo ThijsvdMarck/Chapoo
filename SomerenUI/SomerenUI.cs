@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Test voor save
+// Test voor save GOGO
 namespace SomerenUI
 {
     // Friet is lekker
@@ -483,6 +483,7 @@ namespace SomerenUI
                 pnl_MenuBalkBestelling.Show();
                 pnl_LunchBestelling.Show();
 
+                //Clear comboboxes
                 CB_Items.Items.Clear();
                 CB_LunchDiner.Items.Clear();
                 CB_EtenDrinken.Items.Clear();
@@ -490,6 +491,8 @@ namespace SomerenUI
                 CB_SoortGerechtLunch.Items.Clear();
                 CB_SoortDrankje.Items.Clear();
                 CB_Aantal.Items.Clear();
+
+                CB_EtenDrinken.DroppedDown = true;
 
 
                 CB_LunchDiner.Items.Add(DagType.Lunch.ToString());
@@ -1972,6 +1975,11 @@ namespace SomerenUI
                 showPanel("LunchBestelling");
             }
 
+
+        }
+
+        private void lbl_KiesItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
